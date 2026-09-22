@@ -147,7 +147,7 @@ preference, and this file is where that shows.
 | [I2016Q4-12](2016/2016-Q4.md#i2016q4-12-uk-national-lottery-camelot-account-breach) | 2016-11-30 | Camelot UK Lotteries Limited |
 | [I2016Q4-17](2016/2016-Q4.md#i2016q4-17-dnc-and-podesta-spear-phishing-grizzly-steppe-disclosure) | 2016-12-29 | Democratic National Committee and Clinton campaign (John Podesta) |
 | [I2017Q1-01](2017/2017-Q1.md#i2017q1-01-st-jude-medical-pacemaker-authentication-vulnerability) | 2017-01-09 | St. Jude Medical (acquired by Abbott) |
-| [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
+| [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
 | [I2017Q2-02](2017/2017-Q2.md#i2017q2-02-sabre-synxis-hotel-reservation-system-breach) | 2017-05-02 | Sabre Corporation (Hospitality Solutions / SynXis Central Reservations) |
 | [I2017Q3-01](2017/2017-Q3.md#i2017q3-01-bithumb-employee-pc-compromise-and-customer-data-leak) | 2017-07-05 | Bithumb |
 | [I2017Q3-17](2017/2017-Q3.md#i2017q3-17-deloitte-global-email-system-breach) | 2017-09-25 | Deloitte |
@@ -258,7 +258,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-04](2016/2016-Q1.md#i2016q1-04-university-of-central-florida-data-breach) | 2016-02-04 | University of Central Florida (UCF) |
-| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
+| [I2017Q1-16](2017/2017-Q1.md#i2017q1-16-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
 | [I2017Q3-10](2017/2017-Q3.md#i2017q3-10-cex-webuy-customer-database-breach) | 2017-08-30 | CeX Ltd (Complete Entertainment Exchange) |
 | [I2017Q3-11](2017/2017-Q3.md#i2017q3-11-instagram-api-bug-exploited-for-celebrity-contact-data-doxagram) | 2017-08-30 | Instagram (Facebook) |
 | [I2018Q3-08](2018/2018-Q3.md#i2018q3-08-cosmos-bank-atm-switch-and-swift-cyberheist) | 2018-08-14 | Cosmos Cooperative Bank |
@@ -316,7 +316,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q4-16](2016/2016-Q4.md#i2016q4-16-yahoo-billion-account-breach-disclosure) | 2016-12-14 | Yahoo |
-| [I2017Q1-09](2017/2017-Q1.md#i2017q1-09-yahoo-forged-cookie-account-takeovers) | 2017-02 | Yahoo |
+| [I2017Q1-07](2017/2017-Q1.md#i2017q1-07-yahoo-forged-cookie-account-takeovers) | 2017-02 | Yahoo |
 | [I2018Q1-09](2018/2018-Q1.md#i2018q1-09-grammarly-browser-extension-authentication-token-exposure) | 2018-02-02 | Grammarly, Inc. |
 | [I2018Q3-20](2018/2018-Q3.md#i2018q3-20-facebook-view-as-access-token-breach) | 2018-09-28 | Facebook, Inc. |
 | [I2019Q1-03](2019/2019-Q1.md#i2019q1-03-fortnite-account-takeover-vulnerability) | 2019-01-16 | Epic Games |
@@ -359,7 +359,7 @@ preference, and this file is where that shows.
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-mirai-botnet-ddos-attack-on-dyn) | 2016-10-21 | Dyn (managed DNS provider; outage cascaded to Twitter, Netflix, Reddit, Spotify, PayPal, Amazon, and others) |
 | [I2016Q4-05](2016/2016-Q4.md#i2016q4-05-tesco-bank-cyber-heist) | 2016-11 | Tesco Personal Finance plc (Tesco Bank) |
 | [I2016Q4-12](2016/2016-Q4.md#i2016q4-12-uk-national-lottery-camelot-account-breach) | 2016-11-30 | Camelot UK Lotteries Limited |
-| [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
+| [I2017Q1-14](2017/2017-Q1.md#i2017q1-14-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
 | [I2017Q2-02](2017/2017-Q2.md#i2017q2-02-sabre-synxis-hotel-reservation-system-breach) | 2017-05-02 | Sabre Corporation (Hospitality Solutions / SynXis Central Reservations) |
 | [I2017Q3-08](2017/2017-Q3.md#i2017q3-08-taringa-user-database-leaked-with-weak-password-hashes) | 2017-08 | Taringa! |
 | [I2017Q3-09](2017/2017-Q3.md#i2017q3-09-onliner-spambot-server-exposes-711-million-records-and-live-smtp-credentials) | 2017-08-29 | Onliner spambot operation (unnamed mail-server operators worldwide) |
@@ -566,7 +566,7 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2017Q1-05](2017/2017-Q1.md#i2017q1-05-polish-banks-watering-hole-attack-via-compromised-knf-website) | 2017-02-03 | Watering-hole campaign via compromised KNF website (20+ Polish banks; Mexican and Uruguayan banking-regulator sites also used) |
+| [I2017Q1-11](2017/2017-Q1.md#i2017q1-11-polish-banks-watering-hole-attack-via-compromised-knf-website) | 2017-02-03 | Watering-hole campaign via compromised KNF website (20+ Polish banks; Mexican and Uruguayan banking-regulator sites also used) |
 | [I2017Q4-14](2017/2017-Q4.md#i2017q4-14-nicehash-hot-wallet-theft) | 2017-12-06 | NiceHash d.o.o. |
 | [I2017Q4-15](2017/2017-Q4.md#i2017q4-15-moneytaker-bank-network-intrusion-and-fraud-campaign) | 2017-12-11 | Financial institutions in the United States, Russia, and United Kingdom (MoneyTaker campaign) |
 | [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir |
@@ -609,7 +609,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-01` — Nothing is publicly reachable unless it was decided to be; enumerate regularly
 
-**74 incidents.**
+**75 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -625,6 +625,7 @@ preference, and this file is where that shows.
 | [I2016Q4-10](2016/2016-Q4.md#i2016q4-10-san-francisco-muni-sfmta-ransomware-attack) | 2016-11-26 | San Francisco Municipal Transportation Agency (SFMTA / Muni) |
 | [I2016Q4-11](2016/2016-Q4.md#i2016q4-11-deutsche-telekom-router-outage-miraitr-069) | 2016-11-27 | Deutsche Telekom |
 | [I2016Q4-13](2016/2016-Q4.md#i2016q4-13-blackheart-records-exposed-backup-server) | 2016-12 | Blackheart Records (independent record label) |
+| [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-mass-ransom-wave-against-exposed-elasticsearch-clusters) | 2017-01-18 | Indiscriminate ransom campaign against exposed Elasticsearch clusters (thousands of independently run installations worldwide, concentrated in the United States with further exposure identified in Europe, China, and Singapore) |
 | [I2017Q2-04](2017/2017-Q2.md#i2017q2-04-bronx-lebanon-hospital-center-exposed-patient-backup-server) | 2017-05-09 | Bronx-Lebanon Hospital Center (backup managed by vendor iHealth Innovations) |
 | [I2017Q2-05](2017/2017-Q2.md#i2017q2-05-wannacry-ransomware-worm) | 2017-05-12 | WannaCry ransomware campaign (NHS England and Scotland; Telefónica; FedEx; Renault-Nissan; Deutsche Bahn; and organizations in 150+ countries) |
 | [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-wannacry-infections-at-iberdrola-and-gas-natural) | 2017-05-12 | Iberdrola, S.A. |
@@ -721,7 +722,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**109 incidents.**
+**111 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -739,7 +740,9 @@ preference, and this file is where that shows.
 | [I2016Q4-10](2016/2016-Q4.md#i2016q4-10-san-francisco-muni-sfmta-ransomware-attack) | 2016-11-26 | San Francisco Municipal Transportation Agency (SFMTA / Muni) |
 | [I2016Q4-14](2016/2016-Q4.md#i2016q4-14-ukraine-power-grid-attack-kyiv) | 2016-12 | Ukrenergo (Ukraine's national electricity transmission system operator) |
 | [I2016Q4-15](2016/2016-Q4.md#i2016q4-15-south-korea-defense-ministry-military-intranet-hack) | 2016-12-06 | Republic of Korea Ministry of National Defense (Defense Integrated Data Center / Cyber Command) |
-| [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
+| [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-ukrenergo-kyiv-power-grid-cyberattack-confirmation) | 2017-01-18 | Ukrenergo (Ukraine's national power transmission operator) |
+| [I2017Q1-09](2017/2017-Q1.md#i2017q1-09-arbys-restaurant-chain-point-of-sale-malware-breach) | 2017-02 | Arby's Restaurant Group (corporate-owned locations) |
+| [I2017Q1-12](2017/2017-Q1.md#i2017q1-12-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
 | [I2017Q2-14](2017/2017-Q2.md#i2017q2-14-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
 | [I2017Q2-15](2017/2017-Q2.md#i2017q2-15-notpetya-infects-rosneft-servers) | 2017-06-27 | Rosneft |
@@ -857,11 +860,12 @@ preference, and this file is where that shows.
 
 ## `CLOUD-08` — Admin interfaces are not on the public internet
 
-**19 incidents.**
+**20 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-20](2016/2016-Q1.md#i2016q1-20-medstar-health-ransomware-attack) | 2016-03-28 | MedStar Health |
+| [I2017Q1-05](2017/2017-Q1.md#i2017q1-05-hadoop-and-couchdb-ransom-and-vandalism-wave) | 2017-01-18 | Vandalism and ransom campaign against exposed Hadoop HDFS and CouchDB installations worldwide (the same wave that hit MongoDB and Elasticsearch instances, including CloudPets and the Elasticsearch campaign recorded separately in this file) |
 | [I2018Q1-04](2018/2018-Q1.md#i2018q1-04-hancock-health-samsam-ransomware-attack) | 2018-01-16 | Hancock Health (Hancock Regional Hospital, Greenfield, Indiana) |
 | [I2018Q1-15](2018/2018-Q1.md#i2018q1-15-slingshot-router-based-cyber-espionage-campaign) | 2018-03-09 | Slingshot campaign (multiple victims, primarily Kenya and Yemen) |
 | [I2018Q2-08](2018/2018-Q2.md#i2018q2-08-vpnfilter-router-and-nas-botnet) | 2018-05-23 | VPNFilter botnet campaign |
@@ -1011,7 +1015,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q3-07](2016/2016-Q3.md#i2016q3-07-oracle-micros-point-of-sale-portal-breach) | 2016-08-08 | Oracle Corporation (MICROS division) |
-| [I2017Q1-09](2017/2017-Q1.md#i2017q1-09-yahoo-forged-cookie-account-takeovers) | 2017-02 | Yahoo |
+| [I2017Q1-07](2017/2017-Q1.md#i2017q1-07-yahoo-forged-cookie-account-takeovers) | 2017-02 | Yahoo |
 | [I2017Q4-11](2017/2017-Q4.md#i2017q4-11-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. |
 | [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
 | [I2022Q1-07](2022/2022-Q1.md#i2022q1-07-nvidia-lapsus-breach) | 2022-02-25 | Nvidia Corporation |
@@ -1107,7 +1111,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
 | [I2016Q2-15](2016/2016-Q2.md#i2016q2-15-vkcom-2012-breach-resold-at-scale) | 2016-06-06 | VK (VKontakte) |
-| [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
+| [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
 | [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
 | [I2017Q3-09](2017/2017-Q3.md#i2017q3-09-onliner-spambot-server-exposes-711-million-records-and-live-smtp-credentials) | 2017-08-29 | Onliner spambot operation (unnamed mail-server operators worldwide) |
 | [I2018Q1-03](2018/2018-Q1.md#i2018q1-03-aadhaar-enrolment-portal-access-sold-via-whatsapp) | 2018-01-03 | Unique Identification Authority of India (UIDAI) |
@@ -1201,7 +1205,7 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
+| [I2017Q1-16](2017/2017-Q1.md#i2017q1-16-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
 | [I2018Q4-04](2018/2018-Q4.md#i2018q4-04-employees-retirement-system-of-texas-member-search-exposure) | 2018-10-23 | Employees Retirement System of Texas (ERS) |
 | [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
 | [I2020Q2-14](2020/2020-Q2.md#i2020q2-14-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
@@ -1220,7 +1224,7 @@ preference, and this file is where that shows.
 | [I2016Q3-03](2016/2016-Q3.md#i2016q3-03-vietnam-airlines-website-and-airport-display-system-hack) | 2016-07-29 | Vietnam Airlines |
 | [I2016Q3-17](2016/2016-Q3.md#i2016q3-17-emr4all-exposed-medical-records-repository) | 2016-09 | EMR4All |
 | [I2016Q4-04](2016/2016-Q4.md#i2016q4-04-australian-red-cross-blood-service-data-breach) | 2016-10-28 | Australian Red Cross Blood Service |
-| [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
+| [I2017Q1-14](2017/2017-Q1.md#i2017q1-14-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
 | [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
 | [I2017Q3-03](2017/2017-Q3.md#i2017q3-03-verizon-customer-records-exposed-via-nice-systems-s3-bucket) | 2017-07-12 | Verizon Communications (via vendor NICE Systems) |
 | [I2017Q4-16](2017/2017-Q4.md#i2017q4-16-alteryx-hosted-experian-and-census-bureau-consumer-database-exposed) | 2017-12-19 | Alteryx, Inc. |
@@ -1241,7 +1245,7 @@ preference, and this file is where that shows.
 
 ## `DATA-04` — Databases and search indexes are not reachable from the public internet
 
-**35 incidents.**
+**37 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1254,7 +1258,9 @@ preference, and this file is where that shows.
 | [I2016Q3-18](2016/2016-Q3.md#i2016q3-18-awards-screenerscom-exposed-studio-credential-database) | 2016-09 | Vision Media Management (Awards-Screeners.com) |
 | [I2016Q4-01](2016/2016-Q4.md#i2016q4-01-sheet-metal-workers-union-exposed-database) | 2016-10 | Sheet Metal Workers Union (a Northern California local; specific local number not identified in reporting) |
 | [I2016Q4-13](2016/2016-Q4.md#i2016q4-13-blackheart-records-exposed-backup-server) | 2016-12 | Blackheart Records (independent record label) |
-| [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
+| [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-mass-ransom-wave-against-exposed-elasticsearch-clusters) | 2017-01-18 | Indiscriminate ransom campaign against exposed Elasticsearch clusters (thousands of independently run installations worldwide, concentrated in the United States with further exposure identified in Europe, China, and Singapore) |
+| [I2017Q1-05](2017/2017-Q1.md#i2017q1-05-hadoop-and-couchdb-ransom-and-vandalism-wave) | 2017-01-18 | Vandalism and ransom campaign against exposed Hadoop HDFS and CouchDB installations worldwide (the same wave that hit MongoDB and Elasticsearch instances, including CloudPets and the Elasticsearch campaign recorded separately in this file) |
+| [I2017Q1-14](2017/2017-Q1.md#i2017q1-14-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
 | [I2017Q2-04](2017/2017-Q2.md#i2017q2-04-bronx-lebanon-hospital-center-exposed-patient-backup-server) | 2017-05-09 | Bronx-Lebanon Hospital Center (backup managed by vendor iHealth Innovations) |
 | [I2017Q3-02](2017/2017-Q3.md#i2017q3-02-reliance-jio-subscriber-data-exposed-via-magicapkcom-lookup-tool) | 2017-07-09 | Reliance Jio Infocomm |
 | [I2017Q4-18](2017/2017-Q4.md#i2017q4-18-nissan-canada-finance-customer-data-breach) | 2017-12-21 | Nissan Canada Finance / INFINITI Financial Services Canada |
@@ -1406,7 +1412,7 @@ preference, and this file is where that shows.
 
 ## `DATA-09` — Data minimization and enforced retention limits
 
-**70 incidents.**
+**71 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1419,6 +1425,7 @@ preference, and this file is where that shows.
 | [I2016Q4-07](2016/2016-Q4.md#i2016q4-07-friendfinder-networks-breach-adultfriendfinder) | 2016-11-13 | FriendFinder Networks |
 | [I2016Q4-13](2016/2016-Q4.md#i2016q4-13-blackheart-records-exposed-backup-server) | 2016-12 | Blackheart Records (independent record label) |
 | [I2017Q1-02](2017/2017-Q1.md#i2017q1-02-cellebrite-forensics-vendor-data-theft) | 2017-01-12 | Cellebrite |
+| [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-uidai-police-complaint-over-aadhaar-database-misuse) | 2017-02 | Unique Identification Authority of India (Aadhaar database); implicated partners Axis Bank, Suvidhaa Infoserve, and eMudhra |
 | [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
 | [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
 | [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
@@ -1493,11 +1500,12 @@ preference, and this file is where that shows.
 
 ## `DATA-11` — Bulk export is a privileged, logged, alerting action
 
-**43 incidents.**
+**44 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q3-02](2016/2016-Q3.md#i2016q3-02-interpark-customer-data-breach-and-extortion-attempt) | 2016-07-28 | Interpark |
+| [I2017Q1-15](2017/2017-Q1.md#i2017q1-15-vault-7-wikileaks-publication-of-cia-hacking-tools) | 2017-03-07 | U.S. Central Intelligence Agency |
 | [I2017Q3-04](2017/2017-Q3.md#i2017q3-04-bupa-global-customer-data-stolen-and-offered-for-sale-by-an-employee) | 2017-07-14 | Bupa Global (Bupa Insurance Services) |
 | [I2017Q3-07](2017/2017-Q3.md#i2017q3-07-hbo-network-intrusion-and-game-of-thrones-extortion) | 2017-07-31 | Home Box Office (HBO) |
 | [I2017Q4-09](2017/2017-Q4.md#i2017q4-09-appleby-offshore-law-firm-hack-paradise-papers) | 2017-11-05 | Appleby (law firm) |
@@ -1746,7 +1754,7 @@ preference, and this file is where that shows.
 | [I2016Q2-14](2016/2016-Q2.md#i2016q2-14-banco-del-austro-swift-fraud) | 2016-05-20 | Banco del Austro |
 | [I2016Q3-05](2016/2016-Q3.md#i2016q3-05-bitfinex-cryptocurrency-exchange-hack) | 2016-08-02 | Bitfinex (iFinex Inc.) |
 | [I2016Q3-12](2016/2016-Q3.md#i2016q3-12-leoni-ag-business-email-compromise-wire-fraud) | 2016-08-16 | Leoni AG |
-| [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
+| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
 | [I2017Q3-12](2017/2017-Q3.md#i2017q3-12-macewan-university-vendor-payment-redirection-fraud) | 2017-08-31 | MacEwan University |
 | [I2017Q4-03](2017/2017-Q4.md#i2017q4-03-far-eastern-international-bank-swift-cyberheist) | 2017-10-11 | Far Eastern International Bank |
 | [I2017Q4-11](2017/2017-Q4.md#i2017q4-11-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. |
@@ -1809,7 +1817,7 @@ preference, and this file is where that shows.
 | [I2016Q3-02](2016/2016-Q3.md#i2016q3-02-interpark-customer-data-breach-and-extortion-attempt) | 2016-07-28 | Interpark |
 | [I2016Q4-06](2016/2016-Q4.md#i2016q4-06-casino-rama-resort-data-breach) | 2016-11-10 | Casino Rama Resort (Ontario, Canada; regulated by the Alcohol and Gaming Commission of Ontario and Ontario Lottery and Gaming Corporation) |
 | [I2016Q4-17](2016/2016-Q4.md#i2016q4-17-dnc-and-podesta-spear-phishing-grizzly-steppe-disclosure) | 2016-12-29 | Democratic National Committee and Clinton campaign (John Podesta) |
-| [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
+| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
 | [I2017Q2-03](2017/2017-Q2.md#i2017q2-03-google-docs-oauth-phishing-worm) | 2017-05-03 | Gmail and G Suite users (mass OAuth phishing campaign) |
 | [I2017Q4-19](2017/2017-Q4.md#i2017q4-19-japan-airlines-business-email-compromise) | 2017-12-21 | Japan Airlines Co., Ltd. |
 | [I2018Q1-18](2018/2018-Q1.md#i2018q1-18-mabna-institute-university-credential-theft-campaign-doj-indictment) | 2018-03-23 | Mabna Institute campaign (144+ universities across the US and 21 other countries) |
@@ -1912,12 +1920,13 @@ preference, and this file is where that shows.
 
 ## `HUMAN-09` — Insider risk is monitored by behaviour, not by trust
 
-**12 incidents.**
+**13 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q3-09](2016/2016-Q3.md#i2016q3-09-sage-group-insider-data-breach) | 2016-08-11 | Sage Group |
 | [I2016Q3-11](2016/2016-Q3.md#i2016q3-11-shadow-brokers-leak-of-nsa-linked-exploit-tools) | 2016-08-13 | National Security Agency (Equation Group toolset) |
+| [I2017Q1-15](2017/2017-Q1.md#i2017q1-15-vault-7-wikileaks-publication-of-cia-hacking-tools) | 2017-03-07 | U.S. Central Intelligence Agency |
 | [I2017Q3-04](2017/2017-Q3.md#i2017q3-04-bupa-global-customer-data-stolen-and-offered-for-sale-by-an-employee) | 2017-07-14 | Bupa Global (Bupa Insurance Services) |
 | [I2018Q2-04](2018/2018-Q2.md#i2018q2-04-suntrust-bank-insider-data-theft-attempt) | 2018-04-20 | SunTrust Banks |
 | [I2019Q1-04](2019/2019-Q1.md#i2019q1-04-singapore-hiv-registry-data-leak) | 2019-01-28 | Singapore Ministry of Health (National Public Health Unit HIV Registry) |
@@ -1938,7 +1947,7 @@ preference, and this file is where that shows.
 | [I2016Q1-09](2016/2016-Q1.md#i2016q1-09-snapchat-payroll-data-phishing) | 2016-02-29 | Snap Inc. (Snapchat) |
 | [I2016Q1-14](2016/2016-Q1.md#i2016q1-14-seagate-technology-w-2-phishing) | 2016-03-07 | Seagate Technology |
 | [I2016Q3-12](2016/2016-Q3.md#i2016q3-12-leoni-ag-business-email-compromise-wire-fraud) | 2016-08-16 | Leoni AG |
-| [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
+| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
 | [I2017Q4-19](2017/2017-Q4.md#i2017q4-19-japan-airlines-business-email-compromise) | 2017-12-21 | Japan Airlines Co., Ltd. |
 | [I2018Q3-01](2018/2018-Q3.md#i2018q3-01-unitypoint-health-business-email-compromise) | 2018-07 | UnityPoint Health |
 | [I2019Q2-05](2019/2019-Q2.md#i2019q2-05-inmediata-health-group-exposure-and-breach-notification-mailing-error) | 2019-04-22 | Inmediata Health Group |
@@ -1971,7 +1980,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2016Q1-19](2016/2016-Q1.md#i2016q1-19-philippines-comelec-voter-database-breach) | 2016-03-27 | Commission on Elections (COMELEC), Philippines |
 | [I2016Q3-15](2016/2016-Q3.md#i2016q3-15-2016-state-election-board-intrusions-illinois-arizona) | 2016-08-29 | Illinois State Board of Elections |
-| [I2017Q1-07](2017/2017-Q1.md#i2017q1-07-cloudbleed-cloudflare-reverse-proxy-memory-disclosure) | 2017-02-23 | Cloudflare (and its customer websites) |
+| [I2017Q1-13](2017/2017-Q1.md#i2017q1-13-cloudbleed-cloudflare-reverse-proxy-memory-disclosure) | 2017-02-23 | Cloudflare (and its customer websites) |
 | [I2017Q3-16](2017/2017-Q3.md#i2017q3-16-sec-edgar-filing-system-hack-used-for-insider-trading) | 2017-09-20 | U.S. Securities and Exchange Commission |
 
 ## `INPUT-03` — Output encoding and a content security policy; no raw HTML from user data
@@ -2069,8 +2078,8 @@ preference, and this file is where that shows.
 | [I2016Q4-10](2016/2016-Q4.md#i2016q4-10-san-francisco-muni-sfmta-ransomware-attack) | 2016-11-26 | San Francisco Municipal Transportation Agency (SFMTA / Muni) |
 | [I2016Q4-14](2016/2016-Q4.md#i2016q4-14-ukraine-power-grid-attack-kyiv) | 2016-12 | Ukrenergo (Ukraine's national electricity transmission system operator) |
 | [I2016Q4-16](2016/2016-Q4.md#i2016q4-16-yahoo-billion-account-breach-disclosure) | 2016-12-14 | Yahoo |
-| [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
-| [I2017Q1-05](2017/2017-Q1.md#i2017q1-05-polish-banks-watering-hole-attack-via-compromised-knf-website) | 2017-02-03 | Watering-hole campaign via compromised KNF website (20+ Polish banks; Mexican and Uruguayan banking-regulator sites also used) |
+| [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
+| [I2017Q1-11](2017/2017-Q1.md#i2017q1-11-polish-banks-watering-hole-attack-via-compromised-knf-website) | 2017-02-03 | Watering-hole campaign via compromised KNF website (20+ Polish banks; Mexican and Uruguayan banking-regulator sites also used) |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
 | [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
 | [I2017Q3-07](2017/2017-Q3.md#i2017q3-07-hbo-network-intrusion-and-game-of-thrones-extortion) | 2017-07-31 | Home Box Office (HBO) |
@@ -2153,7 +2162,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-02` — Alerts fire on abnormal read or export volume per account
 
-**97 incidents.**
+**98 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2174,8 +2183,9 @@ preference, and this file is where that shows.
 | [I2016Q4-02](2016/2016-Q4.md#i2016q4-02-hitachi-payment-services-breach-indian-bank-debit-cards) | 2016-10-20 | Hitachi Payment Services (ATM/POS payment-switch operator for State Bank of India, HDFC Bank, ICICI Bank, Yes Bank, Axis Bank, and other Indian banks) |
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-mirai-botnet-ddos-attack-on-dyn) | 2016-10-21 | Dyn (managed DNS provider; outage cascaded to Twitter, Netflix, Reddit, Spotify, PayPal, Amazon, and others) |
 | [I2016Q4-11](2016/2016-Q4.md#i2016q4-11-deutsche-telekom-router-outage-miraitr-069) | 2016-11-27 | Deutsche Telekom |
-| [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
-| [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
+| [I2017Q1-09](2017/2017-Q1.md#i2017q1-09-arbys-restaurant-chain-point-of-sale-malware-breach) | 2017-02 | Arby's Restaurant Group (corporate-owned locations) |
+| [I2017Q1-12](2017/2017-Q1.md#i2017q1-12-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
+| [I2017Q1-16](2017/2017-Q1.md#i2017q1-16-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
 | [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
 | [I2017Q3-01](2017/2017-Q3.md#i2017q3-01-bithumb-employee-pc-compromise-and-customer-data-leak) | 2017-07-05 | Bithumb |
@@ -2257,11 +2267,12 @@ preference, and this file is where that shows.
 
 ## `OBSV-03` — Detection is itself monitored; a broken sensor is an incident
 
-**33 incidents.**
+**34 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q3-08](2016/2016-Q3.md#i2016q3-08-2016-australian-census-ecensus-ddos-outage) | 2016-08-09 | Australian Bureau of Statistics |
+| [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-ukrenergo-kyiv-power-grid-cyberattack-confirmation) | 2017-01-18 | Ukrenergo (Ukraine's national power transmission operator) |
 | [I2017Q3-18](2017/2017-Q3.md#i2017q3-18-whole-foods-market-taproom-and-restaurant-payment-card-breach) | 2017-09-28 | Whole Foods Market (Amazon) |
 | [I2017Q4-02](2017/2017-Q4.md#i2017q4-02-disqus-2012-user-database-breach-disclosed) | 2017-10-06 | Disqus, Inc. |
 | [I2017Q4-05](2017/2017-Q4.md#i2017q4-05-south-african-master-deeds-consumer-data-exposure) | 2017-10-18 | Jigsaw Holdings (data sourced via Dracore Data Sciences) |
@@ -2566,10 +2577,11 @@ preference, and this file is where that shows.
 
 ## `VENDOR-02` — Granted OAuth tokens are scoped, expiring, and reviewed; unused ones revoked
 
-**9 incidents.**
+**10 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-uidai-police-complaint-over-aadhaar-database-misuse) | 2017-02 | Unique Identification Authority of India (Aadhaar database); implicated partners Axis Bank, Suvidhaa Infoserve, and eMudhra |
 | [I2017Q2-03](2017/2017-Q2.md#i2017q2-03-google-docs-oauth-phishing-worm) | 2017-05-03 | Gmail and G Suite users (mass OAuth phishing campaign) |
 | [I2018Q1-16](2018/2018-Q1.md#i2018q1-16-facebook-cambridge-analytica-data-scandal) | 2018-03-17 | Facebook, Inc. |
 | [I2022Q2-03](2022/2022-Q2.md#i2022q2-03-heroku-and-travis-ci-oauth-token-theft-github-npm) | 2022-04-15 | Heroku and Travis CI (compromised OAuth integrators); GitHub customers including npm |
