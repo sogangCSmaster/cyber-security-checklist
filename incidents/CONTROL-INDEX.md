@@ -135,12 +135,13 @@ preference, and this file is where that shows.
 
 ## `AUTH-01` — Phishing-resistant MFA on every human account with production reach
 
-**103 incidents.**
+**104 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
-| [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-gotomypc-credential-stuffing-account-takeovers) | 2016-06-20 | GoToMyPC (Citrix) |
+| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
+| [I2016Q2-14](2016/2016-Q2.md#i2016q2-14-banco-del-austro-swift-fraud) | 2016-05-20 | Banco del Austro |
+| [I2016Q2-18](2016/2016-Q2.md#i2016q2-18-gotomypc-credential-stuffing-account-takeovers) | 2016-06-20 | GoToMyPC (Citrix) |
 | [I2016Q3-01](2016/2016-Q3.md#i2016q3-01-wikileaks-publication-of-turkish-akp-party-emails) | 2016-07-19 | Justice and Development Party (AKP) |
 | [I2016Q3-16](2016/2016-Q3.md#i2016q3-16-dropbox-2012-breach-disclosure) | 2016-08-30 | Dropbox |
 | [I2016Q4-12](2016/2016-Q4.md#i2016q4-12-uk-national-lottery-camelot-account-breach) | 2016-11-30 | Camelot UK Lotteries Limited |
@@ -331,13 +332,14 @@ preference, and this file is where that shows.
 
 ## `AUTH-06` — Rate limiting, lockout, and breached-password checks on all auth surfaces
 
-**35 incidents.**
+**36 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-01](2016/2016-Q1.md#i2016q1-01-irs-e-file-pin-automated-attack) | 2016-02-09 | Internal Revenue Service (IRS) |
-| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
-| [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-gotomypc-credential-stuffing-account-takeovers) | 2016-06-20 | GoToMyPC (Citrix) |
+| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
+| [I2016Q2-15](2016/2016-Q2.md#i2016q2-15-vkcom-2012-breach-resold-at-scale) | 2016-06-06 | VK (VKontakte) |
+| [I2016Q2-18](2016/2016-Q2.md#i2016q2-18-gotomypc-credential-stuffing-account-takeovers) | 2016-06-20 | GoToMyPC (Citrix) |
 | [I2016Q3-14](2016/2016-Q3.md#i2016q3-14-opera-sync-server-breach) | 2016-08-26 | Opera Software |
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-mirai-botnet-ddos-attack-on-dyn) | 2016-10-21 | Dyn (managed DNS provider; outage cascaded to Twitter, Netflix, Reddit, Spotify, PayPal, Amazon, and others) |
 | [I2016Q4-05](2016/2016-Q4.md#i2016q4-05-tesco-bank-cyber-heist) | 2016-11 | Tesco Personal Finance plc (Tesco Bank) |
@@ -582,8 +584,8 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-11](2016/2016-Q1.md#i2016q1-11-medstar-health-ransomware-attack) | 2016-03-28 | MedStar Health |
-| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
-| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
+| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
+| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
 | [I2016Q3-04](2016/2016-Q3.md#i2016q3-04-kingo-energy-exposed-customer-id-document-database) | 2016-08 | Kingo Energy |
 | [I2016Q3-10](2016/2016-Q3.md#i2016q3-10-silverland-hotel-exposed-booking-database) | 2016-08-12 | Silverland Hotel |
 | [I2016Q3-17](2016/2016-Q3.md#i2016q3-17-emr4all-exposed-medical-records-repository) | 2016-09 | EMR4All |
@@ -684,13 +686,15 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**95 incidents.**
+**97 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-06](2016/2016-Q1.md#i2016q1-06-bangladesh-bank-swift-heist) | 2016-03-08 | Bangladesh Bank |
 | [I2016Q1-11](2016/2016-Q1.md#i2016q1-11-medstar-health-ransomware-attack) | 2016-03-28 | MedStar Health |
 | [I2016Q2-01](2016/2016-Q2.md#i2016q2-01-panama-papers-leak-mossack-fonseca) | 2016-04-03 | Mossack Fonseca |
+| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-goldcorp-data-leak) | 2016-04-28 | Goldcorp |
+| [I2016Q2-17](2016/2016-Q2.md#i2016q2-17-jtb-corporation-customer-data-breach) | 2016-06-15 | JTB Corporation |
 | [I2016Q3-03](2016/2016-Q3.md#i2016q3-03-vietnam-airlines-website-and-airport-display-system-hack) | 2016-07-29 | Vietnam Airlines |
 | [I2016Q3-06](2016/2016-Q3.md#i2016q3-06-banner-health-data-breach) | 2016-08-03 | Banner Health |
 | [I2016Q3-07](2016/2016-Q3.md#i2016q3-07-oracle-micros-point-of-sale-portal-breach) | 2016-08-08 | Oracle Corporation (MICROS division) |
@@ -795,10 +799,11 @@ preference, and this file is where that shows.
 
 ## `CLOUD-07` — Infrastructure is declared as code and drift is detected
 
-**3 incidents.**
+**4 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-11](2016/2016-Q2.md#i2016q2-11-gatecoin-hot-wallet-theft) | 2016-05-17 | Gatecoin |
 | [I2017Q4-04](2017/2017-Q4.md#i2017q4-04-forever-21-point-of-sale-encryption-failure) | 2017-11-14 | Forever 21, Inc. |
 | [I2020Q1-08](2020/2020-Q1.md#i2020q1-08-virgin-media-marketing-database-exposure) | 2020-03 | Virgin Media |
 | [I2021Q4-01](2021/2021-Q4.md#i2021q4-01-twitch-source-code-and-creator-payout-leak) | 2021-10-06 | Twitch (Amazon) |
@@ -999,7 +1004,7 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
+| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
 | [I2016Q3-05](2016/2016-Q3.md#i2016q3-05-bitfinex-cryptocurrency-exchange-hack) | 2016-08-02 | Bitfinex (iFinex Inc.) |
 | [I2016Q4-09](2016/2016-Q4.md#i2016q4-09-three-uk-customer-database-breach) | 2016-11-18 | Three UK (Hutchison 3G UK) |
 | [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
@@ -1039,11 +1044,12 @@ preference, and this file is where that shows.
 
 ## `CRED-07` — Credentials expire; no indefinite lifetimes
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
+| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
+| [I2016Q2-15](2016/2016-Q2.md#i2016q2-15-vkcom-2012-breach-resold-at-scale) | 2016-06-06 | VK (VKontakte) |
 | [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
 | [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
 | [I2017Q3-09](2017/2017-Q3.md#i2017q3-09-onliner-spambot-server-exposes-711-million-records-and-live-smtp-credentials) | 2017-08-29 | Onliner spambot operation (unnamed mail-server operators worldwide) |
@@ -1096,10 +1102,11 @@ preference, and this file is where that shows.
 
 ## `CRED-10` — No default or shared credential in anything you ship or deploy; a unique one is forced at first use
 
-**5 incidents.**
+**6 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-turkish-citizens-database-leak) | 2016-04-05 | Turkey population registry (MERNIS) |
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-mirai-botnet-ddos-attack-on-dyn) | 2016-10-21 | Dyn (managed DNS provider; outage cascaded to Twitter, Netflix, Reddit, Spotify, PayPal, Amazon, and others) |
 | [I2016Q4-11](2016/2016-Q4.md#i2016q4-11-deutsche-telekom-router-outage-miraitr-069) | 2016-11-27 | Deutsche Telekom |
 | [I2018Q2-08](2018/2018-Q2.md#i2018q2-08-vpnfilter-router-and-nas-botnet) | 2018-05-23 | VPNFilter botnet campaign |
@@ -1174,13 +1181,14 @@ preference, and this file is where that shows.
 
 ## `DATA-04` — Databases and search indexes are not reachable from the public internet
 
-**32 incidents.**
+**33 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-08](2016/2016-Q1.md#i2016q1-08-kinoptic-abandoned-app-database-exposure) | 2016-03 | Kinoptic (defunct iOS app) |
 | [I2016Q1-04](2016/2016-Q1.md#i2016q1-04-21st-century-oncology-patient-data-breach) | 2016-03-04 | 21st Century Oncology |
-| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
+| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
+| [I2016Q2-20](2016/2016-Q2.md#i2016q2-20-thomson-reuters-world-check-database-exposure) | 2016-06-29 | Thomson Reuters (World-Check, exposed via a third-party licensee) |
 | [I2016Q3-04](2016/2016-Q3.md#i2016q3-04-kingo-energy-exposed-customer-id-document-database) | 2016-08 | Kingo Energy |
 | [I2016Q3-10](2016/2016-Q3.md#i2016q3-10-silverland-hotel-exposed-booking-database) | 2016-08-12 | Silverland Hotel |
 | [I2016Q3-18](2016/2016-Q3.md#i2016q3-18-awards-screenerscom-exposed-studio-credential-database) | 2016-09 | Vision Media Management (Awards-Screeners.com) |
@@ -1222,11 +1230,14 @@ preference, and this file is where that shows.
 
 ## `DATA-06` — Passwords hashed with a modern memory-hard algorithm
 
-**19 incidents.**
+**22 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
+| [I2016Q2-06](2016/2016-Q2.md#i2016q2-06-lifeboat-minecraft-network-breach-disclosure) | 2016-04-25 | Lifeboat (Minecraft server network) |
+| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-qatar-national-bank-data-leak) | 2016-04-26 | Qatar National Bank (QNB) |
+| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
+| [I2016Q2-15](2016/2016-Q2.md#i2016q2-15-vkcom-2012-breach-resold-at-scale) | 2016-06-06 | VK (VKontakte) |
 | [I2016Q3-16](2016/2016-Q3.md#i2016q3-16-dropbox-2012-breach-disclosure) | 2016-08-30 | Dropbox |
 | [I2016Q4-07](2016/2016-Q4.md#i2016q4-07-friendfinder-networks-breach-adultfriendfinder) | 2016-11-13 | FriendFinder Networks |
 | [I2016Q4-16](2016/2016-Q4.md#i2016q4-16-yahoo-billion-account-breach-disclosure) | 2016-12-14 | Yahoo |
@@ -1248,10 +1259,13 @@ preference, and this file is where that shows.
 
 ## `DATA-07` — Sensitive fields encrypted at rest; identity documents deleted after use
 
-**27 incidents.**
+**30 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-turkish-citizens-database-leak) | 2016-04-05 | Turkey population registry (MERNIS) |
+| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-qatar-national-bank-data-leak) | 2016-04-26 | Qatar National Bank (QNB) |
+| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-goldcorp-data-leak) | 2016-04-28 | Goldcorp |
 | [I2016Q3-04](2016/2016-Q3.md#i2016q3-04-kingo-energy-exposed-customer-id-document-database) | 2016-08 | Kingo Energy |
 | [I2016Q3-10](2016/2016-Q3.md#i2016q3-10-silverland-hotel-exposed-booking-database) | 2016-08-12 | Silverland Hotel |
 | [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
@@ -1282,13 +1296,14 @@ preference, and this file is where that shows.
 
 ## `DATA-08` — Backups exist, are restore-tested, and are not writable by production credentials
 
-**30 incidents.**
+**31 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-hollywood-presbyterian-medical-center-ransomware) | 2016-02-12 | Hollywood Presbyterian Medical Center |
-| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
-| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-13](2016/2016-Q2.md#i2016q2-13-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
+| [I2016Q2-16](2016/2016-Q2.md#i2016q2-16-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-19](2016/2016-Q2.md#i2016q2-19-circle-sport-leavine-family-racing-ransomware-attack) | 2016-06-27 | Circle-Sport Leavine Family Racing (CSLFR) |
 | [I2018Q1-05](2018/2018-Q1.md#i2018q1-05-allscripts-samsam-ransomware-outage) | 2018-01-18 | Allscripts Healthcare Solutions |
 | [I2019Q1-03](2019/2019-Q1.md#i2019q1-03-vfemail-catastrophic-data-destruction) | 2019-02-12 | VFEmail (US Web Systems, Inc.) |
 | [I2019Q1-07](2019/2019-Q1.md#i2019q1-07-norsk-hydro-lockergoga-ransomware-attack) | 2019-03-19 | Norsk Hydro |
@@ -1441,10 +1456,11 @@ preference, and this file is where that shows.
 
 ## `DATA-12` — What a single compromise can reach is capped, in value and in volume
 
-**20 incidents.**
+**21 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-11](2016/2016-Q2.md#i2016q2-11-gatecoin-hot-wallet-theft) | 2016-05-17 | Gatecoin |
 | [I2017Q3-01](2017/2017-Q3.md#i2017q3-01-bithumb-employee-pc-compromise-and-customer-data-leak) | 2017-07-05 | Bithumb |
 | [I2017Q4-10](2017/2017-Q4.md#i2017q4-10-youbit-exchange-hack-and-shutdown) | 2017-12-19 | Youbit (Yapian Co.) |
 | [I2018Q2-12](2018/2018-Q2.md#i2018q2-12-coinrail-cryptocurrency-exchange-hack) | 2018-06-10 | Coinrail |
@@ -1606,7 +1622,7 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
+| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
 | [I2016Q4-17](2016/2016-Q4.md#i2016q4-17-dnc-and-podesta-spear-phishing-grizzly-steppe-disclosure) | 2016-12-29 | Democratic National Committee and Clinton campaign (John Podesta) |
 | [I2020Q1-15](2020/2020-Q1.md#i2020q1-15-godaddy-employee-phishing-escrowcom-dns-hijack) | 2020-03-30 | GoDaddy |
 | [I2020Q3-07](2020/2020-Q3.md#i2020q3-07-experian-south-africa-fraudulent-data-disclosure) | 2020-08 | Experian South Africa |
@@ -1627,14 +1643,15 @@ preference, and this file is where that shows.
 
 ## `HUMAN-02` — High-impact actions require a second person
 
-**18 incidents.**
+**19 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-03](2016/2016-Q1.md#i2016q1-03-snapchat-payroll-data-phishing) | 2016-02-29 | Snap Inc. (Snapchat) |
 | [I2016Q1-05](2016/2016-Q1.md#i2016q1-05-seagate-technology-w-2-phishing) | 2016-03-07 | Seagate Technology |
-| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
-| [I2016Q2-06](2016/2016-Q2.md#i2016q2-06-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
+| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
+| [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
+| [I2016Q2-14](2016/2016-Q2.md#i2016q2-14-banco-del-austro-swift-fraud) | 2016-05-20 | Banco del Austro |
 | [I2016Q3-05](2016/2016-Q3.md#i2016q3-05-bitfinex-cryptocurrency-exchange-hack) | 2016-08-02 | Bitfinex (iFinex Inc.) |
 | [I2016Q3-12](2016/2016-Q3.md#i2016q3-12-leoni-ag-business-email-compromise-wire-fraud) | 2016-08-16 | Leoni AG |
 | [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
@@ -1679,16 +1696,17 @@ preference, and this file is where that shows.
 
 ## `HUMAN-05` — Training reflects current technique, including voice and AI-assisted impersonation
 
-**54 incidents.**
+**55 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-hollywood-presbyterian-medical-center-ransomware) | 2016-02-12 | Hollywood Presbyterian Medical Center |
 | [I2016Q1-03](2016/2016-Q1.md#i2016q1-03-snapchat-payroll-data-phishing) | 2016-02-29 | Snap Inc. (Snapchat) |
 | [I2016Q1-05](2016/2016-Q1.md#i2016q1-05-seagate-technology-w-2-phishing) | 2016-03-07 | Seagate Technology |
-| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
-| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
-| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-sprouts-farmers-market-w-2-phishing-breach) | 2016-04-20 | Sprouts Farmers Market |
+| [I2016Q2-13](2016/2016-Q2.md#i2016q2-13-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
+| [I2016Q2-16](2016/2016-Q2.md#i2016q2-16-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-17](2016/2016-Q2.md#i2016q2-17-jtb-corporation-customer-data-breach) | 2016-06-15 | JTB Corporation |
 | [I2016Q3-02](2016/2016-Q3.md#i2016q3-02-interpark-customer-data-breach-and-extortion-attempt) | 2016-07-28 | Interpark |
 | [I2016Q4-06](2016/2016-Q4.md#i2016q4-06-casino-rama-resort-data-breach) | 2016-11-10 | Casino Rama Resort (Ontario, Canada; regulated by the Alcohol and Gaming Commission of Ontario and Ontario Lottery and Gaming Corporation) |
 | [I2016Q4-17](2016/2016-Q4.md#i2016q4-17-dnc-and-podesta-spear-phishing-grizzly-steppe-disclosure) | 2016-12-29 | Democratic National Committee and Clinton campaign (John Podesta) |
@@ -1748,10 +1766,11 @@ preference, and this file is where that shows.
 
 ## `HUMAN-07` — Sensitive operations have a checklist, not just a competent operator
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-19](2016/2016-Q2.md#i2016q2-19-circle-sport-leavine-family-racing-ransomware-attack) | 2016-06-27 | Circle-Sport Leavine Family Racing (CSLFR) |
 | [I2016Q3-12](2016/2016-Q3.md#i2016q3-12-leoni-ag-business-email-compromise-wire-fraud) | 2016-08-16 | Leoni AG |
 | [I2016Q4-15](2016/2016-Q4.md#i2016q4-15-south-korea-defense-ministry-military-intranet-hack) | 2016-12-06 | Republic of Korea Ministry of National Defense (Defense Integrated Data Center / Cyber Command) |
 | [I2017Q3-12](2017/2017-Q3.md#i2017q3-12-macewan-university-vendor-payment-redirection-fraud) | 2017-08-31 | MacEwan University |
@@ -1820,7 +1839,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-10](2016/2016-Q1.md#i2016q1-10-philippines-comelec-voter-database-breach) | 2016-03-27 | Commission on Elections (COMELEC), Philippines |
-| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
+| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
 | [I2016Q3-15](2016/2016-Q3.md#i2016q3-15-2016-state-election-board-intrusions-illinois-arizona) | 2016-08-29 | Illinois State Board of Elections |
 | [I2019Q1-02](2019/2019-Q1.md#i2019q1-02-fortnite-account-takeover-vulnerability) | 2019-01-16 | Epic Games |
 | [I2019Q2-01](2019/2019-Q2.md#i2019q2-01-georgia-tech-web-application-data-breach) | 2019-04 | Georgia Institute of Technology |
@@ -1914,12 +1933,13 @@ preference, and this file is where that shows.
 
 ## `OBSV-01` — Authentication, authorization failures, admin actions, and exports are centrally logged
 
-**82 incidents.**
+**83 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-04](2016/2016-Q1.md#i2016q1-04-21st-century-oncology-patient-data-breach) | 2016-03-04 | 21st Century Oncology |
 | [I2016Q1-06](2016/2016-Q1.md#i2016q1-06-bangladesh-bank-swift-heist) | 2016-03-08 | Bangladesh Bank |
+| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-turkish-citizens-database-leak) | 2016-04-05 | Turkey population registry (MERNIS) |
 | [I2016Q3-01](2016/2016-Q3.md#i2016q3-01-wikileaks-publication-of-turkish-akp-party-emails) | 2016-07-19 | Justice and Development Party (AKP) |
 | [I2016Q3-03](2016/2016-Q3.md#i2016q3-03-vietnam-airlines-website-and-airport-display-system-hack) | 2016-07-29 | Vietnam Airlines |
 | [I2016Q3-06](2016/2016-Q3.md#i2016q3-06-banner-health-data-breach) | 2016-08-03 | Banner Health |
@@ -2003,13 +2023,18 @@ preference, and this file is where that shows.
 
 ## `OBSV-02` — Alerts fire on abnormal read or export volume per account
 
-**81 incidents.**
+**86 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-01](2016/2016-Q1.md#i2016q1-01-irs-e-file-pin-automated-attack) | 2016-02-09 | Internal Revenue Service (IRS) |
 | [I2016Q1-04](2016/2016-Q1.md#i2016q1-04-21st-century-oncology-patient-data-breach) | 2016-03-04 | 21st Century Oncology |
 | [I2016Q1-09](2016/2016-Q1.md#i2016q1-09-verizon-enterprise-customer-data-breach) | 2016-03-24 | Verizon Enterprise Solutions |
+| [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-qatar-national-bank-data-leak) | 2016-04-26 | Qatar National Bank (QNB) |
+| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-goldcorp-data-leak) | 2016-04-28 | Goldcorp |
+| [I2016Q2-11](2016/2016-Q2.md#i2016q2-11-gatecoin-hot-wallet-theft) | 2016-05-17 | Gatecoin |
+| [I2016Q2-14](2016/2016-Q2.md#i2016q2-14-banco-del-austro-swift-fraud) | 2016-05-20 | Banco del Austro |
+| [I2016Q2-17](2016/2016-Q2.md#i2016q2-17-jtb-corporation-customer-data-breach) | 2016-06-15 | JTB Corporation |
 | [I2016Q3-02](2016/2016-Q3.md#i2016q3-02-interpark-customer-data-breach-and-extortion-attempt) | 2016-07-28 | Interpark |
 | [I2016Q3-05](2016/2016-Q3.md#i2016q3-05-bitfinex-cryptocurrency-exchange-hack) | 2016-08-02 | Bitfinex (iFinex Inc.) |
 | [I2016Q3-06](2016/2016-Q3.md#i2016q3-06-banner-health-data-breach) | 2016-08-03 | Banner Health |
@@ -2137,13 +2162,15 @@ preference, and this file is where that shows.
 
 ## `OBSV-05` — A written incident plan naming the decider, the communicator, and the disclosure clock
 
-**74 incidents.**
+**76 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-hollywood-presbyterian-medical-center-ransomware) | 2016-02-12 | Hollywood Presbyterian Medical Center |
-| [I2016Q2-08](2016/2016-Q2.md#i2016q2-08-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
-| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-06](2016/2016-Q2.md#i2016q2-06-lifeboat-minecraft-network-breach-disclosure) | 2016-04-25 | Lifeboat (Minecraft server network) |
+| [I2016Q2-13](2016/2016-Q2.md#i2016q2-13-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital |
+| [I2016Q2-16](2016/2016-Q2.md#i2016q2-16-university-of-calgary-ransomware-attack) | 2016-06-07 | University of Calgary |
+| [I2016Q2-19](2016/2016-Q2.md#i2016q2-19-circle-sport-leavine-family-racing-ransomware-attack) | 2016-06-27 | Circle-Sport Leavine Family Racing (CSLFR) |
 | [I2016Q3-08](2016/2016-Q3.md#i2016q3-08-2016-australian-census-ecensus-ddos-outage) | 2016-08-09 | Australian Bureau of Statistics |
 | [I2016Q3-19](2016/2016-Q3.md#i2016q3-19-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo |
 | [I2016Q4-05](2016/2016-Q4.md#i2016q4-05-tesco-bank-cyber-heist) | 2016-11 | Tesco Personal Finance plc (Tesco Bank) |
@@ -2218,14 +2245,15 @@ preference, and this file is where that shows.
 
 ## `OBSV-06` — A published way for an outsider to report a vulnerability
 
-**35 incidents.**
+**36 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-08](2016/2016-Q1.md#i2016q1-08-kinoptic-abandoned-app-database-exposure) | 2016-03 | Kinoptic (defunct iOS app) |
 | [I2016Q1-10](2016/2016-Q1.md#i2016q1-10-philippines-comelec-voter-database-breach) | 2016-03-27 | Commission on Elections (COMELEC), Philippines |
-| [I2016Q2-02](2016/2016-Q2.md#i2016q2-02-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
-| [I2016Q2-04](2016/2016-Q2.md#i2016q2-04-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
+| [I2016Q2-03](2016/2016-Q2.md#i2016q2-03-comelec-voter-database-hack-comeleak) | 2016-04-07 | Commission on Elections (COMELEC), Philippines |
+| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-mexican-voter-database-exposure) | 2016-04-25 | Instituto Nacional Electoral (INE) voter registry |
+| [I2016Q2-20](2016/2016-Q2.md#i2016q2-20-thomson-reuters-world-check-database-exposure) | 2016-06-29 | Thomson Reuters (World-Check, exposed via a third-party licensee) |
 | [I2016Q3-13](2016/2016-Q3.md#i2016q3-13-medsecmuddy-waters-st-jude-medical-device-disclosure) | 2016-08-25 | St. Jude Medical |
 | [I2016Q3-18](2016/2016-Q3.md#i2016q3-18-awards-screenerscom-exposed-studio-credential-database) | 2016-09 | Vision Media Management (Awards-Screeners.com) |
 | [I2017Q1-01](2017/2017-Q1.md#i2017q1-01-st-jude-medical-pacemaker-authentication-vulnerability) | 2017-01-09 | St. Jude Medical (acquired by Abbott) |
@@ -2298,12 +2326,13 @@ preference, and this file is where that shows.
 
 ## `VENDOR-01` — An inventory of every third party holding your data or a token to your systems
 
-**67 incidents.**
+**68 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-07](2016/2016-Q1.md#i2016q1-07-malvertising-campaign-on-major-news-sites) | 2016-03-16 | Ad-network supply chain (New York Times, BBC, AOL, MSN and other publishers) |
-| [I2016Q2-06](2016/2016-Q2.md#i2016q2-06-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
+| [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
+| [I2016Q2-20](2016/2016-Q2.md#i2016q2-20-thomson-reuters-world-check-database-exposure) | 2016-06-29 | Thomson Reuters (World-Check, exposed via a third-party licensee) |
 | [I2016Q3-17](2016/2016-Q3.md#i2016q3-17-emr4all-exposed-medical-records-repository) | 2016-09 | EMR4All |
 | [I2016Q4-02](2016/2016-Q4.md#i2016q4-02-hitachi-payment-services-breach-indian-bank-debit-cards) | 2016-10-20 | Hitachi Payment Services (ATM/POS payment-switch operator for State Bank of India, HDFC Bank, ICICI Bank, Yes Bank, Axis Bank, and other Indian banks) |
 | [I2016Q4-04](2016/2016-Q4.md#i2016q4-04-australian-red-cross-blood-service-data-breach) | 2016-10-28 | Australian Red Cross Blood Service |
@@ -2480,8 +2509,8 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
-| [I2016Q2-06](2016/2016-Q2.md#i2016q2-06-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
+| [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
+| [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) |
 | [I2016Q4-02](2016/2016-Q4.md#i2016q4-02-hitachi-payment-services-breach-indian-bank-debit-cards) | 2016-10-20 | Hitachi Payment Services (ATM/POS payment-switch operator for State Bank of India, HDFC Bank, ICICI Bank, Yes Bank, Axis Bank, and other Indian banks) |
 | [I2017Q3-05](2017/2017-Q3.md#i2017q3-05-swedish-transport-agency-data-mishandled-through-ibm-outsourcing) | 2017-07-17 | Transportstyrelsen (Swedish Transport Agency) |
 | [I2017Q3-06](2017/2017-Q3.md#i2017q3-06-unicredit-customer-data-accessed-through-a-compromised-partner-channel) | 2017-07-26 | UniCredit |
