@@ -7,7 +7,7 @@ Paste immediately before deploying. Asks for a verdict, not a discussion.
 ```text
 I am about to deploy this to production where real users will use it. Run a go/no-go gate.
 
-Check these ten. Any single failure means DO NOT SHIP:
+Check these eleven. Any single failure means DO NOT SHIP:
 
 G1 SECRETS — No credential in the repository, in git history, or in the built client bundle.
    Every client-visible env var is one I would publish on purpose. Build the bundle and check it;
@@ -42,9 +42,15 @@ G9 BROWSER TRUST — A real Content-Security-Policy (no *, 'unsafe-inline', or '
    script-src — a policy of default-src * is disabled in all but name), plus HSTS, nosniff,
    framing control, and Secure/HttpOnly/SameSite session cookies.
 
-G10 NO ENUMERATION — Login, signup, and password reset return the same answer, status, and timing
-   whether or not the account exists. The login path hashes even when the account is absent, so
-   "no such user" is not measurably faster than "wrong password".
+G10 NO ENUMERATION — Login, signup, and password reset return the same answer, status, timing, and
+   lockout behaviour whether or not the account exists. The login path hashes even when the account is
+   absent, so "no such user" is not measurably faster than "wrong password". No account named admin,
+   root, or test exists in production, and privileged users cannot sign in through the public form.
+
+G11 STORED DATA — Passwords exist only as argon2id, scrypt, or bcrypt hashes (never plaintext, never
+   encrypted). National-ID, card, health, and biometric fields are encrypted by the application with
+   keys the database credential cannot read. No card number or security code is stored. No password or
+   identifier appears in logs, error reports, or analytics.
 
 RULES
 - Verdict first, as a heading: SHIP or DO NOT SHIP.

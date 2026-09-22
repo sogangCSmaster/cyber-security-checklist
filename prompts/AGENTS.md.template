@@ -39,6 +39,13 @@ did. Ask only when a default genuinely conflicts with something I have asked for
 - `service_role` and admin database keys are server-side only. Never in client code, never in an
   edge function whose output reaches the client, never in an agent's context.
 - Parameterized queries only. Never build SQL by concatenation, including in internal tooling.
+- Hash passwords with argon2id (or scrypt/bcrypt) through the library. Never MD5, SHA-1, SHA-256, plaintext,
+  or reversible encryption.
+- Encrypt national-ID, passport, bank/card, health, and biometric fields in the application before they reach
+  the database, with keys from a KMS the database credential cannot read. Search them through an HMAC blind
+  index, never a plaintext or `sha256()` copy. Never store card numbers or security codes — use the payment
+  processor's tokens.
+- Never log request bodies, whole user objects, or password fields.
 
 ### Endpoints
 
@@ -49,8 +56,12 @@ did. Ask only when a default genuinely conflicts with something I have asked for
 - Validate input server-side against an explicit schema.
 - Rate-limit login, password reset, and anything enumerable by id, email, or phone.
 - Login, signup, and reset must reveal nothing about whether an account exists — same message,
-  same status, same timing. Hash the password even when the account is absent, so "no such
-  user" is not faster than "wrong password".
+  same status, same timing, same lockout. Hash the password even when the account is absent,
+  with the app's own hasher and cost, so "no such user" is not faster than "wrong password".
+  Send emails from a queue, count failures per submitted identifier, and check account state only
+  after the password. Never use a random sleep as the fix.
+- No account named admin, root, or test in production. Privileged users sign in through the
+  company IdP with passkeys or hardware keys, never through the public login form.
 - Compute prices, totals, and quotas server-side. Never trust an amount or a limit from the
   client.
 

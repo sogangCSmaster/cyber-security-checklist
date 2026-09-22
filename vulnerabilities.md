@@ -42,9 +42,10 @@ black-box counterpart in [`checklist/probe-playbook.md`](./checklist/probe-playb
 | [Unrestricted resource consumption](#unrestricted-resource-consumption) | API4:2023 | `AUTH-06` `DATA-11` | 2 |
 | [Race conditions](#race-conditions) | TOCTOU | `INPUT-02` `HUMAN-08` | — |
 | [Business-logic abuse](#business-logic-abuse) | — | `INPUT-02` `DATA-11` | 10 |
-| [Enumeration and scraping](#enumeration-and-scraping) | API6:2023 | `AUTH-06` `DATA-10` `DATA-11` | 2 |
+| [Enumeration and scraping](#enumeration-and-scraping) | API6:2023, user enumeration, timing oracle | `AUTH-06` `AUTH-13` `AUTH-14` `LEAK-01` `LEAK-02` `DATA-10` `DATA-11` | 2 |
 | [Secrets in the client](#secrets-in-the-client) | — | `CRED-02` `DATA-05` | 5 |
 | [Secrets in the repository](#secrets-in-the-repository) | — | `CRED-01` `CRED-03` | many |
+| [Weak password storage and unencrypted personal data](#weak-password-storage-and-unencrypted-personal-data) | A02:2021 cryptographic failures, plaintext passwords | `DATA-06` `DATA-07` `DATA-13` `DATA-14` `CRYPTO-07` `CRYPTO-08` `OBSV-04` | 74 |
 | [Session theft](#session-theft) | token replay, cookie theft | `AUTH-04` | 6 |
 | [OAuth consent phishing](#oauth-consent-phishing) | illicit consent grant | `VENDOR-02` `VENDOR-03` | 3 |
 | [Default credentials](#default-credentials) | — | `CRED-10` | 6 |
@@ -627,9 +628,12 @@ million times.
 **How it shows up in AI-generated code.** Any lookup by email, phone or username — signup,
 password reset, "find friends", invite. Generated code returns a different response for "no such
 user" than for "wrong password", which is an enumeration oracle, and rate limiting is rarely part
-of the prompt.
+of the prompt. Even with identical messages, the typical generated login returns early when the user
+is missing and runs the slow password hash only when the user exists — so a nonexistent account
+answers measurably faster, and response time alone confirms which accounts, including `admin`, are
+real.
 
-**Controls:** `AUTH-06`, `DATA-10` (features that fan out one account's data), `DATA-11`.
+**Controls:** `AUTH-06`, `AUTH-13` (same answer, timing, and side effects at login), `AUTH-14` (no predictable privileged account to confirm), `LEAK-01`, `LEAK-02`, `DATA-10` (features that fan out one account's data), `DATA-11`.
 
 **In the corpus:** 2 tagged, several more in substance.
 
@@ -695,6 +699,41 @@ a code sample the model produced with a real value substituted in.
 
 **How to test.** `gitleaks detect` over full history, not just the working tree. Then rotate
 anything it finds — removing the commit is not rotation.
+
+---
+
+## Weak password storage and unencrypted personal data
+
+**Also called:** OWASP A02:2021 cryptographic failures, plaintext passwords, sensitive data exposure.
+
+**In one sentence.** The breach was going to happen anyway; how the data was stored decided whether
+it was a list of hashes and ciphertext or a list of passwords and identity numbers.
+
+**How it shows up in AI-generated code.** Passwords "encrypted" with a reversible cipher, or hashed
+with `sha256()` because it is in the standard library. Identity and card numbers in plain columns,
+with the managed database's "encryption at rest" checkbox taken as the answer — which protects a
+stolen disk and nothing else. A searchable `sha256(phone)` beside the encrypted phone number. Whole
+request bodies logged while debugging, passwords included.
+
+**Controls:** `DATA-06` (hash, never encrypt, passwords), `DATA-07` (application-level encryption
+of high-harm fields), `CRYPTO-07` (blind index), `CRYPTO-08` (keys apart from data), `DATA-13`
+(masking), `DATA-14` (no stored card data), `OBSV-04` (nothing sensitive in logs).
+
+**In the corpus:** 74 incidents cite one of these controls.
+
+- **LinkedIn, 2012 (resold 2016)** — 117 million unsalted SHA-1 hashes; most of an initial sample
+  was cracked within days.
+- **Facebook, 2019** — hundreds of millions of passwords logged in plaintext, searchable by more
+  than 20,000 employees.
+- **SK Telecom, 2025** — subscriber authentication keys stored without encryption; 26.96 million
+  records.
+- **Lotte Card, 2025** — resident registration numbers stored unencrypted, including in the
+  payment server's log files.
+
+**How to test.** Read a stored password hash: it should begin with `$argon2id$`, `$2b$`, or
+`$scrypt$`. Run a raw `SELECT` on a high-harm column with the application's own database
+credentials: it should return ciphertext. Log in with a unique marker password and search every
+log and error tracker for it.
 
 ---
 
@@ -945,7 +984,7 @@ generate — a pull request, a marketplace extension, a snippet pasted from a we
   VS Code marketplace extensions.
 
 **How to test.**
-`grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}]" --include="*.{js,ts,py,go,json}" .`
+`grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}]" --include='*.js' --include='*.ts' --include='*.py' --include='*.go' --include='*.json' .`
 
 ---
 

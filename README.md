@@ -21,7 +21,7 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 | | What it is | Who it is for |
 | --- | --- | --- |
 | **[`checklist.md`](./checklist.md)** | The entry point: a fifteen-item triage, an applicability matrix, and a map to the domains | Anyone. Start here |
-| **[`checklist/`](./checklist/)** | 160 controls across 19 domains, each with a priority, a layer, the incident behind it, and — **Detect / Fix / Verify / Probe** — how to find it and prove it is gone | Anyone hardening a specific area |
+| **[`checklist/`](./checklist/)** | 165 controls across 19 domains, each with a priority, a layer, the incident behind it, and — **Detect / Fix / Verify / Probe** — how to find it and prove it is gone | Anyone hardening a specific area |
 | **[`checklist/probe-playbook.md`](./checklist/probe-playbook.md)** | The black-box pass: the checks you (or an AI you point at your own deployment) run against a **running** app with no source access | Anyone testing a live system they are authorized to test |
 | **[`vulnerabilities.md`](./vulnerabilities.md)** | The same ground organised by **what goes wrong** — IDOR, BOLA, SSRF, mass assignment, prompt injection and 42 more, each with how it appears in AI-generated code | Anyone who knows the name of the bug but not the control |
 | **[`incidents/`](./incidents/)** | The evidence: **861 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |

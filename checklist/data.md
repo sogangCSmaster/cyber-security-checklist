@@ -53,20 +53,35 @@ data was compromised".
 - **Verify:** no privileged key appears in any client bundle, edge function output, or agent context.
 
 ### DATA-06
-**P1 · code** — Passwords hashed with argon2id, bcrypt, or scrypt. See [`CRYPTO-01`](./crypto.md#crypto-01).
+**P1 · code** — Passwords are stored only as a slow, salted, one-way hash — argon2id, scrypt, or bcrypt. Never encrypted, never plaintext, never a fast hash.
 
-- **Why:** Yahoo used MD5; Zynga used SHA-1 for some accounts and legacy MD5 for others. A fast hash means a stolen table is cracked, not merely stolen.
-- **Detect:** find the hashing call; MD5/SHA-1/SHA-256/unsalted anything fails.
-- **Fix:** argon2id (preferred), bcrypt, or scrypt with sound parameters.
-- **Verify:** stored hashes carry a modern algorithm identifier and per-password salt.
+- **Why:** LinkedIn's 2012 breach, resold at full scale in 2016 — 117M unsalted SHA-1 hashes; the large majority of an initial sample was cracked within days, and the recovered passwords fed credential stuffing elsewhere. Yahoo used MD5; Zynga used SHA-1. Suprema BioStar 2, 2019 — plaintext usernames and passwords in an open index.
+- **Detect:**
+  - Find where passwords are written. MD5, SHA-1, SHA-256/512 (even salted), unsalted anything, a homegrown scheme, or reversible encryption (`AES`, `encrypt(password)`) all fail.
+  - Find where the password travels besides the hasher — logs, analytics events, error reports, a "support" column. Those are [`OBSV-04`](./observability.md#obsv-04) failures.
+  - A "forgot password" flow that can send the user their existing password proves it is stored reversibly.
+- **Fix:**
+  - **Hash, don't encrypt.** A password is verified, never recovered. With reversible encryption, one stolen key reveals every password.
+  - Use argon2id where available. OWASP's current minimums: argon2id with 19 MiB memory, 2 iterations, parallelism 1; scrypt with N=2^17, r=8, p=1; bcrypt with cost 10 or more; PBKDF2-HMAC-SHA256 with 600,000 iterations only where FIPS requires it. Let the library generate and store the salt.
+  - **Upgrade legacy hashes at next sign-in:** after a successful login, if the stored hash uses an old algorithm or cost, rehash with the current parameters. Fast legacy hashes you cannot wait for can be wrapped now (argon2id over the old hash) and unwrapped at next login.
+  - A pepper — a secret mixed in before hashing, held in a KMS or secret manager rather than the database — is an optional extra layer.
+- **Verify:** every stored hash carries a modern algorithm identifier (`$argon2id$`, `$2b$`, `$scrypt$`) with a per-user salt; no column, log, or backup holds a password in any reversible form; password reset issues a new password, never the old one.
 
 ### DATA-07
-**P1 · config** — Sensitive fields encrypted at rest; identity documents deleted after they have served their purpose.
+**P1 · code** — High-harm personal data is encrypted by the application, field by field, with keys the database cannot reach — and identity documents are deleted once they have served their purpose.
 
-- **Why:** Marriott, 2018 — 5.25M unencrypted passport numbers. Tea, 2025 — verification selfies and IDs retained long after verification.
-- **Detect:** identify sensitive fields and check encryption at rest and retention policy.
-- **Fix:** encrypt sensitive columns/objects; delete identity documents once verification is complete.
-- **Verify:** sensitive data is encrypted and the deletion job runs.
+- **Why:** Marriott, 2018 — 5.25M unencrypted passport numbers, plus payment card numbers, in the stolen data. SK Telecom, 2025 — subscriber authentication keys stored without encryption, so reaching the Home Subscriber Server was the same as reading every SIM's key; 26.96M records. Lotte Card, 2025 — resident registration numbers stored unencrypted, including in the payment server's own log files; 2.97M people. Vastaamo, 2020 — verbatim psychotherapy notes on an unencrypted database, then extortion of individual patients. Tea, 2025 — verification selfies and IDs kept long after verification.
+- **Detect:**
+  - List the columns and objects holding high-harm data: national identifiers (resident registration, social security, passport, and driver's-licence numbers), bank account and card numbers, health data, biometrics, precise location, uploaded identity documents, and authentication secrets such as SIM keys or API tokens stored for users.
+  - For each, is it encrypted **by the application** before it reaches the database, or only by the disk underneath? Managed-database and volume "encryption at rest" protects a stolen disk. It does nothing against SQL injection, a leaked database credential, an over-privileged app role, or a backup the app can read — which is how the incidents above actually happened.
+  - Where are the keys? A key in the same database, in the same `.env` as the database password, or in the repository is not separation ([`CRYPTO-08`](./crypto.md#crypto-08)).
+- **Fix:**
+  - Encrypt high-harm fields in the application with an authenticated mode (AES-GCM through a vetted library or a KMS envelope-encryption SDK — [`CRYPTO-05`](./crypto.md#crypto-05)); hold the keys in a KMS or HSM with decrypt rights granted only to the service that needs them ([`CRYPTO-08`](./crypto.md#crypto-08)).
+  - Do not store what you do not need: verify an identity document, keep the result, and delete the image ([`DATA-09`](#data-09)).
+  - Card numbers: do not store them at all ([`DATA-14`](#data-14)). Fields you must search by: [`CRYPTO-07`](./crypto.md#crypto-07).
+  - Keep disk and volume encryption on as well; it is the floor, not the control.
+  - Where regulation names specific fields, treat it as the floor. In Korea, the Personal Information Protection Act requires resident registration numbers to be stored encrypted and passwords to be hashed one-way; GDPR Article 32 names encryption and pseudonymisation as appropriate measures.
+- **Verify:** a raw `SELECT` of a high-harm column using the application's own database credentials returns ciphertext; those credentials cannot read the key; a restored backup is ciphertext too.
 
 ### DATA-08
 **P1 · infra** — Backups exist, are restore-tested, and are not writable by production credentials.
@@ -108,3 +123,20 @@ data was compromised".
 - **Detect:** for any store of value or bulk data, is there a documented ceiling on what one compromise reaches?
 - **Fix:** hold the minimum online; move the rest to cold or segmented storage.
 - **Verify:** the online ceiling is documented and enforced.
+
+### DATA-13
+**P1 · code** — Sensitive values are masked wherever they are displayed or leave the service — UI, API responses, logs, exports, analytics, support tools — and revealing a full value is a permissioned, logged action.
+
+- **Why:** exposure usually comes from data that was served, exported, or logged in full when a fragment would have done. Lotte Card, 2025 — resident registration numbers in plaintext in server log files. Klaviyo, 2026 — trackers on its own sign-up form forwarded what users typed, passwords included, to six advertising and analytics companies.
+- **Detect:** grep serializers, templates, and CSV exports for full national identifier, card, account, and phone fields; check logs, error-tracker events, and analytics payloads for the same.
+- **Fix:** return masked forms by default (last four digits of a card, a partial identifier); a separate, role-restricted action reveals the full value and records who asked and why; strip sensitive fields from logs and analytics at the source ([`OBSV-04`](./observability.md#obsv-04)).
+- **Verify:** a representative API response, a log sample, and an export each contain only masked values.
+
+### DATA-14
+**P0 · code** — Payment card numbers never touch your storage: the payment processor tokenizes them, and the card security code is never stored at all. *(Applies if you take payments.)*
+
+- **Why:** Marriott, 2018 — payment card numbers among the stolen guest data. Forever 21, 2017 — point-of-sale encryption "was not always on," so malware read card data in the clear for months.
+- **Detect:** any column, log, or file holding a full card number or a security code; any card field posted to your own server instead of the processor's hosted field or checkout.
+- **Fix:** collect cards in the processor's hosted fields or checkout so the full number never reaches your servers; keep only the processor's token and the last four digits; never store the security code — PCI DSS forbids retaining it after authorization.
+- **Verify:** a scan of tables, logs, and backups for 13–19-digit sequences that pass the Luhn check finds none.
+

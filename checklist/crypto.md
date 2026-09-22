@@ -9,11 +9,11 @@ scheme. You do not need to invent anything here — you need to use the vetted p
 ---
 
 ### CRYPTO-01
-**P0 · code** — Passwords hashed with argon2id, bcrypt, or scrypt, salted per password. This is [`DATA-06`](./data.md#data-06).
+**P0 · code** — Passwords are hashed one-way with argon2id, scrypt, or bcrypt — never encrypted, never a fast hash. Full treatment: [`DATA-06`](./data.md#data-06).
 
-- **Why:** Yahoo used MD5; Zynga used SHA-1 for some accounts and legacy MD5 for others. A fast or unsalted hash means a stolen table is cracked, not merely stolen.
-- **Detect:** find the password hashing call; MD5, SHA-1, SHA-256, or unsalted anything fails.
-- **Fix:** argon2id (preferred) with sound parameters, or bcrypt/scrypt; a unique salt per password (the library handles it).
+- **Why:** LinkedIn (unsalted SHA-1, 117M), Yahoo (MD5), Zynga (SHA-1). A fast or unsalted hash means a stolen table is cracked, not merely stolen; reversible encryption means one stolen key reveals every password.
+- **Detect:** find the password storage call; MD5, SHA-1, SHA-256, unsalted anything, or `encrypt()` fails.
+- **Fix:** see [`DATA-06`](./data.md#data-06) — algorithm, OWASP parameters, and upgrading legacy hashes at next sign-in.
 - **Verify:** stored hashes carry a modern algorithm identifier and a per-password salt.
 
 ### CRYPTO-02
@@ -50,9 +50,26 @@ scheme. You do not need to invent anything here — you need to use the vetted p
 - **Verify:** encryption uses an AEAD construction from a standard library and keys come from managed storage.
 
 ### CRYPTO-06
-**P2 · config** — Sensitive data encrypted at rest. This is [`DATA-07`](./data.md#data-07).
+**P2 · config** — Disk, volume, and backup encryption is on everywhere. This is the floor under [`DATA-07`](./data.md#data-07), not a substitute for it.
 
-- **Why:** Marriott, 2018 — 5.25M unencrypted passport numbers.
-- **Detect:** which sensitive fields/objects are encrypted at rest?
-- **Fix:** encrypt sensitive data at rest with managed keys.
-- **Verify:** sensitive stores are encrypted and keys are managed.
+- **Why:** stolen or lost media — eir, 2018 (an unencrypted laptop), Washington State University, 2017 (a backup drive) — are the cases disk encryption stops. It does not stop anyone who reads the data through the database or the application.
+- **Detect:** check that databases, volumes, object storage, laptops, and backups have encryption at rest enabled.
+- **Fix:** enable provider-managed encryption at rest everywhere, and full-disk encryption on every laptop ([`CICD-07`](./cicd.md#cicd-07)); add field-level encryption for high-harm data ([`DATA-07`](./data.md#data-07)).
+- **Verify:** every store and device reports encryption at rest enabled.
+
+### CRYPTO-07
+**P1 · code** — Encrypted fields that must be searchable use a keyed blind index (an HMAC with a secret key), never a plaintext copy and never an unkeyed hash.
+
+- **Why:** the usual workaround for "we encrypted the phone number but still need to look users up by it" is a plaintext copy or `sha256(phone)` beside the ciphertext. Phone numbers, birth dates, and national identifiers come from small, structured spaces, so an unkeyed hash of one can be reversed by hashing every possible value — the protection the encryption bought is gone.
+- **Detect:** for each encrypted field, look for a sibling column used for lookups: plaintext, a truncated value, or `sha256()`/`md5()` of the value without a secret key.
+- **Fix:** store `HMAC-SHA256(index_key, normalized_value)` as the lookup column, with `index_key` held in the KMS like the encryption key and distinct from it. Normalize before hashing (strip spaces, fix case and format) so lookups match.
+- **Verify:** no plaintext or unkeyed-hash copy of an encrypted field exists, and the lookup column cannot be recomputed without the key.
+
+### CRYPTO-08
+**P1 · config** — Encryption keys are kept apart from the data they protect — in a KMS or HSM, not in the database, the repository, or the same secret store entry as the database password — and every decryption is permissioned and logged.
+
+- **Why:** encryption whose key is reachable along the same path as the data protects nothing from whoever walks that path. LastPass, 2022 — one DevOps engineer's vault held the access and decryption keys for the production backups, so one compromised engineer reached both the customer vault backups and what was needed to decrypt the backup storage.
+- **Detect:** where does the application get its data-encryption key? A constant in code, a database column, a file on the same host, or an environment variable set alongside the database password all fail. Can one human or one credential reach both the ciphertext and the key?
+- **Fix:** envelope encryption — a KMS-held key wraps the data keys; the application asks the KMS to unwrap; IAM grants decrypt only to the service that needs it; no human holds both the data and the key; KMS calls are logged; keys rotate on a schedule and on suspicion.
+- **Verify:** the database credentials alone cannot decrypt anything; the KMS audit log shows which principal decrypted what; a key rotation has actually been performed.
+
