@@ -58,7 +58,14 @@ exposed (CVE-2025-48757). The code worked perfectly. That was the problem.
   organizations. → `INPUT-01`
 - Databases and search indexes bind to a private network, never to `0.0.0.0` with an open
   security group. → `DATA-04`
-- Passwords hashed with argon2id, bcrypt, or scrypt. Never MD5, SHA-1, or unsalted anything. → `DATA-06`
+- Passwords are **hashed, never encrypted**: argon2id (or scrypt/bcrypt) through the library, never MD5, SHA-1,
+  SHA-256, or `encrypt()`. A password is verified, never recovered. → `DATA-06`
+- High-harm fields — national ID, passport, bank and card numbers, health, biometrics — are encrypted **in the
+  application** before they reach the database, with keys in a KMS the database credential cannot read. The
+  managed database's own "encryption at rest" does not count: it does nothing against SQL injection or a leaked
+  credential. If you must search by an encrypted field, store an HMAC blind index, not plaintext or `sha256()`.
+  Never store a card number or security code — use the payment processor's tokens. → `DATA-07`, `CRYPTO-07`, `CRYPTO-08`, `DATA-14`
+- Never log a request body, a whole user object, or a password field. → `OBSV-04`
 
 ---
 
@@ -157,7 +164,8 @@ These are cheap while you are generating the code and expensive to retrofit:
 
 - **Browser headers.** Ship a real Content-Security-Policy (nonce-based, no `*`/`unsafe-inline`/`unsafe-eval`), plus HSTS, `nosniff`, framing control, and `Secure; HttpOnly; SameSite` cookies. A CSP of `default-src *` is the same as none. → [`WEB-01`](../../checklist/web.md#web-01), [`WEB-05`](../../checklist/web.md#web-05)
 - **Uploads.** Require auth on the upload endpoint, validate by content, store private and serve via signed URLs, and never serve user HTML/SVG from your own origin. An unauthenticated `/api/upload` that lands in a public bucket is two breaches at once. → [`FILE-01`](../../checklist/files.md#file-01), [`FILE-04`](../../checklist/files.md#file-04)
-- **Don't leak existence.** Login, signup, and password reset return one neutral answer, in constant time, whether or not the account exists — always run the password hash, even against a dummy, so "no such user" is not measurably faster than "wrong password". → [`AUTH-13`](../../checklist/authentication.md#auth-13), [`LEAK-01`](../../checklist/leakage.md#leak-01)
+- **Don't leak existence.** Login, signup, and password reset return one neutral answer, in constant time, whether or not the account exists — always run the password hash, even against a dummy made with the app's own hasher and cost, so "no such user" is not measurably faster than "wrong password". Count failed attempts per submitted identifier, send emails from a queue, and check "disabled" or "unverified" only after the password. Never "fix" timing with a random sleep. → [`AUTH-13`](../../checklist/authentication.md#auth-13), [`LEAK-01`](../../checklist/leakage.md#leak-01)
+- **No `admin` to find.** No account named `admin`, `root`, or `test` in production; privileged users sign in through the company IdP with passkeys or hardware keys, never through the public login form. → [`AUTH-14`](../../checklist/authentication.md#auth-14)
 - **Server-side money and quotas.** Compute prices, totals, and remaining quota on the server; never trust an amount or a limit from the client. → [`LOGIC-02`](../../checklist/logic.md#logic-02)
 
 ---
@@ -165,7 +173,7 @@ These are cheap while you are generating the code and expensive to retrofit:
 ## Full reference
 
 - [`checklist.md`](../../checklist.md) — the entry point, triage, and domain map
-- [`checklist/`](../../checklist/) — 160 controls across 19 domains, each with Detect / Fix / Verify / Probe
+- [`checklist/`](../../checklist/) — 165 controls across 19 domains, each with Detect / Fix / Verify / Probe
 - [`checklist/probe-playbook.md`](../../checklist/probe-playbook.md) — black-box checks against a running app
 - [`vulnerabilities.md`](../../vulnerabilities.md) — the same ground by vulnerability class (IDOR, BOLA, SSRF, …)
 - [`incidents/`](../../incidents/) — the breach corpus these rules come from

@@ -21,6 +21,13 @@ generic OWASP lecture. Work through these in order and report what you find, wit
      not count.
    - Is a service_role or admin key present anywhere the client or a third party could read it?
    - Are databases, search indexes, or storage buckets reachable from the internet?
+   - How are passwords stored? Only argon2id, scrypt, or bcrypt hashes pass. MD5, SHA-1, SHA-256, plaintext,
+     or reversible encryption all fail — a password is verified, never recovered.
+   - Are national-ID, passport, card, bank-account, health, or biometric fields encrypted by the application
+     before they reach the database, with keys the database credential cannot read? The database's own
+     "encryption at rest" does not count. Is any searchable copy stored as plaintext or an unkeyed hash?
+   - Is any card number or card security code stored anywhere? Is any password or identifier written to logs,
+     error trackers, or analytics?
 
 3. AUTHORIZATION
    - For each endpoint returning user data: does it establish the caller from the session rather
@@ -71,6 +78,11 @@ generic OWASP lecture. Work through these in order and report what you find, wit
      real user with a wrong password (because only the real path runs the password hash) confirms
      which accounts exist. The fix is to hash even when the account is absent and return one
      neutral answer.
+   - Do failed-attempt counters, lockout, or notification emails behave differently for real and
+     nonexistent accounts? Is account state (disabled, unverified) revealed before the password is
+     checked? A random sleep is not a fix.
+   - Is there an account named admin, root, or test in production, and can privileged users sign
+     in through the public login form?
    - Are prices, totals, quantities, and quotas computed and enforced server-side, or trusted
      from the client?
    - Can a multi-step flow (checkout, verification, reset) be completed out of order by calling

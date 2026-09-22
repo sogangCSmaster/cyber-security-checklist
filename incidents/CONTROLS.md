@@ -37,7 +37,8 @@ required control in the record's prose.
 | AUTH-10 | Legacy and alternative login paths are disabled, not merely deprecated |
 | AUTH-11 | Every state-changing interface authenticates its caller, including non-HTTP ones |
 | AUTH-12 | Federated logins validated in full: signature, issuer, audience, expiry, nonce |
-| AUTH-13 | Login returns the same answer and timing whether or not the account exists |
+| AUTH-13 | Login returns the same answer, timing, and side effects whether or not the account exists |
+| AUTH-14 | Privileged accounts: no predictable identifiers, no path through the public login, phishing-resistant MFA |
 
 ## DATA — Data layer, tenant isolation, storage
 | ID | Control |
@@ -47,13 +48,15 @@ required control in the record's prose.
 | DATA-03 | Object storage is private by default; legacy buckets audited |
 | DATA-04 | Databases and search indexes are not reachable from the public internet |
 | DATA-05 | Admin or service-role database keys never reach a client or an agent context |
-| DATA-06 | Passwords hashed with a modern memory-hard algorithm |
-| DATA-07 | Sensitive fields encrypted at rest; identity documents deleted after use |
+| DATA-06 | Passwords stored only as a slow, salted, one-way hash (argon2id, scrypt, bcrypt); never encrypted or fast-hashed |
+| DATA-07 | High-harm personal data encrypted by the application with keys the database cannot reach; ID documents deleted after use |
 | DATA-08 | Backups exist, are restore-tested, and are not writable by production credentials |
 | DATA-09 | Data minimization and enforced retention limits |
 | DATA-10 | Features that fan out one account's data to others are rate-limited and opt-in |
 | DATA-11 | Bulk export is a privileged, logged, alerting action |
 | DATA-12 | What a single compromise can reach is capped, in value and in volume |
+| DATA-13 | Sensitive values masked in UI, API responses, logs, exports, and analytics; full reveal is permissioned and logged |
+| DATA-14 | Payment card numbers never stored (processor tokenization); card security codes never stored at all |
 
 ## INPUT — Input handling and injection
 | ID | Control |
@@ -157,7 +160,7 @@ required control in the record's prose.
 | OBSV-01 | Authentication, authorization failures, admin actions, and exports are centrally logged |
 | OBSV-02 | Alerts fire on abnormal read or export volume per account |
 | OBSV-03 | Detection is itself monitored; a broken sensor is an incident |
-| OBSV-04 | Logs contain no secrets, tokens, or full identifiers |
+| OBSV-04 | Logs, error reports, analytics, and session recordings never contain passwords, tokens, or full identifiers |
 | OBSV-05 | A written incident plan naming the decider, the communicator, and the disclosure clock |
 | OBSV-06 | A published way for an outsider to report a vulnerability |
 | OBSV-07 | The "our credentials are already public" scenario is rehearsed |
@@ -221,12 +224,14 @@ required control in the record's prose.
 ## CRYPTO — Hashing, tokens, randomness, transport
 | ID | Control |
 | --- | --- |
-| CRYPTO-01 | Passwords hashed with argon2id, bcrypt, or scrypt, salted per password |
+| CRYPTO-01 | Passwords hashed one-way with argon2id, scrypt, or bcrypt; the crypto view of DATA-06 |
 | CRYPTO-02 | Tokens, session IDs, and secrets come from a cryptographically secure RNG |
 | CRYPTO-03 | Comparisons of secrets are constant-time |
 | CRYPTO-04 | TLS everywhere, modern configuration; certificate validation never disabled |
 | CRYPTO-05 | No home-grown cryptography; vetted libraries and authenticated encryption; keys managed |
-| CRYPTO-06 | Sensitive data encrypted at rest |
+| CRYPTO-06 | Disk, volume, device, and backup encryption on everywhere; the floor under DATA-07, not a substitute |
+| CRYPTO-07 | Searchable encrypted fields use a keyed blind index (HMAC), never plaintext or an unkeyed hash |
+| CRYPTO-08 | Encryption keys kept apart from the data (KMS/HSM); decryption permissioned and logged |
 
 ## DNS — Domains, subdomains, certificates, email
 | ID | Control |

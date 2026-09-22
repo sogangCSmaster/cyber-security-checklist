@@ -75,6 +75,7 @@ project to its domains:
 | Stores or returns user data | CRED, AUTH, DATA, API, LEAK, OBSV |
 | Has a browser front end | WEB, INPUT, LEAK |
 | Accepts uploads | FILE, INPUT, DATA |
+| Stores passwords, national IDs, card numbers, health, or biometric data | DATA (06, 07, 13, 14), CRYPTO, OBSV |
 | Has money, quotas, credits, or multi-step workflows | LOGIC, API, OBSV |
 | Calls other services, or is called by them | API, INPUT (SSRF), VENDOR, CRYPTO |
 | Runs on a cloud account | CLOUD, CRED, CICD, DNS |
@@ -101,8 +102,9 @@ with the full Detect / Fix / Verify / Probe.
 - [ ] **MFA on every account that can reach production**, including contractors and the account nobody uses any more. → [`AUTH-01`](./checklist/authentication.md#auth-01)
 - [ ] **`service_role` and admin keys are server-side only** — not in client code, not in an agent's context. → [`DATA-05`](./checklist/data.md#data-05), [`AGENT-02`](./checklist/agents.md#agent-02)
 - [ ] **Parameterized queries everywhere.** → [`INPUT-01`](./checklist/input.md#input-01)
+- [ ] **Passwords are hashed (argon2id, scrypt, or bcrypt), never encrypted; national-ID, card, and health fields are encrypted by the application with keys the database cannot read; nothing sensitive is logged.** The database's own "encryption at rest" is not this. → [`DATA-06`](./checklist/data.md#data-06), [`DATA-07`](./checklist/data.md#data-07), [`OBSV-04`](./checklist/observability.md#obsv-04)
 - [ ] **Lockfile committed, install scripts off in CI.** → [`DEPS-01`](./checklist/dependencies.md#deps-01), [`DEPS-02`](./checklist/dependencies.md#deps-02)
-- [ ] **Login, signup, and password reset reveal nothing** — same message, same status, same timing whether the account exists or not. → [`LEAK-01`](./checklist/leakage.md#leak-01), [`AUTH-13`](./checklist/authentication.md#auth-13)
+- [ ] **Login, signup, and password reset reveal nothing** — same message, same status, same timing whether the account exists or not — **and there is no `admin` to find**: no predictable privileged account, and privileged users never sign in through the public form. → [`LEAK-01`](./checklist/leakage.md#leak-01), [`AUTH-13`](./checklist/authentication.md#auth-13), [`AUTH-14`](./checklist/authentication.md#auth-14)
 - [ ] **A real Content-Security-Policy** — not `default-src *` with `unsafe-inline`, which is the same as none. → [`WEB-01`](./checklist/web.md#web-01)
 - [ ] **Nothing an agent reads is treated as an instruction**, and no agent both reads untrusted content and has an outbound channel while holding data access. → [`AGENT-01`](./checklist/agents.md#agent-01), [`AGENT-03`](./checklist/agents.md#agent-03)
 - [ ] **An alert fires if one account suddenly reads everything.** → [`OBSV-02`](./checklist/observability.md#obsv-02)

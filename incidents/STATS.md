@@ -259,9 +259,9 @@ incidents is not a preference, it is where the evidence is.
 | `AUTH-06` | 50 |
 | `VENDOR-08` | 50 |
 | `CRED-06` | 47 |
+| `DATA-07` | 45 |
 | `OBSV-06` | 45 |
 | `DATA-12` | 45 |
-| `DATA-07` | 44 |
 | `DATA-04` | 43 |
 | `VENDOR-06` | 41 |
 | `OBSV-03` | 40 |
@@ -269,8 +269,8 @@ incidents is not a preference, it is where the evidence is.
 | `AUTH-03` | 32 |
 | `HUMAN-02` | 31 |
 | `CLOUD-08` | 30 |
+| `DATA-06` | 28 |
 | `CRED-07` | 28 |
-| `DATA-06` | 27 |
 | `HUMAN-10` | 26 |
 | `AUTH-02` | 24 |
 | `HUMAN-01` | 24 |
@@ -329,6 +329,7 @@ incidents is not a preference, it is where the evidence is.
 | `CICD-01` | 5 |
 | `AGENT-08` | 5 |
 | `HUMAN-08` | 4 |
+| `CRYPTO-06` | 4 |
 | `CLOUD-07` | 4 |
 | `VENDOR-07` | 4 |
 | `HUMAN-NEW` | 4 |
@@ -337,6 +338,7 @@ incidents is not a preference, it is where the evidence is.
 | `DATA-10` | 4 |
 | `AGENT-NEW` | 4 |
 | `AGENT-05` | 4 |
+| `CRYPTO-01` | 3 |
 | `DEPS-06` | 3 |
 | `DEPS-08` | 3 |
 | `CLOUD-06` | 3 |
@@ -345,7 +347,7 @@ incidents is not a preference, it is where the evidence is.
 | `OBSV-07` | 3 |
 | `CICD-09` | 3 |
 | `INPUT-05` | 2 |
-| `CRYPTO-01` | 2 |
+| `DATA-14` | 2 |
 | `DATA-05` | 2 |
 | `CLOUD-02` | 2 |
 | `LEAK-01` | 2 |
@@ -358,14 +360,16 @@ incidents is not a preference, it is where the evidence is.
 | `AGENT-09` | 2 |
 | `CICD-05` | 2 |
 | `FILE-04` | 2 |
+| `DATA-13` | 2 |
 | `CRED-08` | 1 |
 | `WEB-01` | 1 |
-| `CRYPTO-06` | 1 |
 | `INPUT-08` | 1 |
 | `LEAK-04` | 1 |
 | `INPUT-NEW` | 1 |
 | `INPUT-07` | 1 |
 | `OBSV-NEW` | 1 |
 | `DEPS-NEW` | 1 |
+| `CRYPTO-08` | 1 |
 | `DEPS-05` | 1 |
 | `AGENT-11` | 1 |
+| `AUTH-14` | 1 |

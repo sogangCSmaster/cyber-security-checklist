@@ -635,9 +635,17 @@ preference, and this file is where that shows.
 
 *No incident in the corpus cites this control yet.*
 
-## `AUTH-13` — Login returns the same answer and timing whether or not the account exists
+## `AUTH-13` — Login returns the same answer, timing, and side effects whether or not the account exists
 
 *No incident in the corpus cites this control yet.*
+
+## `AUTH-14` — Privileged accounts: no predictable identifiers, no path through the public login, phishing-resistant MFA
+
+**1 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 
 ## `CICD-01` — CI secrets are per-job and unavailable to untrusted pull-request builds
 
@@ -1509,12 +1517,13 @@ preference, and this file is where that shows.
 | [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 
-## `CRYPTO-01` — Passwords hashed with argon2id, bcrypt, or scrypt, salted per password
+## `CRYPTO-01` — Passwords hashed one-way with argon2id, scrypt, or bcrypt; the crypto view of DATA-06
 
-**2 incidents.**
+**3 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
 | [I2016Q3-19](2016/2016-Q3.md#i2016q3-19-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo |
 | [I2019Q3-15](2019/2019-Q3.md#i2019q3-15-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. |
 
@@ -1534,13 +1543,28 @@ preference, and this file is where that shows.
 
 *No incident in the corpus cites this control yet.*
 
-## `CRYPTO-06` — Sensitive data encrypted at rest
+## `CRYPTO-06` — Disk, volume, device, and backup encryption on everywhere; the floor under DATA-07, not a substitute
+
+**4 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-centene-corporation-missing-hard-drives) | 2016-01-26 | Centene Corporation |
+| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
+| [I2018Q1-01](2018/2018-Q1.md#i2018q1-01-charles-river-medical-associates-stolen-device-patient-data-exposure) | 2018-01 | Charles River Medical Associates |
+| [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir |
+
+## `CRYPTO-07` — Searchable encrypted fields use a keyed blind index (HMAC), never plaintext or an unkeyed hash
+
+*No incident in the corpus cites this control yet.*
+
+## `CRYPTO-08` — Encryption keys kept apart from the data (KMS/HSM); decryption permissioned and logged
 
 **1 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
+| [I2022Q4-19](2022/2022-Q4.md#i2022q4-19-lastpass-cloud-storage-breach-customer-vault-backups) | 2022-12-22 | LastPass (GoTo) |
 
 ## `DATA-01` — Row-level authorization enabled and default-deny on every client-reachable table
 
@@ -1680,9 +1704,9 @@ preference, and this file is where that shows.
 | [I2018Q4-12](2018/2018-Q4.md#i2018q4-12-atrium-health-billing-vendor-breach-accudoc) | 2018-11-28 | Atrium Health (via billing vendor AccuDoc Solutions) |
 | [I2026Q1-09](2026/2026-Q1.md#i2026q1-09-moltbook-ai-agent-social-network-database-exposure) | 2026-01-31 | Moltbook |
 
-## `DATA-06` — Passwords hashed with a modern memory-hard algorithm
+## `DATA-06` — Passwords stored only as a slow, salted, one-way hash (argon2id, scrypt, bcrypt); never encrypted or fast-hashed
 
-**27 incidents.**
+**28 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1701,6 +1725,7 @@ preference, and this file is where that shows.
 | [I2018Q1-19](2018/2018-Q1.md#i2018q1-19-myfitnesspal-under-armour-account-data-breach) | 2018-03-29 | Under Armour, Inc. (MyFitnessPal) |
 | [I2018Q4-16](2018/2018-Q4.md#i2018q4-16-quora-data-breach) | 2018-12-03 | Quora, Inc. |
 | [I2019Q3-09](2019/2019-Q3.md#i2019q3-09-stockx-data-breach-and-delayed-disclosure) | 2019-08-03 | StockX |
+| [I2019Q3-10](2019/2019-Q3.md#i2019q3-10-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. |
 | [I2019Q3-15](2019/2019-Q3.md#i2019q3-15-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. |
 | [I2020Q1-09](2020/2020-Q1.md#i2020q1-09-decathlon-spain-unsecured-elasticsearch-database) | 2020-03 | Decathlon Spain |
 | [I2020Q3-13](2020/2020-Q3.md#i2020q3-13-freepikflaticon-sql-injection-breach) | 2020-08-22 | Freepik Company (Freepik, Flaticon) |
@@ -1714,9 +1739,9 @@ preference, and this file is where that shows.
 | [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
 | [I2026Q3-14](2026/2026-Q3.md#i2026q3-14-klaviyo-sign-up-form-password-leakage-to-advertisers) | 2026-08-10 | Klaviyo |
 
-## `DATA-07` — Sensitive fields encrypted at rest; identity documents deleted after use
+## `DATA-07` — High-harm personal data encrypted by the application with keys the database cannot reach; ID documents deleted after use
 
-**44 incidents.**
+**45 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1734,6 +1759,7 @@ preference, and this file is where that shows.
 | [I2018Q3-04](2018/2018-Q3.md#i2018q3-04-typeform-backup-exposure-affecting-downstream-customers) | 2018-07-03 | Typeform |
 | [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir |
 | [I2018Q4-05](2018/2018-Q4.md#i2018q4-05-cathay-pacific-passenger-data-breach) | 2018-10-24 | Cathay Pacific Airways |
+| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
 | [I2019Q3-08](2019/2019-Q3.md#i2019q3-08-renown-health-lost-storage-device-breach) | 2019-08 | Renown Health |
 | [I2019Q3-10](2019/2019-Q3.md#i2019q3-10-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. |
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. |
@@ -2127,6 +2153,24 @@ preference, and this file is where that shows.
 | [I2026Q3-18](2026/2026-Q3.md#i2026q3-18-atf-major-incident-declaration-after-qilin-claim) | 2026-08-27 | US Bureau of Alcohol, Tobacco, Firearms and Explosives |
 | [I2026Q3-23](2026/2026-Q3.md#i2026q3-23-idscan-identity-verification-breach) | 2026-09-10 | IDScan |
 | [I2026Q3-24](2026/2026-Q3.md#i2026q3-24-trezor-customer-exposure-through-brevo-email-provider) | 2026-09-11 | Trezor (via Brevo) |
+
+## `DATA-13` — Sensitive values masked in UI, API responses, logs, exports, and analytics; full reveal is permissioned and logged
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2025Q3-19](2025/2025-Q3.md#i2025q3-19-lotte-card-online-payment-server-breach) | 2025-09-01 | Lotte Card |
+| [I2026Q3-14](2026/2026-Q3.md#i2026q3-14-klaviyo-sign-up-form-password-leakage-to-advertisers) | 2026-08-10 | Klaviyo |
+
+## `DATA-14` — Payment card numbers never stored (processor tokenization); card security codes never stored at all
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2017Q4-10](2017/2017-Q4.md#i2017q4-10-forever-21-point-of-sale-encryption-failure) | 2017-11-14 | Forever 21, Inc. |
+| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
 
 ## `DEPS-01` — Lockfile committed; installs are frozen and reproducible
 
@@ -3186,7 +3230,7 @@ preference, and this file is where that shows.
 | [I2026Q3-02](2026/2026-Q3.md#i2026q3-02-openai-models-autonomous-intrusion-into-hugging-face) | 2026-07-21 | Hugging Face |
 | [I2026Q3-04](2026/2026-Q3.md#i2026q3-04-south-korean-foreign-ministry-training-platform-breach) | 2026-07-22 | South Korea Ministry of Foreign Affairs (National Diplomatic Academy) |
 
-## `OBSV-04` — Logs contain no secrets, tokens, or full identifiers
+## `OBSV-04` — Logs, error reports, analytics, and session recordings never contain passwords, tokens, or full identifiers
 
 **6 incidents.**
 

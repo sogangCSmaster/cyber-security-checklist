@@ -14,7 +14,7 @@ open the quarterly file for the full record.
 | ID | Disclosed | Organization | Entry | Scale | Controls |
 | --- | --- | --- | --- | --- | --- |
 | [I2016Q1-01](2016/2016-Q1.md#i2016q1-01-cryptsy-bitcoin-exchange-theft-disclosure) | 2016-01-15 | Cryptsy | entry/supply-chain-dependency | 13000 BTC and 300000 LTC stolen (~5970000 USD at 2016 disclosure value) | DEPS-10, OBSV-05, HUMAN-08 |
-| [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-centene-corporation-missing-hard-drives) | 2016-01-26 | Centene Corporation | entry/physical | 950000 people | DATA-07, DATA-09, HUMAN-07 |
+| [I2016Q1-02](2016/2016-Q1.md#i2016q1-02-centene-corporation-missing-hard-drives) | 2016-01-26 | Centene Corporation | entry/physical | 950000 people | DATA-07, DATA-09, HUMAN-07, CRYPTO-06 |
 | [I2016Q1-03](2016/2016-Q1.md#i2016q1-03-israel-electric-authority-ransomware) | 2016-01-26 | Israel Electric Authority (Ministry of Energy and Water regulator) | entry/phishing | undisclosed | HUMAN-05, CLOUD-05, OBSV-05 |
 | [I2016Q1-04](2016/2016-Q1.md#i2016q1-04-university-of-central-florida-data-breach) | 2016-02-04 | University of Central Florida (UCF) | entry/unknown | 63000 people | OBSV-01, DATA-09, AUTH-02 |
 | [I2016Q1-05](2016/2016-Q1.md#i2016q1-05-irs-e-file-pin-automated-attack) | 2016-02-09 | Internal Revenue Service (IRS) | entry/business-logic | 464000 SSNs attempted (101000 PINs obtained) | AUTH-06, AUTH-05, OBSV-02 |
@@ -44,7 +44,7 @@ open the quarterly file for the full record.
 | [I2016Q2-09](2016/2016-Q2.md#i2016q2-09-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company | entry/third-party-access | 18000000 cards | VENDOR-08, CRED-06, AUTH-01 |
 | [I2016Q2-10](2016/2016-Q2.md#i2016q2-10-tien-phong-bank-swift-fraud-attempt) | 2016-05-15 | Tien Phong Bank (TPBank) | entry/supply-chain-vendor | undisclosed | VENDOR-01, VENDOR-08, HUMAN-02 |
 | [I2016Q2-11](2016/2016-Q2.md#i2016q2-11-gatecoin-hot-wallet-theft) | 2016-05-17 | Gatecoin | entry/unknown | 250 BTC and 185000 ETH (about $2 million) | CLOUD-07, OBSV-02, DATA-12 |
-| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn | entry/sqli | 117000000 people | DATA-06, AUTH-06, CRED-07 |
+| [I2016Q2-12](2016/2016-Q2.md#i2016q2-12-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn | entry/sqli | 117000000 people | DATA-06, AUTH-06, CRED-07, CRYPTO-01 |
 | [I2016Q2-13](2016/2016-Q2.md#i2016q2-13-kansas-heart-hospital-ransomware-attack) | 2016-05-19 | Kansas Heart Hospital | entry/phishing | undisclosed | HUMAN-05, DATA-08, OBSV-05 |
 | [I2016Q2-14](2016/2016-Q2.md#i2016q2-14-banco-del-austro-swift-fraud) | 2016-05-20 | Banco del Austro | entry/stolen-credentials | 12 transfers | AUTH-01, HUMAN-02, OBSV-02 |
 | [I2016Q2-15](2016/2016-Q2.md#i2016q2-15-vkcom-2012-breach-resold-at-scale) | 2016-06-06 | VK (VKontakte) | entry/unknown | 100544934 people | DATA-06, CRED-07, AUTH-06 |
@@ -121,7 +121,7 @@ open the quarterly file for the full record.
 | [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-wannacry-disrupts-hitachi-email-systems) | 2017-05-15 | Hitachi, Ltd. | entry/unpatched-cve | undisclosed | CLOUD-01, CLOUD-09, CLOUD-10 |
 | [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-wannacry-disrupts-west-bengal-power-utility-billing) | 2017-05-16 | West Bengal State Electricity Distribution Company Limited (WBSEDCL) | entry/unpatched-cve | 800000 households | CLOUD-01, CLOUD-09, CLOUD-10 |
 | [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. | entry/api-key-abuse | undisclosed | CRED-06, CRED-07, OBSV-02 |
-| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University | entry/physical | 1200000 people | DATA-07, DATA-09, OBSV-05 |
+| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University | entry/physical | 1200000 people | DATA-07, DATA-09, OBSV-05, CRYPTO-06 |
 | [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) | entry/public-storage | 198000000 people | DATA-03, CLOUD-01, DATA-09 |
 | [I2017Q2-14](2017/2017-Q2.md#i2017q2-14-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) | entry/supply-chain-update | 45000 computers | CLOUD-05, VENDOR-06, CLOUD-10 |
 | [I2017Q2-15](2017/2017-Q2.md#i2017q2-15-notpetya-infects-rosneft-servers) | 2017-06-27 | Rosneft | entry/unknown | undisclosed | CLOUD-05, CLOUD-10, CRED-06 |
@@ -156,7 +156,7 @@ open the quarterly file for the full record.
 | [I2017Q4-07](2017/2017-Q4.md#i2017q4-07-dragonfly-20-energy-sector-credential-harvesting-campaign) | 2017-10-20 | Western energy-sector operators (Dragonfly 2.0 / Energetic Bear campaign) | entry/spear-phishing | undisclosed | AUTH-01, CLOUD-05, VENDOR-08 |
 | [I2017Q4-08](2017/2017-Q4.md#i2017q4-08-bad-rabbit-ransomware-outbreak) | 2017-10-24 | Multiple organizations in Russia and Ukraine (Bad Rabbit campaign) | entry/rce | 200 organizations | CLOUD-10, CLOUD-05, VENDOR-05 |
 | [I2017Q4-09](2017/2017-Q4.md#i2017q4-09-appleby-offshore-law-firm-hack-paradise-papers) | 2017-11-05 | Appleby (law firm) | entry/unknown | 13400000 documents | OBSV-02, DATA-11, OBSV-05 |
-| [I2017Q4-10](2017/2017-Q4.md#i2017q4-10-forever-21-point-of-sale-encryption-failure) | 2017-11-14 | Forever 21, Inc. | entry/unknown | undisclosed | CLOUD-07, OBSV-02, HUMAN-07 |
+| [I2017Q4-10](2017/2017-Q4.md#i2017q4-10-forever-21-point-of-sale-encryption-failure) | 2017-11-14 | Forever 21, Inc. | entry/unknown | undisclosed | CLOUD-07, OBSV-02, HUMAN-07, DATA-14 |
 | [I2017Q4-11](2017/2017-Q4.md#i2017q4-11-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. | entry/secrets-in-repo, entry/credential-reuse | 57000000 people | CRED-01, CRED-03, CRED-06, OBSV-05 |
 | [I2017Q4-12](2017/2017-Q4.md#i2017q4-12-imgur-2014-credential-breach-disclosed) | 2017-11-24 | Imgur, Inc. | entry/unknown | 1700000 people | DATA-06, OBSV-03, OBSV-06 |
 | [I2017Q4-13](2017/2017-Q4.md#i2017q4-13-tio-networks-breach-following-paypal-acquisition) | 2017-12-01 | TIO Networks Corp. (PayPal subsidiary) | entry/unknown | 1600000 people | VENDOR-07, DATA-07, HUMAN-04 |
@@ -171,7 +171,7 @@ open the quarterly file for the full record.
 
 | ID | Disclosed | Organization | Entry | Scale | Controls |
 | --- | --- | --- | --- | --- | --- |
-| [I2018Q1-01](2018/2018-Q1.md#i2018q1-01-charles-river-medical-associates-stolen-device-patient-data-exposure) | 2018-01 | Charles River Medical Associates | entry/physical | 9387 people | DATA-07, HUMAN-07, DATA-09 |
+| [I2018Q1-01](2018/2018-Q1.md#i2018q1-01-charles-river-medical-associates-stolen-device-patient-data-exposure) | 2018-01 | Charles River Medical Associates | entry/physical | 9387 people | DATA-07, HUMAN-07, DATA-09, CRYPTO-06 |
 | [I2018Q1-02](2018/2018-Q1.md#i2018q1-02-meltdown-and-spectre-cpu-speculative-execution-flaws) | 2018-01-03 | Intel, AMD, and ARM (industry-wide) | entry/zero-day | undisclosed | CLOUD-05, CLOUD-10 |
 | [I2018Q1-03](2018/2018-Q1.md#i2018q1-03-aadhaar-enrolment-portal-access-sold-via-whatsapp) | 2018-01-03 | Unique Identification Authority of India (UIDAI) | entry/offboarding-failure, entry/insider | 1100000000 people | AUTH-08, HUMAN-03, CRED-07 |
 | [I2018Q1-04](2018/2018-Q1.md#i2018q1-04-hancock-health-samsam-ransomware-attack) | 2018-01-16 | Hancock Health (Hancock Regional Hospital, Greenfield, Indiana) | entry/exposed-service, entry/third-party-access | undisclosed | VENDOR-08, CLOUD-08, AUTH-08 |
@@ -217,7 +217,7 @@ open the quarterly file for the full record.
 | [I2018Q3-07](2018/2018-Q3.md#i2018q3-07-reddit-breach-via-intercepted-sms-two-factor-codes) | 2018-08-01 | Reddit, Inc. | entry/session-theft | undisclosed | AUTH-01, AUTH-09 |
 | [I2018Q3-08](2018/2018-Q3.md#i2018q3-08-cosmos-bank-atm-switch-and-swift-cyberheist) | 2018-08-14 | Cosmos Cooperative Bank | entry/unknown | undisclosed | CLOUD-05, OBSV-02, AUTH-02 |
 | [I2018Q3-09](2018/2018-Q3.md#i2018q3-09-superdrug-credential-stuffing-extortion-attempt) | 2018-08-21 | Superdrug Stores plc | entry/credential-stuffing | 386 people | AUTH-06, AUTH-01 |
-| [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir | entry/physical | 36642 people | CICD-07, DATA-07, OBSV-03 |
+| [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir | entry/physical | 36642 people | CICD-07, DATA-07, OBSV-03, CRYPTO-06 |
 | [I2018Q3-11](2018/2018-Q3.md#i2018q3-11-t-mobile-api-customer-data-exposure) | 2018-08-24 | T-Mobile US | entry/idor | 2000000 people | AUTH-02, INPUT-09 |
 | [I2018Q3-12](2018/2018-Q3.md#i2018q3-12-fiserv-secureinternetbankcom-sequential-id-exposure) | 2018-08-28 | Fiserv, Inc. | entry/idor | undisclosed | AUTH-02, INPUT-09, OBSV-06, API-01 |
 | [I2018Q3-13](2018/2018-Q3.md#i2018q3-13-huazhu-hotels-group-guest-data-leak) | 2018-08-28 | Huazhu Group (China Lodging Group) | entry/unknown | 500000000 records | DATA-11, CLOUD-01, OBSV-01 |
@@ -240,7 +240,7 @@ open the quarterly file for the full record.
 | [I2018Q4-10](2018/2018-Q4.md#i2018q4-10-usps-informed-delivery-account-exposure) | 2018-11-21 | United States Postal Service | entry/idor | 60000000 people | AUTH-02, AUTH-03, OBSV-06 |
 | [I2018Q4-11](2018/2018-Q4.md#i2018q4-11-event-stream-npm-backdoor-targeting-copay) | 2018-11-26 | Copay (BitPay), via the event-stream npm package | entry/supply-chain-dependency | undisclosed | DEPS-03, DEPS-08, DEPS-09 |
 | [I2018Q4-12](2018/2018-Q4.md#i2018q4-12-atrium-health-billing-vendor-breach-accudoc) | 2018-11-28 | Atrium Health (via billing vendor AccuDoc Solutions) | entry/supply-chain-vendor | 2650000 people | VENDOR-01, VENDOR-06, DATA-05 |
-| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) | entry/unknown | 383000000-500000000 people | OBSV-01, CRED-07, VENDOR-07, CRYPTO-06 |
+| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) | entry/unknown | 383000000-500000000 people | OBSV-01, CRED-07, VENDOR-07, DATA-07 |
 | [I2018Q4-14](2018/2018-Q4.md#i2018q4-14-morelenet-customer-database-breach) | 2018-12 | Morele.net Sp. z o.o. | entry/phishing | 2200000 people | AUTH-06, OBSV-02, HUMAN-05 |
 | [I2018Q4-15](2018/2018-Q4.md#i2018q4-15-adams-county-health-plan-former-employee-access) | 2018-12 | Adams County (U.S. county government health plan) | entry/offboarding-failure | 258120 people | HUMAN-03, AUTH-08, OBSV-01 |
 | [I2018Q4-16](2018/2018-Q4.md#i2018q4-16-quora-data-breach) | 2018-12-03 | Quora, Inc. | entry/unknown | 100000000 people | OBSV-01, OBSV-02, DATA-06 |
@@ -290,7 +290,7 @@ open the quarterly file for the full record.
 | [I2019Q3-07](2019/2019-Q3.md#i2019q3-07-capital-one-cloud-data-breach) | 2019-07-29 | Capital One Financial Corporation | entry/ssrf, entry/misconfiguration | 106000000 people | CLOUD-02, CLOUD-03, INPUT-04 |
 | [I2019Q3-08](2019/2019-Q3.md#i2019q3-08-renown-health-lost-storage-device-breach) | 2019-08 | Renown Health | entry/physical | 27004 people | DATA-07, CLOUD-09, HUMAN-07 |
 | [I2019Q3-09](2019/2019-Q3.md#i2019q3-09-stockx-data-breach-and-delayed-disclosure) | 2019-08-03 | StockX | entry/unknown | 6800000 people | OBSV-05, DATA-06 |
-| [I2019Q3-10](2019/2019-Q3.md#i2019q3-10-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. | entry/public-database | 1000000 fingerprint records | DATA-04, DATA-07, CLOUD-01 |
+| [I2019Q3-10](2019/2019-Q3.md#i2019q3-10-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. | entry/public-database | 1000000 fingerprint records | DATA-04, DATA-07, CLOUD-01, DATA-06 |
 | [I2019Q3-11](2019/2019-Q3.md#i2019q3-11-coordinated-ransomware-attack-on-22-texas-local-governments) | 2019-08-16 | 22 Texas municipal and county governments (coordinated campaign, including the City of Keene) | entry/supply-chain-vendor | 22 organizations | VENDOR-01, VENDOR-08, CLOUD-05 |
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. | entry/physical | 15000 people | DATA-07, DATA-09, HUMAN-07 |
 | [I2019Q3-13](2019/2019-Q3.md#i2019q3-13-exposed-database-of-facebook-users-phone-numbers) | 2019-09-04 | Facebook (data held on an unaffiliated third-party server) | entry/public-database | 220000000-419000000 records | DATA-09, CLOUD-01, OBSV-06 |
@@ -562,7 +562,7 @@ open the quarterly file for the full record.
 | [I2022Q4-16](2022/2022-Q4.md#i2022q4-16-congress-of-the-state-of-jalisco-ransomware-attack) | 2022-12-09 | Congreso del Estado de Jalisco (Jalisco State Congress), Mexico | entry/unknown | 14 servers | DATA-08, CLOUD-05, OBSV-05 |
 | [I2022Q4-17](2022/2022-Q4.md#i2022q4-17-uber-employee-data-exposure-via-teqtivity-vendor-breach) | 2022-12-12 | Uber Technologies (via third-party vendor Teqtivity) | entry/supply-chain-vendor | 77000 people | VENDOR-01, VENDOR-08, DATA-08 |
 | [I2022Q4-18](2022/2022-Q4.md#i2022q4-18-continental-ag-lockbit-data-theft-extortion) | 2022-12-12 | Continental AG | entry/stolen-credentials | undisclosed | AUTH-01, HUMAN-05, CRED-06 |
-| [I2022Q4-19](2022/2022-Q4.md#i2022q4-19-lastpass-cloud-storage-breach-customer-vault-backups) | 2022-12-22 | LastPass (GoTo) | entry/unpatched-cve, entry/stolen-credentials | 25-33 million user vaults (LastPass's approximate total registered user base; the exact number of backups exfiltrated was not disclosed) | CICD-07, CRED-04, DATA-08 |
+| [I2022Q4-19](2022/2022-Q4.md#i2022q4-19-lastpass-cloud-storage-breach-customer-vault-backups) | 2022-12-22 | LastPass (GoTo) | entry/unpatched-cve, entry/stolen-credentials | 25-33 million user vaults (LastPass's approximate total registered user base; the exact number of backups exfiltrated was not disclosed) | CICD-07, CRED-04, DATA-08, CRYPTO-08 |
 
 ## 2023 (83 records)
 

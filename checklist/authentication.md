@@ -112,18 +112,55 @@ establishing identity in the first place and not giving it away.
 - **Verify:** feed the validator a token with a good body but a bad signature, and one with the wrong `aud`, and confirm both are rejected.
 
 ### AUTH-13
-**P1 · code** — Login returns the same answer and takes the same time whether or not the account exists.
+**P1 · code** — Login returns the same answer, in the same time, with the same side effects, whether or not the account exists.
 
-- **Why:** the login **timing oracle** — a self-test of a real platform found that logging in as a nonexistent user returned in ~0.06 s while `admin` with a wrong password took ~1.0 s, because the wrong-password path runs the slow hash and the no-such-user path returns early. That gap confirmed `admin` existed. The same difference in message (`"no such user"` vs `"wrong password"`) or status (`404` vs `401`) leaks it outright.
-- **Detect:** read the login handler. Does it `return` early when the user lookup misses, *before* any password hashing? Does it branch its error message or status on user existence?
-- **Fix:** always perform the hash comparison, even when the account does not exist, against a **dummy hash** of the same cost, then return one generic failure. Make the message and status identical on both branches.
+- **Why:** the login **timing oracle** — a self-test of a real platform found that logging in as a nonexistent user returned in ~0.06 s while `admin` with a wrong password took ~1.0 s, because only the existing-account path ran the slow password hash. That gap confirmed `admin` existed. A difference in message (`"no such user"` vs `"wrong password"`), status (`404` vs `401`), response size, or cookies leaks the same fact more loudly.
+- **Detect:**
+  - **Hand-written handlers** — the shape AI generates most often: the user lookup misses and the handler returns *before* any hash runs (`if (!user) return 401` above `bcrypt.compare`).
+  - **Framework auth** — some already do constant work: Django's `ModelBackend` runs the default hasher when the user is missing, and Spring Security's `DaoAuthenticationProvider` compares against a precomputed dummy. Confirm the built-in path is the one actually used, and that custom code wrapped around it has not reintroduced an early return.
+  - **Work after the hash that only real accounts get** — a failed-attempt counter write, a lockout lookup, a synchronous "someone tried to sign in" email or webhook, audit rows joined to the user record.
+  - **Order of checks** — "account disabled", "email not verified", or "MFA not enrolled" checked *before* the password, which tells someone who does not know the password that the account exists.
+- **Fix:**
+  1. **Equal work.** When the account does not exist, verify the submitted password against a dummy hash produced by **the app's own hashing function with its current parameters** — same algorithm, same cost. A dummy made with library defaults (`gensalt()`) differs from real hashes made at another cost or with argon2, and the gap survives.
+  2. **One answer.** Identical status, body, headers, and cookies on every failure: `401 Invalid username or password`.
+  3. **Password first, account state second.** Say "disabled", "unverified", or "enrol MFA" only after the password has verified.
+  4. **Equal side effects.** Count failed attempts and apply throttling per *submitted identifier*, whether or not an account exists, so lockout looks the same for both. Send emails and webhooks, and write heavy audit records, from a background queue so they never sit on the response path.
+  5. **Not a fix: random delays.** A `sleep(random())` adds noise that averaging over many attempts removes; the difference in means remains. Equal work is the fix; a fixed minimum response time is at most a supplement.
+  6. Residual micro-differences (a cache hit versus a database miss) cannot be engineered away entirely. Remove the large, reliable signal — the hash — and make what remains impractical to measure with rate limits per IP and per identifier ([`AUTH-06`](#auth-06)).
   ```python
-  # constant-work login: hash even when the user is absent
-  DUMMY = bcrypt.hashpw(b"x", bcrypt.gensalt())          # precomputed once
-  user = get_user(username)
-  ok = bcrypt.checkpw(password, user.pw_hash if user else DUMMY)
-  if not ok or user is None:
-      return error(401, "Invalid username or password")  # same status, same text, same work
+  # constant-work login; hash_password / verify_password are the app's own helpers
+  DUMMY_HASH = hash_password(secrets.token_urlsafe(16))   # same algorithm and cost as real hashes
+
+  def login(username, password):
+      user = find_user(username)
+      ok = verify_password(password, user.password_hash if user else DUMMY_HASH)
+      if user is None or not ok:
+          queue_failed_attempt(username)                   # keyed by submitted id, off the response path
+          return error(401, "Invalid username or password")
+      if user.disabled or not user.email_verified:         # account state only after the password
+          return error(403, "Account needs attention")
+      return start_session(user)
   ```
-- **Verify:** a test measures the two paths (nonexistent user vs real-user-wrong-password) and asserts the timing difference is within noise — not the cost of one hash — and that the message and status are byte-identical.
-- **Probe:** the timing comparison in [playbook §4](./probe-playbook.md#4--auth-responses--timing-and-message-differences-worked-example). Related, endpoint-agnostic: [`LEAK-01`](./leakage.md#leak-01), [`LEAK-02`](./leakage.md#leak-02).
+- **Verify:**
+  - A test issues dozens of failed logins on each path — a nonexistent identifier, and a real one with a wrong password — and compares the **medians**. The difference must be far below the cost of one hash (single-digit milliseconds, not hundreds); one attempt each proves nothing.
+  - The two failure responses are byte-identical: status, body, headers, `Set-Cookie`, and length.
+  - After N failures, a nonexistent identifier receives the same throttle or lockout response as a real one.
+- **Probe:** the timing comparison in [playbook §4](./probe-playbook.md#4--auth-responses--timing-and-message-differences-worked-example). Related: [`LEAK-01`](./leakage.md#leak-01), [`LEAK-02`](./leakage.md#leak-02), and [`AUTH-14`](#auth-14) — why confirming that `admin` exists should be worth nothing.
+
+### AUTH-14
+**P1 · config** — Privileged accounts are worth nothing to someone who learns they exist: no predictable identifiers, no path through the public login, phishing-resistant MFA always.
+
+- **Why:** enumeration is half of an attack; the other half is what the confirmed account can do. McHire, 2025 — the staff login accepted a leftover test account whose username and password were both `123456`, which carried a restaurant-owner administrative view; with an IDOR behind it, 64M applicant records were reachable. The timing oracle in [`AUTH-13`](#auth-13) mattered precisely because it confirmed an account named `admin`.
+- **Detect:**
+  - Accounts named `admin`, `administrator`, `root`, `test`, `demo`, `support`, `superuser`, or the company name — in the production user table, seed data, fixtures, and migrations.
+  - Whether privileged roles can sign in through the same public form and endpoint as customers.
+  - Test, demo, and seed accounts present in production at all.
+  - Privileged accounts without phishing-resistant MFA, or with MFA that can be skipped.
+- **Fix:**
+  - Give every privileged human a personal, non-guessable identity tied to SSO — never a shared `admin`.
+  - Serve privileged sign-in from a separate surface (the company IdP, an allowlisted network, or a separate admin host), and have the public login refuse privileged roles outright ([`AUTH-07`](#auth-07), [`CLOUD-08`](./cloud.md#cloud-08)).
+  - Require phishing-resistant MFA — passkeys or hardware keys — on every privileged account ([`AUTH-01`](#auth-01), [`AUTH-09`](#auth-09)).
+  - Remove test, demo, and seed accounts from production, and make the deploy refuse to load seed data there ([`CRED-10`](./secrets.md#cred-10)).
+  - Alert on any sign-in attempt against a reserved or privileged identifier through the public login; with no such account there, every attempt is reconnaissance ([`OBSV-02`](./observability.md#obsv-02)).
+- **Verify:** the public login rejects a privileged account even with the correct password; no reserved identifier exists in the production user table; every privileged account shows phishing-resistant MFA enrolled and enforced.
+- **Probe:** a sign-in attempt for `admin` through the public login behaves exactly like any other failure ([playbook §4](./probe-playbook.md#4--auth-responses--timing-and-message-differences-worked-example)) — and there is no such account there to confirm.

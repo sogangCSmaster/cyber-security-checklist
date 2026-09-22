@@ -14,17 +14,22 @@ step that makes the breach cheap.
 
 - **Why:** account enumeration is the first step of every credential-stuffing and phishing campaign — 23andMe (2023) and Nintendo (2020) both began by knowing which accounts were real. A signup that says *"email already in use"* and a reset that says *"no account with that email"* hand the attacker a membership oracle for free.
 - **Detect:** exercise each account-touching endpoint with a known-real and a known-fake identifier and diff the responses — message text, status code, and whether the side effect (an email sent) differs.
-- **Fix:** return the same neutral message and status in both cases — *"If that email exists, we've sent a reset link"* — and send the email only in the real case, without telling the caller which happened.
-- **Verify:** a test asserts the response for a nonexistent account is byte-identical to the one for a real account.
+- **Fix:** one neutral answer per flow, and nothing on the response path that only happens for real accounts:
+  - **Password reset** — always *"If an account exists for that address, we've sent a link."* Send the email from a background queue: a synchronous send only for real accounts makes the response measurably slower, which is the same oracle as [`AUTH-13`](./authentication.md#auth-13).
+  - **Sign-up** — accept the submission either way and reply *"Check your email to continue."* A new address gets a verification link; an existing one gets *"You already have an account — sign in or reset your password."* The page never says "email already in use".
+  - **Login** — [`AUTH-13`](./authentication.md#auth-13).
+  - **Magic-link and one-time-code login** — the same pattern as reset: one answer, queued send.
+  - **"Is this username available?"** — if usernames are public by design (profile URLs, @handles), availability is not a secret, but rate-limit the check ([`API-05`](./api.md#api-05)). If they are not public, do not offer the check before sign-up completes.
+- **Verify:** for each flow, a test asserts the response for a nonexistent account is byte-identical to the one for a real account (status, body, headers, cookies), and that the median response time over many attempts does not differ by the cost of an email send or a hash.
 - **Probe:** [playbook §4](./probe-playbook.md#4--auth-responses--timing-and-message-differences-worked-example).
 
 ### LEAK-02
 **P1 · code** — Security decisions run in time independent of the secret. No comparison, lookup, or hash short-circuits in a way an outsider can measure.
 
 - **Why:** the **timing oracle** worked example — a nonexistent login returned far faster than a real account with a wrong password, because only the real path ran the password hash (~0.06 s vs ~1.0 s), confirming which usernames existed. The same class covers token and API-key comparison that stops at the first differing byte, and coupon/2FA-code checks that return early.
-- **Detect:** find every place a user-supplied value is compared against a secret or used to gate work — auth, token/HMAC verification, password-reset tokens, API keys, one-time codes. Does any of them branch or return before doing constant work?
-- **Fix:** use constant-time comparison for secrets (`hmac.compare_digest`, `crypto.timingSafeEqual`); on the login path, hash even when the account is absent ([`AUTH-13`](./authentication.md#auth-13)); avoid early returns keyed on secret existence.
-- **Verify:** measure the two branches under load and assert the difference is within noise, not the cost of the skipped work.
+- **Detect:** find every place a user-supplied value is compared against a secret or used to gate work — auth, token/HMAC verification, password-reset tokens, API keys, one-time codes. Does any of them branch or return before doing constant work? Then look *after* the comparison: work that runs on only one branch (a counter write, an email, a webhook) reintroduces the difference.
+- **Fix:** use constant-time comparison for secrets (`hmac.compare_digest`, `crypto.timingSafeEqual`) ([`CRYPTO-03`](./crypto.md#crypto-03)); on the login path, hash even when the account is absent ([`AUTH-13`](./authentication.md#auth-13)); move one-branch side effects to a background queue; avoid early returns keyed on secret existence. **Random delays are not a fix** — averaging over many requests removes the noise and leaves the difference.
+- **Verify:** measure each branch many times and compare medians; the difference must be within noise, not the cost of the skipped work.
 - **Probe:** [playbook §4](./probe-playbook.md#4--auth-responses--timing-and-message-differences-worked-example).
 
 ### LEAK-03

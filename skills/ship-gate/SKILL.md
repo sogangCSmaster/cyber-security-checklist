@@ -86,11 +86,13 @@ time in the corpus is measured in weeks; without this gate, you find out from a 
 ## The should-fix gates
 
 These do not block a launch on their own. Two or more together do.
+One exception: G10 blocks on its own if passwords are stored in plaintext or with reversible encryption,
+or if card security codes are stored at all — `DATA-06`, `DATA-14`.
 
 | | Gate | Control |
 | --- | --- | --- |
 | G9 | Rate limiting on login, password reset, and any endpoint enumerable by id, email, or phone | `AUTH-06` |
-| G10 | Passwords hashed with argon2id, bcrypt, or scrypt | `DATA-06` |
+| G10 | Passwords stored only as argon2id, scrypt, or bcrypt hashes; national-ID, card, health, and biometric fields encrypted by the application with keys the database credential cannot read; no passwords or identifiers in logs | `DATA-06`, `DATA-07`, `CRYPTO-08`, `OBSV-04` |
 | G11 | Backups exist, have been restore-tested, and are not writable by production credentials | `DATA-08` |
 | G12 | Identity documents and other high-harm data are deleted after they have served their purpose | `DATA-07` |
 | G13 | Cloud roles carry no wildcard actions or resources | `CLOUD-03` |
@@ -98,7 +100,7 @@ These do not block a launch on their own. Two or more together do.
 | G15 | A named person owns the response, and there is a published way to report a vulnerability | `OBSV-05`, `OBSV-06` |
 | G16 | Agents with data access cannot both read untrusted content and send outbound unsupervised | `AGENT-03` |
 | G17 | A real Content-Security-Policy (no `*`/`unsafe-inline`/`unsafe-eval` on script-src) plus HSTS, nosniff, framing control, and Secure/HttpOnly/SameSite cookies | `WEB-01`, `WEB-05` |
-| G18 | Login, signup, and reset reveal nothing by message, status, or timing — the login path hashes even when the account is absent | `AUTH-13`, `LEAK-01` |
+| G18 | Login, signup, and reset reveal nothing by message, status, timing, or lockout — the login path hashes even when the account is absent — and no account named `admin`, `root`, or `test` exists in production | `AUTH-13`, `AUTH-14`, `LEAK-01` |
 
 ---
 

@@ -31,11 +31,15 @@ what turn "we found out from a journalist" into "an alert fired that night".
 - **Verify:** disabling a sensor in staging raises an alert.
 
 ### OBSV-04
-**P1 · code** — Logs contain no secrets, tokens, or full identifiers.
+**P1 · code** — Logs, error reports, analytics, and session recordings never contain passwords, tokens, or full identifiers.
 
-- **Detect:** grep logs for tokens, passwords, full PANs, full identity numbers.
-- **Fix:** redact at the logging layer; log references, not secrets ([`LEAK-06`](./leakage.md#leak-06)).
-- **Verify:** a sample of logs contains no secret or full identifier.
+- **Why:** Twitter, 2018 — a bug wrote passwords to an internal log before the hashing step. Facebook, 2019 — internal applications had logged hundreds of millions of passwords in plaintext, searchable by more than 20,000 employees. Lotte Card, 2025 — resident registration numbers in plaintext in the payment server's own log files. Klaviyo, 2026 — trackers on its sign-up form forwarded typed passwords to advertising companies. A correctly hashed password database does not help if the same password is sitting in a log.
+- **Detect:**
+  - Grep logging calls that write whole objects or requests: `log(req.body)`, `console.log(user)`, `logger.info(request.headers)`, `print(request.json)`.
+  - Check error-tracker configuration (request-body and header capture), session-replay and analytics settings (form-field capture), and which third-party scripts load on sign-in and sign-up pages.
+  - Search existing logs for password-shaped fields, bearer tokens, and national-identifier or card-number patterns.
+- **Fix:** log an allowlist of fields, never whole objects; redact `password`, `token`, `authorization`, `cookie`, identifier, and card fields in the logger as a backstop; turn off or scrub request-body capture in error trackers; exclude password and sensitive inputs from session replay and analytics; keep third-party scripts off authentication pages ([`VENDOR-05`](./vendors.md#vendor-05)); mask what must be logged ([`DATA-13`](./data.md#data-13)).
+- **Verify:** submit a login and a sign-up with a unique marker password and identifier, then confirm neither marker appears in any log, error event, analytics payload, or outbound tracker request.
 
 ### OBSV-05
 **P1 · process** — A written incident plan naming the decider, the communicator, and the disclosure clock.

@@ -44,7 +44,7 @@ not alphabetically.
 ```bash
 # Live tree
 grep -rInE "(api[_-]?key|secret|token|password|passwd|private[_-]?key|bearer)[\"']?\s*[:=]\s*[\"'][^\"']{12,}" \
-  --include="*.{js,jsx,ts,tsx,py,rb,go,java,php,env,json,yml,yaml,toml,tf}" . 2>/dev/null | head -40
+  --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.py' --include='*.rb' --include='*.go' --include='*.java' --include='*.php' --include='*.env' --include='.env*' --include='*.json' --include='*.yml' --include='*.yaml' --include='*.toml' --include='*.tf' . 2>/dev/null | head -40
 
 # Known key shapes
 grep -rInE "(AKIA[0-9A-Z]{16}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{36}|xox[baprs]-|-----BEGIN [A-Z ]*PRIVATE KEY-----|eyJ[A-Za-z0-9_-]{20,}\.eyJ)" . 2>/dev/null | head -40
@@ -72,7 +72,7 @@ grep -rInE "create table" --include="*.sql" . | head -30
 grep -rInE "enable row level security|create policy" --include="*.sql" . | head -30
 
 # service_role where it must not be
-grep -rIn "service_role\|SUPABASE_SERVICE" --include="*.{js,jsx,ts,tsx,py}" . | head -20
+grep -rIn "service_role\|SUPABASE_SERVICE" --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.py' . | head -20
 
 # Firebase rules that allow everything
 grep -rIn -A3 '"rules"\|allow read\|allow write' firebase.json firestore.rules storage.rules 2>/dev/null | head -30
@@ -80,6 +80,28 @@ grep -rIn -A3 '"rules"\|allow read\|allow write' firebase.json firestore.rules s
 
 For every table the client can query, confirm a policy exists **and** that the policy actually
 scopes by user. `USING (true)` is not a policy, it is decoration.
+
+### Stored passwords and personal data — `DATA-06`, `DATA-07`, `DATA-13`, `DATA-14`, `CRYPTO-07`, `CRYPTO-08`, `OBSV-04`
+
+```bash
+# How are passwords stored? Fast hashes and reversible encryption both fail
+grep -rInE "(md5|sha1|sha256|createHash)\(|hashlib\.(md5|sha1|sha256)|encrypt\([^)]*pass" \
+  --include='*.js' --include='*.ts' --include='*.py' --include='*.rb' --include='*.go' --include='*.java' --include='*.php' . 2>/dev/null | head -30
+
+# Which fields hold high-harm data? Each needs application-level encryption or should not exist
+grep -rInE "(ssn|resident|rrn|jumin|passport|licen[cs]e_?(no|number)|card_?(number|no)|\bpan\b|cvv|cvc|account_?(number|no)|biometric|diagnosis)" \
+  --include='*.sql' --include='*.prisma' --include='*.py' --include='*.ts' --include='*.js' --include='*.rb' . 2>/dev/null | head -40
+
+# Are whole requests or user objects logged?
+grep -rInE "(console\.log|logger\.[a-z]+|log\.[a-z]+|print)\(.*(req\.body|request\.(body|json|data|headers)|password|\buser\))" \
+  --include='*.js' --include='*.ts' --include='*.py' --include='*.rb' --include='*.go' . 2>/dev/null | head -30
+```
+
+For each high-harm field, answer: is it encrypted **by the application** before it reaches the database, or only by
+the disk? Managed "encryption at rest" does not stop SQL injection, a leaked database credential, or a readable
+backup. Where is the key — and can the database credential reach it? Is a searchable copy stored as plaintext or an
+unkeyed hash? A password hashed with anything other than argon2id, scrypt, or bcrypt, or stored with reversible
+encryption, is a finding on its own; so is a stored card security code.
 
 ### Authorization — `AUTH-02`, `AUTH-03`, `INPUT-09`
 
@@ -95,9 +117,9 @@ because the happy path works perfectly.
 ### Injection — `INPUT-01`, `INPUT-02`, `INPUT-04`
 
 ```bash
-grep -rInE "(execute|query|raw)\s*\(\s*[\"'\`].*(\+|\$\{|%s|f[\"'])" --include="*.{js,ts,py,rb,go,php}" . | head -30
-grep -rIn "dangerouslySetInnerHTML\|innerHTML\s*=\|v-html\|eval(\|new Function(" --include="*.{js,jsx,ts,tsx,vue}" . | head -20
-grep -rInE "(fetch|axios|requests\.(get|post)|urllib)" --include="*.{js,ts,py}" . | grep -iE "req\.|request\.|params|body|query" | head -20
+grep -rInE "(execute|query|raw)\s*\(\s*[\"'\`].*(\+|\$\{|%s|f[\"'])" --include='*.js' --include='*.ts' --include='*.py' --include='*.rb' --include='*.go' --include='*.php' . | head -30
+grep -rIn "dangerouslySetInnerHTML\|innerHTML\s*=\|v-html\|eval(\|new Function(" --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.vue' . | head -20
+grep -rInE "(fetch|axios|requests\.(get|post)|urllib)" --include='*.js' --include='*.ts' --include='*.py' . | grep -iE "req\.|request\.|params|body|query" | head -20
 ```
 
 The third command finds candidate SSRF: an outbound request built from user input. Check whether
@@ -109,7 +131,7 @@ Capital One chain.
 ```bash
 ls package-lock.json yarn.lock pnpm-lock.yaml poetry.lock uv.lock Gemfile.lock go.sum 2>/dev/null
 grep -rIn "\"postinstall\"\|\"preinstall\"\|\"prepare\"" package.json 2>/dev/null
-grep -rIno "src=[\"']https\?://[^\"']*" --include="*.html" --include="*.{jsx,tsx}" . | head -20
+grep -rIno "src=[\"']https\?://[^\"']*" --include="*.html" --include='*.jsx' --include='*.tsx' . | head -20
 npm audit --omit=dev 2>/dev/null | tail -20 || pip-audit 2>/dev/null | tail -20
 ```
 
@@ -128,7 +150,7 @@ Only if the project has one. Check:
 
 ```bash
 grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}\x{E0000}-\x{E007F}]" \
-  --include="*.{js,jsx,ts,tsx,py,go,rs,json}" . 2>/dev/null | head
+  --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.py' --include='*.go' --include='*.rs' --include='*.json' . 2>/dev/null | head
 ```
 
 ### Configuration and exposure — `CLOUD-01`, `CLOUD-03`, `CLOUD-08`, `OBSV-04`
