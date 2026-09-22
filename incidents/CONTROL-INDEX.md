@@ -135,7 +135,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-01` — Phishing-resistant MFA on every human account with production reach
 
-**102 incidents.**
+**103 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -178,9 +178,10 @@ preference, and this file is where that shows.
 | [I2019Q4-09](2019/2019-Q4.md#i2019q4-09-disney-launch-day-account-hijacking-wave) | 2019-11-18 | Disney+ (The Walt Disney Company) |
 | [I2020Q1-01](2020/2020-Q1.md#i2020q1-01-travelex-ransomware-shutdown) | 2020-01-07 | Travelex |
 | [I2020Q1-03](2020/2020-Q1.md#i2020q1-03-toll-group-ransomware-shutdown) | 2020-02-05 | Toll Group |
-| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
-| [I2020Q2-02](2020/2020-Q2.md#i2020q2-02-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
-| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
+| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
+| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
+| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
+| [I2020Q2-13](2020/2020-Q2.md#i2020q2-13-service-nsw-email-compromise-and-customer-data-breach) | 2020-05-14 | Service NSW |
 | [I2020Q3-03](2020/2020-Q3.md#i2020q3-03-gedmatch-privacy-setting-reset-exposes-dna-matches) | 2020-07-20 | GEDmatch (Verogen) |
 | [I2020Q4-01](2020/2020-Q4.md#i2020q4-01-sltt-government-networks-chained-vpn-and-netlogon-vulnerabilities) | 2020-10-09 | Multiple U.S. state, local, tribal, and territorial (SLTT) government networks |
 | [I2021Q1-04](2021/2021-Q1.md#i2021q1-04-oldsmar-water-treatment-plant-scada-intrusion) | 2021-02-08 | City of Oldsmar, Florida (water treatment facility) |
@@ -244,7 +245,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-02` — Authorization checked server-side, per object, on every request
 
-**14 incidents.**
+**15 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -260,12 +261,13 @@ preference, and this file is where that shows.
 | [I2019Q2-06](2019/2019-Q2.md#i2019q2-06-stack-overflow-production-system-breach) | 2019-05-17 | Stack Overflow |
 | [I2020Q1-07](2020/2020-Q1.md#i2020q1-07-clearview-ai-client-list-theft) | 2020-02-28 | Clearview AI |
 | [I2020Q1-16](2020/2020-Q1.md#i2020q1-16-marriott-second-guest-data-breach) | 2020-03-31 | Marriott International |
+| [I2020Q2-16](2020/2020-Q2.md#i2020q2-16-ehteraz-contact-tracing-app-national-id-exposure) | 2020-05-26 | Ministry of Public Health, Qatar (Ehteraz app) |
 | [I2024Q4-07](2024/2024-Q4.md#i2024q4-07-the-real-world-platform-breach) | 2024-11-22 | The Real World (Andrew Tate's online education platform) |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 
 ## `AUTH-03` — No unauthenticated endpoint returns user data
 
-**21 incidents.**
+**22 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -277,6 +279,7 @@ preference, and this file is where that shows.
 | [I2018Q4-06](2018/2018-Q4.md#i2018q4-06-usps-informed-delivery-account-exposure) | 2018-11-21 | United States Postal Service |
 | [I2019Q2-07](2019/2019-Q2.md#i2019q2-07-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation |
 | [I2020Q1-06](2020/2020-Q1.md#i2020q1-06-slickwraps-customer-data-exposure) | 2020-02-22 | Slickwraps |
+| [I2020Q2-16](2020/2020-Q2.md#i2020q2-16-ehteraz-contact-tracing-app-national-id-exposure) | 2020-05-26 | Ministry of Public Health, Qatar (Ehteraz app) |
 | [I2021Q1-07](2021/2021-Q1.md#i2021q1-07-proxylogon-hafnium-exchange-server-mass-exploitation) | 2021-03-02 | On-premises Microsoft Exchange Server operators (HAFNIUM / ProxyLogon campaign) |
 | [I2021Q1-09](2021/2021-Q1.md#i2021q1-09-norwegian-parliament-storting-exchange-breach) | 2021-03-10 | Storting (Norwegian Parliament) |
 | [I2021Q2-04](2021/2021-Q2.md#i2021q2-04-peloton-unauthenticated-api-exposure) | 2021-05-05 | Peloton Interactive |
@@ -352,7 +355,7 @@ preference, and this file is where that shows.
 | [I2019Q4-07](2019/2019-Q4.md#i2019q4-07-credential-stuffing-wave-against-bank-customers-via-mint-and-quickbooks-aggregation) | 2019-11 | NCR Digital Insight (banking platform) |
 | [I2019Q4-09](2019/2019-Q4.md#i2019q4-09-disney-launch-day-account-hijacking-wave) | 2019-11-18 | Disney+ (The Walt Disney Company) |
 | [I2020Q1-14](2020/2020-Q1.md#i2020q1-14-zoom-zoombombing-wave) | 2020-03-30 | Zoom Video Communications |
-| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
+| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
 | [I2020Q3-03](2020/2020-Q3.md#i2020q3-03-gedmatch-privacy-setting-reset-exposes-dna-matches) | 2020-07-20 | GEDmatch (Verogen) |
 | [I2021Q2-02](2021/2021-Q2.md#i2021q2-02-geico-drivers-license-number-scraping) | 2021-04-19 | GEICO |
 | [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
@@ -439,7 +442,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2019Q4-07](2019/2019-Q4.md#i2019q4-07-credential-stuffing-wave-against-bank-customers-via-mint-and-quickbooks-aggregation) | 2019-11 | NCR Digital Insight (banking platform) |
-| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
+| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
 | [I2021Q2-05](2021/2021-Q2.md#i2021q2-05-colonial-pipeline-ransomware-attack) | 2021-05-08 | Colonial Pipeline Company |
 
 ## `AUTH-11` — Every state-changing interface authenticates its caller, including non-HTTP ones
@@ -681,7 +684,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**93 incidents.**
+**95 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -729,7 +732,9 @@ preference, and this file is where that shows.
 | [I2020Q1-10](2020/2020-Q1.md#i2020q1-10-champaign-urbana-public-health-district-ransomware) | 2020-03-11 | Champaign-Urbana Public Health District |
 | [I2020Q1-11](2020/2020-Q1.md#i2020q1-11-brno-university-hospital-ransomware-attack) | 2020-03-13 | Brno University Hospital |
 | [I2020Q1-13](2020/2020-Q1.md#i2020q1-13-finastra-ransomware-shutdown) | 2020-03-20 | Finastra |
-| [I2020Q2-02](2020/2020-Q2.md#i2020q2-02-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
+| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-edp-ragnar-locker-ransomware-and-extortion) | 2020-04-15 | EDP - Energias de Portugal |
+| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
+| [I2020Q2-17](2020/2020-Q2.md#i2020q2-17-honda-snake-ekans-ransomware-attack) | 2020-06-09 | Honda Motor Co. |
 | [I2020Q3-05](2020/2020-Q3.md#i2020q3-05-garmin-wastedlocker-ransomware-outage) | 2020-07-27 | Garmin Ltd. |
 | [I2020Q4-03](2020/2020-Q4.md#i2020q4-03-capcom) | 2020-11-02 | Capcom Co., Ltd. |
 | [I2020Q4-04](2020/2020-Q4.md#i2020q4-04-campari-group) | 2020-11-09 | Davide Campari-Milano N.V. (Campari Group) |
@@ -809,7 +814,7 @@ preference, and this file is where that shows.
 | [I2018Q1-15](2018/2018-Q1.md#i2018q1-15-slingshot-router-based-cyber-espionage-campaign) | 2018-03-09 | Slingshot campaign (multiple victims, primarily Kenya and Yemen) |
 | [I2018Q2-08](2018/2018-Q2.md#i2018q2-08-vpnfilter-router-and-nas-botnet) | 2018-05-23 | VPNFilter botnet campaign |
 | [I2019Q2-05](2019/2019-Q2.md#i2019q2-05-baltimore-city-government-robbinhood-ransomware-attack) | 2019-05-07 | City of Baltimore |
-| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
+| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
 | [I2020Q3-04](2020/2020-Q3.md#i2020q3-04-f5-big-ip-tmui-mass-exploitation-cve-2020-5902) | 2020-07-24 | Multiple organizations, including US federal agencies (CVE-2020-5902 exploitation campaign; no single primary victim) |
 | [I2021Q1-04](2021/2021-Q1.md#i2021q1-04-oldsmar-water-treatment-plant-scada-intrusion) | 2021-02-08 | City of Oldsmar, Florida (water treatment facility) |
 | [I2021Q1-08](2021/2021-Q1.md#i2021q1-08-verkada-camera-system-breach) | 2021-03-09 | Verkada |
@@ -856,7 +861,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-10` — A patch SLA for internet-facing and laterally-reachable systems, an inventory of what cannot be patched, and a staged rollout
 
-**37 incidents.**
+**38 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -880,6 +885,7 @@ preference, and this file is where that shows.
 | [I2020Q1-03](2020/2020-Q1.md#i2020q1-03-toll-group-ransomware-shutdown) | 2020-02-05 | Toll Group |
 | [I2020Q1-11](2020/2020-Q1.md#i2020q1-11-brno-university-hospital-ransomware-attack) | 2020-03-13 | Brno University Hospital |
 | [I2020Q1-13](2020/2020-Q1.md#i2020q1-13-finastra-ransomware-shutdown) | 2020-03-20 | Finastra |
+| [I2020Q2-17](2020/2020-Q2.md#i2020q2-17-honda-snake-ekans-ransomware-attack) | 2020-06-09 | Honda Motor Co. |
 | [I2020Q4-01](2020/2020-Q4.md#i2020q4-01-sltt-government-networks-chained-vpn-and-netlogon-vulnerabilities) | 2020-10-09 | Multiple U.S. state, local, tribal, and territorial (SLTT) government networks |
 | [I2023Q2-08](2023/2023-Q2.md#i2023q2-08-moveit-transfer-mass-exploitation-cve-2023-34362) | 2023-05-31 | Progress Software (MOVEit Transfer), exploited by Cl0p against thousands of downstream organizations |
 | [I2023Q2-09](2023/2023-Q2.md#i2023q2-09-nova-scotia-government-moveit-breach) | 2023-06-02 | Government of Nova Scotia |
@@ -910,7 +916,7 @@ preference, and this file is where that shows.
 | [I2019Q1-08](2019/2019-Q1.md#i2019q1-08-facebook-plaintext-password-logging) | 2019-03-21 | Facebook |
 | [I2019Q2-08](2019/2019-Q2.md#i2019q2-08-canva-data-breach) | 2019-05-24 | Canva |
 | [I2019Q4-08](2019/2019-Q4.md#i2019q4-08-orvis-internal-credentials-exposed-on-pastebin) | 2019-11 | Orvis |
-| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
+| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
 | [I2020Q4-05](2020/2020-Q4.md#i2020q4-05-wildworks-animal-jam) | 2020-11-11 | WildWorks |
 | [I2021Q1-03](2021/2021-Q1.md#i2021q1-03-bykea-customer-and-driver-database-exposure) | 2021-01-28 | Bykea |
 | [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
@@ -947,7 +953,7 @@ preference, and this file is where that shows.
 | [I2016Q3-07](2016/2016-Q3.md#i2016q3-07-oracle-micros-point-of-sale-portal-breach) | 2016-08-08 | Oracle Corporation (MICROS division) |
 | [I2017Q1-09](2017/2017-Q1.md#i2017q1-09-yahoo-forged-cookie-account-takeovers) | 2017-02 | Yahoo |
 | [I2017Q4-05](2017/2017-Q4.md#i2017q4-05-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. |
-| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
+| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
 | [I2022Q1-07](2022/2022-Q1.md#i2022q1-07-nvidia-lapsus-breach) | 2022-02-25 | Nvidia Corporation |
 | [I2023Q1-01](2023/2023-Q1.md#i2023q1-01-circleci-engineer-laptop-malware-and-secrets-exposure) | 2023-01-04 | CircleCI |
 | [I2024Q1-08](2024/2024-Q1.md#i2024q1-08-change-healthcare-unitedhealth-ransomware-attack) | 2024-02-21 | Change Healthcare (a UnitedHealth Group / Optum subsidiary) |
@@ -989,7 +995,7 @@ preference, and this file is where that shows.
 
 ## `CRED-06` — Credentials scoped to one job, one resource, one permission
 
-**36 incidents.**
+**37 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1012,6 +1018,7 @@ preference, and this file is where that shows.
 | [I2019Q3-03](2019/2019-Q3.md#i2019q3-03-bitpoint-cryptocurrency-exchange-hot-wallet-theft) | 2019-07-12 | BitPoint Japan Co., Ltd. |
 | [I2019Q4-01](2019/2019-Q4.md#i2019q4-01-imperva-cloud-waf-customer-data-exposure) | 2019-10-10 | Imperva |
 | [I2020Q1-16](2020/2020-Q1.md#i2020q1-16-marriott-second-guest-data-breach) | 2020-03-31 | Marriott International |
+| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-grubman-shire-meiselas-sacks-revil-ransomware-and-extortion) | 2020-05 | Grubman Shire Meiselas & Sacks |
 | [I2020Q4-05](2020/2020-Q4.md#i2020q4-05-wildworks-animal-jam) | 2020-11-11 | WildWorks |
 | [I2021Q1-01](2021/2021-Q1.md#i2021q1-01-ubiquiti-insider-data-theft-and-extortion) | 2021-01-11 | Ubiquiti Inc. |
 | [I2021Q1-04](2021/2021-Q1.md#i2021q1-04-oldsmar-water-treatment-plant-scada-intrusion) | 2021-02-08 | City of Oldsmar, Florida (water treatment facility) |
@@ -1044,7 +1051,7 @@ preference, and this file is where that shows.
 | [I2018Q4-09](2018/2018-Q4.md#i2018q4-09-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
 | [I2019Q4-01](2019/2019-Q4.md#i2019q4-01-imperva-cloud-waf-customer-data-exposure) | 2019-10-10 | Imperva |
 | [I2019Q4-02](2019/2019-Q4.md#i2019q4-02-avast-ccleaner-backend-intrusion-via-forgotten-vpn-account) | 2019-10-21 | Avast Software |
-| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
+| [I2020Q2-11](2020/2020-Q2.md#i2020q2-11-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
 | [I2022Q1-10](2022/2022-Q1.md#i2022q1-10-ubisoft-cyber-security-incident) | 2022-03-10 | Ubisoft Entertainment |
 | [I2022Q2-03](2022/2022-Q2.md#i2022q2-03-heroku-and-travis-ci-oauth-token-theft-github-npm) | 2022-04-15 | Heroku and Travis CI (compromised OAuth integrators); GitHub customers including npm |
 | [I2023Q3-09](2023/2023-Q3.md#i2023q3-09-microsoft-ai-research-38tb-sas-token-exposure) | 2023-09-18 | Microsoft (AI research division) |
@@ -1101,7 +1108,7 @@ preference, and this file is where that shows.
 
 ## `DATA-01` — Row-level authorization enabled and default-deny on every client-reachable table
 
-**14 incidents.**
+**15 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1111,8 +1118,9 @@ preference, and this file is where that shows.
 | [I2019Q3-04](2019/2019-Q3.md#i2019q3-04-bulgaria-national-revenue-agency-data-breach) | 2019-07-15 | National Revenue Agency of Bulgaria (NRA) |
 | [I2020Q1-06](2020/2020-Q1.md#i2020q1-06-slickwraps-customer-data-exposure) | 2020-02-22 | Slickwraps |
 | [I2020Q1-08](2020/2020-Q1.md#i2020q1-08-virgin-media-marketing-database-exposure) | 2020-03 | Virgin Media |
-| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
-| [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
+| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
+| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-grubman-shire-meiselas-sacks-revil-ransomware-and-extortion) | 2020-05 | Grubman Shire Meiselas & Sacks |
+| [I2020Q2-14](2020/2020-Q2.md#i2020q2-14-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
 | [I2023Q1-11](2023/2023-Q1.md#i2023q1-11-chatgpt-redis-bug-cross-user-data-exposure) | 2023-03-24 | OpenAI |
 | [I2024Q1-11](2024/2024-Q1.md#i2024q1-11-france-travail-pôle-emploi-job-seeker-data-breach) | 2024-03-13 | France Travail |
 | [I2024Q3-07](2024/2024-Q3.md#i2024q3-07-slack-ai-indirect-prompt-injection-data-exfiltration) | 2024-08-20 | Slack (Salesforce) |
@@ -1128,8 +1136,8 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
 | [I2018Q4-01](2018/2018-Q4.md#i2018q4-01-employees-retirement-system-of-texas-member-search-exposure) | 2018-10-23 | Employees Retirement System of Texas (ERS) |
-| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
-| [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
+| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
+| [I2020Q2-14](2020/2020-Q2.md#i2020q2-14-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
 | [I2023Q1-11](2023/2023-Q1.md#i2023q1-11-chatgpt-redis-bug-cross-user-data-exposure) | 2023-03-24 | OpenAI |
 | [I2025Q2-08](2025/2025-Q2.md#i2025q2-08-lovable-generated-applications-without-row-level-security) | 2025-05-29 | Lovable |
 | [I2025Q2-11](2025/2025-Q2.md#i2025q2-11-asana-mcp-server-cross-tenant-data-exposure) | 2025-06-18 | Asana |
@@ -1189,7 +1197,7 @@ preference, and this file is where that shows.
 | [I2019Q3-16](2019/2019-Q3.md#i2019q3-16-ecuador-national-data-leak-novaestrat) | 2019-09-16 | Novaestrat |
 | [I2020Q1-05](2020/2020-Q1.md#i2020q1-05-mgm-resorts-guest-data-posted-to-hacking-forum) | 2020-02-20 | MGM Resorts International |
 | [I2020Q1-09](2020/2020-Q1.md#i2020q1-09-decathlon-spain-unsecured-elasticsearch-database) | 2020-03 | Decathlon Spain |
-| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
+| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
 | [I2020Q3-08](2020/2020-Q3.md#i2020q3-08-unsecured-elasticsearch-database-exposes-scraped-social-profiles) | 2020-08 | SocialArks (social-media data/marketing vendor) |
 | [I2020Q4-02](2020/2020-Q4.md#i2020q4-02-vastaamo) | 2020-10-21 | Vastaamo |
 | [I2021Q1-02](2021/2021-Q1.md#i2021q1-02-socialarks-scraped-profile-database-exposure) | 2021-01-11 | SocialArks |
@@ -1256,7 +1264,7 @@ preference, and this file is where that shows.
 | [I2019Q3-08](2019/2019-Q3.md#i2019q3-08-renown-health-lost-storage-device-breach) | 2019-08 | Renown Health |
 | [I2019Q3-10](2019/2019-Q3.md#i2019q3-10-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. |
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. |
-| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
+| [I2020Q2-15](2020/2020-Q2.md#i2020q2-15-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
 | [I2020Q3-02](2020/2020-Q3.md#i2020q3-02-blackbaud-ransomware-and-donor-data-breach) | 2020-07-16 | Blackbaud, Inc. (SaaS donor-management vendor; over 13,000 nonprofit, education, and healthcare customers affected) |
 | [I2020Q4-02](2020/2020-Q4.md#i2020q4-02-vastaamo) | 2020-10-21 | Vastaamo |
 | [I2021Q1-10](2021/2021-Q1.md#i2021q1-10-sita-passenger-service-system-breach-air-india) | 2021-03-19 | SITA (Air India passenger data) |
@@ -1311,7 +1319,7 @@ preference, and this file is where that shows.
 
 ## `DATA-09` — Data minimization and enforced retention limits
 
-**59 incidents.**
+**62 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1344,6 +1352,9 @@ preference, and this file is where that shows.
 | [I2019Q1-01](2019/2019-Q1.md#i2019q1-01-wolverine-solutions-group-ransomware-attack) | 2019-01-04 | Wolverine Solutions Group |
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. |
 | [I2019Q3-13](2019/2019-Q3.md#i2019q3-13-exposed-database-of-facebook-users-phone-numbers) | 2019-09-04 | Facebook (data held on an unaffiliated third-party server) |
+| [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-itaewon-cluster-contact-tracing-disclosures-and-lgbtq-outing) | 2020-05 | Korea Centers for Disease Control and Prevention and Seoul-area local governments |
+| [I2020Q2-12](2020/2020-Q2.md#i2020q2-12-aarogya-setu-location-based-health-status-inference) | 2020-05-06 | National Informatics Centre, Government of India (Aarogya Setu app) |
+| [I2020Q2-13](2020/2020-Q2.md#i2020q2-13-service-nsw-email-compromise-and-customer-data-breach) | 2020-05-14 | Service NSW |
 | [I2020Q3-02](2020/2020-Q3.md#i2020q3-02-blackbaud-ransomware-and-donor-data-breach) | 2020-07-16 | Blackbaud, Inc. (SaaS donor-management vendor; over 13,000 nonprofit, education, and healthcare customers affected) |
 | [I2020Q3-08](2020/2020-Q3.md#i2020q3-08-unsecured-elasticsearch-database-exposes-scraped-social-profiles) | 2020-08 | SocialArks (social-media data/marketing vendor) |
 | [I2021Q1-02](2021/2021-Q1.md#i2021q1-02-socialarks-scraped-profile-database-exposure) | 2021-01-11 | SocialArks |
@@ -1377,10 +1388,11 @@ preference, and this file is where that shows.
 
 ## `DATA-10` — Features that fan out one account's data to others are rate-limited and opt-in
 
-**2 incidents.**
+**3 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
+| [I2020Q2-12](2020/2020-Q2.md#i2020q2-12-aarogya-setu-location-based-health-status-inference) | 2020-05-06 | National Informatics Centre, Government of India (Aarogya Setu app) |
 | [I2022Q4-07](2022/2022-Q4.md#i2022q4-07-twitter-api-vulnerability-data-scraped-and-leaked-at-scale) | 2022-11-24 | Twitter, Inc. (renamed X Corp. in 2023) |
 | [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe |
 
@@ -1399,7 +1411,7 @@ preference, and this file is where that shows.
 | [I2018Q2-09](2018/2018-Q2.md#i2018q2-09-bmo-and-simplii-financial-customer-data-extortion-attempt) | 2018-05-28 | Bank of Montreal (BMO) and Simplii Financial (CIBC) |
 | [I2018Q2-14](2018/2018-Q2.md#i2018q2-14-liberty-holdings-email-repository-breach-and-extortion-attempt) | 2018-06-17 | Liberty Holdings Limited |
 | [I2018Q3-13](2018/2018-Q3.md#i2018q3-13-huazhu-hotels-group-guest-data-leak) | 2018-08-28 | Huazhu Group (China Lodging Group) |
-| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
+| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
 | [I2020Q3-07](2020/2020-Q3.md#i2020q3-07-experian-south-africa-fraudulent-data-disclosure) | 2020-08 | Experian South Africa |
 | [I2022Q1-09](2022/2022-Q1.md#i2022q1-09-samsung-lapsus-source-code-leak) | 2022-03-04 | Samsung Electronics |
 | [I2024Q1-03](2024/2024-Q1.md#i2024q1-03-trello-unauthenticated-api-user-data-scraping) | 2024-01-22 | Trello (Atlassian) |
@@ -1429,7 +1441,7 @@ preference, and this file is where that shows.
 
 ## `DATA-12` — What a single compromise can reach is capped, in value and in volume
 
-**19 incidents.**
+**20 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1439,6 +1451,7 @@ preference, and this file is where that shows.
 | [I2018Q2-15](2018/2018-Q2.md#i2018q2-15-bithumb-cryptocurrency-exchange-hot-wallet-theft) | 2018-06-20 | Bithumb |
 | [I2018Q3-18](2018/2018-Q3.md#i2018q3-18-zaif-cryptocurrency-exchange-hot-wallet-theft) | 2018-09-20 | Tech Bureau Corp. (Zaif) |
 | [I2019Q3-03](2019/2019-Q3.md#i2019q3-03-bitpoint-cryptocurrency-exchange-hot-wallet-theft) | 2019-07-12 | BitPoint Japan Co., Ltd. |
+| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-grubman-shire-meiselas-sacks-revil-ransomware-and-extortion) | 2020-05 | Grubman Shire Meiselas & Sacks |
 | [I2025Q1-11](2025/2025-Q1.md#i2025q1-11-oracle-health-legacy-cerner-server-breach) | 2025-03-28 | Oracle Health (formerly Cerner) |
 | [I2025Q2-04](2025/2025-Q2.md#i2025q2-04-coinbase-bribed-contractor-data-theft) | 2025-05-15 | Coinbase Global |
 | [I2025Q2-13](2025/2025-Q2.md#i2025q2-13-aflac-and-the-insurance-sector-social-engineering-campaign) | 2025-06-20 | Aflac |
@@ -1533,7 +1546,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2016Q2-01](2016/2016-Q2.md#i2016q2-01-panama-papers-leak-mossack-fonseca) | 2016-04-03 | Mossack Fonseca |
 | [I2017Q3-14](2017/2017-Q3.md#i2017q3-14-equifax-data-breach) | 2017-09-07 | Equifax Inc. |
-| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
+| [I2020Q2-18](2020/2020-Q2.md#i2020q2-18-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
 | [I2021Q4-08](2021/2021-Q4.md#i2021q4-08-log4shell-apache-log4j-cve-2021-44228) | 2021-12-09 | Apache Log4j 2 (logging library; embedded across the Java ecosystem) |
 | [I2021Q4-11](2021/2021-Q4.md#i2021q4-11-belgian-ministry-of-defence-log4shell-exploitation) | 2021-12-21 | Belgian Ministry of Defence |
 | [I2022Q3-09](2022/2022-Q3.md#i2022q3-09-suffolk-county-ransomware-attack) | 2022-09-08 | Suffolk County, New York |
@@ -1560,7 +1573,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2016Q4-08](2016/2016-Q4.md#i2016q4-08-adups-firmware-covert-data-collection-blu-products) | 2016-11-15 | BLU Products (device maker; firmware supplied by Shanghai Adups Technology) |
 | [I2018Q4-07](2018/2018-Q4.md#i2018q4-07-event-stream-npm-backdoor-targeting-copay) | 2018-11-26 | Copay (BitPay), via the event-stream npm package |
-| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
+| [I2020Q2-18](2020/2020-Q2.md#i2020q2-18-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
 | [I2021Q1-05](2021/2021-Q1.md#i2021q1-05-accellion-fta-zero-day-breach-singtel) | 2021-02-11 | Singtel |
 | [I2024Q1-10](2024/2024-Q1.md#i2024q1-10-malicious-machine-learning-models-on-the-hugging-face-hub) | 2024-02-29 | Hugging Face Hub (research and disclosure by JFrog) |
 | [I2024Q1-13](2024/2024-Q1.md#i2024q1-13-xz-utils-backdoor-cve-2024-3094) | 2024-03-29 | XZ Utils (open-source compression library; affects the OpenSSH server on most Linux distributions) |
@@ -1575,7 +1588,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2017Q3-15](2017/2017-Q3.md#i2017q3-15-ccleaner-supply-chain-attack) | 2017-09-18 | Piriform (CCleaner, owned by Avast) |
 | [I2019Q1-09](2019/2019-Q1.md#i2019q1-09-operation-shadowhammer-asus-live-update-supply-chain-attack) | 2019-03-25 | ASUS |
-| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
+| [I2020Q2-18](2020/2020-Q2.md#i2020q2-18-ripple20-treck-tcpip-stack-vulnerabilities) | 2020-06-16 | Treck Inc. (embedded TCP/IP stack; affecting 100+ downstream device vendors) |
 | [I2020Q4-08](2020/2020-Q4.md#i2020q4-08-solarwinds-sunburst) | 2020-12-13 | SolarWinds Corporation |
 | [I2021Q1-05](2021/2021-Q1.md#i2021q1-05-accellion-fta-zero-day-breach-singtel) | 2021-02-11 | Singtel |
 | [I2021Q2-03](2021/2021-Q2.md#i2021q2-03-passwordstate-supply-chain-update-compromise) | 2021-04-24 | Click Studios (Passwordstate) |
@@ -1693,7 +1706,7 @@ preference, and this file is where that shows.
 | [I2019Q4-11](2019/2019-Q4.md#i2019q4-11-virtual-care-provider-inc-vcpi-ransomware-attack-on-110-nursing-homes) | 2019-11 | Virtual Care Provider Inc. (VCPI) |
 | [I2020Q1-11](2020/2020-Q1.md#i2020q1-11-brno-university-hospital-ransomware-attack) | 2020-03-13 | Brno University Hospital |
 | [I2020Q1-15](2020/2020-Q1.md#i2020q1-15-godaddy-employee-phishing-escrowcom-dns-hijack) | 2020-03-30 | GoDaddy |
-| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
+| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
 | [I2020Q3-06](2020/2020-Q3.md#i2020q3-06-sans-institute-phishing-and-mailbox-forwarding-exposure) | 2020-08-12 | SANS Institute |
 | [I2021Q2-06](2021/2021-Q2.md#i2021q2-06-hse-ireland-conti-ransomware-attack) | 2021-05-14 | Health Service Executive (Ireland) |
 | [I2021Q2-07](2021/2021-Q2.md#i2021q2-07-waikato-dhb-ransomware-attack) | 2021-05-18 | Waikato District Health Board |
@@ -1735,7 +1748,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-07` — Sensitive operations have a checklist, not just a competent operator
 
-**20 incidents.**
+**23 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1753,8 +1766,11 @@ preference, and this file is where that shows.
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. |
 | [I2020Q1-07](2020/2020-Q1.md#i2020q1-07-clearview-ai-client-list-theft) | 2020-02-28 | Clearview AI |
 | [I2020Q1-08](2020/2020-Q1.md#i2020q1-08-virgin-media-marketing-database-exposure) | 2020-03 | Virgin Media |
-| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
-| [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
+| [I2020Q2-02](2020/2020-Q2.md#i2020q2-02-nrw-corona-soforthilfe-phishing-fraud) | 2020-04-09 | North Rhine-Westphalia state government (Ministry of Economic Affairs) |
+| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration |
+| [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-itaewon-cluster-contact-tracing-disclosures-and-lgbtq-outing) | 2020-05 | Korea Centers for Disease Control and Prevention and Seoul-area local governments |
+| [I2020Q2-12](2020/2020-Q2.md#i2020q2-12-aarogya-setu-location-based-health-status-inference) | 2020-05-06 | National Informatics Centre, Government of India (Aarogya Setu app) |
+| [I2020Q2-14](2020/2020-Q2.md#i2020q2-14-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
 | [I2022Q1-05](2022/2022-Q1.md#i2022q1-05-givesendgo-donor-data-exposure-and-breach) | 2022-02-08 | GiveSendGo |
 | [I2023Q4-01](2023/2023-Q4.md#i2023q4-01-philhealth-medusa-ransomware-attack) | 2023-10-03 | Philippine Health Insurance Corporation (PhilHealth) |
 | [I2025Q1-06](2025/2025-Q1.md#i2025q1-06-bybit-15b-theft-via-the-safewallet-signing-interface) | 2025-02-21 | Bybit (compromise originated at Safe{Wallet}) |
@@ -1880,7 +1896,7 @@ preference, and this file is where that shows.
 
 ## `INPUT-09` — Identifiers are unguessable, and unguessability is never the only control
 
-**10 incidents.**
+**11 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1892,12 +1908,13 @@ preference, and this file is where that shows.
 | [I2018Q3-16](2018/2018-Q3.md#i2018q3-16-govpaynet-receipt-numbering-exposure) | 2018-09-17 | GovPayNet (GovPayNow.com) |
 | [I2019Q2-07](2019/2019-Q2.md#i2019q2-07-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation |
 | [I2020Q1-14](2020/2020-Q1.md#i2020q1-14-zoom-zoombombing-wave) | 2020-03-30 | Zoom Video Communications |
+| [I2020Q2-16](2020/2020-Q2.md#i2020q2-16-ehteraz-contact-tracing-app-national-id-exposure) | 2020-05-26 | Ministry of Public Health, Qatar (Ehteraz app) |
 | [I2021Q2-02](2021/2021-Q2.md#i2021q2-02-geico-drivers-license-number-scraping) | 2021-04-19 | GEICO |
 | [I2024Q2-02](2024/2024-Q2.md#i2024q2-02-dell-partner-portal-api-data-scrape) | 2024-05-10 | Dell Technologies |
 
 ## `OBSV-01` — Authentication, authorization failures, admin actions, and exports are centrally logged
 
-**79 incidents.**
+**82 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1941,9 +1958,12 @@ preference, and this file is where that shows.
 | [I2019Q4-05](2019/2019-Q4.md#i2019q4-05-webcom-registercom-and-network-solutions-customer-data-breach) | 2019-10-30 | Web.com Group |
 | [I2019Q4-12](2019/2019-Q4.md#i2019q4-12-wawa-payment-card-breach) | 2019-12-20 | Wawa, Inc. |
 | [I2020Q1-07](2020/2020-Q1.md#i2020q1-07-clearview-ai-client-list-theft) | 2020-02-28 | Clearview AI |
-| [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
-| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
-| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
+| [I2020Q2-01](2020/2020-Q2.md#i2020q2-01-magellan-health-spear-phishing-and-ransomware-attack) | 2020-04 | Magellan Health |
+| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-edp-ragnar-locker-ransomware-and-extortion) | 2020-04-15 | EDP - Energias de Portugal |
+| [I2020Q2-11](2020/2020-Q2.md#i2020q2-11-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
+| [I2020Q2-13](2020/2020-Q2.md#i2020q2-13-service-nsw-email-compromise-and-customer-data-breach) | 2020-05-14 | Service NSW |
+| [I2020Q2-15](2020/2020-Q2.md#i2020q2-15-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
+| [I2020Q2-17](2020/2020-Q2.md#i2020q2-17-honda-snake-ekans-ransomware-attack) | 2020-06-09 | Honda Motor Co. |
 | [I2020Q3-01](2020/2020-Q3.md#i2020q3-01-twitter-mass-account-takeover) | 2020-07-15 | Twitter, Inc. |
 | [I2020Q3-06](2020/2020-Q3.md#i2020q3-06-sans-institute-phishing-and-mailbox-forwarding-exposure) | 2020-08-12 | SANS Institute |
 | [I2020Q3-09](2020/2020-Q3.md#i2020q3-09-freepikflaticon-sql-injection-breach) | 2020-08-22 | Freepik Company (Freepik, Flaticon) |
@@ -2023,8 +2043,8 @@ preference, and this file is where that shows.
 | [I2019Q3-03](2019/2019-Q3.md#i2019q3-03-bitpoint-cryptocurrency-exchange-hot-wallet-theft) | 2019-07-12 | BitPoint Japan Co., Ltd. |
 | [I2019Q4-06](2019/2019-Q4.md#i2019q4-06-krystal-restaurant-chain-payment-card-breach) | 2019-10 | Krystal (restaurant chain) |
 | [I2019Q4-05](2019/2019-Q4.md#i2019q4-05-webcom-registercom-and-network-solutions-customer-data-breach) | 2019-10-30 | Web.com Group |
-| [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
-| [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
+| [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia |
+| [I2020Q2-15](2020/2020-Q2.md#i2020q2-15-easyjet-customer-and-payment-data-breach) | 2020-05-19 | EasyJet |
 | [I2020Q3-03](2020/2020-Q3.md#i2020q3-03-gedmatch-privacy-setting-reset-exposes-dna-matches) | 2020-07-20 | GEDmatch (Verogen) |
 | [I2020Q3-04](2020/2020-Q3.md#i2020q3-04-f5-big-ip-tmui-mass-exploitation-cve-2020-5902) | 2020-07-24 | Multiple organizations, including US federal agencies (CVE-2020-5902 exploitation campaign; no single primary victim) |
 | [I2020Q4-03](2020/2020-Q4.md#i2020q4-03-capcom) | 2020-11-02 | Capcom Co., Ltd. |
@@ -2071,7 +2091,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-03` — Detection is itself monitored; a broken sensor is an incident
 
-**27 incidents.**
+**28 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2087,7 +2107,8 @@ preference, and this file is where that shows.
 | [I2018Q3-17](2018/2018-Q3.md#i2018q3-17-newegg-magecart-checkout-page-skimmer) | 2018-09-19 | Newegg Inc. |
 | [I2018Q3-18](2018/2018-Q3.md#i2018q3-18-zaif-cryptocurrency-exchange-hot-wallet-theft) | 2018-09-20 | Tech Bureau Corp. (Zaif) |
 | [I2019Q4-11](2019/2019-Q4.md#i2019q4-11-virtual-care-provider-inc-vcpi-ransomware-attack-on-110-nursing-homes) | 2019-11 | Virtual Care Provider Inc. (VCPI) |
-| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
+| [I2020Q2-03](2020/2020-Q2.md#i2020q2-03-edp-ragnar-locker-ransomware-and-extortion) | 2020-04-15 | EDP - Energias de Portugal |
+| [I2020Q2-11](2020/2020-Q2.md#i2020q2-11-godaddy-hosting-ssh-credential-compromise) | 2020-05-04 | GoDaddy |
 | [I2021Q2-06](2021/2021-Q2.md#i2021q2-06-hse-ireland-conti-ransomware-attack) | 2021-05-14 | Health Service Executive (Ireland) |
 | [I2021Q4-07](2021/2021-Q4.md#i2021q4-07-panasonic-file-server-unauthorized-access) | 2021-11-26 | Panasonic Corporation |
 | [I2022Q3-02](2022/2022-Q3.md#i2022q3-02-albania-government-destructive-cyberattack-homeland-justice) | 2022-07-18 | Government of Albania |
@@ -2116,7 +2137,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-05` — A written incident plan naming the decider, the communicator, and the disclosure clock
 
-**73 incidents.**
+**74 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2145,7 +2166,8 @@ preference, and this file is where that shows.
 | [I2020Q1-05](2020/2020-Q1.md#i2020q1-05-mgm-resorts-guest-data-posted-to-hacking-forum) | 2020-02-20 | MGM Resorts International |
 | [I2020Q1-10](2020/2020-Q1.md#i2020q1-10-champaign-urbana-public-health-district-ransomware) | 2020-03-11 | Champaign-Urbana Public Health District |
 | [I2020Q1-13](2020/2020-Q1.md#i2020q1-13-finastra-ransomware-shutdown) | 2020-03-20 | Finastra |
-| [I2020Q2-02](2020/2020-Q2.md#i2020q2-02-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
+| [I2020Q2-02](2020/2020-Q2.md#i2020q2-02-nrw-corona-soforthilfe-phishing-fraud) | 2020-04-09 | North Rhine-Westphalia state government (Ministry of Economic Affairs) |
+| [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions |
 | [I2020Q3-02](2020/2020-Q3.md#i2020q3-02-blackbaud-ransomware-and-donor-data-breach) | 2020-07-16 | Blackbaud, Inc. (SaaS donor-management vendor; over 13,000 nonprofit, education, and healthcare customers affected) |
 | [I2020Q3-05](2020/2020-Q3.md#i2020q3-05-garmin-wastedlocker-ransomware-outage) | 2020-07-27 | Garmin Ltd. |
 | [I2021Q1-06](2021/2021-Q1.md#i2021q1-06-kia-motors-america-ransomware-claim) | 2021-02-16 | Kia Motors America |
