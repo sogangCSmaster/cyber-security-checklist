@@ -32,7 +32,12 @@ def normalize(path: Path) -> int:
 
     def disclosed(block: str) -> str:
         m = re.search(r'^date_disclosed:\s*(\S+)', block, re.M)
-        return m.group(1) if m else '9999-99'
+        if not m:
+            return '9999-99'
+        # A quoted value sorts before an unquoted one and silently scrambles the file,
+        # so strip quotes and pad a month-only date to compare against full dates.
+        value = m.group(1).strip('"\'')
+        return value if len(value) > 7 else value + '-00'
 
     blocks.sort(key=disclosed)
 

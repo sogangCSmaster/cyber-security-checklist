@@ -1166,8 +1166,15 @@ older than a year and name its owner.
   through them. No control in this document is priced against an attacker who can buy the
   credential for the cost of a laptop.
 
+- **Munchables, 2024** — the insider was hired. A developer linked to North Korean operations was
+  brought onto the team through an ordinary recruitment process and drained $62.5M. The control
+  that failed was `HUMAN-04`, at the point of hiring, not `HUMAN-03` at the point of leaving.
+  Fraudulent hiring into engineering roles has since been documented widely enough to be treated
+  as a standing risk rather than an anomaly.
+
 **How to test.** Alert on volume, not intent. One account reading everything is the signal, and it
-looks identical whether the cause is malice, compromise or a stolen session.
+looks identical whether the cause is malice, compromise or a stolen session. Separately: verify
+who you hired, particularly for fully remote engineering roles with production access.
 
 ---
 
