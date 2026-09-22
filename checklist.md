@@ -103,6 +103,13 @@ credential somewhere it should not have been.
 - [ ] **CRED-09** · **P2** — A rotation and revocation runbook with a named owner and a stated
       maximum time-to-revoke.
   - *Verify:* someone can answer "how long to kill every credential?" with a number, not a shrug.
+- [ ] **CRED-10** · **P1** — No default or shared credential in anything you ship or deploy. A
+      unique one is forced at first use.
+  - *Why:* Mirai, 2016 — default factory credentials on IoT cameras and DVRs assembled a botnet
+    that took a DNS provider offline across much of the US. VPNFilter, 2018 — the same class, on
+    consumer routers.
+  - *Verify:* no credential in firmware, images, or seed data, and first boot refuses to proceed
+    until one is set.
 
 ---
 
@@ -143,6 +150,13 @@ credential somewhere it should not have been.
   - *Why:* Uber, 2022 — MFA push-bombing a contractor until they approved.
 - [ ] **AUTH-10** · **P1** — Legacy and alternative login paths are disabled, not merely
       deprecated.
+- [ ] **AUTH-11** · **P1** — Every state-changing interface authenticates its caller, including
+      the ones that are not HTTP.
+  - *Why:* St. Jude implantable cardiac devices, 2016 — a radio command interface accepted
+    state-changing commands from an unauthenticated party nearby. The same gap appears in message
+    queues, serial and Bluetooth interfaces, and internal services assumed to be "behind the
+    firewall".
+  - *Verify:* enumerate every interface that can change state, not just the HTTP routes.
   - *Why:* Nintendo, 2020 — credential stuffing against the legacy NNID login. Microsoft, 2024 —
     password spraying a legacy non-production test tenant with no MFA, which held an OAuth app
     with corporate reach.
@@ -190,6 +204,12 @@ credential somewhere it should not have been.
   - *Why:* 23andMe, 2023 — the "DNA Relatives" feature turned 14,000 compromised logins into 6.9M
     exposed profiles. Facebook, 2021 — contact import, 533M phone numbers.
 - [ ] **DATA-11** · **P1** — Bulk export is a privileged, logged, alerting action.
+- [ ] **DATA-12** · **P1** — What a single compromise can reach is capped, in value and in volume.
+  - *Why:* Youbit, 2017 and Coinrail, 2018 — hot wallets held the full balance, so one compromise
+    took everything, and Youbit filed for bankruptcy the same day. The general form: put a ceiling
+    on what any internet-connected system holds at one time and sweep the rest out of reach.
+  - *Verify:* for any store of value or bulk data, a documented ceiling exists on what one
+    compromise reaches.
   - *Why:* Salesloft Drift, 2025 — stolen OAuth tokens used for bulk CRM export across 700+
     organizations. Every mass-scraping incident in the corpus ran through an endpoint working
     exactly as designed.
@@ -325,6 +345,14 @@ Misconfiguration is the most common root cause among the largest breaches ever r
 - [ ] **CLOUD-08** · **P1** — Admin interfaces not on the public internet.
 - [ ] **CLOUD-09** · **P2** — An asset inventory exists; unowned and forgotten assets are found and
       removed.
+- [ ] **CLOUD-10** · **P1** — A patch SLA for internet-facing and laterally-reachable systems, an
+      inventory of what cannot be patched, and a staged rollout.
+  - *Why:* WannaCry and NotPetya both ran on MS17-010, patched two months earlier. Equifax's
+    Struts patch had been available for two months. And the counterweight, from the same corpus:
+    Intel's first Meltdown and Spectre microcode caused enough reboot instability that it had to
+    be pulled and reissued — a patch SLA without a staged rollout trades one outage for another.
+  - *Verify:* a number exists for "critical patch applied within N days", and someone can name
+    what is not patchable and why.
   - *Why:* T-Mobile, 2021 — an unprotected internet-facing router nobody owned.
 
 ---
@@ -378,6 +406,13 @@ Misconfiguration is the most common root cause among the largest breaches ever r
   - *Why:* Marriott, 2018 — intruders were in Starwood's network from 2014 and were acquired along
     with the company. 383M guest records, four years undetected.
 - [ ] **VENDOR-08** · **P2** — Vendor access time-boxed and separately monitored.
+- [ ] **VENDOR-09** · **P2** — What a bundled third-party component actually does at runtime is
+      verified, not assumed.
+  - *Why:* BLU Products, 2016 — pre-installed update-agent firmware copied users' text messages,
+    call logs, contacts, and location to servers abroad every 72 hours, by the vendor's own
+    account without their knowledge. `postmark-mcp`, 2025 — fifteen clean versions, then one line
+    that BCC'd every email. What it claims to do and what it sends are different questions.
+  - *Verify:* for any component with network access, observe what it actually transmits.
 
 ---
 

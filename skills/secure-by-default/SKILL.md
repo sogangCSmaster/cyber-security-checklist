@@ -153,6 +153,6 @@ They own the decision.
 
 ## Full reference
 
-- [`checklist.md`](../../checklist.md) — all 105 controls with priorities and verification steps
+- [`checklist.md`](../../checklist.md) — all 110 controls with priorities and verification steps
 - [`incidents/`](../../incidents/) — the breach corpus these rules come from
 - [`incidents/STATS.md`](../../incidents/STATS.md) — which failures actually appear most often

@@ -20,7 +20,7 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 
 | | What it is | Who it is for |
 | --- | --- | --- |
-| **[`checklist.md`](./checklist.md)** | 105 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
+| **[`checklist.md`](./checklist.md)** | 110 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
 | **[`incidents/`](./incidents/)** | The evidence: a quarter-by-quarter corpus of documented breaches, tagged and indexed | Anyone asking "has this actually happened?" |
 | **[`skills/`](./skills/)** | Three Claude Code skills that apply the checklist while you work | Claude Code users |
 | **[`prompts/`](./prompts/)** | The same content as copy-paste text | Cursor, Copilot, ChatGPT, anything else |

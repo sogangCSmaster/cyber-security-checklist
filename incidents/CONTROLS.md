@@ -19,6 +19,7 @@ required control in the record's prose.
 | CRED-07 | Credentials expire; no indefinite lifetimes |
 | CRED-08 | Per-environment secrets; development cannot reach production |
 | CRED-09 | A rotation and revocation runbook with an owner and a stated maximum time-to-revoke |
+| CRED-10 | No default or shared credential in anything you ship or deploy; a unique one is forced at first use |
 
 ## AUTH — Identity, authentication, authorization
 | ID | Control |
@@ -33,6 +34,7 @@ required control in the record's prose.
 | AUTH-08 | Access is inventoried, owned, and expires when unused |
 | AUTH-09 | MFA cannot be satisfied by a tap; number matching or hardware keys |
 | AUTH-10 | Legacy and alternative login paths are disabled, not merely deprecated |
+| AUTH-11 | Every state-changing interface authenticates its caller, including non-HTTP ones |
 
 ## DATA — Data layer, tenant isolation, storage
 | ID | Control |
@@ -48,6 +50,7 @@ required control in the record's prose.
 | DATA-09 | Data minimization and enforced retention limits |
 | DATA-10 | Features that fan out one account's data to others are rate-limited and opt-in |
 | DATA-11 | Bulk export is a privileged, logged, alerting action |
+| DATA-12 | What a single compromise can reach is capped, in value and in volume |
 
 ## INPUT — Input handling and injection
 | ID | Control |
@@ -103,6 +106,7 @@ required control in the record's prose.
 | CLOUD-07 | Infrastructure is declared as code and drift is detected |
 | CLOUD-08 | Admin interfaces are not on the public internet |
 | CLOUD-09 | An inventory exists; unowned and forgotten assets are found and removed |
+| CLOUD-10 | A patch SLA for internet-facing and laterally-reachable systems, an inventory of what cannot be patched, and a staged rollout |
 
 ## CICD — Pipeline, build, deploy, developer machines
 | ID | Control |
@@ -128,6 +132,7 @@ required control in the record's prose.
 | VENDOR-06 | Contractual notification windows, and you monitor vendor advisories |
 | VENDOR-07 | Acquired and inherited systems are audited before being connected |
 | VENDOR-08 | Vendor access is time-boxed and separately monitored |
+| VENDOR-09 | What a bundled third-party component actually does at runtime is verified, not assumed |
 
 ## HUMAN — People and process
 | ID | Control |
