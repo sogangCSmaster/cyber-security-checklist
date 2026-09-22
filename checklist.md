@@ -20,6 +20,10 @@ Each control has an ID (`CRED-01`), a priority, the incident that proves it matt
 verify it. The ID is stable: incident records point at it, skills cite it, and you can reference
 it in a pull request.
 
+[`vulnerabilities.md`](./vulnerabilities.md) is the same ground indexed the other way — by the
+named class (IDOR, BOLA, SSRF, mass assignment, prompt injection) rather than by the control — and
+says how each one tends to appear in AI-generated code.
+
 [`incidents/CONTROL-INDEX.md`](./incidents/CONTROL-INDEX.md) lists, for every control, every
 incident in the corpus it would have broken. It is generated, so it cannot drift from the
 evidence — and the three controls with no incidents behind them are marked as such below rather

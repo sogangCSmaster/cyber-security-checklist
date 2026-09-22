@@ -21,6 +21,7 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 | | What it is | Who it is for |
 | --- | --- | --- |
 | **[`checklist.md`](./checklist.md)** | 110 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
+| **[`vulnerabilities.md`](./vulnerabilities.md)** | The same ground organised by **what goes wrong** — IDOR, BOLA, SSRF, mass assignment, prompt injection and 42 more, each with how it appears in AI-generated code | Anyone who knows the name of the bug but not the control |
 | **[`incidents/`](./incidents/)** | The evidence: **470 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |
 | **[`incidents/PATTERNS.md`](./incidents/PATTERNS.md)** | What the 470 records add up to, counted rather than asserted | Anyone who wants the conclusion before the evidence |
 | **[`skills/`](./skills/)** | Three Claude Code skills that apply the checklist while you work | Claude Code users |

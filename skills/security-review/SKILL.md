@@ -155,6 +155,10 @@ controls it maps to. `incidents/CONTROL-INDEX.md` goes the other way — give it
 lists every incident that control would have broken, which is usually the faster path from a
 finding to its precedent.
 
+[`vulnerabilities.md`](../../vulnerabilities.md) gives each finding its **name** — IDOR, BOLA
+(API1:2023), mass assignment, SSRF, indirect prompt injection. Use it. A developer can search for
+`BOLA`; they cannot search for "authorization checked per object".
+
 Never invent an incident, a figure, or a CVE. If the corpus has no matching case, say the control
 is preventive rather than evidenced — that is an honest and still useful finding.
 
