@@ -21,7 +21,8 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 | | What it is | Who it is for |
 | --- | --- | --- |
 | **[`checklist.md`](./checklist.md)** | 110 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
-| **[`incidents/`](./incidents/)** | The evidence: a quarter-by-quarter corpus of documented breaches, tagged and indexed | Anyone asking "has this actually happened?" |
+| **[`incidents/`](./incidents/)** | The evidence: **470 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |
+| **[`incidents/PATTERNS.md`](./incidents/PATTERNS.md)** | What the 470 records add up to, counted rather than asserted | Anyone who wants the conclusion before the evidence |
 | **[`skills/`](./skills/)** | Three Claude Code skills that apply the checklist while you work | Claude Code users |
 | **[`prompts/`](./prompts/)** | The same content as copy-paste text | Cursor, Copilot, ChatGPT, anything else |
 
@@ -99,8 +100,8 @@ nothing from this repository:
 
 ## The evidence
 
-[`incidents/`](./incidents/) is a quarter-by-quarter corpus covering 2016 through 2026. Each
-record separates three things that are usually blurred together, because they need three
+[`incidents/`](./incidents/) holds **470 records across all 43 quarters from 2016 Q1 to 2026 Q3**.
+Each record separates three things that are usually blurred together, because they need three
 different fixes:
 
 | | Question | What it maps to |
@@ -122,6 +123,7 @@ grep -rlE 'tech/(firebase|supabase)' incidents/20*/   # everything involving a c
 grep -rl 'DATA-01' incidents/20*/                     # which incidents does this control answer for?
 ```
 
+[`incidents/PATTERNS.md`](./incidents/PATTERNS.md) is the rollup.
 [`incidents/INDEX.md`](./incidents/INDEX.md) is one line per incident.
 [`incidents/STATS.md`](./incidents/STATS.md) is the frequency rollup that the checklist's ordering
 comes from. [`incidents/index.jsonl`](./incidents/index.jsonl) is the machine-readable version.
@@ -131,6 +133,19 @@ All three are generated:
 python3 tools/build_index.py           # rebuild
 python3 tools/build_index.py --check   # validate without writing
 ```
+
+### Three things the evidence says that most security advice does not
+
+- **Half of all breaches involved no escalation at all.** `escalation/none-required` appears in
+  **49%** of records — the bucket was public, the database had no password, the endpoint answered
+  anyone who asked. There was no chain to break.
+- **The most common published answer to "how did they get in" is silence.** `entry/unknown` is
+  **30%**, more than three times the next vector. The distribution of published entry vectors is
+  not the distribution of real ones.
+- **The top three root causes are organizational.** Process failure (24%), detection failure (22%)
+  and third-party trust (21%) all outrank every purely technical class. Zero-days are 3%.
+
+Full working in [`incidents/PATTERNS.md`](./incidents/PATTERNS.md).
 
 ### What the corpus is and is not
 
