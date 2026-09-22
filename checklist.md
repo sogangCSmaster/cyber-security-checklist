@@ -78,7 +78,8 @@ credential somewhere it should not have been.
       support ticket has seen.
   - *Why:* Okta, 2023 — service-account credentials saved into a personal Google profile, then
     session tokens inside support HAR files. s1ngularity, 2025 — AI CLIs were driven to collect
-    local secrets; 2,300+ were exfiltrated.
+    local secrets. Vendor tallies of what was taken differ; Wiz counted over a thousand valid
+    GitHub tokens plus cloud and npm credentials.
   - *Verify:* a rotation was performed and the old credential now fails. Removing the commit is
     not rotation.
 - [ ] **CRED-04** · **P1** — Secrets injected at runtime from a manager or the environment, never
@@ -256,8 +257,8 @@ Roughly a fifth of the corpus. The category that has grown fastest since 2020.
   - *Verify:* CI uses `npm ci`, `--frozen-lockfile`, or `uv sync --frozen`, never a bare install.
 - [ ] **DEPS-02** · **P0** — Install scripts disabled by default on developer machines and in CI.
   - *Why:* s1ngularity, 2025 — the entire payload was a `postinstall` script, which then invoked
-    the developer's own AI CLI to hunt for secrets: 2,300+ secrets, 6,700 repositories, 5,500
-    private repositories flipped to public.
+    the developer's own AI CLI to hunt for secrets. The stolen tokens were then used to flip over
+    5,500 private repositories to public across more than 400 users and organizations.
   - *Verify:* `npm config get ignore-scripts` is `true`, or CI passes `--ignore-scripts`.
 - [ ] **DEPS-03** · **P0** — A cooldown before adopting a newly published version.
   - *Why:* the `chalk`/`debug` compromise of September 2025 was live for hours across packages
@@ -364,8 +365,10 @@ Misconfiguration is the most common root cause among the largest breaches ever r
     customer's CI job to the attacker. HashiCorp had to rotate its GPG release-signing key.
 - [ ] **CICD-02** · **P0** — Branch protection and required review on anything that reaches users.
   - *Why:* Amazon Q Developer extension, 2025 — an attacker with no special privileges opened a
-    pull request from an ordinary account, it was merged, and a wiper prompt shipped to ~1M
-    installs.
+    pull request from an ordinary GitHub account, it was merged, and a released version shipped
+    with a prompt instructing the agent to wipe the user's filesystem and AWS resources. AWS
+    reported the payload failed on a syntax error, so nothing was confirmed destroyed: the review
+    gate is what should have caught it, and did not.
 - [ ] **CICD-03** · **P1** — Build provenance and artifact signing. Verify what ships is what was
       built.
   - *Why:* SolarWinds, 2020 — malicious code injected during compilation, then signed and shipped
