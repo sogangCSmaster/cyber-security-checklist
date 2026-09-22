@@ -18,8 +18,8 @@ incidents is not a preference, it is where the evidence is.
 | `entry/misconfiguration` | 23 |
 | `entry/phishing` | 21 |
 | `entry/public-database` | 19 |
+| `entry/third-party-access` | 17 |
 | `entry/spear-phishing` | 16 |
-| `entry/third-party-access` | 16 |
 | `entry/zero-day` | 15 |
 | `entry/public-storage` | 15 |
 | `entry/supply-chain-dependency` | 14 |
@@ -70,7 +70,7 @@ incidents is not a preference, it is where the evidence is.
 | --- | --- |
 | `factor/process-failure` | 111 |
 | `factor/detection-failure` | 105 |
-| `factor/third-party-trust` | 99 |
+| `factor/third-party-trust` | 100 |
 | `factor/misconfiguration` | 70 |
 | `factor/social-engineering` | 66 |
 | `factor/no-least-privilege` | 50 |
@@ -243,7 +243,7 @@ incidents is not a preference, it is where the evidence is.
 | `OBSV-01` | 69 |
 | `OBSV-02` | 68 |
 | `OBSV-05` | 66 |
-| `VENDOR-01` | 57 |
+| `VENDOR-01` | 58 |
 | `CLOUD-01` | 56 |
 | `HUMAN-05` | 49 |
 | `DATA-09` | 44 |
@@ -292,6 +292,7 @@ incidents is not a preference, it is where the evidence is.
 | `AGENT-06` | 8 |
 | `CICD-04` | 8 |
 | `AUTH-05` | 7 |
+| `HUMAN-10` | 7 |
 | `VENDOR-05` | 7 |
 | `HUMAN-09` | 7 |
 | `INPUT-09` | 7 |
@@ -302,7 +303,6 @@ incidents is not a preference, it is where the evidence is.
 | `AGENT-01` | 7 |
 | `AGENT-03` | 7 |
 | `DEPS-02` | 7 |
-| `HUMAN-10` | 6 |
 | `DEPS-01` | 6 |
 | `AGENT-02` | 6 |
 | `OBSV-09` | 5 |

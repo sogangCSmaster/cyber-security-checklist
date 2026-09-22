@@ -166,7 +166,7 @@ preference, and this file is where that shows.
 | [I2019Q2-03](2019/2019-Q2.md#i2019q2-03-wipro-employee-phishing-and-client-network-pivot) | 2019-04-15 | Wipro Limited |
 | [I2019Q2-05](2019/2019-Q2.md#i2019q2-05-baltimore-city-government-robbinhood-ransomware-attack) | 2019-05-07 | City of Baltimore |
 | [I2019Q2-08](2019/2019-Q2.md#i2019q2-08-canva-data-breach) | 2019-05-24 | Canva |
-| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-department-of-health-services-phishing-breach) | 2019-07-09 | Los Angeles County Department of Health Services |
+| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-health-services-patient-data-exposed-via-a-contractor-phishing-breach) | 2019-07-08 | Nemadji Research Corporation (billing and eligibility contractor to the Los Angeles County Department of Health Services) |
 | [I2019Q4-02](2019/2019-Q4.md#i2019q4-02-avast-ccleaner-backend-intrusion-via-forgotten-vpn-account) | 2019-10-21 | Avast Software |
 | [I2019Q4-07](2019/2019-Q4.md#i2019q4-07-credential-stuffing-wave-against-bank-customers-via-mint-and-quickbooks-aggregation) | 2019-11 | NCR Digital Insight (banking platform) |
 | [I2019Q4-09](2019/2019-Q4.md#i2019q4-09-disney-launch-day-account-hijacking-wave) | 2019-11-18 | Disney+ (The Walt Disney Company) |
@@ -1547,7 +1547,7 @@ preference, and this file is where that shows.
 | [I2019Q1-05](2019/2019-Q1.md#i2019q1-05-uconn-health-phishing-attack) | 2019-02-25 | UConn Health |
 | [I2019Q1-07](2019/2019-Q1.md#i2019q1-07-norsk-hydro-lockergoga-ransomware-attack) | 2019-03-19 | Norsk Hydro |
 | [I2019Q2-03](2019/2019-Q2.md#i2019q2-03-wipro-employee-phishing-and-client-network-pivot) | 2019-04-15 | Wipro Limited |
-| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-department-of-health-services-phishing-breach) | 2019-07-09 | Los Angeles County Department of Health Services |
+| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-health-services-patient-data-exposed-via-a-contractor-phishing-breach) | 2019-07-08 | Nemadji Research Corporation (billing and eligibility contractor to the Los Angeles County Department of Health Services) |
 | [I2019Q3-06](2019/2019-Q3.md#i2019q3-06-toyota-boshoku-business-email-compromise) | 2019-09-06 | Toyota Boshoku Corporation (European subsidiary) |
 | [I2019Q4-11](2019/2019-Q4.md#i2019q4-11-virtual-care-provider-inc-vcpi-ransomware-attack-on-110-nursing-homes) | 2019-11 | Virtual Care Provider Inc. (VCPI) |
 | [I2020Q1-09](2020/2020-Q1.md#i2020q1-09-godaddy-employee-phishing-escrowcom-dns-hijack) | 2020-03-30 | GoDaddy |
@@ -1635,7 +1635,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-10` — Recipients and destinations are confirmed before data leaves the organization
 
-**6 incidents.**
+**7 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1644,6 +1644,7 @@ preference, and this file is where that shows.
 | [I2016Q3-05](2016/2016-Q3.md#i2016q3-05-leoni-ag-business-email-compromise-wire-fraud) | 2016-08-16 | Leoni AG |
 | [I2017Q1-04](2017/2017-Q1.md#i2017q1-04-tax-season-w-2-phishing-and-ceo-fraud-email-campaign) | 2017-02-02 | Tax-season W-2/CEO-fraud phishing campaign (EWTN Global Catholic Network; Moneytree; 20+ U.S. school districts; hospitals, restaurants, staffing agencies, and nonprofits nationwide) |
 | [I2018Q3-03](2018/2018-Q3.md#i2018q3-03-unitypoint-health-business-email-compromise) | 2018-07 | UnityPoint Health |
+| [I2019Q3-06](2019/2019-Q3.md#i2019q3-06-toyota-boshoku-business-email-compromise) | 2019-09-06 | Toyota Boshoku Corporation (European subsidiary) |
 | [I2020Q1-05](2020/2020-Q1.md#i2020q1-05-slickwraps-customer-data-exposure) | 2020-02-22 | Slickwraps |
 
 ## `INPUT-01` — Parameterized queries everywhere; no concatenated SQL
@@ -1770,7 +1771,7 @@ preference, and this file is where that shows.
 | [I2018Q4-10](2018/2018-Q4.md#i2018q4-10-quora-data-breach) | 2018-12-03 | Quora, Inc. |
 | [I2019Q1-05](2019/2019-Q1.md#i2019q1-05-uconn-health-phishing-attack) | 2019-02-25 | UConn Health |
 | [I2019Q1-06](2019/2019-Q1.md#i2019q1-06-citrix-internal-network-breach) | 2019-03 | Citrix Systems |
-| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-department-of-health-services-phishing-breach) | 2019-07-09 | Los Angeles County Department of Health Services |
+| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-health-services-patient-data-exposed-via-a-contractor-phishing-breach) | 2019-07-08 | Nemadji Research Corporation (billing and eligibility contractor to the Los Angeles County Department of Health Services) |
 | [I2019Q3-07](2019/2019-Q3.md#i2019q3-07-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. |
 | [I2019Q4-05](2019/2019-Q4.md#i2019q4-05-webcom-registercom-and-network-solutions-customer-data-breach) | 2019-10-30 | Web.com Group |
 | [I2019Q4-12](2019/2019-Q4.md#i2019q4-12-wawa-payment-card-breach) | 2019-12-20 | Wawa, Inc. |
@@ -2079,7 +2080,7 @@ preference, and this file is where that shows.
 
 ## `VENDOR-01` — An inventory of every third party holding your data or a token to your systems
 
-**57 incidents.**
+**58 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2097,6 +2098,7 @@ preference, and this file is where that shows.
 | [I2019Q2-02](2019/2019-Q2.md#i2019q2-02-facebook-third-party-app-data-exposed-on-public-aws-s3-buckets) | 2019-04-03 | Facebook third-party app data exposure (Cultura Colectiva, At the Pool) |
 | [I2019Q2-04](2019/2019-Q2.md#i2019q2-04-freedom-mobile-customer-data-exposed-via-vendor-database) | 2019-05-07 | Freedom Mobile |
 | [I2019Q2-09](2019/2019-Q2.md#i2019q2-09-amca-collections-vendor-breach-quest-diagnostics-labcorp) | 2019-06-03 | American Medical Collection Agency (AMCA) |
+| [I2019Q3-01](2019/2019-Q3.md#i2019q3-01-los-angeles-county-health-services-patient-data-exposed-via-a-contractor-phishing-breach) | 2019-07-08 | Nemadji Research Corporation (billing and eligibility contractor to the Los Angeles County Department of Health Services) |
 | [I2019Q3-08](2019/2019-Q3.md#i2019q3-08-ecuador-national-data-leak-novaestrat) | 2019-09-16 | Novaestrat |
 | [I2019Q3-09](2019/2019-Q3.md#i2019q3-09-doordash-third-party-vendor-data-breach) | 2019-09-26 | DoorDash, Inc. |
 | [I2019Q4-03](2019/2019-Q4.md#i2019q4-03-nordvpn-server-compromise-via-datacenter-vendor) | 2019-10-21 | NordVPN |
