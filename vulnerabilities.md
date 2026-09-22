@@ -1117,6 +1117,8 @@ gone.
 - **Cloudflare, 2025** — 104 customer API tokens had been pasted into support cases, and went out
   with them when the support vendor's OAuth tokens were stolen. Your customers paste secrets into
   your support desk whether or not you ask them to.
+- **Gilead Sciences, 2025** — a mail-merge error at a print vendor put social security numbers on
+  the *outside* of the envelopes. No system was breached and nothing was hacked.
 
 **How to test.** This one is process, not code. Confirm that bulk sends, data exports and public
 publications have a second pair of eyes, and that the tooling defaults to BCC and to redaction.
@@ -1135,6 +1137,9 @@ publications have a second pair of eyes, and that the tooling defaults to BCC an
   revoked, reaching customer companies four years later.
 - **Chegg, 2018** — a former contractor's shared login, never rotated.
 - **Toyota, 2022** — a key in a public repository for five years, still valid.
+- **KiranaPro, India, 2025** — a fifteen-person grocery-delivery startup never revoked a departed
+  employee's AWS and GitHub credentials. They were used to delete all production data. The whole
+  company, from one account nobody closed.
 
 **How to test.** Take last quarter's leavers and try their accounts. Then list every credential
 older than a year and name its owner.
