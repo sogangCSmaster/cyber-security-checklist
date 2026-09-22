@@ -554,7 +554,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-01` — Nothing is publicly reachable unless it was decided to be; enumerate regularly
 
-**56 incidents.**
+**60 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -565,7 +565,11 @@ preference, and this file is where that shows.
 | [I2016Q4-09](2016/2016-Q4.md#i2016q4-09-blackheart-records-exposed-backup-server) | 2016-12 | Blackheart Records (independent record label) |
 | [I2017Q2-04](2017/2017-Q2.md#i2017q2-04-bronx-lebanon-hospital-center-exposed-patient-backup-server) | 2017-05-09 | Bronx-Lebanon Hospital Center (backup managed by vendor iHealth Innovations) |
 | [I2017Q2-05](2017/2017-Q2.md#i2017q2-05-wannacry-ransomware-worm) | 2017-05-12 | WannaCry ransomware campaign (NHS England and Scotland; Telefónica; FedEx; Renault-Nissan; Deutsche Bahn; and organizations in 150+ countries) |
-| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
+| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-wannacry-infections-at-iberdrola-and-gas-natural) | 2017-05-12 | Iberdrola, S.A. |
+| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-wannacry-hits-russian-railways-interior-ministry-and-megafon) | 2017-05-13 | Russian Railways (RZD) |
+| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-wannacry-disrupts-hitachi-email-systems) | 2017-05-15 | Hitachi, Ltd. |
+| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-wannacry-disrupts-west-bengal-power-utility-billing) | 2017-05-16 | West Bengal State Electricity Distribution Company Limited (WBSEDCL) |
+| [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
 | [I2017Q3-01](2017/2017-Q3.md#i2017q3-01-verizon-customer-records-exposed-via-nice-systems-s3-bucket) | 2017-07-12 | Verizon Communications (via vendor NICE Systems) |
 | [I2017Q4-09](2017/2017-Q4.md#i2017q4-09-alteryx-hosted-experian-and-census-bureau-consumer-database-exposed) | 2017-12-19 | Alteryx, Inc. |
 | [I2018Q2-10](2018/2018-Q2.md#i2018q2-10-exactis-marketing-database-exposure) | 2018-06-28 | Exactis |
@@ -648,7 +652,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**76 incidents.**
+**81 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -660,7 +664,12 @@ preference, and this file is where that shows.
 | [I2016Q4-06](2016/2016-Q4.md#i2016q4-06-san-francisco-muni-sfmta-ransomware-attack) | 2016-11-26 | San Francisco Municipal Transportation Agency (SFMTA / Muni) |
 | [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
-| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-14](2017/2017-Q2.md#i2017q2-14-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-15](2017/2017-Q2.md#i2017q2-15-notpetya-infects-rosneft-servers) | 2017-06-27 | Rosneft |
+| [I2017Q2-16](2017/2017-Q2.md#i2017q2-16-notpetya-halts-beiersdorf-global-production) | 2017-06-27 | Beiersdorf AG |
+| [I2017Q2-17](2017/2017-Q2.md#i2017q2-17-notpetya-encrypts-ukrainian-regional-power-distributors) | 2017-06-27 | Dniproenergo and Zaporizhzhiaenergo (Ukrainian regional electricity distributors) |
+| [I2017Q2-18](2017/2017-Q2.md#i2017q2-18-notpetya-disrupts-oschadbank-client-services) | 2017-06-27 | State Savings Bank of Ukraine (Oschadbank) |
+| [I2017Q2-19](2017/2017-Q2.md#i2017q2-19-notpetya-halts-gateway-terminals-india-at-jnpt) | 2017-06-28 | Gateway Terminals India (APM Terminals terminal at Jawaharlal Nehru Port Trust) |
 | [I2017Q3-07](2017/2017-Q3.md#i2017q3-07-equifax-data-breach) | 2017-09-07 | Equifax Inc. |
 | [I2017Q3-11](2017/2017-Q3.md#i2017q3-11-whole-foods-market-taproom-and-restaurant-payment-card-breach) | 2017-09-28 | Whole Foods Market (Amazon) |
 | [I2017Q4-02](2017/2017-Q4.md#i2017q4-02-hyatt-hotels-second-payment-card-breach) | 2017-10 | Hyatt Hotels Corporation |
@@ -774,7 +783,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-09` — An inventory exists; unowned and forgotten assets are found and removed
 
-**19 incidents.**
+**23 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -782,6 +791,10 @@ preference, and this file is where that shows.
 | [I2016Q2-01](2016/2016-Q2.md#i2016q2-01-panama-papers-leak-mossack-fonseca) | 2016-04-03 | Mossack Fonseca |
 | [I2017Q1-02](2017/2017-Q1.md#i2017q1-02-cellebrite-forensics-vendor-data-theft) | 2017-01-12 | Cellebrite |
 | [I2017Q2-05](2017/2017-Q2.md#i2017q2-05-wannacry-ransomware-worm) | 2017-05-12 | WannaCry ransomware campaign (NHS England and Scotland; Telefónica; FedEx; Renault-Nissan; Deutsche Bahn; and organizations in 150+ countries) |
+| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-wannacry-infections-at-iberdrola-and-gas-natural) | 2017-05-12 | Iberdrola, S.A. |
+| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-wannacry-hits-russian-railways-interior-ministry-and-megafon) | 2017-05-13 | Russian Railways (RZD) |
+| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-wannacry-disrupts-hitachi-email-systems) | 2017-05-15 | Hitachi, Ltd. |
+| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-wannacry-disrupts-west-bengal-power-utility-billing) | 2017-05-16 | West Bengal State Electricity Distribution Company Limited (WBSEDCL) |
 | [I2018Q1-10](2018/2018-Q1.md#i2018q1-10-orbitz-legacy-platform-payment-card-breach) | 2018-03-20 | Orbitz, LLC (a subsidiary of Expedia Group) |
 | [I2019Q1-04](2019/2019-Q1.md#i2019q1-04-uw-medicine-misconfigured-database-exposure) | 2019-02-21 | UW Medicine |
 | [I2019Q4-01](2019/2019-Q4.md#i2019q4-01-imperva-cloud-waf-customer-data-exposure) | 2019-10-10 | Imperva |
@@ -800,12 +813,21 @@ preference, and this file is where that shows.
 
 ## `CLOUD-10` — A patch SLA for internet-facing and laterally-reachable systems, an inventory of what cannot be patched, and a staged rollout
 
-**21 incidents.**
+**30 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2017Q2-05](2017/2017-Q2.md#i2017q2-05-wannacry-ransomware-worm) | 2017-05-12 | WannaCry ransomware campaign (NHS England and Scotland; Telefónica; FedEx; Renault-Nissan; Deutsche Bahn; and organizations in 150+ countries) |
-| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-wannacry-infections-at-iberdrola-and-gas-natural) | 2017-05-12 | Iberdrola, S.A. |
+| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-wannacry-hits-russian-railways-interior-ministry-and-megafon) | 2017-05-13 | Russian Railways (RZD) |
+| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-wannacry-disrupts-hitachi-email-systems) | 2017-05-15 | Hitachi, Ltd. |
+| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-wannacry-disrupts-west-bengal-power-utility-billing) | 2017-05-16 | West Bengal State Electricity Distribution Company Limited (WBSEDCL) |
+| [I2017Q2-14](2017/2017-Q2.md#i2017q2-14-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-15](2017/2017-Q2.md#i2017q2-15-notpetya-infects-rosneft-servers) | 2017-06-27 | Rosneft |
+| [I2017Q2-16](2017/2017-Q2.md#i2017q2-16-notpetya-halts-beiersdorf-global-production) | 2017-06-27 | Beiersdorf AG |
+| [I2017Q2-17](2017/2017-Q2.md#i2017q2-17-notpetya-encrypts-ukrainian-regional-power-distributors) | 2017-06-27 | Dniproenergo and Zaporizhzhiaenergo (Ukrainian regional electricity distributors) |
+| [I2017Q2-18](2017/2017-Q2.md#i2017q2-18-notpetya-disrupts-oschadbank-client-services) | 2017-06-27 | State Savings Bank of Ukraine (Oschadbank) |
+| [I2017Q2-19](2017/2017-Q2.md#i2017q2-19-notpetya-halts-gateway-terminals-india-at-jnpt) | 2017-06-28 | Gateway Terminals India (APM Terminals terminal at Jawaharlal Nehru Port Trust) |
 | [I2018Q1-01](2018/2018-Q1.md#i2018q1-01-meltdown-and-spectre-cpu-speculative-execution-flaws) | 2018-01-03 | Intel, AMD, and ARM (industry-wide) |
 | [I2018Q4-02](2018/2018-Q4.md#i2018q4-02-cathay-pacific-passenger-data-breach) | 2018-10-24 | Cathay Pacific Airways |
 | [I2020Q4-01](2020/2020-Q4.md#i2020q4-01-sltt-government-networks-chained-vpn-and-netlogon-vulnerabilities) | 2020-10-09 | Multiple U.S. state, local, tribal, and territorial (SLTT) government networks |
@@ -917,13 +939,16 @@ preference, and this file is where that shows.
 
 ## `CRED-06` — Credentials scoped to one job, one resource, one permission
 
-**29 incidents.**
+**32 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q2-05](2016/2016-Q2.md#i2016q2-05-wendys-point-of-sale-malware-breach) | 2016-05-11 | The Wendy's Company |
 | [I2016Q4-05](2016/2016-Q4.md#i2016q4-05-three-uk-customer-database-breach) | 2016-11-18 | Three UK (Hutchison 3G UK) |
-| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
+| [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
+| [I2017Q2-15](2017/2017-Q2.md#i2017q2-15-notpetya-infects-rosneft-servers) | 2017-06-27 | Rosneft |
+| [I2017Q2-16](2017/2017-Q2.md#i2017q2-16-notpetya-halts-beiersdorf-global-production) | 2017-06-27 | Beiersdorf AG |
+| [I2017Q2-19](2017/2017-Q2.md#i2017q2-19-notpetya-halts-gateway-terminals-india-at-jnpt) | 2017-06-28 | Gateway Terminals India (APM Terminals terminal at Jawaharlal Nehru Port Trust) |
 | [I2017Q3-10](2017/2017-Q3.md#i2017q3-10-deloitte-global-email-system-breach) | 2017-09-25 | Deloitte |
 | [I2017Q4-05](2017/2017-Q4.md#i2017q4-05-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. |
 | [I2017Q4-08](2017/2017-Q4.md#i2017q4-08-nicehash-hot-wallet-theft) | 2017-12-06 | NiceHash d.o.o. |
@@ -959,7 +984,7 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2016Q2-07](2016/2016-Q2.md#i2016q2-07-linkedin-2012-breach-resold-at-true-scale) | 2016-05-18 | LinkedIn |
 | [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
-| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
+| [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
 | [I2018Q4-09](2018/2018-Q4.md#i2018q4-09-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
 | [I2019Q4-01](2019/2019-Q4.md#i2019q4-01-imperva-cloud-waf-customer-data-exposure) | 2019-10-10 | Imperva |
 | [I2019Q4-02](2019/2019-Q4.md#i2019q4-02-avast-ccleaner-backend-intrusion-via-forgotten-vpn-account) | 2019-10-21 | Avast Software |
@@ -1056,7 +1081,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2017Q1-08](2017/2017-Q1.md#i2017q1-08-cloudpets-connected-toy-database-and-voice-message-exposure) | 2017-02-27 | Spiral Toys (CloudPets) |
-| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
+| [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
 | [I2017Q3-01](2017/2017-Q3.md#i2017q3-01-verizon-customer-records-exposed-via-nice-systems-s3-bucket) | 2017-07-12 | Verizon Communications (via vendor NICE Systems) |
 | [I2017Q4-09](2017/2017-Q4.md#i2017q4-09-alteryx-hosted-experian-and-census-bureau-consumer-database-exposed) | 2017-12-19 | Alteryx, Inc. |
 | [I2018Q1-07](2018/2018-Q1.md#i2018q1-07-fedex-bongo-international-exposed-amazon-s3-bucket) | 2018-02-16 | FedEx Corporation (Bongo International, a discontinued subsidiary) |
@@ -1145,7 +1170,7 @@ preference, and this file is where that shows.
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
-| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
+| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
 | [I2017Q4-07](2017/2017-Q4.md#i2017q4-07-tio-networks-breach-following-paypal-acquisition) | 2017-12-01 | TIO Networks Corp. (PayPal subsidiary) |
 | [I2018Q4-02](2018/2018-Q4.md#i2018q4-02-cathay-pacific-passenger-data-breach) | 2018-10-24 | Cathay Pacific Airways |
 | [I2019Q3-04](2019/2019-Q3.md#i2019q3-04-suprema-biostar-2-biometric-database-exposure) | 2019-08-14 | Suprema Inc. |
@@ -1208,9 +1233,9 @@ preference, and this file is where that shows.
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-friendfinder-networks-breach-adultfriendfinder) | 2016-11-13 | FriendFinder Networks |
 | [I2016Q4-09](2016/2016-Q4.md#i2016q4-09-blackheart-records-exposed-backup-server) | 2016-12 | Blackheart Records (independent record label) |
 | [I2017Q1-02](2017/2017-Q1.md#i2017q1-02-cellebrite-forensics-vendor-data-theft) | 2017-01-12 | Cellebrite |
-| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
-| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
-| [I2017Q2-09](2017/2017-Q2.md#i2017q2-09-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
+| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
+| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
+| [I2017Q2-13](2017/2017-Q2.md#i2017q2-13-deep-root-analytics-rnc-voter-data-exposure) | 2017-06-19 | Deep Root Analytics (data compiled for the Republican National Committee) |
 | [I2017Q3-04](2017/2017-Q3.md#i2017q3-04-cex-webuy-customer-database-breach) | 2017-08-30 | CeX Ltd (Complete Entertainment Exchange) |
 | [I2017Q4-01](2017/2017-Q4.md#i2017q4-01-disqus-2012-user-database-breach-disclosed) | 2017-10-06 | Disqus, Inc. |
 | [I2018Q1-07](2018/2018-Q1.md#i2018q1-07-fedex-bongo-international-exposed-amazon-s3-bucket) | 2018-02-16 | FedEx Corporation (Bongo International, a discontinued subsidiary) |
@@ -1756,7 +1781,7 @@ preference, and this file is where that shows.
 | [I2017Q1-03](2017/2017-Q1.md#i2017q1-03-shamoon-2-wiper-attacks-on-saudi-arabian-organizations) | 2017-01-23 | Shamoon 2 wiper campaign (Saudi Arabian government ministries and private-sector organizations, including energy-sector operators) |
 | [I2017Q1-05](2017/2017-Q1.md#i2017q1-05-polish-banks-watering-hole-attack-via-compromised-knf-website) | 2017-02-03 | Watering-hole campaign via compromised KNF website (20+ Polish banks; Mexican and Uruguayan banking-regulator sites also used) |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
-| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
+| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
 | [I2017Q3-03](2017/2017-Q3.md#i2017q3-03-hbo-network-intrusion-and-game-of-thrones-extortion) | 2017-07-31 | Home Box Office (HBO) |
 | [I2017Q4-02](2017/2017-Q4.md#i2017q4-02-hyatt-hotels-second-payment-card-breach) | 2017-10 | Hyatt Hotels Corporation |
 | [I2017Q4-11](2017/2017-Q4.md#i2017q4-11-nissan-canada-finance-customer-data-breach) | 2017-12-21 | Nissan Canada Finance / INFINITI Financial Services Canada |
@@ -1831,7 +1856,7 @@ preference, and this file is where that shows.
 | [I2017Q1-06](2017/2017-Q1.md#i2017q1-06-intercontinental-hotels-group-point-of-sale-malware-initial-disclosure) | 2017-02-03 | InterContinental Hotels Group (IHG) — Americas franchise properties |
 | [I2017Q1-10](2017/2017-Q1.md#i2017q1-10-americas-joblink-alliance-job-seeker-data-exposure) | 2017-03-22 | America's JobLink Alliance (shared platform for state workforce agencies) |
 | [I2017Q2-01](2017/2017-Q2.md#i2017q2-01-chipotle-point-of-sale-malware-breach) | 2017-04-25 | Chipotle Mexican Grill, Inc. |
-| [I2017Q2-07](2017/2017-Q2.md#i2017q2-07-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
+| [I2017Q2-11](2017/2017-Q2.md#i2017q2-11-onelogin-aws-key-compromise) | 2017-05-31 | OneLogin, Inc. |
 | [I2017Q3-02](2017/2017-Q3.md#i2017q3-02-bupa-global-customer-data-stolen-and-offered-for-sale-by-an-employee) | 2017-07-14 | Bupa Global (Bupa Insurance Services) |
 | [I2017Q3-03](2017/2017-Q3.md#i2017q3-03-hbo-network-intrusion-and-game-of-thrones-extortion) | 2017-07-31 | Home Box Office (HBO) |
 | [I2017Q4-04](2017/2017-Q4.md#i2017q4-04-forever-21-point-of-sale-encryption-failure) | 2017-11-14 | Forever 21, Inc. |
@@ -1943,8 +1968,8 @@ preference, and this file is where that shows.
 | [I2016Q3-10](2016/2016-Q3.md#i2016q3-10-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo |
 | [I2016Q4-02](2016/2016-Q4.md#i2016q4-02-tesco-bank-cyber-heist) | 2016-11 | Tesco Personal Finance plc (Tesco Bank) |
 | [I2017Q2-02](2017/2017-Q2.md#i2017q2-02-sabre-synxis-hotel-reservation-system-breach) | 2017-05-02 | Sabre Corporation (Hospitality Solutions / SynXis Central Reservations) |
-| [I2017Q2-06](2017/2017-Q2.md#i2017q2-06-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
-| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
+| [I2017Q2-08](2017/2017-Q2.md#i2017q2-08-bell-canada-customer-data-breach) | 2017-05-15 | Bell Canada |
+| [I2017Q2-12](2017/2017-Q2.md#i2017q2-12-washington-state-university-backup-hard-drive-theft) | 2017-06-09 | Washington State University |
 | [I2017Q3-07](2017/2017-Q3.md#i2017q3-07-equifax-data-breach) | 2017-09-07 | Equifax Inc. |
 | [I2017Q3-09](2017/2017-Q3.md#i2017q3-09-sec-edgar-filing-system-hack-used-for-insider-trading) | 2017-09-20 | U.S. Securities and Exchange Commission |
 | [I2017Q4-05](2017/2017-Q4.md#i2017q4-05-uber-rider-and-driver-data-breach-and-cover-up) | 2017-11-21 | Uber Technologies, Inc. |
@@ -2201,13 +2226,15 @@ preference, and this file is where that shows.
 
 ## `VENDOR-06` — Contractual notification windows, and you monitor vendor advisories
 
-**27 incidents.**
+**29 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q1-07](2016/2016-Q1.md#i2016q1-07-malvertising-campaign-on-major-news-sites) | 2016-03-16 | Ad-network supply chain (New York Times, BBC, AOL, MSN and other publishers) |
 | [I2016Q3-02](2016/2016-Q3.md#i2016q3-02-oracle-micros-point-of-sale-portal-breach) | 2016-08-08 | Oracle Corporation (MICROS division) |
-| [I2017Q2-10](2017/2017-Q2.md#i2017q2-10-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-14](2017/2017-Q2.md#i2017q2-14-notpetya-wiper-campaign) | 2017-06-27 | NotPetya wiper campaign (A.P. Moller-Maersk; Merck; FedEx's TNT Express; Mondelez; Saint-Gobain; and numerous Ukrainian government, bank, and infrastructure systems) |
+| [I2017Q2-17](2017/2017-Q2.md#i2017q2-17-notpetya-encrypts-ukrainian-regional-power-distributors) | 2017-06-27 | Dniproenergo and Zaporizhzhiaenergo (Ukrainian regional electricity distributors) |
+| [I2017Q2-18](2017/2017-Q2.md#i2017q2-18-notpetya-disrupts-oschadbank-client-services) | 2017-06-27 | State Savings Bank of Ukraine (Oschadbank) |
 | [I2018Q2-02](2018/2018-Q2.md#i2018q2-02-247ai-customer-chat-platform-breach-best-buy-delta-searskmart) | 2018-04-04 | [24]7.ai |
 | [I2018Q4-08](2018/2018-Q4.md#i2018q4-08-atrium-health-billing-vendor-breach-accudoc) | 2018-11-28 | Atrium Health (via billing vendor AccuDoc Solutions) |
 | [I2019Q1-01](2019/2019-Q1.md#i2019q1-01-wolverine-solutions-group-ransomware-attack) | 2019-01-04 | Wolverine Solutions Group |
