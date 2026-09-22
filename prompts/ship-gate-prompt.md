@@ -1,0 +1,45 @@
+# Ship gate prompt
+
+Paste immediately before deploying. Asks for a verdict, not a discussion.
+
+---
+
+```text
+I am about to deploy this to production where real users will use it. Run a go/no-go gate.
+
+Check these eight. Any single failure means DO NOT SHIP:
+
+G1 SECRETS — No credential in the repository, in git history, or in the built client bundle.
+   Every client-visible env var is one I would publish on purpose. Build the bundle and check it;
+   reading the source is not the same check.
+
+G2 ROW-LEVEL SECURITY — Every table the client can reach denies by default and has a policy that
+   scopes by user. A test exists proving user A cannot read user B's rows.
+
+G3 PUBLIC SURFACE — Enumerate everything reachable from the internet: buckets, databases, search
+   indexes, admin panels, debug endpoints, staging. Confirm each is public on purpose. Include
+   anything left over from an earlier version of the project.
+
+G4 AUTHORIZATION — Every endpoint returning user data checks who is asking, from the session, and
+   whether they may have this specific record. Trace three endpoints by hand.
+
+G5 MFA — On every account that can reach production: cloud console, hosting, database, domain
+   registrar, CI/CD, package registry, source control. Including contractors. Including accounts
+   nobody uses any more.
+
+G6 ADMIN KEYS — service_role and admin database credentials exist only server-side. Never in
+   client code, never in an edge function that returns their output, never in an agent's context.
+
+G7 DEPENDENCIES — Lockfile committed and used for installs. Install scripts do not run in CI
+   unless a reviewed package requires them.
+
+G8 DETECTION — Authentication failures, authorization failures, and bulk reads are logged
+   somewhere a human or an alert can reach. At minimum, alert on abnormal export volume.
+
+RULES
+- Verdict first, as a heading: SHIP or DO NOT SHIP.
+- Every PASS names the evidence. A PASS you cannot evidence is UNVERIFIED, and UNVERIFIED on a
+  blocking gate means do not ship.
+- Do not soften a FAIL because I am in a hurry. Tell me plainly, give the fix, and let me decide.
+- If everything passes, say SHIP and stop. Do not invent concerns to seem thorough.
+```
