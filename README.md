@@ -22,8 +22,8 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 | --- | --- | --- |
 | **[`checklist.md`](./checklist.md)** | 110 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
 | **[`vulnerabilities.md`](./vulnerabilities.md)** | The same ground organised by **what goes wrong** — IDOR, BOLA, SSRF, mass assignment, prompt injection and 42 more, each with how it appears in AI-generated code | Anyone who knows the name of the bug but not the control |
-| **[`incidents/`](./incidents/)** | The evidence: **470 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |
-| **[`incidents/PATTERNS.md`](./incidents/PATTERNS.md)** | What the 470 records add up to, counted rather than asserted | Anyone who wants the conclusion before the evidence |
+| **[`incidents/`](./incidents/)** | The evidence: **861 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |
+| **[`incidents/PATTERNS.md`](./incidents/PATTERNS.md)** | What the 861 records add up to, counted rather than asserted | Anyone who wants the conclusion before the evidence |
 | **[`skills/`](./skills/)** | Three Claude Code skills that apply the checklist while you work | Claude Code users |
 | **[`prompts/`](./prompts/)** | The same content as copy-paste text | Cursor, Copilot, ChatGPT, anything else |
 
@@ -101,7 +101,7 @@ nothing from this repository:
 
 ## The evidence
 
-[`incidents/`](./incidents/) holds **470 records across all 43 quarters from 2016 Q1 to 2026 Q3**.
+[`incidents/`](./incidents/) holds **861 records across all 43 quarters from 2016 Q1 to 2026 Q3**.
 Each record separates three things that are usually blurred together, because they need three
 different fixes:
 
@@ -140,13 +140,13 @@ python3 tools/build_index.py --check   # validate without writing
 ### Three things the evidence says that most security advice does not
 
 - **Half of all breaches involved no escalation at all.** `escalation/none-required` appears in
-  **49%** of records — the bucket was public, the database had no password, the endpoint answered
+  **52%** of records — the bucket was public, the database had no password, the endpoint answered
   anyone who asked. There was no chain to break.
 - **The most common published answer to "how did they get in" is silence.** `entry/unknown` is
-  **30%**, more than three times the next vector. The distribution of published entry vectors is
+  **39%**, many times the next vector. The distribution of published entry vectors is
   not the distribution of real ones.
-- **The top three root causes are organizational.** Process failure (24%), detection failure (22%)
-  and third-party trust (21%) all outrank every purely technical class. Zero-days are 3%.
+- **The top three root causes are organizational.** Process failure (26%), detection failure (23%)
+  and third-party trust (20%) all outrank every purely technical class. Zero-days are 3%.
 
 Full working in [`incidents/PATTERNS.md`](./incidents/PATTERNS.md).
 
@@ -159,8 +159,12 @@ with ordinary human error and process failure deliberately over-represented — 
 bucket teaches more about prevention than a nation-state zero-day, and it is far more likely to
 be your problem.
 
-It is also **skewed toward what gets reported**: consumer data, regulated industries, and
-English-language coverage. That limitation is stated in the checklist rather than hidden.
+It is **skewed toward what gets reported**: consumer data and regulated industries dominate, and
+`sector/tech` alone is 239 of 861 records. It is *less* skewed geographically than most breach
+compilations — 404 of 861 records are from outside the United States and the United Kingdom,
+across 81 distinct regions — because the second pass searched local outlets and regulators rather
+than English-language aggregators. It is still not proportional to where breaches actually happen,
+and [`incidents/PATTERNS.md`](./incidents/PATTERNS.md) says so.
 
 ---
 

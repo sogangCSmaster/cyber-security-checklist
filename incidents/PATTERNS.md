@@ -4,7 +4,7 @@ The rollup of [the corpus](./README.md). Every figure here comes from the record
 `incidents/<year>/`, counted by [`tools/build_index.py`](../tools/build_index.py); live frequencies
 are in [`STATS.md`](./STATS.md).
 
-> Counted across **470 records, 2016 Q1 – 2026 Q3**. Percentages are of all records, and tags are
+> Counted across **861 records, 2016 Q1 – 2026 Q3**. Percentages are of all records, and tags are
 > not exclusive — an incident usually carries several.
 
 ---
@@ -13,12 +13,12 @@ are in [`STATS.md`](./STATS.md).
 
 ### 1. Half of all breaches involved no escalation at all
 
-`escalation/none-required` appears in **49%** of records. Not "the attacker escalated quickly" —
+`escalation/none-required` appears in **52%** of records. Not "the attacker escalated quickly" —
 there was nothing to escalate. The bucket was public. The database had no password. The endpoint
 returned the records to anyone who asked. The identifier in the URL was sequential and nobody
 checked who was asking.
 
-The second most common escalation, lateral movement, is 24%. Everything else — privilege
+The second most common escalation, lateral movement, is 25%. Everything else — privilege
 escalation, token forgery, flat networks, credential reuse — is in single digits.
 
 This is the opposite of how breaches are usually imagined. The mental model is a chain: foothold,
@@ -32,8 +32,10 @@ whether "none required" applies to you.
 
 ### 2. The most common answer to "how did they get in" is that nobody said
 
-`entry/unknown` is **30%** of records — nearly a third, and more than three times the next
-vector. These are not cases the researchers failed to look up. They are cases where the victim
+`entry/unknown` is **39%** of records — nearly two in five, and many times the next vector. It
+grew as the corpus grew, from 30% at 470 records to 39% at 861, because the incidents added in the
+second pass were smaller, more recent and more often from outside the English-language press —
+exactly the cases least likely to come with a published mechanism. These are not cases the researchers failed to look up. They are cases where the victim
 published a breach notification that described what was taken and never described how.
 
 That has a practical consequence for anyone building a threat model from public reporting: **the
@@ -41,18 +43,18 @@ distribution of published entry vectors is not the distribution of real ones.** 
 is skewed toward the mechanisms that are legally required to be disclosed, embarrassing enough to
 leak, or interesting enough for a vendor to write up.
 
-It also means the honest ranking below is a ranking of *known* vectors among the 70% that said.
+It also means the honest ranking below is a ranking of *known* vectors among the 61% that said.
 
 ### 3. The top three root causes are organizational, not technical
 
 | Root cause | Share |
 | --- | --- |
-| `factor/process-failure` — no review, no gate, no approval step | **24%** |
-| `factor/detection-failure` — it was visible and nobody saw it | **22%** |
-| `factor/third-party-trust` — a vendor, package, or maintainer trusted without verification | **21%** |
-| `factor/misconfiguration` | 15% |
-| `factor/social-engineering` | 14% |
-| `factor/no-least-privilege` | 10% |
+| `factor/process-failure` — no review, no gate, no approval step | **26%** |
+| `factor/detection-failure` — it was visible and nobody saw it | **23%** |
+| `factor/third-party-trust` — a vendor, package, or maintainer trusted without verification | **20%** |
+| `factor/misconfiguration` | 13% |
+| `factor/social-engineering` | 11% |
+| `factor/human-error` | 10% |
 | `factor/no-segmentation` | 10% |
 
 No purely technical failure class reaches the top three. The most common way an organization gets
@@ -85,8 +87,7 @@ available, or a door that was already open.
 **Credential-shaped entry, added up, is the largest known category.** Stolen credentials, phishing,
 credential stuffing, password spraying, credential reuse, session theft, MFA fatigue, default
 credentials, OAuth consent and help-desk resets together exceed every other grouping. This is why
-`AUTH-01` is the most-cited control in the corpus: it appears against **95 of 470 records**, one in
-five.
+`AUTH-01` is the most-cited control in the corpus: it appears against **141 of 861 records**.
 
 ---
 
@@ -96,10 +97,10 @@ Entry is usually cheap. What turned an incident into a catastrophe, in this corp
 always one of five things:
 
 1. **Nothing was needed** (49%) — see above.
-2. **Lateral movement across a flat or over-trusting network** (24%).
-3. **Over-scoped credentials** (10%) — a token that could read one thing would have been an
+2. **Lateral movement across a flat or over-trusting network** (25%).
+3. **Over-scoped credentials** (6%) — a token that could read one thing would have been an
    incident; a token that could read everything was a headline.
-4. **Supply-chain cascade** (8%) — the victim was itself the path to its customers. This is the
+4. **Supply-chain cascade** (6%) — the victim was itself the path to its customers. This is the
    category that grew fastest across the decade.
 5. **Long-lived credentials** — a secret in a public repository for five years, a pilot credential
    unused and unrevoked for four, a storage token set to expire in 2051.
@@ -111,13 +112,14 @@ always one of five things:
 The corpus was built to over-represent ordinary human failure, because that is what most readers
 will actually face. What it shows:
 
-- **`factor/social-engineering` is in 14% of records**, and it is growing: help-desk impersonation,
+- **`factor/social-engineering` is in 11% of records**, and it is growing: help-desk impersonation,
   voice phishing and OAuth consent abuse carried some of the largest incidents of 2023–2026. No
   technical control in `checklist.md` survives a support desk that resets anything for anyone who
   sounds stressed. That is what `HUMAN-01` exists for.
-- **Insider and inadvertent disclosure together are only 7 records** — rare, but they include some
-  of the most expensive. Bribery of outsourced support staff cost one company a nine-figure sum.
-- **69 records are `actor/researcher`** and **82 carry `impact/none-confirmed`** — roughly one in
+- **Human-origin entry — inadvertent disclosure, insider misuse, offboarding failure, physical
+  loss, bribery — is 63 records.** At 470 records it was seven; the second pass went looking for
+  it specifically and found nine times as many, which is itself the finding. Bribery of outsourced support staff cost one company a nine-figure sum.
+- **107 records are `actor/researcher`** and **134 carry `impact/none-confirmed`** — roughly one in
   six of everything here is a case where somebody found the exposure before an attacker did. These
   are the most instructive records in the corpus: same mechanism, no damage. They are also the
   reason `OBSV-06`, a published way for an outsider to report a problem, is worth the ten minutes
@@ -127,13 +129,13 @@ will actually face. What it shows:
 
 ## Detection: the gap nobody budgets for
 
-`dwell_days` is recorded for 120 records — most breach notifications do not state it.
+`dwell_days` is recorded for 168 records — most breach notifications do not state it.
 
 | | |
 | --- | --- |
-| Median dwell time | **19 days** |
+| Median dwell time | **10 days** |
 | Longest | **3,449 days** (over nine years) |
-| Over 90 days | **30 of 120** |
+| Over 90 days | **34 of 168** |
 
 Two conclusions. First, the median is long enough that detection is not a nice-to-have; a
 fortnight of undetected access is enough to reach everything. Second, the tail is what defines the
@@ -151,13 +153,13 @@ AI- and agent-related records, by year:
 
 | Year | AI-related | Total | Share |
 | --- | --- | --- | --- |
-| 2016–2022 | **0** | 289 | 0% |
-| 2023 | 6 | 46 | 13% |
-| 2024 | 5 | 41 | 12% |
-| 2025 | 11 | 53 | 21% |
-| 2026 (partial) | 10 | 41 | **24%** |
+| 2016–2022 | **0** | 520 | 0% |
+| 2023 | 8 | 83 | 10% |
+| 2024 | 9 | 78 | 12% |
+| 2025 | 14 | 97 | 14% |
+| 2026 (partial) | 15 | 83 | **18%** |
 
-Zero for seven years, then a quarter of everything within four. Everything in the first two thirds
+Zero for seven years, then nearly a fifth of everything within four. Everything in the first two thirds
 of this document still applies unchanged — the new mechanics sit on top of it, they do not replace
 it. What is genuinely new:
 
@@ -184,15 +186,18 @@ Stated plainly, because the numbers above are only as good as their limits:
 1. **It is built from disclosed breaches.** Undetected and undisclosed incidents are absent by
    definition, and 31% of what *is* disclosed never says how. Treat the entry-vector ranking as a
    ranking of what gets published.
-2. **It is skewed by sector.** `sector/tech` is 175 of 470 records, with government, SaaS and
+2. **It is skewed by sector.** `sector/tech` is 239 of 861 records, with government, SaaS and
    healthcare next. Manufacturing, agriculture, logistics and small business are under-represented
    relative to how often they are actually hit.
-3. **It is skewed by geography.** 171 records are United States, 158 global, 21 United Kingdom, and
-   120 are everywhere else — Japan, Australia, Germany, Canada, South Korea, China, France,
-   India, the Philippines and others. That is deliberate coverage work, and it is still not
-   proportional to where breaches happen.
-4. **Confidence is mixed on purpose.** 225 records are `high` (a regulator, a court filing, or the
-   victim's own post-mortem), 217 `medium`, 28 `low`. A `low` record is in the corpus because the
+3. **It is less skewed by geography than most breach compilations, and still not proportional.**
+   224 records are United States, 203 global, 30 United Kingdom, and **404 are everywhere else**,
+   across 81 distinct regions. Non-US, non-UK is the largest single bucket. That took deliberate
+   work — searching local outlets and regulators rather than English-language aggregators, which
+   is how the corpus found a Japanese school's mistyped email, a Senegalese national ID exposure
+   and a fifteen-person Indian startup deleted by its own former employee. It is still not
+   proportional to where breaches actually happen.
+4. **Confidence is mixed on purpose.** 357 records are `high` (a regulator, a court filing, or the
+   victim's own post-mortem), 436 `medium`, 68 `low`. A `low` record is in the corpus because the
    mechanism is instructive, not because the numbers are trustworthy.
 5. **Human error is under-counted, and systematically so.** Ordinary mistakes — a misdirected
    email, a spreadsheet with a hidden tab, a lost device — usually surface through a regulator's
@@ -217,15 +222,15 @@ The most-cited controls across the corpus, in order:
 
 | Control | Records it would have broken |
 | --- | --- |
-| `AUTH-01` phishing-resistant MFA everywhere with production reach | 95 |
-| `CLOUD-05` segmentation between tiers and environments | 76 |
-| `OBSV-01` central logging of auth, authorization failures, admin actions, exports | 69 |
-| `OBSV-02` alerting on abnormal read or export volume | 68 |
-| `OBSV-05` a written incident plan with a named decider and a disclosure clock | 66 |
-| `VENDOR-01` an inventory of every third party holding your data or a token | 57 |
-| `CLOUD-01` nothing publicly reachable that was not decided to be | 56 |
-| `HUMAN-05` training that reflects current technique | 49 |
-| `DATA-09` data minimization and enforced retention | 44 |
+| `CLOUD-05` segmentation between tiers and environments | 191 |
+| `OBSV-05` a written incident plan with a named decider and a disclosure clock | 172 |
+| `AUTH-01` phishing-resistant MFA everywhere with production reach | 141 |
+| `OBSV-02` alerting on abnormal read or export volume | 140 |
+| `OBSV-01` central logging of auth, authorization failures, admin actions, exports | 135 |
+| `VENDOR-01` an inventory of every third party holding your data or a token | 110 |
+| `DATA-09` data minimization and enforced retention | 109 |
+| `DATA-08` backups that exist, restore, and are not writable by production | 92 |
+| `CLOUD-01` nothing publicly reachable that was not decided to be | 88 |
 
 Four of the top nine are detection, response and inventory — the things that do not prevent a
 breach and decide entirely how bad it gets.
