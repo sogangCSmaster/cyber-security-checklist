@@ -71,7 +71,7 @@ open the quarterly file for the full record.
 | [I2016Q3-16](2016/2016-Q3.md#i2016q3-16-dropbox-2012-breach-disclosure) | 2016-08-30 | Dropbox | entry/credential-reuse | 68000000 people | AUTH-01, DATA-06 |
 | [I2016Q3-17](2016/2016-Q3.md#i2016q3-17-emr4all-exposed-medical-records-repository) | 2016-09 | EMR4All | entry/public-storage | 30000 records | DATA-03, CLOUD-01, VENDOR-01 |
 | [I2016Q3-18](2016/2016-Q3.md#i2016q3-18-awards-screenerscom-exposed-studio-credential-database) | 2016-09 | Vision Media Management (Awards-Screeners.com) | entry/public-database | 1200 accounts | DATA-04, OBSV-06, CLOUD-01 |
-| [I2016Q3-19](2016/2016-Q3.md#i2016q3-19-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo | entry/unknown | 500000000 people | OBSV-05, OBSV-09 |
+| [I2016Q3-19](2016/2016-Q3.md#i2016q3-19-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo | entry/unknown | 500000000 people | OBSV-05, OBSV-09, CRYPTO-01 |
 | [I2016Q4-01](2016/2016-Q4.md#i2016q4-01-sheet-metal-workers-union-exposed-database) | 2016-10 | Sheet Metal Workers Union (a Northern California local; specific local number not identified in reporting) | entry/exposed-service | 24900 people | DATA-04, CLOUD-01, DATA-09 |
 | [I2016Q4-02](2016/2016-Q4.md#i2016q4-02-hitachi-payment-services-breach-indian-bank-debit-cards) | 2016-10-20 | Hitachi Payment Services (ATM/POS payment-switch operator for State Bank of India, HDFC Bank, ICICI Bank, Yes Bank, Axis Bank, and other Indian banks) | entry/supply-chain-vendor | 3200000 cards | VENDOR-01, VENDOR-08, OBSV-02 |
 | [I2016Q4-03](2016/2016-Q4.md#i2016q4-03-mirai-botnet-ddos-attack-on-dyn) | 2016-10-21 | Dyn (managed DNS provider; outage cascaded to Twitter, Netflix, Reddit, Spotify, PayPal, Amazon, and others) | entry/default-credentials | 100000 devices | CRED-10, AUTH-06, OBSV-02 |
@@ -191,7 +191,7 @@ open the quarterly file for the full record.
 | [I2018Q1-18](2018/2018-Q1.md#i2018q1-18-mabna-institute-university-credential-theft-campaign-doj-indictment) | 2018-03-23 | Mabna Institute campaign (144+ universities across the US and 21 other countries) | entry/spear-phishing | 8000 accounts | AUTH-01, HUMAN-05, OBSV-01 |
 | [I2018Q1-19](2018/2018-Q1.md#i2018q1-19-myfitnesspal-under-armour-account-data-breach) | 2018-03-29 | Under Armour, Inc. (MyFitnessPal) | entry/unknown | 150000000 people | DATA-06, OBSV-01, OBSV-02 |
 | [I2018Q2-01](2018/2018-Q2.md#i2018q2-01-saks-fifth-avenue-and-lord-taylor-payment-card-breach-hudsons-bay-company) | 2018-04-01 | Hudson's Bay Company | entry/unknown | 5000000 cards | CLOUD-05, OBSV-03, OBSV-08 |
-| [I2018Q2-02](2018/2018-Q2.md#i2018q2-02-panera-bread-customer-data-exposure) | 2018-04-02 | Panera Bread | entry/unauth-api, entry/idor | 10000-37000000 records | AUTH-03, INPUT-09, OBSV-06 |
+| [I2018Q2-02](2018/2018-Q2.md#i2018q2-02-panera-bread-customer-data-exposure) | 2018-04-02 | Panera Bread | entry/unauth-api, entry/idor | 10000-37000000 records | AUTH-03, INPUT-09, OBSV-06, API-01 |
 | [I2018Q2-03](2018/2018-Q2.md#i2018q2-03-247ai-customer-chat-platform-breach-best-buy-delta-searskmart) | 2018-04-04 | [24]7.ai | entry/supply-chain-vendor | undisclosed | VENDOR-01, VENDOR-05, VENDOR-06 |
 | [I2018Q2-04](2018/2018-Q2.md#i2018q2-04-suntrust-bank-insider-data-theft-attempt) | 2018-04-20 | SunTrust Banks | entry/insider | 1500000 people | DATA-11, OBSV-02, HUMAN-09 |
 | [I2018Q2-05](2018/2018-Q2.md#i2018q2-05-andhra-pradesh-maternal-health-and-aadhaar-data-exposure) | 2018-04-30 | Andhra Pradesh Department of Health, Medical and Family Welfare | entry/inadvertent-disclosure, entry/misconfiguration | 2071913 people | DATA-09, HUMAN-07, OBSV-06 |
@@ -219,7 +219,7 @@ open the quarterly file for the full record.
 | [I2018Q3-09](2018/2018-Q3.md#i2018q3-09-superdrug-credential-stuffing-extortion-attempt) | 2018-08-21 | Superdrug Stores plc | entry/credential-stuffing | 386 people | AUTH-06, AUTH-01 |
 | [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-eir-customer-data-breach-via-stolen-unencrypted-laptop) | 2018-08-22 | eir | entry/physical | 36642 people | CICD-07, DATA-07, OBSV-03 |
 | [I2018Q3-11](2018/2018-Q3.md#i2018q3-11-t-mobile-api-customer-data-exposure) | 2018-08-24 | T-Mobile US | entry/idor | 2000000 people | AUTH-02, INPUT-09 |
-| [I2018Q3-12](2018/2018-Q3.md#i2018q3-12-fiserv-secureinternetbankcom-sequential-id-exposure) | 2018-08-28 | Fiserv, Inc. | entry/idor | undisclosed | AUTH-02, INPUT-09, OBSV-06 |
+| [I2018Q3-12](2018/2018-Q3.md#i2018q3-12-fiserv-secureinternetbankcom-sequential-id-exposure) | 2018-08-28 | Fiserv, Inc. | entry/idor | undisclosed | AUTH-02, INPUT-09, OBSV-06, API-01 |
 | [I2018Q3-13](2018/2018-Q3.md#i2018q3-13-huazhu-hotels-group-guest-data-leak) | 2018-08-28 | Huazhu Group (China Lodging Group) | entry/unknown | 500000000 records | DATA-11, CLOUD-01, OBSV-01 |
 | [I2018Q3-14](2018/2018-Q3.md#i2018q3-14-air-canada-mobile-app-account-takeover-breach) | 2018-08-29 | Air Canada | entry/unknown | 20000 people | AUTH-06, AUTH-01, OBSV-02 |
 | [I2018Q3-15](2018/2018-Q3.md#i2018q3-15-british-airways-magecart-card-skimming-breach) | 2018-09-06 | British Airways | entry/third-party-access | 429612 people | AUTH-01, CRED-01, CLOUD-05, VENDOR-08 |
@@ -240,7 +240,7 @@ open the quarterly file for the full record.
 | [I2018Q4-10](2018/2018-Q4.md#i2018q4-10-usps-informed-delivery-account-exposure) | 2018-11-21 | United States Postal Service | entry/idor | 60000000 people | AUTH-02, AUTH-03, OBSV-06 |
 | [I2018Q4-11](2018/2018-Q4.md#i2018q4-11-event-stream-npm-backdoor-targeting-copay) | 2018-11-26 | Copay (BitPay), via the event-stream npm package | entry/supply-chain-dependency | undisclosed | DEPS-03, DEPS-08, DEPS-09 |
 | [I2018Q4-12](2018/2018-Q4.md#i2018q4-12-atrium-health-billing-vendor-breach-accudoc) | 2018-11-28 | Atrium Health (via billing vendor AccuDoc Solutions) | entry/supply-chain-vendor | 2650000 people | VENDOR-01, VENDOR-06, DATA-05 |
-| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) | entry/unknown | 383000000-500000000 people | OBSV-01, CRED-07, VENDOR-07 |
+| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) | entry/unknown | 383000000-500000000 people | OBSV-01, CRED-07, VENDOR-07, CRYPTO-06 |
 | [I2018Q4-14](2018/2018-Q4.md#i2018q4-14-morelenet-customer-database-breach) | 2018-12 | Morele.net Sp. z o.o. | entry/phishing | 2200000 people | AUTH-06, OBSV-02, HUMAN-05 |
 | [I2018Q4-15](2018/2018-Q4.md#i2018q4-15-adams-county-health-plan-former-employee-access) | 2018-12 | Adams County (U.S. county government health plan) | entry/offboarding-failure | 258120 people | HUMAN-03, AUTH-08, OBSV-01 |
 | [I2018Q4-16](2018/2018-Q4.md#i2018q4-16-quora-data-breach) | 2018-12-03 | Quora, Inc. | entry/unknown | 100000000 people | OBSV-01, OBSV-02, DATA-06 |
@@ -275,7 +275,7 @@ open the quarterly file for the full record.
 | [I2019Q2-08](2019/2019-Q2.md#i2019q2-08-binance-cryptocurrency-exchange-hot-wallet-theft) | 2019-05-07 | Binance | entry/phishing, entry/api-key-abuse | 7000 BTC | AUTH-01, AUTH-06, OBSV-02 |
 | [I2019Q2-09](2019/2019-Q2.md#i2019q2-09-uniqlo-and-gu-japan-online-store-credential-stuffing-breach) | 2019-05-14 | Fast Retailing Co., Ltd. (UNIQLO Japan, GU Japan) | entry/credential-stuffing | 461091 people | AUTH-01, AUTH-06, OBSV-02 |
 | [I2019Q2-10](2019/2019-Q2.md#i2019q2-10-stack-overflow-production-system-breach) | 2019-05-17 | Stack Overflow | entry/auth-bypass | 184-250 people (initial estimate later revised) | CLOUD-06, CICD-02, AUTH-02 |
-| [I2019Q2-11](2019/2019-Q2.md#i2019q2-11-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation | entry/idor | 885000000 documents | AUTH-03, INPUT-09, OBSV-06 |
+| [I2019Q2-11](2019/2019-Q2.md#i2019q2-11-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation | entry/idor | 885000000 documents | AUTH-03, INPUT-09, OBSV-06, API-01 |
 | [I2019Q2-12](2019/2019-Q2.md#i2019q2-12-canva-data-breach) | 2019-05-24 | Canva | entry/unknown | 139000000 people | CRED-01, AUTH-01, OBSV-06 |
 | [I2019Q2-13](2019/2019-Q2.md#i2019q2-13-amca-collections-vendor-breach-quest-diagnostics-labcorp) | 2019-06-03 | American Medical Collection Agency (AMCA) | entry/unknown | 19600000+ people (Quest approximately 11.9 million plus LabCorp approximately 7.7 million; other AMCA clients also affected, total never consolidated) | VENDOR-01, VENDOR-06, OBSV-02 |
 | [I2019Q2-14](2019/2019-Q2.md#i2019q2-14-australian-national-university-19-year-data-breach) | 2019-06-04 | Australian National University | entry/spear-phishing | 200000 people | AUTH-01, CLOUD-10, OBSV-01 |
@@ -295,7 +295,7 @@ open the quarterly file for the full record.
 | [I2019Q3-12](2019/2019-Q3.md#i2019q3-12-perfect-teeth-yale-lost-device-breach) | 2019-09 | Perfect Teeth Yale, P.C. | entry/physical | 15000 people | DATA-07, DATA-09, HUMAN-07 |
 | [I2019Q3-13](2019/2019-Q3.md#i2019q3-13-exposed-database-of-facebook-users-phone-numbers) | 2019-09-04 | Facebook (data held on an unaffiliated third-party server) | entry/public-database | 220000000-419000000 records | DATA-09, CLOUD-01, OBSV-06 |
 | [I2019Q3-14](2019/2019-Q3.md#i2019q3-14-toyota-boshoku-business-email-compromise) | 2019-09-06 | Toyota Boshoku Corporation (European subsidiary) | entry/spear-phishing | undisclosed | HUMAN-02, HUMAN-08, HUMAN-05, HUMAN-10 |
-| [I2019Q3-15](2019/2019-Q3.md#i2019q3-15-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. | entry/unknown | 218000000 accounts | DATA-06, OBSV-05, OBSV-01 |
+| [I2019Q3-15](2019/2019-Q3.md#i2019q3-15-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. | entry/unknown | 218000000 accounts | DATA-06, OBSV-05, OBSV-01, CRYPTO-01 |
 | [I2019Q3-16](2019/2019-Q3.md#i2019q3-16-ecuador-national-data-leak-novaestrat) | 2019-09-16 | Novaestrat | entry/public-database | 20000000 people | DATA-04, VENDOR-01, VENDOR-08 |
 | [I2019Q3-17](2019/2019-Q3.md#i2019q3-17-doordash-third-party-vendor-data-breach) | 2019-09-26 | DoorDash, Inc. | entry/supply-chain-vendor | 4900000 people | VENDOR-01, VENDOR-06, VENDOR-08 |
 | [I2019Q4-01](2019/2019-Q4.md#i2019q4-01-krystal-restaurant-chain-payment-card-breach) | 2019-10 | Krystal (restaurant chain) | entry/unknown | undisclosed | CLOUD-05, OBSV-02 |
@@ -347,7 +347,7 @@ open the quarterly file for the full record.
 | [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI | entry/misconfiguration | undisclosed | CRED-01, CRED-03, CLOUD-08 |
 | [I2020Q2-05](2020/2020-Q2.md#i2020q2-05-cognizant-maze-ransomware-attack) | 2020-04-18 | Cognizant Technology Solutions | entry/unknown | undisclosed | CLOUD-05, AUTH-01, OBSV-05 |
 | [I2020Q2-06](2020/2020-Q2.md#i2020q2-06-sba-eidl-applicant-data-cross-exposure) | 2020-04-21 | U.S. Small Business Administration | entry/business-logic | 8000 people | DATA-01, DATA-02, HUMAN-07 |
-| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo | entry/credential-stuffing | 300000 accounts | AUTH-06, AUTH-01, AUTH-10 |
+| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo | entry/credential-stuffing | 300000 accounts | AUTH-06, AUTH-01, AUTH-10, LEAK-01 |
 | [I2020Q2-08](2020/2020-Q2.md#i2020q2-08-itaewon-cluster-contact-tracing-disclosures-and-lgbtq-outing) | 2020-05 | Korea Centers for Disease Control and Prevention and Seoul-area local governments | entry/inadvertent-disclosure | undisclosed | DATA-09, HUMAN-07, HUMAN-NEW |
 | [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-grubman-shire-meiselas-sacks-revil-ransomware-and-extortion) | 2020-05 | Grubman Shire Meiselas & Sacks | entry/unknown | undisclosed | DATA-01, DATA-12, CRED-06 |
 | [I2020Q2-10](2020/2020-Q2.md#i2020q2-10-tokopedia-user-database-breach) | 2020-05-02 | Tokopedia | entry/unknown | 91000000 accounts | DATA-11, DATA-04, OBSV-02 |
@@ -633,7 +633,7 @@ open the quarterly file for the full record.
 | [I2023Q3-16](2023/2023-Q3.md#i2023q3-16-born-ontario-moveit-data-breach) | 2023-09-25 | BORN Ontario (Better Outcomes Registry & Network) | entry/zero-day | 3400000 people | DEPS-07, VENDOR-06, DEPS-10 |
 | [I2023Q3-17](2023/2023-Q3.md#i2023q3-17-johnson-controls-international-ransomware-attack) | 2023-09-27 | Johnson Controls International | entry/unknown | 27 TB | CLOUD-05, OBSV-05, CRED-09 |
 | [I2023Q4-01](2023/2023-Q4.md#i2023q4-01-philhealth-medusa-ransomware-attack) | 2023-10-03 | Philippine Health Insurance Corporation (PhilHealth) | entry/unknown | 13 million to 42 million members (disputed) | OBSV-03, CLOUD-10, HUMAN-07 |
-| [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe | entry/credential-stuffing | 6900000 people | AUTH-01, AUTH-06, DATA-10 |
+| [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe | entry/credential-stuffing | 6900000 people | AUTH-01, AUTH-06, DATA-10, LEAK-01 |
 | [I2023Q4-03](2023/2023-Q4.md#i2023q4-03-icmr-covid-testing-database-exposure) | 2023-10-09 | Indian Council of Medical Research (ICMR) | entry/unknown | 815000000 people | DATA-09, DATA-04, OBSV-02 |
 | [I2023Q4-04](2023/2023-Q4.md#i2023q4-04-okta-support-case-management-system-breach) | 2023-10-20 | Okta, Inc. | entry/stolen-credentials | 18400 organizations | CICD-07, VENDOR-04, CRED-09 |
 | [I2023Q4-05](2023/2023-Q4.md#i2023q4-05-südwestfalen-it-ransomware-attack-on-72-german-municipalities) | 2023-10-30 | Südwestfalen IT (regional municipal IT provider, North Rhine-Westphalia, Germany) | entry/unpatched-cve | 72 municipalities, about 1.6 million residents affected | AUTH-01, AUTH-06, CLOUD-10 |
@@ -693,7 +693,7 @@ open the quarterly file for the full record.
 | [I2024Q2-13](2024/2024-Q2.md#i2024q2-13-kadokawa-and-niconico-ransomware-attack) | 2024-06-08 | Kadokawa Corporation and Niconico (Dwango) | entry/phishing | 254241 people | HUMAN-05, CLOUD-05, OBSV-01 |
 | [I2024Q2-14](2024/2024-Q2.md#i2024q2-14-cdk-global-ransomware-attack) | 2024-06-18 | CDK Global | entry/unknown | 15000 dealerships | CLOUD-05, DATA-08, VENDOR-01 |
 | [I2024Q2-15](2024/2024-Q2.md#i2024q2-15-indonesia-national-data-center-ransomware-attack) | 2024-06-24 | Pusat Data Nasional Sementara (Indonesia's Temporary National Data Center) | entry/unknown | 210-282 government services | DATA-08, CLOUD-05, OBSV-05 |
-| [I2024Q2-16](2024/2024-Q2.md#i2024q2-16-polyfillio-supply-chain-compromise) | 2024-06-25 | polyfill.io (JavaScript CDN service; 100,000+ downstream websites affected) | entry/supply-chain-update | 100000 websites | DEPS-06, VENDOR-05, VENDOR-09 |
+| [I2024Q2-16](2024/2024-Q2.md#i2024q2-16-polyfillio-supply-chain-compromise) | 2024-06-25 | polyfill.io (JavaScript CDN service; 100,000+ downstream websites affected) | entry/supply-chain-update | 100000 websites | DEPS-06, VENDOR-05, VENDOR-09, DNS-01 |
 | [I2024Q2-17](2024/2024-Q2.md#i2024q2-17-rabbit-r1-hardcoded-api-key-exposure) | 2024-06-25 | Rabbit Inc. (Rabbit R1 AI hardware device) | entry/secrets-in-client | undisclosed | CRED-01, CRED-04, CRED-03 |
 | [I2024Q2-18](2024/2024-Q2.md#i2024q2-18-national-health-laboratory-service-ransomware-attack) | 2024-06-25 | National Health Laboratory Service (NHLS) | entry/unknown | 265 laboratories | DATA-08, CLOUD-05, OBSV-05 |
 | [I2024Q3-01](2024/2024-Q3.md#i2024q3-01-germanys-bkg-mapping-agency-breach-attributed-to-china) | 2024-07 | Bundesamt für Kartographie und Geodäsie (BKG), German federal government | entry/unknown | undisclosed | OBSV-01, OBSV-08, CLOUD-05 |

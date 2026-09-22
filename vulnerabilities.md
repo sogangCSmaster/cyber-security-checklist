@@ -7,7 +7,9 @@ on every request" is correct and unsearchable: nobody greps for that. They grep 
 
 Each class gives you a plain definition, what it looks like in code, **how it tends to appear in
 AI-generated code specifically**, the controls that prevent it, the incidents in
-[`incidents/`](./incidents/) that prove it matters, and how to test for it.
+[`incidents/`](./incidents/) that prove it matters, and how to test for it. The controls now live
+in the per-domain files under [`checklist/`](./checklist/); the "how to test" notes here have a
+black-box counterpart in [`checklist/probe-playbook.md`](./checklist/probe-playbook.md).
 
 > Corpus counts below are live as of the last index build. Check any of them yourself:
 > `grep -rl 'entry/idor' incidents/20*/ | wc -l`

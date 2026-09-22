@@ -20,7 +20,9 @@ nothing. Knowing what it cost the last six companies that skipped it changes beh
 
 | | What it is | Who it is for |
 | --- | --- | --- |
-| **[`checklist.md`](./checklist.md)** | 110 controls across 11 domains, each with a priority, the incident behind it, and a way to verify it | Anyone. Start with the twelve-item triage at the top |
+| **[`checklist.md`](./checklist.md)** | The entry point: a fifteen-item triage, an applicability matrix, and a map to the domains | Anyone. Start here |
+| **[`checklist/`](./checklist/)** | 160 controls across 19 domains, each with a priority, a layer, the incident behind it, and — **Detect / Fix / Verify / Probe** — how to find it and prove it is gone | Anyone hardening a specific area |
+| **[`checklist/probe-playbook.md`](./checklist/probe-playbook.md)** | The black-box pass: the checks you (or an AI you point at your own deployment) run against a **running** app with no source access | Anyone testing a live system they are authorized to test |
 | **[`vulnerabilities.md`](./vulnerabilities.md)** | The same ground organised by **what goes wrong** — IDOR, BOLA, SSRF, mass assignment, prompt injection and 42 more, each with how it appears in AI-generated code | Anyone who knows the name of the bug but not the control |
 | **[`incidents/`](./incidents/)** | The evidence: **861 documented breaches across all 43 quarters from 2016 to 2026**, tagged and indexed | Anyone asking "has this actually happened?" |
 | **[`incidents/PATTERNS.md`](./incidents/PATTERNS.md)** | What the 861 records add up to, counted rather than asserted | Anyone who wants the conclusion before the evidence |
@@ -62,7 +64,7 @@ incident that proves it matters:
 
 ### `/security-checklist:ship-gate` — the last checkpoint
 
-Eight blocking gates and eight should-fix gates, ordered by how often each failure actually
+Eight blocking gates and ten should-fix gates, ordered by how often each failure actually
 appears in the corpus. Returns **SHIP** or **DO NOT SHIP**, with evidence for every pass. A gate
 it could not verify is reported as unverified rather than assumed fine.
 
@@ -126,7 +128,8 @@ grep -rl 'DATA-01' incidents/20*/                     # which incidents does thi
 
 [`incidents/PATTERNS.md`](./incidents/PATTERNS.md) is the rollup.
 [`incidents/CONTROL-INDEX.md`](./incidents/CONTROL-INDEX.md) maps every control to the incidents
-it would have broken — and marks the three that have none.
+it would have broken — and marks those that are preventive (the newer hardening domains include
+controls with no single disclosed incident behind them; the index says which).
 [`incidents/INDEX.md`](./incidents/INDEX.md) is one line per incident.
 [`incidents/STATS.md`](./incidents/STATS.md) is the frequency rollup that the checklist's ordering
 comes from. [`incidents/index.jsonl`](./incidents/index.jsonl) is the machine-readable version.
@@ -183,8 +186,12 @@ Add an incident:
 The `confidence` field exists so a reader can tell a regulator's finding from an attacker's
 boast. If a number was never disclosed, the record says `undisclosed` — it does not say a guess.
 
-Add a control: it needs at least one incident in the corpus that it would have stopped. A control
-with no evidence behind it belongs in a different list.
+Add a control. The corpus-derived core controls each map to at least one incident that they would
+have stopped — that is what keeps the list honest, and [`incidents/CONTROL-INDEX.md`](./incidents/CONTROL-INDEX.md)
+shows it. The hardening domains added later (browser-trust headers, mobile, parts of crypto and
+business-logic) also include **preventive** controls that no single disclosed incident proves; the
+index marks each of those "no incident cites this yet" rather than inventing one. If you add a
+control, either cite the incident it would have broken or say plainly that it is preventive.
 
 ---
 

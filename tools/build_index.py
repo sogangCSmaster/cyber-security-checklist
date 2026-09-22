@@ -37,7 +37,7 @@ RECORD_RE = re.compile(
     re.MULTILINE | re.DOTALL,
 )
 TAG_RE = re.compile(r"`((?:entry|escalation|impact|factor|tech|actor|sector)/[a-z0-9-]+)`")
-CONTROL_RE = re.compile(r"\|\s*(?P<id>[A-Z]{4,6}-\d{2})\s*\|")
+CONTROL_RE = re.compile(r"\|\s*(?P<id>[A-Z]{3,6}-\d{2})\s*\|")
 
 REQUIRED = [
     "id", "name", "org", "date_occurred", "date_disclosed", "region",
@@ -239,7 +239,7 @@ def write_control_index(records: list[dict], controls: set[str]) -> list[str]:
 
     titles = {}
     for line in (INCIDENTS / "CONTROLS.md").read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\|\s*([A-Z]{4,6}-\d{2})\s*\|\s*(.+?)\s*\|", line)
+        m = re.match(r"\|\s*([A-Z]{3,6}-\d{2})\s*\|\s*(.+?)\s*\|", line)
         if m:
             titles[m.group(1)] = m.group(2)
 

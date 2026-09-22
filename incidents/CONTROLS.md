@@ -1,8 +1,9 @@
 # Control ID Reference
 
-The stable IDs that incident records point at via their `controls:` field. Full text, priority,
-and verification steps live in [`../checklist.md`](../checklist.md); this file exists so that a
-record can be written and indexed without loading the whole checklist.
+The stable IDs that incident records point at via their `controls:` field. Full text, priority, layer,
+and the Detect / Fix / Verify / Probe steps live in the per-domain files under
+[`../checklist/`](../checklist/) (indexed from [`../checklist.md`](../checklist.md)); this file exists
+so that a record can be written and indexed without loading the whole checklist.
 
 If an incident needs a control that is not listed here, use `<PREFIX>-NEW` and describe the
 required control in the record's prose.
@@ -35,6 +36,8 @@ required control in the record's prose.
 | AUTH-09 | MFA cannot be satisfied by a tap; number matching or hardware keys |
 | AUTH-10 | Legacy and alternative login paths are disabled, not merely deprecated |
 | AUTH-11 | Every state-changing interface authenticates its caller, including non-HTTP ones |
+| AUTH-12 | Federated logins validated in full: signature, issuer, audience, expiry, nonce |
+| AUTH-13 | Login returns the same answer and timing whether or not the account exists |
 
 ## DATA — Data layer, tenant isolation, storage
 | ID | Control |
@@ -160,3 +163,84 @@ required control in the record's prose.
 | OBSV-07 | The "our credentials are already public" scenario is rehearsed |
 | OBSV-08 | Log retention exceeds realistic dwell time |
 | OBSV-09 | Post-incident review produces a control change, not just a report |
+
+
+## API — Object authorization, mass assignment, API shape
+| ID | Control |
+| --- | --- |
+| API-01 | Every request naming an object checks the caller may access that object (BOLA/IDOR); the API view of AUTH-02 |
+| API-02 | Authorization enforced on every function and every verb, not just reads and not just the UI (BFLA) |
+| API-03 | The server decides which fields a client may set; role, owner, price never taken from the body (mass assignment) |
+| API-04 | Responses contain only the fields the caller is entitled to (excessive data exposure) |
+| API-05 | Every API has rate limits and quotas; enumerable and expensive endpoints stricter |
+| API-06 | Authorization consistent across methods; no bypass via alternate verb or method override |
+| API-07 | No shadow or zombie APIs; old versions and debug routes inventoried and disabled |
+| API-08 | GraphQL/batch endpoints have depth, complexity, and per-resolver authorization |
+
+## WEB — Browser trust: headers, CSP, cookies, CSRF
+| ID | Control |
+| --- | --- |
+| WEB-01 | A Content-Security-Policy that constrains script; no `*`, `unsafe-inline`, or `unsafe-eval` on script-src |
+| WEB-02 | HTTPS enforced everywhere with HSTS; no mixed content |
+| WEB-03 | `X-Content-Type-Options: nosniff` set |
+| WEB-04 | Framing controlled via frame-ancestors / X-Frame-Options (clickjacking) |
+| WEB-05 | Identity cookies are Secure, HttpOnly, and SameSite, scoped narrowly |
+| WEB-06 | User-supplied content output-encoded and never rendered as trusted HTML in the app origin (XSS) |
+| WEB-07 | State-changing requests protected against CSRF |
+| WEB-08 | CORS not wildcarded with credentials; Referrer-Policy and Permissions-Policy set |
+
+## FILE — Uploads, storage, and serving
+| ID | Control |
+| --- | --- |
+| FILE-01 | Every upload endpoint requires authentication and authorization |
+| FILE-02 | Uploads validated by content and type-allowlisted; HTML/SVG never served from the app origin |
+| FILE-03 | Uploads have size and resource limits; decompression and image processing bounded |
+| FILE-04 | Uploaded files stored private by default and served via short-lived signed URLs |
+| FILE-05 | File paths never built from user input; filenames sanitized; downloads scoped (path traversal) |
+| FILE-06 | Metadata stripped from uploads; untrusted documents not rendered server-side without sandboxing |
+
+## LOGIC — Business-logic and workflow abuse
+| ID | Control |
+| --- | --- |
+| LOGIC-01 | Multi-step workflows enforce order and state server-side; steps cannot be skipped or replayed |
+| LOGIC-02 | Prices, quantities, and totals computed and validated server-side; never trusted from the client |
+| LOGIC-03 | Operations on shared state are atomic; no time-of-check/time-of-use race |
+| LOGIC-04 | Quotas, limits, and entitlements enforced server-side |
+| LOGIC-05 | Payments and one-time actions are idempotent and replay-protected |
+
+## LEAK — Information disclosure
+| ID | Control |
+| --- | --- |
+| LEAK-01 | No endpoint reveals whether an account or resource exists (enumeration) |
+| LEAK-02 | Security decisions run in time independent of the secret (timing oracle) |
+| LEAK-03 | Errors returned to clients are generic; no stack traces, DB errors, or debug pages |
+| LEAK-04 | Client-facing identifiers unguessable and never the only control; no volume/order oracle |
+| LEAK-05 | Version and stack banners removed from responses |
+| LEAK-06 | Files and exports stripped of hidden metadata; no secrets or full identifiers in responses/URLs |
+
+## CRYPTO — Hashing, tokens, randomness, transport
+| ID | Control |
+| --- | --- |
+| CRYPTO-01 | Passwords hashed with argon2id, bcrypt, or scrypt, salted per password |
+| CRYPTO-02 | Tokens, session IDs, and secrets come from a cryptographically secure RNG |
+| CRYPTO-03 | Comparisons of secrets are constant-time |
+| CRYPTO-04 | TLS everywhere, modern configuration; certificate validation never disabled |
+| CRYPTO-05 | No home-grown cryptography; vetted libraries and authenticated encryption; keys managed |
+| CRYPTO-06 | Sensitive data encrypted at rest |
+
+## DNS — Domains, subdomains, certificates, email
+| ID | Control |
+| --- | --- |
+| DNS-01 | No dangling DNS records; records removed before the service they point at is decommissioned |
+| DNS-02 | Domain and certificate expiry monitored and auto-renewed; registrar locked and MFA-protected |
+| DNS-03 | Email authentication configured: SPF, DKIM, and DMARC with an enforcing policy |
+| DNS-04 | Registrar transfer lock, CAA records, and DNSSEC where supported |
+
+## MOBILE — Mobile application specifics
+| ID | Control |
+| --- | --- |
+| MOBILE-01 | No secret in the app binary; a shipped app is public like a browser bundle |
+| MOBILE-02 | TLS validated and never disabled; pin where the threat model calls for it |
+| MOBILE-03 | Sensitive data not in plaintext local storage, caches, or logs; platform keystore used |
+| MOBILE-04 | The server enforces authorization; the app is not the security boundary |
+| MOBILE-05 | Deep links, IPC, and exported components validate their input and their caller |

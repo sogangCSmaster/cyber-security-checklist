@@ -151,8 +151,22 @@ They own the decision.
 
 ---
 
+## A few more defaults worth writing in from the start
+
+These are cheap while you are generating the code and expensive to retrofit:
+
+- **Browser headers.** Ship a real Content-Security-Policy (nonce-based, no `*`/`unsafe-inline`/`unsafe-eval`), plus HSTS, `nosniff`, framing control, and `Secure; HttpOnly; SameSite` cookies. A CSP of `default-src *` is the same as none. → [`WEB-01`](../../checklist/web.md#web-01), [`WEB-05`](../../checklist/web.md#web-05)
+- **Uploads.** Require auth on the upload endpoint, validate by content, store private and serve via signed URLs, and never serve user HTML/SVG from your own origin. An unauthenticated `/api/upload` that lands in a public bucket is two breaches at once. → [`FILE-01`](../../checklist/files.md#file-01), [`FILE-04`](../../checklist/files.md#file-04)
+- **Don't leak existence.** Login, signup, and password reset return one neutral answer, in constant time, whether or not the account exists — always run the password hash, even against a dummy, so "no such user" is not measurably faster than "wrong password". → [`AUTH-13`](../../checklist/authentication.md#auth-13), [`LEAK-01`](../../checklist/leakage.md#leak-01)
+- **Server-side money and quotas.** Compute prices, totals, and remaining quota on the server; never trust an amount or a limit from the client. → [`LOGIC-02`](../../checklist/logic.md#logic-02)
+
+---
+
 ## Full reference
 
-- [`checklist.md`](../../checklist.md) — all 110 controls with priorities and verification steps
+- [`checklist.md`](../../checklist.md) — the entry point, triage, and domain map
+- [`checklist/`](../../checklist/) — 160 controls across 19 domains, each with Detect / Fix / Verify / Probe
+- [`checklist/probe-playbook.md`](../../checklist/probe-playbook.md) — black-box checks against a running app
+- [`vulnerabilities.md`](../../vulnerabilities.md) — the same ground by vulnerability class (IDOR, BOLA, SSRF, …)
 - [`incidents/`](../../incidents/) — the breach corpus these rules come from
 - [`incidents/STATS.md`](../../incidents/STATS.md) — which failures actually appear most often
