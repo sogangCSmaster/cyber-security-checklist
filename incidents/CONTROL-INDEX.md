@@ -8,7 +8,7 @@ preference, and this file is where that shows.
 
 ## `AGENT-01` — Everything an agent reads is untrusted data, never instruction
 
-**12 incidents.**
+**13 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -23,11 +23,12 @@ preference, and this file is where that shows.
 | [I2025Q2-17](2025/2025-Q2.md#i2025q2-17-echoleak-zero-click-prompt-injection-in-microsoft-365-copilot) | 2025-06-11 | Microsoft |
 | [I2025Q3-27](2025/2025-Q3.md#i2025q3-27-forcedleak-indirect-prompt-injection-in-salesforce-agentforce) | 2025-09-25 | Salesforce (Agentforce customers with Web-to-Lead enabled) |
 | [I2025Q4-18](2025/2025-Q4.md#i2025q4-18-servicenow-now-assist-agent-to-agent-prompt-injection) | 2025-11-19 | ServiceNow (Now Assist agentic AI platform) |
+| [I2026Q2-26](2026/2026-Q2.md#i2026q2-26-agentjacking-sentry-error-events-hijacking-ai-coding-agents) | 2026-06-17 | Sentry MCP integration (organisations with publicly exposed DSNs) |
 | [I2026Q3-27](2026/2026-Q3.md#i2026q3-27-bragjack-hijacking-of-ai-browser-agents) | 2026-09-19 | Google Chrome, Microsoft Edge, Perplexity Comet, Opera Neon, Claude in Chrome |
 
 ## `AGENT-02` — Agent credentials are scoped to the task; never admin or service-role
 
-**9 incidents.**
+**11 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -37,13 +38,15 @@ preference, and this file is where that shows.
 | [I2025Q4-18](2025/2025-Q4.md#i2025q4-18-servicenow-now-assist-agent-to-agent-prompt-injection) | 2025-11-19 | ServiceNow (Now Assist agentic AI platform) |
 | [I2026Q1-09](2026/2026-Q1.md#i2026q1-09-moltbook-ai-agent-social-network-database-exposure) | 2026-01-31 | Moltbook |
 | [I2026Q1-12](2026/2026-Q1.md#i2026q1-12-unauthenticated-mcp-servers-exposed-at-internet-scale) | 2026-02 | Model Context Protocol server operators (multiple) |
-| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-mcp-stdio-parameter-injection-across-the-official-sdks) | 2026-04-15 | Model Context Protocol ecosystem (OX Security disclosure) |
+| [I2026Q2-20](2026/2026-Q2.md#i2026q2-20-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-26](2026/2026-Q2.md#i2026q2-26-agentjacking-sentry-error-events-hijacking-ai-coding-agents) | 2026-06-17 | Sentry MCP integration (organisations with publicly exposed DSNs) |
 | [I2026Q3-02](2026/2026-Q3.md#i2026q3-02-openai-models-autonomous-intrusion-into-hugging-face) | 2026-07-21 | Hugging Face |
 | [I2026Q3-28](2026/2026-Q3.md#i2026q3-28-openai-codex-sandbox-escapes) | 2026-09-20 | OpenAI (Codex Desktop and Codex CLI) |
 
 ## `AGENT-03` — Private data, untrusted content, and an external channel never combine unsupervised
 
-**11 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -57,11 +60,12 @@ preference, and this file is where that shows.
 | [I2025Q3-27](2025/2025-Q3.md#i2025q3-27-forcedleak-indirect-prompt-injection-in-salesforce-agentforce) | 2025-09-25 | Salesforce (Agentforce customers with Web-to-Lead enabled) |
 | [I2025Q3-28](2025/2025-Q3.md#i2025q3-28-postmark-mcp-malicious-mcp-server) | 2025-09-26 | Users of the rogue postmark-mcp npm package (impersonating Postmark's MCP server) |
 | [I2025Q4-18](2025/2025-Q4.md#i2025q4-18-servicenow-now-assist-agent-to-agent-prompt-injection) | 2025-11-19 | ServiceNow (Now Assist agentic AI platform) |
+| [I2026Q2-26](2026/2026-Q2.md#i2026q2-26-agentjacking-sentry-error-events-hijacking-ai-coding-agents) | 2026-06-17 | Sentry MCP integration (organisations with publicly exposed DSNs) |
 | [I2026Q3-27](2026/2026-Q3.md#i2026q3-27-bragjack-hijacking-of-ai-browser-agents) | 2026-09-19 | Google Chrome, Microsoft Edge, Perplexity Comet, Opera Neon, Claude in Chrome |
 
 ## `AGENT-04` — MCP servers and IDE extensions are pinned, reviewed, and version-diffed
 
-**7 incidents.**
+**8 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -70,22 +74,24 @@ preference, and this file is where that shows.
 | [I2026Q1-11](2026/2026-Q1.md#i2026q1-11-clawhub-agent-skill-marketplace-poisoning) | 2026-02 | OpenClaw ClawHub skill marketplace |
 | [I2026Q1-14](2026/2026-Q1.md#i2026q1-14-openclaw-one-click-remote-code-execution) | 2026-02-03 | OpenClaw |
 | [I2026Q1-23](2026/2026-Q1.md#i2026q1-23-claude-code-repository-configuration-rce-and-api-key-exfiltration) | 2026-02-25 | Anthropic (Claude Code) |
+| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-mcp-stdio-parameter-injection-across-the-official-sdks) | 2026-04-15 | Model Context Protocol ecosystem (OX Security disclosure) |
 | [I2026Q3-27](2026/2026-Q3.md#i2026q3-27-bragjack-hijacking-of-ai-browser-agents) | 2026-09-19 | Google Chrome, Microsoft Edge, Perplexity Comet, Opera Neon, Claude in Chrome |
 | [I2026Q3-28](2026/2026-Q3.md#i2026q3-28-openai-codex-sandbox-escapes) | 2026-09-20 | OpenAI (Codex Desktop and Codex CLI) |
 
 ## `AGENT-05` — No MCP server or agent endpoint exposed without authentication
 
-**3 incidents.**
+**4 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2025Q2-18](2025/2025-Q2.md#i2025q2-18-asana-mcp-server-cross-tenant-data-exposure) | 2025-06-18 | Asana |
 | [I2026Q1-12](2026/2026-Q1.md#i2026q1-12-unauthenticated-mcp-servers-exposed-at-internet-scale) | 2026-02 | Model Context Protocol server operators (multiple) |
 | [I2026Q1-14](2026/2026-Q1.md#i2026q1-14-openclaw-one-click-remote-code-execution) | 2026-02-03 | OpenClaw |
+| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-mcp-stdio-parameter-injection-across-the-official-sdks) | 2026-04-15 | Model Context Protocol ecosystem (OX Security disclosure) |
 
 ## `AGENT-06` — Human approval before an agent writes to production, moves money, or changes access
 
-**11 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -96,14 +102,15 @@ preference, and this file is where that shows.
 | [I2025Q3-17](2025/2025-Q3.md#i2025q3-17-s1ngularity-nx-supply-chain-compromise) | 2025-08-27 | Nx (Nrwl) build system and its downstream developers |
 | [I2025Q4-14](2025/2025-Q4.md#i2025q4-14-ai-orchestrated-espionage-campaign-disclosed-by-anthropic) | 2025-11-13 | Approximately 30 targeted organizations (technology, finance, chemical manufacturing, government) |
 | [I2025Q4-18](2025/2025-Q4.md#i2025q4-18-servicenow-now-assist-agent-to-agent-prompt-injection) | 2025-11-19 | ServiceNow (Now Assist agentic AI platform) |
-| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-20](2026/2026-Q2.md#i2026q2-20-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-26](2026/2026-Q2.md#i2026q2-26-agentjacking-sentry-error-events-hijacking-ai-coding-agents) | 2026-06-17 | Sentry MCP integration (organisations with publicly exposed DSNs) |
 | [I2026Q3-02](2026/2026-Q3.md#i2026q3-02-openai-models-autonomous-intrusion-into-hugging-face) | 2026-07-21 | Hugging Face |
 | [I2026Q3-27](2026/2026-Q3.md#i2026q3-27-bragjack-hijacking-of-ai-browser-agents) | 2026-09-19 | Google Chrome, Microsoft Edge, Perplexity Comet, Opera Neon, Claude in Chrome |
 | [I2026Q3-28](2026/2026-Q3.md#i2026q3-28-openai-codex-sandbox-escapes) | 2026-09-20 | OpenAI (Codex Desktop and Codex CLI) |
 
 ## `AGENT-07` — Agent actions are logged with their originating prompt and are reversible
 
-**8 incidents.**
+**9 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -113,6 +120,7 @@ preference, and this file is where that shows.
 | [I2025Q3-28](2025/2025-Q3.md#i2025q3-28-postmark-mcp-malicious-mcp-server) | 2025-09-26 | Users of the rogue postmark-mcp npm package (impersonating Postmark's MCP server) |
 | [I2025Q4-14](2025/2025-Q4.md#i2025q4-14-ai-orchestrated-espionage-campaign-disclosed-by-anthropic) | 2025-11-13 | Approximately 30 targeted organizations (technology, finance, chemical manufacturing, government) |
 | [I2025Q4-18](2025/2025-Q4.md#i2025q4-18-servicenow-now-assist-agent-to-agent-prompt-injection) | 2025-11-19 | ServiceNow (Now Assist agentic AI platform) |
+| [I2026Q2-26](2026/2026-Q2.md#i2026q2-26-agentjacking-sentry-error-events-hijacking-ai-coding-agents) | 2026-06-17 | Sentry MCP integration (organisations with publicly exposed DSNs) |
 | [I2026Q3-02](2026/2026-Q3.md#i2026q3-02-openai-models-autonomous-intrusion-into-hugging-face) | 2026-07-21 | Hugging Face |
 | [I2026Q3-27](2026/2026-Q3.md#i2026q3-27-bragjack-hijacking-of-ai-browser-agents) | 2026-09-19 | Google Chrome, Microsoft Edge, Perplexity Comet, Opera Neon, Claude in Chrome |
 
@@ -157,7 +165,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-01` — Phishing-resistant MFA on every human account with production reach
 
-**140 incidents.**
+**141 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -296,7 +304,8 @@ preference, and this file is where that shows.
 | [I2026Q1-05](2026/2026-Q1.md#i2026q1-05-flemish-hospital-it-supplier-credential-exposure) | 2026-01-14 | Three Flemish hospitals sharing AZ Monica's IT service provider |
 | [I2026Q1-15](2026/2026-Q1.md#i2026q1-15-shinyhunters-voice-phishing-wave) | 2026-02-04 | ShinyHunters campaign (Harvard University, University of Pennsylvania, Figure Technology Solutions, CarGurus and others) |
 | [I2026Q1-26](2026/2026-Q1.md#i2026q1-26-stryker-wiper-attack) | 2026-03-28 | Stryker Corporation |
-| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
+| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
+| [I2026Q2-21](2026/2026-Q2.md#i2026q2-21-tchap-government-messaging-account-compromise) | 2026-06-08 | DINUM (Tchap) |
 | [I2026Q3-11](2026/2026-Q3.md#i2026q3-11-hostdzire-hypervisor-ransomware-and-permanent-data-loss) | 2026-08-05 | HostDzire |
 | [I2026Q3-19](2026/2026-Q3.md#i2026q3-19-mckesson-cloud-account-compromise-via-voice-phishing) | 2026-08-31 | McKesson |
 | [I2026Q3-21](2026/2026-Q3.md#i2026q3-21-dropbox-account-takeover-through-lenovo-id-federation) | 2026-09-02 | Dropbox (via Lenovo Identity Provider Services) |
@@ -304,7 +313,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-02` — Authorization checked server-side, per object, on every request
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -330,11 +339,12 @@ preference, and this file is where that shows.
 | [I2025Q2-05](2025/2025-Q2.md#i2025q2-05-mtn-group-customer-data-breach) | 2025-04-24 | MTN Group |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 | [I2026Q1-08](2026/2026-Q1.md#i2026q1-08-minnesota-dhs-mnchoices-over-permissioned-access) | 2026-01-16 | Minnesota Department of Human Services (MnCHOICES, operated by FEI Systems) |
+| [I2026Q2-18](2026/2026-Q2.md#i2026q2-18-government24-issued-civil-documents-to-the-wrong-applicants) | 2026-05-27 | Ministry of the Interior and Safety (Government24) |
 | [I2026Q3-13](2026/2026-Q3.md#i2026q3-13-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 
 ## `AUTH-03` — No unauthenticated endpoint returns user data
 
-**31 incidents.**
+**32 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -368,6 +378,7 @@ preference, and this file is where that shows.
 | [I2025Q1-04](2025/2025-Q1.md#i2025q1-04-deepseek-exposed-clickhouse-database) | 2025-01-29 | DeepSeek |
 | [I2025Q1-12](2025/2025-Q1.md#i2025q1-12-cocospy-spyic-and-spyzie-stalkerware-data-exposure) | 2025-02-20 | Cocospy, Spyic and Spyzie (stalkerware apps traced to 711.icu) |
 | [I2025Q2-14](2025/2025-Q2.md#i2025q2-14-zoomcar-customer-data-breach) | 2025-06 | Zoomcar Holdings, Inc. |
+| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-ants-secure-documents-agency-data-exposure) | 2026-04-16 | Agence Nationale des Titres Sécurisés (ANTS) |
 | [I2026Q3-13](2026/2026-Q3.md#i2026q3-13-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 
 ## `AUTH-04` — Sessions are short-lived, revocable, and rotated on privilege change
@@ -392,13 +403,13 @@ preference, and this file is where that shows.
 | [I2025Q1-13](2025/2025-Q1.md#i2025q1-13-bybit-15b-theft-via-the-safewallet-signing-interface) | 2025-02-21 | Bybit (compromise originated at Safe{Wallet}) |
 | [I2025Q4-11](2025/2025-Q4.md#i2025q4-11-nikkei-slack-breach-from-an-infostealer-on-a-personal-computer) | 2025-11-04 | Nikkei Inc. |
 | [I2026Q1-07](2026/2026-Q1.md#i2026q1-07-victorian-department-of-education-student-account-breach) | 2026-01-15 | Victorian Department of Education (Australia) |
-| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
+| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
 | [I2026Q3-21](2026/2026-Q3.md#i2026q3-21-dropbox-account-takeover-through-lenovo-id-federation) | 2026-09-02 | Dropbox (via Lenovo Identity Provider Services) |
 | [I2026Q3-26](2026/2026-Q3.md#i2026q3-26-gyazo-database-and-image-metadata-breach) | 2026-09-18 | Gyazo (Helpfeel Inc.) |
 
 ## `AUTH-05` — Account recovery and help-desk paths are as strong as the login path
 
-**10 incidents.**
+**11 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -410,12 +421,13 @@ preference, and this file is where that shows.
 | [I2024Q3-18](2024/2024-Q3.md#i2024q3-18-transport-for-london-cyberattack) | 2024-09-12 | Transport for London (TfL) |
 | [I2025Q2-04](2025/2025-Q2.md#i2025q2-04-marks-spencer-co-op-and-harrods) | 2025-04-22 | Marks & Spencer |
 | [I2025Q2-21](2025/2025-Q2.md#i2025q2-21-aflac-and-the-insurance-sector-social-engineering-campaign) | 2025-06-20 | Aflac |
-| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-permanent-tsb-open24-contact-centre-impersonation) | 2026-05-08 | Permanent TSB |
+| [I2026Q2-20](2026/2026-Q2.md#i2026q2-20-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
 | [I2026Q3-21](2026/2026-Q3.md#i2026q3-21-dropbox-account-takeover-through-lenovo-id-federation) | 2026-09-02 | Dropbox (via Lenovo Identity Provider Services) |
 
 ## `AUTH-06` — Rate limiting, lockout, and breached-password checks on all auth surfaces
 
-**48 incidents.**
+**50 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -466,6 +478,8 @@ preference, and this file is where that shows.
 | [I2025Q2-19](2025/2025-Q2.md#i2025q2-19-the-16-billion-credentials-aggregation-story) | 2025-06-18 | No single victim — compiled infostealer logs |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 | [I2025Q3-14](2025/2025-Q3.md#i2025q3-14-bremanger-dam-control-system-intrusion) | 2025-08-13 | Lake Risevatnet dam, Bremanger, Norway |
+| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-permanent-tsb-open24-contact-centre-impersonation) | 2026-05-08 | Permanent TSB |
+| [I2026Q2-21](2026/2026-Q2.md#i2026q2-21-tchap-government-messaging-account-compromise) | 2026-06-08 | DINUM (Tchap) |
 | [I2026Q3-16](2026/2026-Q3.md#i2026q3-16-french-dgfip-tax-and-cadastral-data-breach) | 2026-08-17 | Direction générale des Finances publiques (DGFiP), French Ministry of the Economy and Finance |
 
 ## `AUTH-07` — Admin and impersonation tooling sits behind separate auth and full audit
@@ -499,7 +513,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-08` — Access is inventoried, owned, and expires when unused
 
-**21 incidents.**
+**22 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -520,7 +534,8 @@ preference, and this file is where that shows.
 | [I2025Q4-25](2025/2025-Q4.md#i2025q4-25-tokyo-high-school-data-left-in-a-shared-account) | 2025-11-28 | Tokyo Metropolitan Board of Education (metropolitan high school, not named) |
 | [I2026Q1-02](2026/2026-Q1.md#i2026q1-02-kyowon-group-ransomware-attack) | 2026-01-12 | Kyowon Group |
 | [I2026Q1-08](2026/2026-Q1.md#i2026q1-08-minnesota-dhs-mnchoices-over-permissioned-access) | 2026-01-16 | Minnesota Department of Human Services (MnCHOICES, operated by FEI Systems) |
-| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
+| [I2026Q2-27](2026/2026-Q2.md#i2026q2-27-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
 | [I2026Q3-16](2026/2026-Q3.md#i2026q3-16-french-dgfip-tax-and-cadastral-data-breach) | 2026-08-17 | Direction générale des Finances publiques (DGFiP), French Ministry of the Economy and Finance |
 | [I2026Q3-18](2026/2026-Q3.md#i2026q3-18-atf-major-incident-declaration-after-qilin-claim) | 2026-08-27 | US Bureau of Alcohol, Tobacco, Firearms and Explosives |
 | [I2026Q3-25](2026/2026-Q3.md#i2026q3-25-japan-digital-agency-vpn-intrusion) | 2026-09-14 | Digital Agency of Japan (Government Solution Service) |
@@ -582,7 +597,7 @@ preference, and this file is where that shows.
 | [I2025Q1-16](2025/2025-Q1.md#i2025q1-16-tj-actionschanged-files-github-action-compromise) | 2025-03-14 | tj-actions (open-source GitHub Action; 23000+ downstream repositories) |
 | [I2025Q1-17](2025/2025-Q1.md#i2025q1-17-reviewdogaction-setup-and-the-spotbugs-token-chain) | 2025-03-17 | reviewdog (open-source project); SpotBugs; downstream CI consumers |
 | [I2025Q3-17](2025/2025-Q3.md#i2025q3-17-s1ngularity-nx-supply-chain-compromise) | 2025-08-27 | Nx (Nrwl) build system and its downstream developers |
-| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
+| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
 
 ## `CICD-02` — Branch protection and required review on anything that reaches users
 
@@ -628,8 +643,8 @@ preference, and this file is where that shows.
 | [I2025Q3-17](2025/2025-Q3.md#i2025q3-17-s1ngularity-nx-supply-chain-compromise) | 2025-08-27 | Nx (Nrwl) build system and its downstream developers |
 | [I2025Q3-25](2025/2025-Q3.md#i2025q3-25-shai-hulud-self-replicating-npm-worm) | 2025-09-16 | npm ecosystem (campaign; 500+ packages) |
 | [I2026Q1-25](2026/2026-Q1.md#i2026q1-25-trivy-supply-chain-compromise) | 2026-03-20 | Aqua Security (Trivy) |
-| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
-| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
+| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
+| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
 
 ## `CICD-05` — Deploy credentials are per-repository, least-privilege, and expiring
 
@@ -677,7 +692,7 @@ preference, and this file is where that shows.
 | [I2025Q4-11](2025/2025-Q4.md#i2025q4-11-nikkei-slack-breach-from-an-infostealer-on-a-personal-computer) | 2025-11-04 | Nikkei Inc. |
 | [I2026Q1-11](2026/2026-Q1.md#i2026q1-11-clawhub-agent-skill-marketplace-poisoning) | 2026-02 | OpenClaw ClawHub skill marketplace |
 | [I2026Q1-23](2026/2026-Q1.md#i2026q1-23-claude-code-repository-configuration-rce-and-api-key-exfiltration) | 2026-02-25 | Anthropic (Claude Code) |
-| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
+| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
 | [I2026Q3-28](2026/2026-Q3.md#i2026q3-28-openai-codex-sandbox-escapes) | 2026-09-20 | OpenAI (Codex Desktop and Codex CLI) |
 
 ## `CICD-08` — The build system is treated as production and monitored as such
@@ -793,10 +808,10 @@ preference, and this file is where that shows.
 | [I2026Q1-12](2026/2026-Q1.md#i2026q1-12-unauthenticated-mcp-servers-exposed-at-internet-scale) | 2026-02 | Model Context Protocol server operators (multiple) |
 | [I2026Q1-27](2026/2026-Q1.md#i2026q1-27-claude-code-source-exposed-through-an-npm-packaging-error) | 2026-03-31 | Anthropic (Claude Code npm package) |
 | [I2026Q2-02](2026/2026-Q2.md#i2026q2-02-duc-money-transfer-app-exposed-identity-documents) | 2026-04-02 | Duales Inc. (Duc) |
-| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
-| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
-| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
-| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
+| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
+| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+| [I2026Q2-17](2026/2026-Q2.md#i2026q2-17-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
+| [I2026Q2-19](2026/2026-Q2.md#i2026q2-19-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 | [I2026Q3-07](2026/2026-Q3.md#i2026q3-07-oldelval-pipeline-operator-intrusion) | 2026-07-31 | Oleoductos del Valle (Oldelval) |
 
@@ -838,7 +853,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**190 incidents.**
+**191 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1026,6 +1041,7 @@ preference, and this file is where that shows.
 | [I2026Q1-13](2026/2026-Q1.md#i2026q1-13-senegal-directorate-of-file-automation-national-identity-attack) | 2026-02 | Direction de l'Automatisation des Fichiers (DAF), Senegal |
 | [I2026Q1-16](2026/2026-Q1.md#i2026q1-16-conpet-oil-pipeline-operator-ransomware) | 2026-02-06 | Conpet |
 | [I2026Q1-22](2026/2026-Q1.md#i2026q1-22-hazeldenes-poultry-processor-cyberattack) | 2026-02-19 | Hazeldene's Chicken Farm |
+| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-chipsoft-ransomware-attack-on-dutch-healthcare-software) | 2026-04-07 | ChipSoft |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 | [I2026Q3-07](2026/2026-Q3.md#i2026q3-07-oldelval-pipeline-operator-intrusion) | 2026-07-31 | Oleoductos del Valle (Oldelval) |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-sithonia-municipality-and-port-fund-ransomware) | 2026-08 | Municipality of Sithonia and Municipal Port Fund of Sithonia |
@@ -1056,7 +1072,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-08` — Admin interfaces are not on the public internet
 
-**28 incidents.**
+**30 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1084,14 +1100,16 @@ preference, and this file is where that shows.
 | [I2025Q4-28](2025/2025-Q4.md#i2025q4-28-korean-air-employee-data-stolen-through-its-catering-subsidiary) | 2025-12-29 | Korean Air Catering & Duty-Free (KC&D), affecting Korean Air employees |
 | [I2026Q1-12](2026/2026-Q1.md#i2026q1-12-unauthenticated-mcp-servers-exposed-at-internet-scale) | 2026-02 | Model Context Protocol server operators (multiple) |
 | [I2026Q1-14](2026/2026-Q1.md#i2026q1-14-openclaw-one-click-remote-code-execution) | 2026-02-03 | OpenClaw |
-| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
-| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
+| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-mcp-stdio-parameter-injection-across-the-official-sdks) | 2026-04-15 | Model Context Protocol ecosystem (OX Security disclosure) |
+| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
+| [I2026Q2-16](2026/2026-Q2.md#i2026q2-16-dígitro-tecnologia-lawful-interception-vendor-leak) | 2026-05-21 | Dígitro Tecnologia |
+| [I2026Q2-25](2026/2026-Q2.md#i2026q2-25-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 | [I2026Q3-11](2026/2026-Q3.md#i2026q3-11-hostdzire-hypervisor-ransomware-and-permanent-data-loss) | 2026-08-05 | HostDzire |
 
 ## `CLOUD-09` — An inventory exists; unowned and forgotten assets are found and removed
 
-**35 incidents.**
+**36 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1126,6 +1144,7 @@ preference, and this file is where that shows.
 | [I2025Q3-27](2025/2025-Q3.md#i2025q3-27-forcedleak-indirect-prompt-injection-in-salesforce-agentforce) | 2025-09-25 | Salesforce (Agentforce customers with Web-to-Lead enabled) |
 | [I2025Q4-08](2025/2025-Q4.md#i2025q4-08-hacktivist-tampering-with-internet-exposed-canadian-ics) | 2025-10-30 | Canadian critical infrastructure operators (water utility, oil and gas producer, grain farm) |
 | [I2025Q4-13](2025/2025-Q4.md#i2025q4-13-checkoutcom-legacy-cloud-storage-extortion) | 2025-11-12 | Checkout.com |
+| [I2026Q2-18](2026/2026-Q2.md#i2026q2-18-government24-issued-civil-documents-to-the-wrong-applicants) | 2026-05-27 | Ministry of the Interior and Safety (Government24) |
 | [I2026Q3-04](2026/2026-Q3.md#i2026q3-04-south-korean-foreign-ministry-training-platform-breach) | 2026-07-22 | South Korea Ministry of Foreign Affairs (National Diplomatic Academy) |
 | [I2026Q3-13](2026/2026-Q3.md#i2026q3-13-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 | [I2026Q3-18](2026/2026-Q3.md#i2026q3-18-atf-major-incident-declaration-after-qilin-claim) | 2026-08-27 | US Bureau of Alcohol, Tobacco, Firearms and Explosives |
@@ -1133,7 +1152,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-10` — A patch SLA for internet-facing and laterally-reachable systems, an inventory of what cannot be patched, and a staged rollout
 
-**68 incidents.**
+**69 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1200,7 +1219,8 @@ preference, and this file is where that shows.
 | [I2025Q4-15](2025/2025-Q4.md#i2025q4-15-logitech-oracle-e-business-suite-data-theft) | 2025-11-14 | Logitech International S.A. |
 | [I2025Q4-28](2025/2025-Q4.md#i2025q4-28-korean-air-employee-data-stolen-through-its-catering-subsidiary) | 2025-12-29 | Korean Air Catering & Duty-Free (KC&D), affecting Korean Air employees |
 | [I2026Q1-17](2026/2026-Q1.md#i2026q1-17-dutch-data-protection-authority-and-council-for-the-judiciary-breach) | 2026-02-07 | Autoriteit Persoonsgegevens and Raad voor de rechtspraak |
-| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
+| [I2026Q2-16](2026/2026-Q2.md#i2026q2-16-dígitro-tecnologia-lawful-interception-vendor-leak) | 2026-05-21 | Dígitro Tecnologia |
+| [I2026Q2-25](2026/2026-Q2.md#i2026q2-25-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
 | [I2026Q3-04](2026/2026-Q3.md#i2026q3-04-south-korean-foreign-ministry-training-platform-breach) | 2026-07-22 | South Korea Ministry of Foreign Affairs (National Diplomatic Academy) |
 | [I2026Q3-17](2026/2026-Q3.md#i2026q3-17-boston-scientific-global-operations-disruption) | 2026-08-26 | Boston Scientific |
 | [I2026Q3-22](2026/2026-Q3.md#i2026q3-22-mathspace-breach-through-unpatched-self-hosted-metabase) | 2026-09-08 | Mathspace |
@@ -1208,7 +1228,7 @@ preference, and this file is where that shows.
 
 ## `CRED-01` — No secret in source, config, client bundle, or git history
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1233,7 +1253,8 @@ preference, and this file is where that shows.
 | [I2025Q1-17](2025/2025-Q1.md#i2025q1-17-reviewdogaction-setup-and-the-spotbugs-token-chain) | 2025-03-17 | reviewdog (open-source project); SpotBugs; downstream CI consumers |
 | [I2025Q4-09](2025/2025-Q4.md#i2025q4-09-open-vsx-and-vs-code-publisher-tokens-leaked-in-public-repositories) | 2025-10-31 | Eclipse Foundation (Open VSX Registry) |
 | [I2026Q1-23](2026/2026-Q1.md#i2026q1-23-claude-code-repository-configuration-rce-and-api-key-exfiltration) | 2026-02-25 | Anthropic (Claude Code) |
-| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
+| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
+| [I2026Q2-16](2026/2026-Q2.md#i2026q2-16-dígitro-tecnologia-lawful-interception-vendor-leak) | 2026-05-21 | Dígitro Tecnologia |
 | [I2026Q3-20](2026/2026-Q3.md#i2026q3-20-berlin-city-administration-data-theft) | 2026-08-31 | Berlin city administration (Land Berlin) |
 
 ## `CRED-02` — Anything the browser can read is public; secrets live server-side only
@@ -1250,7 +1271,7 @@ preference, and this file is where that shows.
 
 ## `CRED-03` — Rotate on exposure, including anything an AI tool or third party has seen
 
-**20 incidents.**
+**21 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1272,6 +1293,7 @@ preference, and this file is where that shows.
 | [I2025Q4-05](2025/2025-Q4.md#i2025q4-05-glassworm-invisible-unicode-extension-worm) | 2025-10-24 | Open VSX Registry and Microsoft VS Code Marketplace extension publishers |
 | [I2025Q4-16](2025/2025-Q4.md#i2025q4-16-eurofiber-france-ticketing-platform-breach) | 2025-11-17 | Eurofiber France (with Eurafibre, FullSave, Netiwan, Avelia) |
 | [I2026Q2-03](2026/2026-Q2.md#i2026q2-03-cert-eu-and-european-commission-aws-key-theft-via-trivy) | 2026-04-03 | CERT-EU / European Commission |
+| [I2026Q2-16](2026/2026-Q2.md#i2026q2-16-dígitro-tecnologia-lawful-interception-vendor-leak) | 2026-05-21 | Dígitro Tecnologia |
 | [I2026Q3-10](2026/2026-Q3.md#i2026q3-10-chaindrop-npm-supply-chain-worm) | 2026-08-04 | npm registry ecosystem (keyv, cacheable, flat-cache, file-entry-cache, cacheable-request and others) |
 | [I2026Q3-26](2026/2026-Q3.md#i2026q3-26-gyazo-database-and-image-metadata-breach) | 2026-09-18 | Gyazo (Helpfeel Inc.) |
 
@@ -1288,7 +1310,7 @@ preference, and this file is where that shows.
 | [I2022Q3-18](2022/2022-Q3.md#i2022q3-18-uber-corporate-network-breach) | 2022-09-16 | Uber Technologies |
 | [I2022Q4-19](2022/2022-Q4.md#i2022q4-19-lastpass-cloud-storage-breach-customer-vault-backups) | 2022-12-22 | LastPass (GoTo) |
 | [I2024Q2-17](2024/2024-Q2.md#i2024q2-17-rabbit-r1-hardcoded-api-key-exposure) | 2024-06-25 | Rabbit Inc. (Rabbit R1 AI hardware device) |
-| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
+| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
 | [I2026Q3-20](2026/2026-Q3.md#i2026q3-20-berlin-city-administration-data-theft) | 2026-08-31 | Berlin city administration (Land Berlin) |
 
 ## `CRED-05` — Secret file patterns ignored before the first commit
@@ -1387,7 +1409,7 @@ preference, and this file is where that shows.
 | [I2025Q4-09](2025/2025-Q4.md#i2025q4-09-open-vsx-and-vs-code-publisher-tokens-leaked-in-public-repositories) | 2025-10-31 | Eclipse Foundation (Open VSX Registry) |
 | [I2025Q4-22](2025/2025-Q4.md#i2025q4-22-shai-hulud-20-npm-worm) | 2025-11-24 | npm ecosystem (packages from Zapier, ENS Domains, AsyncAPI, PostHog, Postman and others) |
 | [I2025Q4-27](2025/2025-Q4.md#i2025q4-27-coupang-customer-data-breach) | 2025-11-29 | Coupang Corp. |
-| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-27](2026/2026-Q2.md#i2026q2-27-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
 
 ## `CRED-08` — Per-environment secrets; development cannot reach production
 
@@ -1399,7 +1421,7 @@ preference, and this file is where that shows.
 
 ## `CRED-09` — A rotation and revocation runbook with an owner and a stated maximum time-to-revoke
 
-**13 incidents.**
+**14 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1415,7 +1437,8 @@ preference, and this file is where that shows.
 | [I2025Q4-16](2025/2025-Q4.md#i2025q4-16-eurofiber-france-ticketing-platform-breach) | 2025-11-17 | Eurofiber France (with Eurafibre, FullSave, Netiwan, Avelia) |
 | [I2025Q4-27](2025/2025-Q4.md#i2025q4-27-coupang-customer-data-breach) | 2025-11-29 | Coupang Corp. |
 | [I2026Q1-25](2026/2026-Q1.md#i2026q1-25-trivy-supply-chain-compromise) | 2026-03-20 | Aqua Security (Trivy) |
-| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
+| [I2026Q2-27](2026/2026-Q2.md#i2026q2-27-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
 
 ## `CRED-10` — No default or shared credential in anything you ship or deploy; a unique one is forced at first use
 
@@ -1431,7 +1454,7 @@ preference, and this file is where that shows.
 | [I2023Q4-14](2023/2023-Q4.md#i2023q4-14-cyberav3ngers-attack-on-a-regional-water-scheme-in-erris-county-mayo) | 2023-12 | Regional water supply scheme, Erris, County Mayo (Ireland) |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 | [I2025Q3-14](2025/2025-Q3.md#i2025q3-14-bremanger-dam-control-system-intrusion) | 2025-08-13 | Lake Risevatnet dam, Bremanger, Norway |
-| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
+| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 
 ## `DATA-01` — Row-level authorization enabled and default-deny on every client-reachable table
@@ -1461,11 +1484,11 @@ preference, and this file is where that shows.
 | [I2025Q1-12](2025/2025-Q1.md#i2025q1-12-cocospy-spyic-and-spyzie-stalkerware-data-exposure) | 2025-02-20 | Cocospy, Spyic and Spyzie (stalkerware apps traced to 711.icu) |
 | [I2025Q2-12](2025/2025-Q2.md#i2025q2-12-lovable-generated-applications-without-row-level-security) | 2025-05-29 | Lovable |
 | [I2026Q1-09](2026/2026-Q1.md#i2026q1-09-moltbook-ai-agent-social-network-database-exposure) | 2026-01-31 | Moltbook |
-| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
 
 ## `DATA-02` — A negative test proves user A cannot read, update, or delete user B's data
 
-**12 incidents.**
+**14 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1480,7 +1503,9 @@ preference, and this file is where that shows.
 | [I2025Q2-18](2025/2025-Q2.md#i2025q2-18-asana-mcp-server-cross-tenant-data-exposure) | 2025-06-18 | Asana |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 | [I2026Q1-09](2026/2026-Q1.md#i2026q1-09-moltbook-ai-agent-social-network-database-exposure) | 2026-01-31 | Moltbook |
-| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-18](2026/2026-Q2.md#i2026q2-18-government24-issued-civil-documents-to-the-wrong-applicants) | 2026-05-27 | Ministry of the Interior and Safety (Government24) |
+| [I2026Q2-23](2026/2026-Q2.md#i2026q2-23-optus-published-unlisted-customer-numbers-in-the-white-pages) | 2026-06-11 | Optus |
 
 ## `DATA-03` — Object storage is private by default; legacy buckets audited
 
@@ -1507,9 +1532,9 @@ preference, and this file is where that shows.
 | [I2026Q1-01](2026/2026-Q1.md#i2026q1-01-illinois-department-of-human-services-public-website-exposure) | 2026-01-02 | Illinois Department of Human Services |
 | [I2026Q1-27](2026/2026-Q1.md#i2026q1-27-claude-code-source-exposed-through-an-npm-packaging-error) | 2026-03-31 | Anthropic (Claude Code npm package) |
 | [I2026Q2-02](2026/2026-Q2.md#i2026q2-02-duc-money-transfer-app-exposed-identity-documents) | 2026-04-02 | Duales Inc. (Duc) |
-| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
-| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
-| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
+| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+| [I2026Q2-17](2026/2026-Q2.md#i2026q2-17-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
+| [I2026Q2-19](2026/2026-Q2.md#i2026q2-19-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
 
 ## `DATA-04` — Databases and search indexes are not reachable from the public internet
 
@@ -1572,7 +1597,7 @@ preference, and this file is where that shows.
 
 ## `DATA-06` — Passwords hashed with a modern memory-hard algorithm
 
-**26 incidents.**
+**27 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1601,6 +1626,7 @@ preference, and this file is where that shows.
 | [I2023Q2-07](2023/2023-Q2.md#i2023q2-07-bank-syariah-indonesia-lockbit-ransomware-attack) | 2023-05-11 | PT Bank Syariah Indonesia Tbk (BSI) |
 | [I2024Q3-13](2024/2024-Q3.md#i2024q3-13-national-public-data-records-exposure-and-bankruptcy) | 2024-08-12 | Jerico Pictures Inc. (d/b/a National Public Data); sister site RecordsCheck.net |
 | [I2026Q1-20](2026/2026-Q1.md#i2026q1-20-adidas-partner-extranet-breach) | 2026-02-17 | Adidas AG |
+| [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
 | [I2026Q3-14](2026/2026-Q3.md#i2026q3-14-klaviyo-sign-up-form-password-leakage-to-advertisers) | 2026-08-10 | Klaviyo |
 
 ## `DATA-07` — Sensitive fields encrypted at rest; identity documents deleted after use
@@ -1649,14 +1675,14 @@ preference, and this file is where that shows.
 | [I2026Q1-21](2026/2026-Q1.md#i2026q1-21-youx-loan-platform-data-breach) | 2026-02-18 | youX |
 | [I2026Q1-24](2026/2026-Q1.md#i2026q1-24-smile-team-orthodontics-ransomware-and-data-publication) | 2026-03-06 | Smile Team Orthodontics |
 | [I2026Q2-02](2026/2026-Q2.md#i2026q2-02-duc-money-transfer-app-exposed-identity-documents) | 2026-04-02 | Duales Inc. (Duc) |
-| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
-| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
-| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
+| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+| [I2026Q2-17](2026/2026-Q2.md#i2026q2-17-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
+| [I2026Q2-19](2026/2026-Q2.md#i2026q2-19-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
 | [I2026Q3-23](2026/2026-Q3.md#i2026q3-23-idscan-identity-verification-breach) | 2026-09-10 | IDScan |
 
 ## `DATA-08` — Backups exist, are restore-tested, and are not writable by production credentials
 
-**91 incidents.**
+**92 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1747,6 +1773,7 @@ preference, and this file is where that shows.
 | [I2026Q1-22](2026/2026-Q1.md#i2026q1-22-hazeldenes-poultry-processor-cyberattack) | 2026-02-19 | Hazeldene's Chicken Farm |
 | [I2026Q1-24](2026/2026-Q1.md#i2026q1-24-smile-team-orthodontics-ransomware-and-data-publication) | 2026-03-06 | Smile Team Orthodontics |
 | [I2026Q1-26](2026/2026-Q1.md#i2026q1-26-stryker-wiper-attack) | 2026-03-28 | Stryker Corporation |
+| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-chipsoft-ransomware-attack-on-dutch-healthcare-software) | 2026-04-07 | ChipSoft |
 | [I2026Q3-07](2026/2026-Q3.md#i2026q3-07-oldelval-pipeline-operator-intrusion) | 2026-07-31 | Oleoductos del Valle (Oldelval) |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-sithonia-municipality-and-port-fund-ransomware) | 2026-08 | Municipality of Sithonia and Municipal Port Fund of Sithonia |
 | [I2026Q3-11](2026/2026-Q3.md#i2026q3-11-hostdzire-hypervisor-ransomware-and-permanent-data-loss) | 2026-08-05 | HostDzire |
@@ -1754,7 +1781,7 @@ preference, and this file is where that shows.
 
 ## `DATA-09` — Data minimization and enforced retention limits
 
-**104 incidents.**
+**109 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1852,7 +1879,12 @@ preference, and this file is where that shows.
 | [I2026Q1-18](2026/2026-Q1.md#i2026q1-18-japan-airlines-luggage-delivery-reservation-system-breach) | 2026-02-11 | Japan Airlines |
 | [I2026Q1-21](2026/2026-Q1.md#i2026q1-21-youx-loan-platform-data-breach) | 2026-02-18 | youX |
 | [I2026Q1-24](2026/2026-Q1.md#i2026q1-24-smile-team-orthodontics-ransomware-and-data-publication) | 2026-03-06 | Smile Team Orthodontics |
-| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-ants-secure-documents-agency-data-exposure) | 2026-04-16 | Agence Nationale des Titres Sécurisés (ANTS) |
+| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-bvg-customer-data-kept-by-a-mailing-contractor-after-the-contract-ended) | 2026-05-04 | Berliner Verkehrsbetriebe (BVG) |
+| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+| [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
+| [I2026Q2-22](2026/2026-Q2.md#i2026q2-22-horizon-academy-trust-pupil-spreadsheet-emailed-to-families) | 2026-06-09 | Horizon Academy Trust |
+| [I2026Q2-28](2026/2026-Q2.md#i2026q2-28-medmate-and-monash-ivf-tracking-pixel-disclosure-of-health-data) | 2026-06-24 | Medmate Australia and Monash IVF |
 | [I2026Q3-01](2026/2026-Q3.md#i2026q3-01-dentaquest-breach-notifications) | 2026-07-17 | DentaQuest |
 | [I2026Q3-05](2026/2026-Q3.md#i2026q3-05-carecloud-electronic-health-record-breach) | 2026-07-30 | CareCloud |
 | [I2026Q3-06](2026/2026-Q3.md#i2026q3-06-court-services-victoria-online-hearing-records-breach) | 2026-07-30 | Court Services Victoria (Magistrates' Court and Children's Court of Victoria) |
@@ -1865,17 +1897,18 @@ preference, and this file is where that shows.
 
 ## `DATA-10` — Features that fan out one account's data to others are rate-limited and opt-in
 
-**3 incidents.**
+**4 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2020Q2-12](2020/2020-Q2.md#i2020q2-12-aarogya-setu-location-based-health-status-inference) | 2020-05-06 | National Informatics Centre, Government of India (Aarogya Setu app) |
 | [I2022Q4-12](2022/2022-Q4.md#i2022q4-12-twitter-api-vulnerability-data-scraped-and-leaked-at-scale) | 2022-11-24 | Twitter, Inc. (renamed X Corp. in 2023) |
 | [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe |
+| [I2026Q2-21](2026/2026-Q2.md#i2026q2-21-tchap-government-messaging-account-compromise) | 2026-06-08 | DINUM (Tchap) |
 
 ## `DATA-11` — Bulk export is a privileged, logged, alerting action
 
-**74 incidents.**
+**78 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1946,7 +1979,11 @@ preference, and this file is where that shows.
 | [I2026Q1-10](2026/2026-Q1.md#i2026q1-10-odido-customer-contact-system-breach) | 2026-02 | Odido |
 | [I2026Q1-15](2026/2026-Q1.md#i2026q1-15-shinyhunters-voice-phishing-wave) | 2026-02-04 | ShinyHunters campaign (Harvard University, University of Pennsylvania, Figure Technology Solutions, CarGurus and others) |
 | [I2026Q1-21](2026/2026-Q1.md#i2026q1-21-youx-loan-platform-data-breach) | 2026-02-18 | youX |
-| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
+| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-ants-secure-documents-agency-data-exposure) | 2026-04-16 | Agence Nationale des Titres Sécurisés (ANTS) |
+| [I2026Q2-21](2026/2026-Q2.md#i2026q2-21-tchap-government-messaging-account-compromise) | 2026-06-08 | DINUM (Tchap) |
+| [I2026Q2-22](2026/2026-Q2.md#i2026q2-22-horizon-academy-trust-pupil-spreadsheet-emailed-to-families) | 2026-06-09 | Horizon Academy Trust |
+| [I2026Q2-24](2026/2026-Q2.md#i2026q2-24-plymouth-city-council-home-education-email-sent-without-bcc) | 2026-06-12 | Plymouth City Council |
+| [I2026Q2-25](2026/2026-Q2.md#i2026q2-25-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
 | [I2026Q3-01](2026/2026-Q3.md#i2026q3-01-dentaquest-breach-notifications) | 2026-07-17 | DentaQuest |
 | [I2026Q3-05](2026/2026-Q3.md#i2026q3-05-carecloud-electronic-health-record-breach) | 2026-07-30 | CareCloud |
 | [I2026Q3-06](2026/2026-Q3.md#i2026q3-06-court-services-victoria-online-hearing-records-breach) | 2026-07-30 | Court Services Victoria (Magistrates' Court and Children's Court of Victoria) |
@@ -1997,7 +2034,7 @@ preference, and this file is where that shows.
 | [I2026Q1-13](2026/2026-Q1.md#i2026q1-13-senegal-directorate-of-file-automation-national-identity-attack) | 2026-02 | Direction de l'Automatisation des Fichiers (DAF), Senegal |
 | [I2026Q1-17](2026/2026-Q1.md#i2026q1-17-dutch-data-protection-authority-and-council-for-the-judiciary-breach) | 2026-02-07 | Autoriteit Persoonsgegevens and Raad voor de rechtspraak |
 | [I2026Q1-18](2026/2026-Q1.md#i2026q1-18-japan-airlines-luggage-delivery-reservation-system-breach) | 2026-02-11 | Japan Airlines |
-| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
 | [I2026Q3-01](2026/2026-Q3.md#i2026q3-01-dentaquest-breach-notifications) | 2026-07-17 | DentaQuest |
 | [I2026Q3-05](2026/2026-Q3.md#i2026q3-05-carecloud-electronic-health-record-breach) | 2026-07-30 | CareCloud |
 | [I2026Q3-06](2026/2026-Q3.md#i2026q3-06-court-services-victoria-online-hearing-records-breach) | 2026-07-30 | Court Services Victoria (Magistrates' Court and Children's Court of Victoria) |
@@ -2030,7 +2067,7 @@ preference, and this file is where that shows.
 | [I2025Q3-25](2025/2025-Q3.md#i2025q3-25-shai-hulud-self-replicating-npm-worm) | 2025-09-16 | npm ecosystem (campaign; 500+ packages) |
 | [I2025Q4-22](2025/2025-Q4.md#i2025q4-22-shai-hulud-20-npm-worm) | 2025-11-24 | npm ecosystem (packages from Zapier, ENS Domains, AsyncAPI, PostHog, Postman and others) |
 | [I2026Q1-11](2026/2026-Q1.md#i2026q1-11-clawhub-agent-skill-marketplace-poisoning) | 2026-02 | OpenClaw ClawHub skill marketplace |
-| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
+| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
 | [I2026Q3-10](2026/2026-Q3.md#i2026q3-10-chaindrop-npm-supply-chain-worm) | 2026-08-04 | npm registry ecosystem (keyv, cacheable, flat-cache, file-entry-cache, cacheable-request and others) |
 
 ## `DEPS-03` — A cooldown before adopting a newly published version
@@ -2057,8 +2094,8 @@ preference, and this file is where that shows.
 | [I2026Q1-11](2026/2026-Q1.md#i2026q1-11-clawhub-agent-skill-marketplace-poisoning) | 2026-02 | OpenClaw ClawHub skill marketplace |
 | [I2026Q1-25](2026/2026-Q1.md#i2026q1-25-trivy-supply-chain-compromise) | 2026-03-20 | Aqua Security (Trivy) |
 | [I2026Q2-03](2026/2026-Q2.md#i2026q2-03-cert-eu-and-european-commission-aws-key-theft-via-trivy) | 2026-04-03 | CERT-EU / European Commission |
-| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
-| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
+| [I2026Q2-08](2026/2026-Q2.md#i2026q2-08-checkmarx-developer-tool-supply-chain-compromise) | 2026-04-22 | Checkmarx (cascading to Bitwarden and downstream users) |
+| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-openai-credential-theft-via-tanstack-npm-compromise) | 2026-05-14 | OpenAI (via TanStack npm packages) |
 | [I2026Q3-10](2026/2026-Q3.md#i2026q3-10-chaindrop-npm-supply-chain-worm) | 2026-08-04 | npm registry ecosystem (keyv, cacheable, flat-cache, file-entry-cache, cacheable-request and others) |
 
 ## `DEPS-04` — Every suggested package is verified to exist and to be the intended one
@@ -2165,7 +2202,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-01` — Identity verification for any credential or MFA reset, independent of the caller's claim
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2190,7 +2227,8 @@ preference, and this file is where that shows.
 | [I2025Q3-12](2025/2025-Q3.md#i2025q3-12-pandora-customer-data-theft-via-third-party-crm) | 2025-08-05 | Pandora A/S |
 | [I2025Q4-21](2025/2025-Q4.md#i2025q4-21-harvard-alumni-and-donor-database-breach-by-voice-phishing) | 2025-11-22 | Harvard University (Alumni Affairs and Development) |
 | [I2026Q1-15](2026/2026-Q1.md#i2026q1-15-shinyhunters-voice-phishing-wave) | 2026-02-04 | ShinyHunters campaign (Harvard University, University of Pennsylvania, Figure Technology Solutions, CarGurus and others) |
-| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
+| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-permanent-tsb-open24-contact-centre-impersonation) | 2026-05-08 | Permanent TSB |
+| [I2026Q2-20](2026/2026-Q2.md#i2026q2-20-instagram-account-takeovers-via-meta-ai-support-chatbot) | 2026-06-01 | Meta Platforms (Instagram) |
 | [I2026Q3-19](2026/2026-Q3.md#i2026q3-19-mckesson-cloud-account-compromise-via-voice-phishing) | 2026-08-31 | McKesson |
 
 ## `HUMAN-02` — High-impact actions require a second person
@@ -2267,7 +2305,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-05` — Training reflects current technique, including voice and AI-assisted impersonation
 
-**72 incidents.**
+**73 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2342,11 +2380,12 @@ preference, and this file is where that shows.
 | [I2025Q4-17](2025/2025-Q4.md#i2025q4-17-doordash-social-engineering-breach) | 2025-11-17 | DoorDash |
 | [I2025Q4-21](2025/2025-Q4.md#i2025q4-21-harvard-alumni-and-donor-database-breach-by-voice-phishing) | 2025-11-22 | Harvard University (Alumni Affairs and Development) |
 | [I2026Q1-15](2026/2026-Q1.md#i2026q1-15-shinyhunters-voice-phishing-wave) | 2026-02-04 | ShinyHunters campaign (Harvard University, University of Pennsylvania, Figure Technology Solutions, CarGurus and others) |
+| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-permanent-tsb-open24-contact-centre-impersonation) | 2026-05-08 | Permanent TSB |
 | [I2026Q3-19](2026/2026-Q3.md#i2026q3-19-mckesson-cloud-account-compromise-via-voice-phishing) | 2026-08-31 | McKesson |
 
 ## `HUMAN-06` — Reporting a mistake is safe and fast; no blame for self-reported errors
 
-**6 incidents.**
+**8 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2355,11 +2394,13 @@ preference, and this file is where that shows.
 | [I2022Q2-16](2022/2022-Q2.md#i2022q2-16-san-raffaele-hospital-newsletter-data-exposure-gdpr-fine) | 2022-06-13 | Società Ospedale San Raffaele (IRCCS San Raffaele), Milan |
 | [I2025Q4-24](2025/2025-Q4.md#i2025q4-24-okayama-school-roster-emailed-to-a-mistyped-address) | 2025-11-27 | Okayama City Board of Education (municipal middle school) |
 | [I2025Q4-26](2025/2025-Q4.md#i2025q4-26-dermatology-clinic-campaign-applicant-list-published-in-error) | 2025-11-28 | Hanafusa Dermatology Clinic |
+| [I2026Q2-22](2026/2026-Q2.md#i2026q2-22-horizon-academy-trust-pupil-spreadsheet-emailed-to-families) | 2026-06-09 | Horizon Academy Trust |
+| [I2026Q2-24](2026/2026-Q2.md#i2026q2-24-plymouth-city-council-home-education-email-sent-without-bcc) | 2026-06-12 | Plymouth City Council |
 | [I2026Q3-15](2026/2026-Q3.md#i2026q3-15-metropolitan-police-operation-cornpoppy-email-disclosure) | 2026-08-15 | Metropolitan Police Service |
 
 ## `HUMAN-07` — Sensitive operations have a checklist, not just a competent operator
 
-**47 incidents.**
+**53 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2408,6 +2449,12 @@ preference, and this file is where that shows.
 | [I2026Q1-01](2026/2026-Q1.md#i2026q1-01-illinois-department-of-human-services-public-website-exposure) | 2026-01-02 | Illinois Department of Human Services |
 | [I2026Q1-04](2026/2026-Q1.md#i2026q1-04-az-monica-hospital-network-shutdown) | 2026-01-13 | AZ Monica (Antwerp and Deurne campuses) |
 | [I2026Q1-27](2026/2026-Q1.md#i2026q1-27-claude-code-source-exposed-through-an-npm-packaging-error) | 2026-03-31 | Anthropic (Claude Code npm package) |
+| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-bvg-customer-data-kept-by-a-mailing-contractor-after-the-contract-ended) | 2026-05-04 | Berliner Verkehrsbetriebe (BVG) |
+| [I2026Q2-18](2026/2026-Q2.md#i2026q2-18-government24-issued-civil-documents-to-the-wrong-applicants) | 2026-05-27 | Ministry of the Interior and Safety (Government24) |
+| [I2026Q2-22](2026/2026-Q2.md#i2026q2-22-horizon-academy-trust-pupil-spreadsheet-emailed-to-families) | 2026-06-09 | Horizon Academy Trust |
+| [I2026Q2-23](2026/2026-Q2.md#i2026q2-23-optus-published-unlisted-customer-numbers-in-the-white-pages) | 2026-06-11 | Optus |
+| [I2026Q2-24](2026/2026-Q2.md#i2026q2-24-plymouth-city-council-home-education-email-sent-without-bcc) | 2026-06-12 | Plymouth City Council |
+| [I2026Q2-28](2026/2026-Q2.md#i2026q2-28-medmate-and-monash-ivf-tracking-pixel-disclosure-of-health-data) | 2026-06-24 | Medmate Australia and Monash IVF |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-sithonia-municipality-and-port-fund-ransomware) | 2026-08 | Municipality of Sithonia and Municipal Port Fund of Sithonia |
 | [I2026Q3-15](2026/2026-Q3.md#i2026q3-15-metropolitan-police-operation-cornpoppy-email-disclosure) | 2026-08-15 | Metropolitan Police Service |
 
@@ -2449,7 +2496,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-10` — Recipients and destinations are confirmed before data leaves the organization
 
-**23 incidents.**
+**26 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2475,6 +2522,9 @@ preference, and this file is where that shows.
 | [I2025Q3-22](2025/2025-Q3.md#i2025q3-22-cloudflare-salesforce-case-data-exposure-via-salesloft-drift) | 2025-09-02 | Cloudflare |
 | [I2025Q4-24](2025/2025-Q4.md#i2025q4-24-okayama-school-roster-emailed-to-a-mistyped-address) | 2025-11-27 | Okayama City Board of Education (municipal middle school) |
 | [I2025Q4-26](2025/2025-Q4.md#i2025q4-26-dermatology-clinic-campaign-applicant-list-published-in-error) | 2025-11-28 | Hanafusa Dermatology Clinic |
+| [I2026Q2-22](2026/2026-Q2.md#i2026q2-22-horizon-academy-trust-pupil-spreadsheet-emailed-to-families) | 2026-06-09 | Horizon Academy Trust |
+| [I2026Q2-23](2026/2026-Q2.md#i2026q2-23-optus-published-unlisted-customer-numbers-in-the-white-pages) | 2026-06-11 | Optus |
+| [I2026Q2-24](2026/2026-Q2.md#i2026q2-24-plymouth-city-council-home-education-email-sent-without-bcc) | 2026-06-12 | Plymouth City Council |
 | [I2026Q3-15](2026/2026-Q3.md#i2026q3-15-metropolitan-police-operation-cornpoppy-email-disclosure) | 2026-08-15 | Metropolitan Police Service |
 
 ## `INPUT-01` — Parameterized queries everywhere; no concatenated SQL
@@ -2497,7 +2547,7 @@ preference, and this file is where that shows.
 
 ## `INPUT-02` — Server-side schema validation on every input; client validation is UX only
 
-**7 incidents.**
+**8 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2508,6 +2558,7 @@ preference, and this file is where that shows.
 | [I2022Q4-02](2022/2022-Q4.md#i2022q4-02-bnb-chain-cross-chain-bridge-exploit-bsc-token-hub) | 2022-10-07 | BNB Chain (Binance) |
 | [I2023Q2-09](2023/2023-Q2.md#i2023q2-09-airbaltic-reservation-system-data-exposure) | 2023-05-12 | Air Baltic Corporation AS (airBaltic) |
 | [I2025Q3-27](2025/2025-Q3.md#i2025q3-27-forcedleak-indirect-prompt-injection-in-salesforce-agentforce) | 2025-09-25 | Salesforce (Agentforce customers with Web-to-Lead enabled) |
+| [I2026Q2-05](2026/2026-Q2.md#i2026q2-05-mcp-stdio-parameter-injection-across-the-official-sdks) | 2026-04-15 | Model Context Protocol ecosystem (OX Security disclosure) |
 
 ## `INPUT-03` — Output encoding and a content security policy; no raw HTML from user data
 
@@ -2593,7 +2644,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-01` — Authentication, authorization failures, admin actions, and exports are centrally logged
 
-**134 incidents.**
+**135 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2727,6 +2778,7 @@ preference, and this file is where that shows.
 | [I2026Q1-17](2026/2026-Q1.md#i2026q1-17-dutch-data-protection-authority-and-council-for-the-judiciary-breach) | 2026-02-07 | Autoriteit Persoonsgegevens and Raad voor de rechtspraak |
 | [I2026Q1-19](2026/2026-Q1.md#i2026q1-19-aeromedical-society-of-australasia-ransomware-listing) | 2026-02-11 | Aeromedical Society of Australasia |
 | [I2026Q2-01](2026/2026-Q2.md#i2026q2-01-fbi-surveillance-system-intrusion) | 2026-04-01 | U.S. Federal Bureau of Investigation |
+| [I2026Q2-18](2026/2026-Q2.md#i2026q2-18-government24-issued-civil-documents-to-the-wrong-applicants) | 2026-05-27 | Ministry of the Interior and Safety (Government24) |
 | [I2026Q3-04](2026/2026-Q3.md#i2026q3-04-south-korean-foreign-ministry-training-platform-breach) | 2026-07-22 | South Korea Ministry of Foreign Affairs (National Diplomatic Academy) |
 | [I2026Q3-06](2026/2026-Q3.md#i2026q3-06-court-services-victoria-online-hearing-records-breach) | 2026-07-30 | Court Services Victoria (Magistrates' Court and Children's Court of Victoria) |
 | [I2026Q3-18](2026/2026-Q3.md#i2026q3-18-atf-major-incident-declaration-after-qilin-claim) | 2026-08-27 | US Bureau of Alcohol, Tobacco, Firearms and Explosives |
@@ -2734,7 +2786,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-02` — Alerts fire on abnormal read or export volume per account
 
-**138 incidents.**
+**140 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2866,7 +2918,9 @@ preference, and this file is where that shows.
 | [I2026Q1-15](2026/2026-Q1.md#i2026q1-15-shinyhunters-voice-phishing-wave) | 2026-02-04 | ShinyHunters campaign (Harvard University, University of Pennsylvania, Figure Technology Solutions, CarGurus and others) |
 | [I2026Q1-18](2026/2026-Q1.md#i2026q1-18-japan-airlines-luggage-delivery-reservation-system-breach) | 2026-02-11 | Japan Airlines |
 | [I2026Q1-21](2026/2026-Q1.md#i2026q1-21-youx-loan-platform-data-breach) | 2026-02-18 | youX |
-| [I2026Q2-13](2026/2026-Q2.md#i2026q2-13-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
+| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-ants-secure-documents-agency-data-exposure) | 2026-04-16 | Agence Nationale des Titres Sécurisés (ANTS) |
+| [I2026Q2-21](2026/2026-Q2.md#i2026q2-21-tchap-government-messaging-account-compromise) | 2026-06-08 | DINUM (Tchap) |
+| [I2026Q2-25](2026/2026-Q2.md#i2026q2-25-naic-peoplesoft-zero-day-breach) | 2026-06-17 | National Association of Insurance Commissioners |
 | [I2026Q3-01](2026/2026-Q3.md#i2026q3-01-dentaquest-breach-notifications) | 2026-07-17 | DentaQuest |
 | [I2026Q3-06](2026/2026-Q3.md#i2026q3-06-court-services-victoria-online-hearing-records-breach) | 2026-07-30 | Court Services Victoria (Magistrates' Court and Children's Court of Victoria) |
 | [I2026Q3-16](2026/2026-Q3.md#i2026q3-16-french-dgfip-tax-and-cadastral-data-breach) | 2026-08-17 | Direction générale des Finances publiques (DGFiP), French Ministry of the Economy and Finance |
@@ -2939,7 +2993,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-05` — A written incident plan naming the decider, the communicator, and the disclosure clock
 
-**168 incidents.**
+**172 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3102,7 +3156,11 @@ preference, and this file is where that shows.
 | [I2026Q1-22](2026/2026-Q1.md#i2026q1-22-hazeldenes-poultry-processor-cyberattack) | 2026-02-19 | Hazeldene's Chicken Farm |
 | [I2026Q1-24](2026/2026-Q1.md#i2026q1-24-smile-team-orthodontics-ransomware-and-data-publication) | 2026-03-06 | Smile Team Orthodontics |
 | [I2026Q1-26](2026/2026-Q1.md#i2026q1-26-stryker-wiper-attack) | 2026-03-28 | Stryker Corporation |
-| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-chipsoft-ransomware-attack-on-dutch-healthcare-software) | 2026-04-07 | ChipSoft |
+| [I2026Q2-09](2026/2026-Q2.md#i2026q2-09-instructure-canvas-breach-and-second-intrusion) | 2026-05-01 | Instructure (Canvas LMS) |
+| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-bvg-customer-data-kept-by-a-mailing-contractor-after-the-contract-ended) | 2026-05-04 | Berliner Verkehrsbetriebe (BVG) |
+| [I2026Q2-12](2026/2026-Q2.md#i2026q2-12-permanent-tsb-open24-contact-centre-impersonation) | 2026-05-08 | Permanent TSB |
+| [I2026Q2-15](2026/2026-Q2.md#i2026q2-15-the-european-house-ambrosetti-breach-and-garante-sanction) | 2026-05-21 | The European House – Ambrosetti |
 | [I2026Q3-05](2026/2026-Q3.md#i2026q3-05-carecloud-electronic-health-record-breach) | 2026-07-30 | CareCloud |
 | [I2026Q3-07](2026/2026-Q3.md#i2026q3-07-oldelval-pipeline-operator-intrusion) | 2026-07-31 | Oleoductos del Valle (Oldelval) |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-sithonia-municipality-and-port-fund-ransomware) | 2026-08 | Municipality of Sithonia and Municipal Port Fund of Sithonia |
@@ -3114,7 +3172,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-06` — A published way for an outsider to report a vulnerability
 
-**44 incidents.**
+**45 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3159,7 +3217,8 @@ preference, and this file is where that shows.
 | [I2025Q1-12](2025/2025-Q1.md#i2025q1-12-cocospy-spyic-and-spyzie-stalkerware-data-exposure) | 2025-02-20 | Cocospy, Spyic and Spyzie (stalkerware apps traced to 711.icu) |
 | [I2025Q2-12](2025/2025-Q2.md#i2025q2-12-lovable-generated-applications-without-row-level-security) | 2025-05-29 | Lovable |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
-| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
+| [I2026Q2-06](2026/2026-Q2.md#i2026q2-06-ants-secure-documents-agency-data-exposure) | 2026-04-16 | Agence Nationale des Titres Sécurisés (ANTS) |
+| [I2026Q2-17](2026/2026-Q2.md#i2026q2-17-uk-visa-application-portal-document-exposure) | 2026-05-27 | Active Leadgen LLC (UK Visa Portal / UK Visit / ETA-Pass) |
 | [I2026Q3-13](2026/2026-Q3.md#i2026q3-13-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 | [I2026Q3-14](2026/2026-Q3.md#i2026q3-14-klaviyo-sign-up-form-password-leakage-to-advertisers) | 2026-08-10 | Klaviyo |
 
@@ -3195,7 +3254,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-09` — Post-incident review produces a control change, not just a report
 
-**6 incidents.**
+**7 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3204,11 +3263,12 @@ preference, and this file is where that shows.
 | [I2017Q4-17](2017/2017-Q4.md#i2017q4-17-youbit-exchange-hack-and-shutdown) | 2017-12-19 | Youbit (Yapian Co.) |
 | [I2019Q4-08](2019/2019-Q4.md#i2019q4-08-city-of-johannesburg-ransomware-attack) | 2019-10-25 | City of Johannesburg (municipal government) |
 | [I2019Q4-19](2019/2019-Q4.md#i2019q4-19-national-veterinary-associates-ransomware-attack-on-400-animal-hospitals) | 2019-11-19 | National Veterinary Associates (NVA) |
-| [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
+| [I2026Q2-19](2026/2026-Q2.md#i2026q2-19-pay-tel-prison-payphone-service-document-exposure) | 2026-05-28 | Pay Tel Communications |
+| [I2026Q2-23](2026/2026-Q2.md#i2026q2-23-optus-published-unlisted-customer-numbers-in-the-white-pages) | 2026-06-11 | Optus |
 
 ## `VENDOR-01` — An inventory of every third party holding your data or a token to your systems
 
-**105 incidents.**
+**110 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3313,7 +3373,12 @@ preference, and this file is where that shows.
 | [I2026Q1-20](2026/2026-Q1.md#i2026q1-20-adidas-partner-extranet-breach) | 2026-02-17 | Adidas AG |
 | [I2026Q1-24](2026/2026-Q1.md#i2026q1-24-smile-team-orthodontics-ransomware-and-data-publication) | 2026-03-06 | Smile Team Orthodontics |
 | [I2026Q2-01](2026/2026-Q2.md#i2026q2-01-fbi-surveillance-system-intrusion) | 2026-04-01 | U.S. Federal Bureau of Investigation |
-| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-chipsoft-ransomware-attack-on-dutch-healthcare-software) | 2026-04-07 | ChipSoft |
+| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-bvg-customer-data-kept-by-a-mailing-contractor-after-the-contract-ended) | 2026-05-04 | Berliner Verkehrsbetriebe (BVG) |
+| [I2026Q2-16](2026/2026-Q2.md#i2026q2-16-dígitro-tecnologia-lawful-interception-vendor-leak) | 2026-05-21 | Dígitro Tecnologia |
+| [I2026Q2-23](2026/2026-Q2.md#i2026q2-23-optus-published-unlisted-customer-numbers-in-the-white-pages) | 2026-06-11 | Optus |
+| [I2026Q2-27](2026/2026-Q2.md#i2026q2-27-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-28](2026/2026-Q2.md#i2026q2-28-medmate-and-monash-ivf-tracking-pixel-disclosure-of-health-data) | 2026-06-24 | Medmate Australia and Monash IVF |
 | [I2026Q3-09](2026/2026-Q3.md#i2026q3-09-ceva-logistics-european-warehouse-intrusion) | 2026-08-01 | Ceva Logistics |
 | [I2026Q3-12](2026/2026-Q3.md#i2026q3-12-framework-customer-data-breach-via-metabase) | 2026-08-07 | Framework Computer |
 | [I2026Q3-24](2026/2026-Q3.md#i2026q3-24-trezor-customer-exposure-through-brevo-email-provider) | 2026-09-11 | Trezor (via Brevo) |
@@ -3334,13 +3399,13 @@ preference, and this file is where that shows.
 | [I2025Q3-21](2025/2025-Q3.md#i2025q3-21-zscaler-salesforce-exposure-via-salesloft-drift) | 2025-09-02 | Zscaler |
 | [I2025Q3-22](2025/2025-Q3.md#i2025q3-22-cloudflare-salesforce-case-data-exposure-via-salesloft-drift) | 2025-09-02 | Cloudflare |
 | [I2025Q4-19](2025/2025-Q4.md#i2025q4-19-gainsight-oauth-token-abuse-against-salesforce-customers) | 2025-11-21 | Gainsight (and its Salesforce-connected customers) |
-| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
-| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
+| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
+| [I2026Q2-27](2026/2026-Q2.md#i2026q2-27-klue-2022-pilot-credential-breach) | 2026-06-18 | Klue |
 | [I2026Q3-24](2026/2026-Q3.md#i2026q3-24-trezor-customer-exposure-through-brevo-email-provider) | 2026-09-11 | Trezor (via Brevo) |
 
 ## `VENDOR-03` — Authorizing a new connected application requires review
 
-**11 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3353,7 +3418,8 @@ preference, and this file is where that shows.
 | [I2025Q3-11](2025/2025-Q3.md#i2025q3-11-unc6040-salesforce-vishing-campaign) | 2025-08-05 | Salesforce customers (campaign; includes one Google corporate Salesforce instance) |
 | [I2025Q3-12](2025/2025-Q3.md#i2025q3-12-pandora-customer-data-theft-via-third-party-crm) | 2025-08-05 | Pandora A/S |
 | [I2025Q4-19](2025/2025-Q4.md#i2025q4-19-gainsight-oauth-token-abuse-against-salesforce-customers) | 2025-11-21 | Gainsight (and its Salesforce-connected customers) |
-| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
+| [I2026Q2-07](2026/2026-Q2.md#i2026q2-07-vercel-breach-via-compromised-contextai) | 2026-04-19 | Vercel |
+| [I2026Q2-28](2026/2026-Q2.md#i2026q2-28-medmate-and-monash-ivf-tracking-pixel-disclosure-of-health-data) | 2026-06-24 | Medmate Australia and Monash IVF |
 | [I2026Q3-21](2026/2026-Q3.md#i2026q3-21-dropbox-account-takeover-through-lenovo-id-federation) | 2026-09-02 | Dropbox (via Lenovo Identity Provider Services) |
 
 ## `VENDOR-04` — Support artifacts are sanitized before being shared
@@ -3375,7 +3441,7 @@ preference, and this file is where that shows.
 
 ## `VENDOR-05` — Third-party scripts on sensitive pages are minimized, pinned, or isolated
 
-**11 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3389,11 +3455,12 @@ preference, and this file is where that shows.
 | [I2024Q2-01](2024/2024-Q2.md#i2024q2-01-kaiser-permanente-website-tracking-technology-disclosure) | 2024-04 | Kaiser Foundation Health Plan (Kaiser Permanente) |
 | [I2024Q2-16](2024/2024-Q2.md#i2024q2-16-polyfillio-supply-chain-compromise) | 2024-06-25 | polyfill.io (JavaScript CDN service; 100,000+ downstream websites affected) |
 | [I2025Q1-13](2025/2025-Q1.md#i2025q1-13-bybit-15b-theft-via-the-safewallet-signing-interface) | 2025-02-21 | Bybit (compromise originated at Safe{Wallet}) |
+| [I2026Q2-28](2026/2026-Q2.md#i2026q2-28-medmate-and-monash-ivf-tracking-pixel-disclosure-of-health-data) | 2026-06-24 | Medmate Australia and Monash IVF |
 | [I2026Q3-14](2026/2026-Q3.md#i2026q3-14-klaviyo-sign-up-form-password-leakage-to-advertisers) | 2026-08-10 | Klaviyo |
 
 ## `VENDOR-06` — Contractual notification windows, and you monitor vendor advisories
 
-**39 incidents.**
+**41 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -3433,6 +3500,8 @@ preference, and this file is where that shows.
 | [I2025Q4-20](2025/2025-Q4.md#i2025q4-20-situsamc-breach-reaching-major-us-banks) | 2025-11-22 | SitusAMC Holdings |
 | [I2025Q4-28](2025/2025-Q4.md#i2025q4-28-korean-air-employee-data-stolen-through-its-catering-subsidiary) | 2025-12-29 | Korean Air Catering & Duty-Free (KC&D), affecting Korean Air employees |
 | [I2026Q1-17](2026/2026-Q1.md#i2026q1-17-dutch-data-protection-authority-and-council-for-the-judiciary-breach) | 2026-02-07 | Autoriteit Persoonsgegevens and Raad voor de rechtspraak |
+| [I2026Q2-04](2026/2026-Q2.md#i2026q2-04-chipsoft-ransomware-attack-on-dutch-healthcare-software) | 2026-04-07 | ChipSoft |
+| [I2026Q2-10](2026/2026-Q2.md#i2026q2-10-bvg-customer-data-kept-by-a-mailing-contractor-after-the-contract-ended) | 2026-05-04 | Berliner Verkehrsbetriebe (BVG) |
 | [I2026Q3-09](2026/2026-Q3.md#i2026q3-09-ceva-logistics-european-warehouse-intrusion) | 2026-08-01 | Ceva Logistics |
 | [I2026Q3-12](2026/2026-Q3.md#i2026q3-12-framework-customer-data-breach-via-metabase) | 2026-08-07 | Framework Computer |
 | [I2026Q3-24](2026/2026-Q3.md#i2026q3-24-trezor-customer-exposure-through-brevo-email-provider) | 2026-09-11 | Trezor (via Brevo) |
