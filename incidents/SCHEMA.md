@@ -101,25 +101,36 @@ match and note the gap in the prose; the vocabulary is extended deliberately, no
 
 ## Control ID reference
 
-`controls:` entries point at `checklist.md`. The stable prefixes are:
+`controls:` entries point at the per-domain files under [`../checklist/`](../checklist/),
+indexed from [`../checklist.md`](../checklist.md). The stable prefixes are:
 
 | Prefix | Domain |
 | --- | --- |
 | `CRED` | Secrets and credentials |
 | `AUTH` | Identity, authentication, authorization |
 | `DATA` | Data layer, tenant isolation, storage |
+| `API` | Object authorization, mass assignment, API shape |
 | `INPUT` | Input handling and injection |
+| `WEB` | Browser trust: headers, CSP, cookies, CSRF |
+| `FILE` | Uploads, storage, and serving |
+| `LOGIC` | Business-logic and workflow abuse |
+| `LEAK` | Information disclosure |
+| `CRYPTO` | Hashing, tokens, randomness, transport |
 | `DEPS` | Dependencies and supply chain |
 | `AGENT` | AI agents, MCP, prompt injection |
 | `CLOUD` | Cloud and infrastructure configuration |
+| `DNS` | Domains, subdomains, certificates, email |
 | `CICD` | Pipeline, build, deploy, developer machines |
 | `VENDOR` | Third parties and integrations |
+| `MOBILE` | Mobile application specifics |
 | `HUMAN` | People, process, and social engineering |
 | `OBSV` | Logging, detection, response, disclosure |
 
 When writing a record before `checklist.md` covers the case, use the prefix plus `-NEW` and
 describe the control in the prose — for example `controls: [AGENT-NEW]` with a sentence saying
 what the control should require. These are reconciled when the checklist is regenerated.
+
+The three-letter prefixes (`API`, `WEB`, `DNS`) are valid control IDs, not typos.
 
 ---
 

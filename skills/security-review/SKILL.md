@@ -1,6 +1,6 @@
 ---
 name: security-review
-description: Audit existing code against the breach-driven security checklist and report findings that each cite the real incident that proves the risk. Use when asked to review code for security, check whether an app is safe to ship, find vulnerabilities, audit secrets or exposed keys, check database access rules or row-level security, look for hardcoded credentials, or assess an AI-generated or vibe-coded application before launch. Also use when asked "is this secure", "what could go wrong here", or to review a diff or pull request for security.
+description: Audit existing code against the breach-driven security checklist and report findings that each cite the real incident that proves the risk. Use when asked to review code for security, check whether an app is safe to ship, find vulnerabilities, audit secrets or exposed keys, check database access rules or row-level security, look for hardcoded credentials, or assess an AI-generated or vibe-coded application before launch. Also use when asked "is this secure", "what could go wrong here", to review a diff or pull request for security, to check security headers or CSP, upload handling, or account enumeration and login timing, or to probe a running app you are authorized to test.
 argument-hint: "[path, diff, or 'all']"
 allowed-tools: Read, Grep, Glob, Bash
 ---
@@ -136,6 +136,37 @@ grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}\x{E0000}-\x{E007
 Storage buckets and their public-access settings, security groups and CIDR ranges, IAM policies
 containing `"*"`, admin routes without authentication, debug mode in production, stack traces
 returned to clients, and secrets or full identifiers written into logs.
+
+### Browser trust — `WEB-01`, `WEB-05`, `WEB-06`
+
+Read the response headers and the front-end code. A `Content-Security-Policy` of `default-src *`
+with `'unsafe-inline'`/`'unsafe-eval'` is disabled in all but name — flag it as if there were no
+CSP. Check for HSTS, `nosniff`, framing control, and `Secure; HttpOnly; SameSite` on session
+cookies. Grep the client for `dangerouslySetInnerHTML`, `innerHTML =`, `v-html`, `document.write`.
+
+### Uploads and files — `FILE-01`, `FILE-02`, `FILE-04`, `FILE-05`
+
+For each upload endpoint: is it authenticated, does it validate by content (not just extension),
+where does the file land (a public bucket is a `FILE-04`/`DATA-03` finding), and can user HTML/SVG
+be served from the app origin (stored XSS)? Grep for file paths built from user input (path
+traversal).
+
+### Enumeration, timing, and logic — `LEAK-01`, `AUTH-13`, `LOGIC-02`
+
+Read login, signup, and password reset: do they return the same message and status whether or not
+the account exists, and does the login path run the password hash even when the user is absent (so
+"no such user" is not faster than "wrong password")? For workflows and commerce, check that order,
+price, quantity, and quota are enforced server-side, not trusted from the client.
+
+## Step 2b — Probe a running instance (only if authorized)
+
+If you have a URL you are **authorized** to test, the source review above has a black-box
+counterpart in [`checklist/probe-playbook.md`](../../checklist/probe-playbook.md): the
+unauthenticated endpoint sweep, object-reference walking (IDOR), the login timing/enumeration
+comparison, upload probing, and header/CSP inspection. Follow its rules of engagement — test only
+what you own or are cleared to test, confirm a finding with a single harmless request, and never
+exfiltrate real data. A finding an external probe confirms (an unauthenticated upload, a walkable
+id, a timing gap) is as real as one found in the source.
 
 ---
 

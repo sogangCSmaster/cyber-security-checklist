@@ -163,6 +163,50 @@ preference, and this file is where that shows.
 | --- | --- | --- |
 | [I2025Q2-12](2025/2025-Q2.md#i2025q2-12-lovable-generated-applications-without-row-level-security) | 2025-05-29 | Lovable |
 
+## `API-01` — Every request naming an object checks the caller may access that object (BOLA/IDOR); the API view of AUTH-02
+
+**4 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2018Q2-02](2018/2018-Q2.md#i2018q2-02-panera-bread-customer-data-exposure) | 2018-04-02 | Panera Bread |
+| [I2018Q3-12](2018/2018-Q3.md#i2018q3-12-fiserv-secureinternetbankcom-sequential-id-exposure) | 2018-08-28 | Fiserv, Inc. |
+| [I2019Q2-11](2019/2019-Q2.md#i2019q2-11-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation |
+| [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
+
+## `API-02` — Authorization enforced on every function and every verb, not just reads and not just the UI (BFLA)
+
+*No incident in the corpus cites this control yet.*
+
+## `API-03` — The server decides which fields a client may set; role, owner, price never taken from the body (mass assignment)
+
+*No incident in the corpus cites this control yet.*
+
+## `API-04` — Responses contain only the fields the caller is entitled to (excessive data exposure)
+
+*No incident in the corpus cites this control yet.*
+
+## `API-05` — Every API has rate limits and quotas; enumerable and expensive endpoints stricter
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe |
+| [I2025Q3-16](2025/2025-Q3.md#i2025q3-16-salesloft-drift-oauth-token-theft) | 2025-08-26 | Salesloft Drift (affecting 700+ downstream customer organizations) |
+
+## `API-06` — Authorization consistent across methods; no bypass via alternate verb or method override
+
+*No incident in the corpus cites this control yet.*
+
+## `API-07` — No shadow or zombie APIs; old versions and debug routes inventoried and disabled
+
+*No incident in the corpus cites this control yet.*
+
+## `API-08` — GraphQL/batch endpoints have depth, complexity, and per-resolver authorization
+
+*No incident in the corpus cites this control yet.*
+
 ## `AUTH-01` — Phishing-resistant MFA on every human account with production reach
 
 **141 incidents.**
@@ -586,6 +630,14 @@ preference, and this file is where that shows.
 | [I2026Q1-12](2026/2026-Q1.md#i2026q1-12-unauthenticated-mcp-servers-exposed-at-internet-scale) | 2026-02 | Model Context Protocol server operators (multiple) |
 | [I2026Q1-14](2026/2026-Q1.md#i2026q1-14-openclaw-one-click-remote-code-execution) | 2026-02-03 | OpenClaw |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
+
+## `AUTH-12` — Federated logins validated in full: signature, issuer, audience, expiry, nonce
+
+*No incident in the corpus cites this control yet.*
+
+## `AUTH-13` — Login returns the same answer and timing whether or not the account exists
+
+*No incident in the corpus cites this control yet.*
 
 ## `CICD-01` — CI secrets are per-job and unavailable to untrusted pull-request builds
 
@@ -1457,6 +1509,39 @@ preference, and this file is where that shows.
 | [I2026Q2-11](2026/2026-Q2.md#i2026q2-11-polish-water-treatment-plant-control-system-intrusions) | 2026-05-07 | Five Polish municipal water treatment plants (ABW disclosure) |
 | [I2026Q3-03](2026/2026-Q3.md#i2026q3-03-iran-linked-plc-campaign-against-us-water-and-wastewater-systems) | 2026-07-22 | US water and wastewater utilities (100+ systems across 12 or more states) |
 
+## `CRYPTO-01` — Passwords hashed with argon2id, bcrypt, or scrypt, salted per password
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2016Q3-19](2016/2016-Q3.md#i2016q3-19-yahoo-2014-breach-disclosure) | 2016-09-22 | Yahoo |
+| [I2019Q3-15](2019/2019-Q3.md#i2019q3-15-zynga-words-with-friends-and-draw-something-breach) | 2019-09-12 | Zynga Inc. |
+
+## `CRYPTO-02` — Tokens, session IDs, and secrets come from a cryptographically secure RNG
+
+*No incident in the corpus cites this control yet.*
+
+## `CRYPTO-03` — Comparisons of secrets are constant-time
+
+*No incident in the corpus cites this control yet.*
+
+## `CRYPTO-04` — TLS everywhere, modern configuration; certificate validation never disabled
+
+*No incident in the corpus cites this control yet.*
+
+## `CRYPTO-05` — No home-grown cryptography; vetted libraries and authenticated encryption; keys managed
+
+*No incident in the corpus cites this control yet.*
+
+## `CRYPTO-06` — Sensitive data encrypted at rest
+
+**1 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2018Q4-13](2018/2018-Q4.md#i2018q4-13-marriottstarwood-guest-database-breach) | 2018-11-30 | Marriott International (Starwood Hotels reservation system) |
+
 ## `DATA-01` — Row-level authorization enabled and default-deny on every client-reachable table
 
 **22 incidents.**
@@ -2200,6 +2285,56 @@ preference, and this file is where that shows.
 | [I2025Q4-22](2025/2025-Q4.md#i2025q4-22-shai-hulud-20-npm-worm) | 2025-11-24 | npm ecosystem (packages from Zapier, ENS Domains, AsyncAPI, PostHog, Postman and others) |
 | [I2026Q3-10](2026/2026-Q3.md#i2026q3-10-chaindrop-npm-supply-chain-worm) | 2026-08-04 | npm registry ecosystem (keyv, cacheable, flat-cache, file-entry-cache, cacheable-request and others) |
 
+## `DNS-01` — No dangling DNS records; records removed before the service they point at is decommissioned
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2024Q2-16](2024/2024-Q2.md#i2024q2-16-polyfillio-supply-chain-compromise) | 2024-06-25 | polyfill.io (JavaScript CDN service; 100,000+ downstream websites affected) |
+| [I2025Q3-27](2025/2025-Q3.md#i2025q3-27-forcedleak-indirect-prompt-injection-in-salesforce-agentforce) | 2025-09-25 | Salesforce (Agentforce customers with Web-to-Lead enabled) |
+
+## `DNS-02` — Domain and certificate expiry monitored and auto-renewed; registrar locked and MFA-protected
+
+*No incident in the corpus cites this control yet.*
+
+## `DNS-03` — Email authentication configured: SPF, DKIM, and DMARC with an enforcing policy
+
+*No incident in the corpus cites this control yet.*
+
+## `DNS-04` — Registrar transfer lock, CAA records, and DNSSEC where supported
+
+*No incident in the corpus cites this control yet.*
+
+## `FILE-01` — Every upload endpoint requires authentication and authorization
+
+*No incident in the corpus cites this control yet.*
+
+## `FILE-02` — Uploads validated by content and type-allowlisted; HTML/SVG never served from the app origin
+
+*No incident in the corpus cites this control yet.*
+
+## `FILE-03` — Uploads have size and resource limits; decompression and image processing bounded
+
+*No incident in the corpus cites this control yet.*
+
+## `FILE-04` — Uploaded files stored private by default and served via short-lived signed URLs
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2025Q3-07](2025/2025-Q3.md#i2025q3-07-tea-app-firebase-storage-exposure) | 2025-07-25 | Tea Dating Advice, Inc. |
+| [I2026Q2-14](2026/2026-Q2.md#i2026q2-14-reqrea-tabiq-hotel-check-in-system-exposure) | 2026-05-15 | Reqrea (Tabiq) |
+
+## `FILE-05` — File paths never built from user input; filenames sanitized; downloads scoped (path traversal)
+
+*No incident in the corpus cites this control yet.*
+
+## `FILE-06` — Metadata stripped from uploads; untrusted documents not rendered server-side without sandboxing
+
+*No incident in the corpus cites this control yet.*
+
 ## `HUMAN-01` — Identity verification for any credential or MFA reset, independent of the caller's claim
 
 **24 incidents.**
@@ -2641,6 +2776,79 @@ preference, and this file is where that shows.
 | [I2025Q1-12](2025/2025-Q1.md#i2025q1-12-cocospy-spyic-and-spyzie-stalkerware-data-exposure) | 2025-02-20 | Cocospy, Spyic and Spyzie (stalkerware apps traced to 711.icu) |
 | [I2025Q3-03](2025/2025-Q3.md#i2025q3-03-mchire-chatbot-default-credentials-and-applicant-idor) | 2025-07-09 | Paradox.ai (McHire recruitment platform used by McDonald's franchisees) |
 | [I2026Q3-26](2026/2026-Q3.md#i2026q3-26-gyazo-database-and-image-metadata-breach) | 2026-09-18 | Gyazo (Helpfeel Inc.) |
+
+## `LEAK-01` — No endpoint reveals whether an account or resource exists (enumeration)
+
+**2 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2020Q2-07](2020/2020-Q2.md#i2020q2-07-nintendo-network-id-credential-stuffing-wave) | 2020-04-24 | Nintendo |
+| [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe |
+
+## `LEAK-02` — Security decisions run in time independent of the secret (timing oracle)
+
+*No incident in the corpus cites this control yet.*
+
+## `LEAK-03` — Errors returned to clients are generic; no stack traces, DB errors, or debug pages
+
+*No incident in the corpus cites this control yet.*
+
+## `LEAK-04` — Client-facing identifiers unguessable and never the only control; no volume/order oracle
+
+**1 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2019Q2-11](2019/2019-Q2.md#i2019q2-11-first-american-financial-title-document-exposure) | 2019-05-24 | First American Financial Corporation |
+
+## `LEAK-05` — Version and stack banners removed from responses
+
+*No incident in the corpus cites this control yet.*
+
+## `LEAK-06` — Files and exports stripped of hidden metadata; no secrets or full identifiers in responses/URLs
+
+*No incident in the corpus cites this control yet.*
+
+## `LOGIC-01` — Multi-step workflows enforce order and state server-side; steps cannot be skipped or replayed
+
+*No incident in the corpus cites this control yet.*
+
+## `LOGIC-02` — Prices, quantities, and totals computed and validated server-side; never trusted from the client
+
+*No incident in the corpus cites this control yet.*
+
+## `LOGIC-03` — Operations on shared state are atomic; no time-of-check/time-of-use race
+
+*No incident in the corpus cites this control yet.*
+
+## `LOGIC-04` — Quotas, limits, and entitlements enforced server-side
+
+*No incident in the corpus cites this control yet.*
+
+## `LOGIC-05` — Payments and one-time actions are idempotent and replay-protected
+
+*No incident in the corpus cites this control yet.*
+
+## `MOBILE-01` — No secret in the app binary; a shipped app is public like a browser bundle
+
+*No incident in the corpus cites this control yet.*
+
+## `MOBILE-02` — TLS validated and never disabled; pin where the threat model calls for it
+
+*No incident in the corpus cites this control yet.*
+
+## `MOBILE-03` — Sensitive data not in plaintext local storage, caches, or logs; platform keystore used
+
+*No incident in the corpus cites this control yet.*
+
+## `MOBILE-04` — The server enforces authorization; the app is not the security boundary
+
+*No incident in the corpus cites this control yet.*
+
+## `MOBILE-05` — Deep links, IPC, and exported components validate their input and their caller
+
+*No incident in the corpus cites this control yet.*
 
 ## `OBSV-01` — Authentication, authorization failures, admin actions, and exports are centrally logged
 
@@ -3585,3 +3793,39 @@ preference, and this file is where that shows.
 | [I2024Q2-16](2024/2024-Q2.md#i2024q2-16-polyfillio-supply-chain-compromise) | 2024-06-25 | polyfill.io (JavaScript CDN service; 100,000+ downstream websites affected) |
 | [I2025Q1-13](2025/2025-Q1.md#i2025q1-13-bybit-15b-theft-via-the-safewallet-signing-interface) | 2025-02-21 | Bybit (compromise originated at Safe{Wallet}) |
 | [I2025Q3-28](2025/2025-Q3.md#i2025q3-28-postmark-mcp-malicious-mcp-server) | 2025-09-26 | Users of the rogue postmark-mcp npm package (impersonating Postmark's MCP server) |
+
+## `WEB-01` — A Content-Security-Policy that constrains script; no `*`, `unsafe-inline`, or `unsafe-eval` on script-src
+
+**1 incidents.**
+
+| Incident | Disclosed | Organization |
+| --- | --- | --- |
+| [I2018Q3-15](2018/2018-Q3.md#i2018q3-15-british-airways-magecart-card-skimming-breach) | 2018-09-06 | British Airways |
+
+## `WEB-02` — HTTPS enforced everywhere with HSTS; no mixed content
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-03` — `X-Content-Type-Options: nosniff` set
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-04` — Framing controlled via frame-ancestors / X-Frame-Options (clickjacking)
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-05` — Identity cookies are Secure, HttpOnly, and SameSite, scoped narrowly
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-06` — User-supplied content output-encoded and never rendered as trusted HTML in the app origin (XSS)
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-07` — State-changing requests protected against CSRF
+
+*No incident in the corpus cites this control yet.*
+
+## `WEB-08` — CORS not wildcarded with credentials; Referrer-Policy and Permissions-Policy set
+
+*No incident in the corpus cites this control yet.*

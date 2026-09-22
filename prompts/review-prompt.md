@@ -34,7 +34,9 @@ generic OWASP lecture. Work through these in order and report what you find, wit
    - Raw HTML from user data (dangerouslySetInnerHTML, innerHTML, v-html).
    - Outbound requests built from user-supplied URLs, and whether link-local metadata addresses
      (169.254.169.254) are blocked.
-   - File uploads: type and size validation, where they are stored, whether they can execute.
+   - File uploads: authentication on the upload endpoint, type/size validation by content (not
+     just extension), where the file is stored (a public bucket URL is a finding), and whether
+     user HTML/SVG can be served from our own origin (stored XSS).
 
 5. DEPENDENCIES
    - Is a lockfile committed and used for installs?
@@ -54,6 +56,36 @@ generic OWASP lecture. Work through these in order and report what you find, wit
    - Cloud roles with wildcard permissions.
    - Are authentication failures and bulk data reads logged anywhere a human would see them?
    - Do logs contain secrets or full identifiers?
+
+8. BROWSER TRUST (if there is a web front end)
+   - Content-Security-Policy: is there one, and does it actually constrain script? A policy of
+     default-src * with 'unsafe-inline'/'unsafe-eval' is disabled in all but name — treat it as
+     no CSP.
+   - HSTS, X-Content-Type-Options: nosniff, framing control (frame-ancestors/X-Frame-Options).
+   - Session cookies: Secure, HttpOnly, SameSite all set?
+   - CSRF protection on state-changing requests.
+
+9. ENUMERATION, TIMING, AND BUSINESS LOGIC
+   - Do login, signup, and password reset reveal whether an account exists — by message, by
+     status code, or by timing? A login that returns fast for a nonexistent user but slow for a
+     real user with a wrong password (because only the real path runs the password hash) confirms
+     which accounts exist. The fix is to hash even when the account is absent and return one
+     neutral answer.
+   - Are prices, totals, quantities, and quotas computed and enforced server-side, or trusted
+     from the client?
+   - Can a multi-step flow (checkout, verification, reset) be completed out of order by calling
+     its steps directly?
+
+BLACK-BOX PASS (only if you can run the app and are authorized to test it)
+   Test only a system you own or are cleared to test; confirm each finding with one harmless
+   request and never exfiltrate real data. Then, from the outside:
+   - Send requests to common endpoints (/api/users, /api/me, /api/upload, /api/export, /admin)
+     with no credentials — note anything that returns data or accepts a write.
+   - Authenticate as one user and try to read another user's object by changing the id (IDOR).
+   - Compare login timing for a nonexistent user vs a real user with a wrong password.
+   - Try an unauthenticated file upload; if it succeeds, follow the returned URL and see if it is
+     publicly readable.
+   - Read the response headers and check the CSP and the header set above.
 
 REPORT FORMAT
 - Order findings by what an attacker gets, not by how easy they were to find.

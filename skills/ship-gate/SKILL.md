@@ -53,6 +53,9 @@ Storage buckets, databases, search indexes, admin panels, debug endpoints, and s
 environments. Enumerate what is internet-reachable and confirm each one on purpose. Legacy
 buckets from an earlier version of the project count — that is exactly how the Tea app lost
 13,000 government IDs.
+An unauthenticated write endpoint (an upload or create that answers a request with no session)
+counts here too — especially one whose file then lands at a public bucket URL. That is two
+failures at once. — `FILE-01`, `FILE-04`
 
 ### G4 · Authorization is server-side and per-object — `AUTH-02`, `AUTH-03`
 Every endpoint returning user data checks both who is asking and whether they may have this
@@ -94,6 +97,8 @@ These do not block a launch on their own. Two or more together do.
 | G14 | Third-party scripts on pages handling credentials or payment are pinned or self-hosted | `DEPS-06`, `VENDOR-05` |
 | G15 | A named person owns the response, and there is a published way to report a vulnerability | `OBSV-05`, `OBSV-06` |
 | G16 | Agents with data access cannot both read untrusted content and send outbound unsupervised | `AGENT-03` |
+| G17 | A real Content-Security-Policy (no `*`/`unsafe-inline`/`unsafe-eval` on script-src) plus HSTS, nosniff, framing control, and Secure/HttpOnly/SameSite cookies | `WEB-01`, `WEB-05` |
+| G18 | Login, signup, and reset reveal nothing by message, status, or timing — the login path hashes even when the account is absent | `AUTH-13`, `LEAK-01` |
 
 ---
 
