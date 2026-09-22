@@ -1,0 +1,22 @@
+{
+  "name": "security-checklist",
+  "displayName": "Breach-Driven Security Checklist",
+  "version": "0.1.0",
+  "description": "Secure defaults, code review, and a pre-deploy gate, derived from how organizations were actually breached between 2016 and 2026. Every rule cites the incident that produced it.",
+  "author": {
+    "name": "sogangCSmaster"
+  },
+  "repository": "https://github.com/sogangCSmaster/cyber-security-checklist",
+  "homepage": "https://github.com/sogangCSmaster/cyber-security-checklist#readme",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "checklist",
+    "vibe-coding",
+    "secrets",
+    "supply-chain",
+    "prompt-injection",
+    "code-review",
+    "appsec"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "cyber-security-checklist",
+  "description": "A breach-driven security checklist and the skills that apply it, built from a decade of documented incidents.",
+  "owner": {
+    "name": "sogangCSmaster",
+    "url": "https://github.com/sogangCSmaster"
+  },
+  "plugins": [
+    {
+      "name": "security-checklist",
+      "source": "./",
+      "displayName": "Breach-Driven Security Checklist",
+      "description": "Secure defaults while generating code, a review that cites real incidents, and a blocking pre-deploy gate. Built from 2016-2026 breach analysis.",
+      "version": "0.1.0",
+      "author": {
+        "name": "sogangCSmaster"
+      },
+      "homepage": "https://github.com/sogangCSmaster/cyber-security-checklist#readme",
+      "license": "MIT",
+      "category": "security",
+      "keywords": ["security", "checklist", "vibe-coding", "supply-chain", "appsec"]
+    }
+  ]
+}
