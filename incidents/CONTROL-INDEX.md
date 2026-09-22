@@ -135,7 +135,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-01` — Phishing-resistant MFA on every human account with production reach
 
-**114 incidents.**
+**118 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -201,10 +201,13 @@ preference, and this file is where that shows.
 | [I2021Q2-11](2021/2021-Q2.md#i2021q2-11-axa-asia-avaddon-ransomware-attack) | 2021-05-17 | AXA Partners (Inter Partners Asia) |
 | [I2021Q2-14](2021/2021-Q2.md#i2021q2-14-fujitsu-projectweb-compromise) | 2021-05-25 | Fujitsu |
 | [I2021Q2-15](2021/2021-Q2.md#i2021q2-15-jbs-foods-ransomware-attack) | 2021-05-31 | JBS S.A. |
-| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
-| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
-| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
-| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
+| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-hx5-revil-ransomware-attack-and-document-leak) | 2021-07-07 | HX5, LLC |
+| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-transnet-ransomware-attack-on-south-african-ports) | 2021-07-22 | Transnet SOC Ltd |
+| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-gigabyte-ransomexx-ransomware-attack) | 2021-08-06 | Giga-Byte Technology Co., Ltd. |
+| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
+| [I2021Q3-12](2021/2021-Q3.md#i2021q3-12-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
+| [I2021Q3-14](2021/2021-Q3.md#i2021q3-14-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
+| [I2021Q3-15](2021/2021-Q3.md#i2021q3-15-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
 | [I2021Q4-05](2021/2021-Q4.md#i2021q4-05-npm-maintainer-account-hijack-wave-ua-parser-js-coa-rc) | 2021-10-22 | Open-source npm package maintainers (ua-parser-js; coa and rc) |
 | [I2021Q4-09](2021/2021-Q4.md#i2021q4-09-mediamarktsaturn-hive-ransomware-attack) | 2021-11-09 | MediaMarktSaturn (Ceconomy AG) |
 | [I2021Q4-10](2021/2021-Q4.md#i2021q4-10-godaddy-managed-wordpress-breach) | 2021-11-22 | GoDaddy |
@@ -215,8 +218,9 @@ preference, and this file is where that shows.
 | [I2022Q1-11](2022/2022-Q1.md#i2022q1-11-amelicnam-healthcare-professional-account-breach) | 2022-03-17 | Caisse nationale de l'assurance maladie (Cnam) / Ameli |
 | [I2022Q1-13](2022/2022-Q1.md#i2022q1-13-microsoft-lapsus-source-code-breach) | 2022-03-22 | Microsoft Corporation |
 | [I2022Q2-02](2022/2022-Q2.md#i2022q2-02-mailchimp-internal-tool-breach-via-employee-social-engineering) | 2022-04-04 | Mailchimp (Intuit) |
-| [I2022Q2-05](2022/2022-Q2.md#i2022q2-05-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
-| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
+| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
+| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
+| [I2022Q2-11](2022/2022-Q2.md#i2022q2-11-carinthia-state-government-ransomware-attack-blackcatalphv) | 2022-05-24 | Government of the State of Carinthia (Kärnten), Austria |
 | [I2022Q3-04](2022/2022-Q3.md#i2022q3-04-twilio-0ktapus-sms-phishing-campaign) | 2022-08-07 | Twilio |
 | [I2022Q3-08](2022/2022-Q3.md#i2022q3-08-doordash-third-party-vendor-breach) | 2022-08-25 | DoorDash |
 | [I2022Q4-02](2022/2022-Q4.md#i2022q4-02-medibank-customer-and-health-claims-data-breach) | 2022-10-13 | Medibank Private Limited |
@@ -256,7 +260,7 @@ preference, and this file is where that shows.
 
 ## `AUTH-02` — Authorization checked server-side, per object, on every request
 
-**18 incidents.**
+**19 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -276,6 +280,7 @@ preference, and this file is where that shows.
 | [I2020Q1-07](2020/2020-Q1.md#i2020q1-07-clearview-ai-client-list-theft) | 2020-02-28 | Clearview AI |
 | [I2020Q1-16](2020/2020-Q1.md#i2020q1-16-marriott-second-guest-data-breach) | 2020-03-31 | Marriott International |
 | [I2020Q2-16](2020/2020-Q2.md#i2020q2-16-ehteraz-contact-tracing-app-national-id-exposure) | 2020-05-26 | Ministry of Public Health, Qatar (Ehteraz app) |
+| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-poly-network-cross-chain-protocol-exploit) | 2021-08-10 | Poly Network |
 | [I2024Q4-07](2024/2024-Q4.md#i2024q4-07-the-real-world-platform-breach) | 2024-11-22 | The Real World (Andrew Tate's online education platform) |
 | [I2026Q3-08](2026/2026-Q3.md#i2026q3-08-polish-public-sector-web-exposure-research) | 2026-08-07 | Polish public sector (courts, hospitals, airports, government offices) |
 
@@ -303,8 +308,8 @@ preference, and this file is where that shows.
 | [I2021Q1-17](2021/2021-Q1.md#i2021q1-17-norwegian-parliament-storting-exchange-breach) | 2021-03-10 | Storting (Norwegian Parliament) |
 | [I2021Q2-06](2021/2021-Q2.md#i2021q2-06-peloton-unauthenticated-api-exposure) | 2021-05-05 | Peloton Interactive |
 | [I2021Q3-01](2021/2021-Q3.md#i2021q3-01-kaseya-vsa-supply-chain-ransomware-attack) | 2021-07-02 | Kaseya |
-| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
-| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
+| [I2021Q3-13](2021/2021-Q3.md#i2021q3-13-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
+| [I2021Q3-16](2021/2021-Q3.md#i2021q3-16-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
 | [I2022Q3-01](2022/2022-Q3.md#i2022q3-01-shanghai-national-police-database-exposure) | 2022-07-04 | Shanghai Police (Shanghai Municipal Public Security Bureau) |
 | [I2022Q3-12](2022/2022-Q3.md#i2022q3-12-optus-customer-data-breach) | 2022-09-22 | Optus (Singtel) |
 | [I2022Q4-07](2022/2022-Q4.md#i2022q4-07-twitter-api-vulnerability-data-scraped-and-leaked-at-scale) | 2022-11-24 | Twitter, Inc. (renamed X Corp. in 2023) |
@@ -386,10 +391,10 @@ preference, and this file is where that shows.
 | [I2020Q3-10](2020/2020-Q3.md#i2020q3-10-gckey-and-cra-my-account-credential-stuffing-attacks) | 2020-08 | Canada Revenue Agency and Employment and Social Development Canada (GCKey shared credential service) |
 | [I2020Q3-11](2020/2020-Q3.md#i2020q3-11-storting-norwegian-parliament-email-system-hack) | 2020-08 | Storting (Parliament of Norway) |
 | [I2021Q2-03](2021/2021-Q2.md#i2021q2-03-geico-drivers-license-number-scraping) | 2021-04-19 | GEICO |
-| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
+| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
 | [I2021Q4-10](2021/2021-Q4.md#i2021q4-10-godaddy-managed-wordpress-breach) | 2021-11-22 | GoDaddy |
 | [I2022Q1-11](2022/2022-Q1.md#i2022q1-11-amelicnam-healthcare-professional-account-breach) | 2022-03-17 | Caisse nationale de l'assurance maladie (Cnam) / Ameli |
-| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
+| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
 | [I2022Q4-03](2022/2022-Q4.md#i2022q4-03-mydeal-woolworths-group-customer-data-breach) | 2022-10-14 | MyDeal.com.au (Woolworths Group subsidiary) |
 | [I2023Q1-04](2023/2023-Q1.md#i2023q1-04-t-mobile-api-data-breach) | 2023-01-19 | T-Mobile US |
 | [I2023Q4-02](2023/2023-Q4.md#i2023q4-02-23andme-credential-stuffing-breach-and-dna-relatives-exposure) | 2023-10-06 | 23andMe |
@@ -667,16 +672,16 @@ preference, and this file is where that shows.
 | [I2021Q1-17](2021/2021-Q1.md#i2021q1-17-norwegian-parliament-storting-exchange-breach) | 2021-03-10 | Storting (Norwegian Parliament) |
 | [I2021Q2-16](2021/2021-Q2.md#i2021q2-16-cognyte-breach-intelligence-database-exposure) | 2021-06-02 | Cognyte Software |
 | [I2021Q2-17](2021/2021-Q2.md#i2021q2-17-volkswagenaudi-vendor-data-exposure) | 2021-06-11 | Volkswagen Group of America / Audi |
-| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
-| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
-| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
+| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
+| [I2021Q3-13](2021/2021-Q3.md#i2021q3-13-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
+| [I2021Q3-16](2021/2021-Q3.md#i2021q3-16-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
 | [I2021Q4-01](2021/2021-Q4.md#i2021q4-01-twitch-source-code-and-creator-payout-leak) | 2021-10-06 | Twitch (Amazon) |
 | [I2021Q4-15](2021/2021-Q4.md#i2021q4-15-volvo-cars-rd-data-theft) | 2021-12-10 | Volvo Cars |
 | [I2021Q4-18](2021/2021-Q4.md#i2021q4-18-quebec-government-website-shutdown-ahead-of-log4shell-exposure) | 2021-12-13 | Government of Quebec |
 | [I2022Q1-02](2022/2022-Q1.md#i2022q1-02-international-committee-of-the-red-cross-icrc-data-breach) | 2022-01-19 | International Committee of the Red Cross (ICRC) |
 | [I2022Q1-05](2022/2022-Q1.md#i2022q1-05-givesendgo-donor-data-exposure-and-breach) | 2022-02-08 | GiveSendGo |
-| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
-| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
+| [I2022Q2-15](2022/2022-Q2.md#i2022q2-15-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
+| [I2022Q2-17](2022/2022-Q2.md#i2022q2-17-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
 | [I2022Q3-01](2022/2022-Q3.md#i2022q3-01-shanghai-national-police-database-exposure) | 2022-07-04 | Shanghai Police (Shanghai Municipal Public Security Bureau) |
 | [I2022Q3-12](2022/2022-Q3.md#i2022q3-12-optus-customer-data-breach) | 2022-09-22 | Optus (Singtel) |
 | [I2022Q4-04](2022/2022-Q4.md#i2022q4-04-microsoft-misconfigured-azure-storage-exposure-bluebleed) | 2022-10-19 | Microsoft Corporation |
@@ -730,7 +735,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-05` — Network segmentation between tiers and between environments
 
-**125 incidents.**
+**134 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -815,10 +820,12 @@ preference, and this file is where that shows.
 | [I2021Q2-10](2021/2021-Q2.md#i2021q2-10-toshiba-tec-france-imaging-systems-darkside-ransomware-attack) | 2021-05-14 | Toshiba Tec France Imaging Systems S.A. |
 | [I2021Q2-11](2021/2021-Q2.md#i2021q2-11-axa-asia-avaddon-ransomware-attack) | 2021-05-17 | AXA Partners (Inter Partners Asia) |
 | [I2021Q2-15](2021/2021-Q2.md#i2021q2-15-jbs-foods-ransomware-attack) | 2021-05-31 | JBS S.A. |
-| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
-| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
-| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
-| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
+| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-transnet-ransomware-attack-on-south-african-ports) | 2021-07-22 | Transnet SOC Ltd |
+| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-gigabyte-ransomexx-ransomware-attack) | 2021-08-06 | Giga-Byte Technology Co., Ltd. |
+| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
+| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
+| [I2021Q3-12](2021/2021-Q3.md#i2021q3-12-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
+| [I2021Q3-15](2021/2021-Q3.md#i2021q3-15-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
 | [I2021Q4-04](2021/2021-Q4.md#i2021q4-04-sinclair-broadcast-group-ransomware-attack) | 2021-10-17 | Sinclair Broadcast Group |
 | [I2021Q4-06](2021/2021-Q4.md#i2021q4-06-iran-nationwide-fuel-card-payment-system-cyberattack) | 2021-10-26 | Iranian fuel-card payment system (gas station network) |
 | [I2021Q4-09](2021/2021-Q4.md#i2021q4-09-mediamarktsaturn-hive-ransomware-attack) | 2021-11-09 | MediaMarktSaturn (Ceconomy AG) |
@@ -827,7 +834,14 @@ preference, and this file is where that shows.
 | [I2021Q4-20](2021/2021-Q4.md#i2021q4-20-belgian-ministry-of-defence-log4shell-exploitation) | 2021-12-21 | Belgian Ministry of Defence |
 | [I2022Q1-06](2022/2022-Q1.md#i2022q1-06-hermeticwiper-campaign-against-ukraine) | 2022-02-23 | Government of Ukraine and private-sector organizations (multiple; campaign) |
 | [I2022Q1-08](2022/2022-Q1.md#i2022q1-08-toyota-production-halt-via-kojima-industries-cyberattack) | 2022-02-28 | Toyota Motor Corporation (production halted via supplier Kojima Industries) |
-| [I2022Q2-05](2022/2022-Q2.md#i2022q2-05-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
+| [I2022Q2-04](2022/2022-Q2.md#i2022q2-04-municipality-of-quito-ransomware-attack-alphvblackcat) | 2022-04-16 | Municipality of Quito, Ecuador |
+| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
+| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-rio-de-janeiro-state-finance-secretariat-ransomware-listing-lockbit) | 2022-04-22 | Secretaria de Estado de Fazenda do Rio de Janeiro (SEFAZ-RJ), Brazil |
+| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-peru-government-ransomware-extortion-conti) | 2022-04-27 | Government of Peru (Dirección Nacional de Inteligencia; Ministry of Economy and Finance) |
+| [I2022Q2-10](2022/2022-Q2.md#i2022q2-10-morelos-state-health-secretariat-ransomware-listing-lockbit) | 2022-05-23 | Secretaría de Salud del Estado de Morelos, Mexico |
+| [I2022Q2-11](2022/2022-Q2.md#i2022q2-11-carinthia-state-government-ransomware-attack-blackcatalphv) | 2022-05-24 | Government of the State of Carinthia (Kärnten), Austria |
+| [I2022Q2-12](2022/2022-Q2.md#i2022q2-12-spicejet-ransomware-attack) | 2022-05-25 | SpiceJet Ltd. |
+| [I2022Q2-14](2022/2022-Q2.md#i2022q2-14-foxconn-baja-california-ransomware-attack-lockbit) | 2022-06-02 | Foxconn / Hon Hai Precision Industry — Baja California plant, Tijuana, Mexico |
 | [I2022Q3-02](2022/2022-Q3.md#i2022q3-02-albania-government-destructive-cyberattack-homeland-justice) | 2022-07-18 | Government of Albania |
 | [I2022Q3-09](2022/2022-Q3.md#i2022q3-09-suffolk-county-ransomware-attack) | 2022-09-08 | Suffolk County, New York |
 | [I2022Q4-06](2022/2022-Q4.md#i2022q4-06-aiims-delhi-ransomware-attack) | 2022-11-23 | All India Institute of Medical Sciences (AIIMS), New Delhi |
@@ -897,7 +911,7 @@ preference, and this file is where that shows.
 | [I2020Q3-18](2020/2020-Q3.md#i2020q3-18-düsseldorf-university-hospital-ransomware-attack-and-patient-death) | 2020-09-17 | Universitätsklinikum Düsseldorf (Düsseldorf University Hospital) |
 | [I2021Q1-09](2021/2021-Q1.md#i2021q1-09-oldsmar-water-treatment-plant-scada-intrusion) | 2021-02-08 | City of Oldsmar, Florida (water treatment facility) |
 | [I2021Q1-16](2021/2021-Q1.md#i2021q1-16-verkada-camera-system-breach) | 2021-03-09 | Verkada |
-| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
+| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-t-mobile-customer-data-breach) | 2021-08-16 | T-Mobile US |
 | [I2023Q1-08](2023/2023-Q1.md#i2023q1-08-us-special-operations-command-exposed-email-archive) | 2023-02-21 | U.S. Special Operations Command (USSOCOM) / U.S. Department of Defense |
 | [I2025Q3-02](2025/2025-Q3.md#i2025q3-02-sharepoint-toolshell-on-premises-exploitation) | 2025-07-19 | On-premises Microsoft SharePoint Server operators (campaign) |
 | [I2025Q4-06](2025/2025-Q4.md#i2025q4-06-congressional-budget-office-network-intrusion) | 2025-11-06 | U.S. Congressional Budget Office |
@@ -943,7 +957,7 @@ preference, and this file is where that shows.
 
 ## `CLOUD-10` — A patch SLA for internet-facing and laterally-reachable systems, an inventory of what cannot be patched, and a staged rollout
 
-**44 incidents.**
+**46 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -975,6 +989,8 @@ preference, and this file is where that shows.
 | [I2020Q3-18](2020/2020-Q3.md#i2020q3-18-düsseldorf-university-hospital-ransomware-attack-and-patient-death) | 2020-09-17 | Universitätsklinikum Düsseldorf (Düsseldorf University Hospital) |
 | [I2020Q4-02](2020/2020-Q4.md#i2020q4-02-sltt-government-networks-chained-vpn-and-netlogon-vulnerabilities) | 2020-10-09 | Multiple U.S. state, local, tribal, and territorial (SLTT) government networks |
 | [I2021Q1-18](2021/2021-Q1.md#i2021q1-18-sepe-ryuk-ransomware-attack) | 2021-03-10 | Servicio Público de Empleo Estatal (SEPE), Spain |
+| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-hx5-revil-ransomware-attack-and-document-leak) | 2021-07-07 | HX5, LLC |
+| [I2021Q3-04](2021/2021-Q3.md#i2021q3-04-pegasus-project-spyware-surveillance-campaign) | 2021-07-18 | Pegasus Project targets (NSO Group Pegasus spyware) |
 | [I2023Q2-08](2023/2023-Q2.md#i2023q2-08-moveit-transfer-mass-exploitation-cve-2023-34362) | 2023-05-31 | Progress Software (MOVEit Transfer), exploited by Cl0p against thousands of downstream organizations |
 | [I2023Q2-09](2023/2023-Q2.md#i2023q2-09-nova-scotia-government-moveit-breach) | 2023-06-02 | Government of Nova Scotia |
 | [I2023Q2-11](2023/2023-Q2.md#i2023q2-11-heidelberger-druckmaschinen-moveit-breach) | 2023-06-22 | Heidelberger Druckmaschinen AG |
@@ -1007,7 +1023,7 @@ preference, and this file is where that shows.
 | [I2020Q2-04](2020/2020-Q2.md#i2020q2-04-clearview-ai-source-code-and-credentials-exposure) | 2020-04-16 | Clearview AI |
 | [I2020Q4-08](2020/2020-Q4.md#i2020q4-08-wildworks-animal-jam) | 2020-11-11 | WildWorks |
 | [I2021Q1-06](2021/2021-Q1.md#i2021q1-06-bykea-customer-and-driver-database-exposure) | 2021-01-28 | Bykea |
-| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
+| [I2022Q2-15](2022/2022-Q2.md#i2022q2-15-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
 | [I2022Q3-07](2022/2022-Q3.md#i2022q3-07-lastpass-developer-environment-breach) | 2022-08-25 | LastPass |
 | [I2022Q4-01](2022/2022-Q4.md#i2022q4-01-toyota-t-connect-access-key-exposed-on-public-github) | 2022-10-07 | Toyota Motor Corporation |
 | [I2022Q4-05](2022/2022-Q4.md#i2022q4-05-dropbox-github-phishing-breach) | 2022-11-01 | Dropbox, Inc. |
@@ -1260,7 +1276,7 @@ preference, and this file is where that shows.
 | [I2019Q2-02](2019/2019-Q2.md#i2019q2-02-facebook-third-party-app-data-exposed-on-public-aws-s3-buckets) | 2019-04-03 | Facebook third-party app data exposure (Cultura Colectiva, At the Pool) |
 | [I2021Q2-17](2021/2021-Q2.md#i2021q2-17-volkswagenaudi-vendor-data-exposure) | 2021-06-11 | Volkswagen Group of America / Audi |
 | [I2022Q1-05](2022/2022-Q1.md#i2022q1-05-givesendgo-donor-data-exposure-and-breach) | 2022-02-08 | GiveSendGo |
-| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
+| [I2022Q2-15](2022/2022-Q2.md#i2022q2-15-pegasus-airlines-exposed-flight-operations-data-aws-s3-bucket) | 2022-06-08 | Pegasus Airlines (PegasusEFB) |
 | [I2023Q2-05](2023/2023-Q2.md#i2023q2-05-capita-legacy-aws-bucket-exposure) | 2023-05-05 | Capita plc |
 | [I2024Q4-08](2024/2024-Q4.md#i2024q4-08-cariad-connected-vehicle-data-exposure) | 2024-12-27 | Cariad (Volkswagen Group's automotive software subsidiary) |
 | [I2025Q3-04](2025/2025-Q3.md#i2025q3-04-tea-app-firebase-storage-exposure) | 2025-07-25 | Tea Dating Advice, Inc. |
@@ -1307,9 +1323,9 @@ preference, and this file is where that shows.
 | [I2021Q1-03](2021/2021-Q1.md#i2021q1-03-socialarks-scraped-profile-database-exposure) | 2021-01-11 | SocialArks |
 | [I2021Q1-06](2021/2021-Q1.md#i2021q1-06-bykea-customer-and-driver-database-exposure) | 2021-01-28 | Bykea |
 | [I2021Q2-16](2021/2021-Q2.md#i2021q2-16-cognyte-breach-intelligence-database-exposure) | 2021-06-02 | Cognyte Software |
-| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
-| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
-| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
+| [I2021Q3-13](2021/2021-Q3.md#i2021q3-13-indonesia-ehac-covid-19-app-data-exposure) | 2021-08-30 | Indonesian Ministry of Health (eHAC app) |
+| [I2021Q3-16](2021/2021-Q3.md#i2021q3-16-gethealth-wearable-data-database-exposure) | 2021-09-14 | GetHealth |
+| [I2022Q2-17](2022/2022-Q2.md#i2022q2-17-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
 | [I2022Q3-01](2022/2022-Q3.md#i2022q3-01-shanghai-national-police-database-exposure) | 2022-07-04 | Shanghai Police (Shanghai Municipal Public Security Bureau) |
 | [I2023Q1-06](2023/2023-Q1.md#i2023q1-06-lg-uplus-customer-data-breach-and-ddos-attacks) | 2023-02-02 | LG Uplus |
 | [I2023Q2-06](2023/2023-Q2.md#i2023q2-06-toyota-connected-t-connect-cloud-misconfiguration) | 2023-05-12 | Toyota Motor Corporation |
@@ -1399,7 +1415,7 @@ preference, and this file is where that shows.
 
 ## `DATA-08` — Backups exist, are restore-tested, and are not writable by production credentials
 
-**45 incidents.**
+**51 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1435,6 +1451,12 @@ preference, and this file is where that shows.
 | [I2021Q4-19](2021/2021-Q4.md#i2021q4-19-kronos-private-cloud-ransomware-attack) | 2021-12-13 | Ultimate Kronos Group (UKG) |
 | [I2022Q1-01](2022/2022-Q1.md#i2022q1-01-whispergate-wiper-campaign-against-ukraine) | 2022-01-15 | Government of Ukraine (multiple agencies; campaign) |
 | [I2022Q1-06](2022/2022-Q1.md#i2022q1-06-hermeticwiper-campaign-against-ukraine) | 2022-02-23 | Government of Ukraine and private-sector organizations (multiple; campaign) |
+| [I2022Q2-04](2022/2022-Q2.md#i2022q2-04-municipality-of-quito-ransomware-attack-alphvblackcat) | 2022-04-16 | Municipality of Quito, Ecuador |
+| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-rio-de-janeiro-state-finance-secretariat-ransomware-listing-lockbit) | 2022-04-22 | Secretaria de Estado de Fazenda do Rio de Janeiro (SEFAZ-RJ), Brazil |
+| [I2022Q2-10](2022/2022-Q2.md#i2022q2-10-morelos-state-health-secretariat-ransomware-listing-lockbit) | 2022-05-23 | Secretaría de Salud del Estado de Morelos, Mexico |
+| [I2022Q2-11](2022/2022-Q2.md#i2022q2-11-carinthia-state-government-ransomware-attack-blackcatalphv) | 2022-05-24 | Government of the State of Carinthia (Kärnten), Austria |
+| [I2022Q2-12](2022/2022-Q2.md#i2022q2-12-spicejet-ransomware-attack) | 2022-05-25 | SpiceJet Ltd. |
+| [I2022Q2-14](2022/2022-Q2.md#i2022q2-14-foxconn-baja-california-ransomware-attack-lockbit) | 2022-06-02 | Foxconn / Hon Hai Precision Industry — Baja California plant, Tijuana, Mexico |
 | [I2022Q4-06](2022/2022-Q4.md#i2022q4-06-aiims-delhi-ransomware-attack) | 2022-11-23 | All India Institute of Medical Sciences (AIIMS), New Delhi |
 | [I2022Q4-08](2022/2022-Q4.md#i2022q4-08-rackspace-hosted-exchange-ransomware-attack) | 2022-12-06 | Rackspace Technology |
 | [I2022Q4-09](2022/2022-Q4.md#i2022q4-09-uber-employee-data-exposure-via-teqtivity-vendor-breach) | 2022-12-12 | Uber Technologies (via third-party vendor Teqtivity) |
@@ -1503,8 +1525,8 @@ preference, and this file is where that shows.
 | [I2021Q1-08](2021/2021-Q1.md#i2021q1-08-qimr-berghofer-accellion-fta-breach) | 2021-02-02 | QIMR Berghofer Medical Research Institute |
 | [I2021Q2-08](2021/2021-Q2.md#i2021q2-08-bpjs-kesehatan-participant-data-leak) | 2021-05-12 | BPJS Kesehatan |
 | [I2021Q2-16](2021/2021-Q2.md#i2021q2-16-cognyte-breach-intelligence-database-exposure) | 2021-06-02 | Cognyte Software |
-| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
-| [I2021Q3-04](2021/2021-Q3.md#i2021q3-04-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
+| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
+| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
 | [I2021Q4-03](2021/2021-Q4.md#i2021q4-03-missouri-dese-educator-social-security-number-exposure) | 2021-10-14 | Missouri Department of Elementary and Secondary Education |
 | [I2021Q4-11](2021/2021-Q4.md#i2021q4-11-panasonic-file-server-unauthorized-access) | 2021-11-26 | Panasonic Corporation |
 | [I2023Q2-03](2023/2023-Q2.md#i2023q2-03-hwl-ebsworth-ransomware-and-law-firm-data-theft) | 2023-04-28 | HWL Ebsworth |
@@ -1543,7 +1565,7 @@ preference, and this file is where that shows.
 
 ## `DATA-11` — Bulk export is a privileged, logged, alerting action
 
-**49 incidents.**
+**50 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1572,6 +1594,7 @@ preference, and this file is where that shows.
 | [I2021Q1-05](2021/2021-Q1.md#i2021q1-05-ggd-covid-19-test-system-insider-data-theft) | 2021-01-26 | GGD (Dutch municipal health services, coordinated by GGD GHOR Nederland) |
 | [I2021Q2-08](2021/2021-Q2.md#i2021q2-08-bpjs-kesehatan-participant-data-leak) | 2021-05-12 | BPJS Kesehatan |
 | [I2022Q1-09](2022/2022-Q1.md#i2022q1-09-samsung-lapsus-source-code-leak) | 2022-03-04 | Samsung Electronics |
+| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-peru-government-ransomware-extortion-conti) | 2022-04-27 | Government of Peru (Dirección Nacional de Inteligencia; Ministry of Economy and Finance) |
 | [I2024Q1-03](2024/2024-Q1.md#i2024q1-03-trello-unauthenticated-api-user-data-scraping) | 2024-01-22 | Trello (Atlassian) |
 | [I2024Q2-02](2024/2024-Q2.md#i2024q2-02-dell-partner-portal-api-data-scrape) | 2024-05-10 | Dell Technologies |
 | [I2024Q3-03](2024/2024-Q3.md#i2024q3-03-att-call-and-text-records-breach-snowflake) | 2024-07-12 | AT&T |
@@ -1599,7 +1622,7 @@ preference, and this file is where that shows.
 
 ## `DATA-12` — What a single compromise can reach is capped, in value and in volume
 
-**27 incidents.**
+**28 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1615,6 +1638,7 @@ preference, and this file is where that shows.
 | [I2020Q2-09](2020/2020-Q2.md#i2020q2-09-grubman-shire-meiselas-sacks-revil-ransomware-and-extortion) | 2020-05 | Grubman Shire Meiselas & Sacks |
 | [I2020Q3-19](2020/2020-Q3.md#i2020q3-19-kucoin-cryptocurrency-exchange-hot-wallet-theft) | 2020-09-26 | KuCoin |
 | [I2021Q2-01](2021/2021-Q2.md#i2021q2-01-quanta-computer-revil-ransomware-and-apple-data-extortion) | 2021-04 | Quanta Computer Inc. |
+| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-poly-network-cross-chain-protocol-exploit) | 2021-08-10 | Poly Network |
 | [I2021Q4-13](2021/2021-Q4.md#i2021q4-13-bitmart-cryptocurrency-exchange-hot-wallet-breach) | 2021-12-06 | BitMart |
 | [I2021Q4-17](2021/2021-Q4.md#i2021q4-17-vulcan-forged-pyr-wallet-theft) | 2021-12-12 | Vulcan Forged |
 | [I2025Q1-11](2025/2025-Q1.md#i2025q1-11-oracle-health-legacy-cerner-server-breach) | 2025-03-28 | Oracle Health (formerly Cerner) |
@@ -1802,7 +1826,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-02` — High-impact actions require a second person
 
-**23 incidents.**
+**24 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1824,9 +1848,10 @@ preference, and this file is where that shows.
 | [I2019Q3-14](2019/2019-Q3.md#i2019q3-14-toyota-boshoku-business-email-compromise) | 2019-09-06 | Toyota Boshoku Corporation (European subsidiary) |
 | [I2020Q3-02](2020/2020-Q3.md#i2020q3-02-twitter-mass-account-takeover) | 2020-07-15 | Twitter, Inc. |
 | [I2020Q3-08](2020/2020-Q3.md#i2020q3-08-experian-south-africa-fraudulent-data-disclosure) | 2020-08 | Experian South Africa |
-| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
+| [I2021Q3-14](2021/2021-Q3.md#i2021q3-14-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
+| [I2021Q3-17](2021/2021-Q3.md#i2021q3-17-uk-ministry-of-defence-afghan-interpreters-email-data-breach) | 2021-09-21 | UK Ministry of Defence (Afghan Relocations and Assistance Policy team) |
 | [I2022Q1-03](2022/2022-Q1.md#i2022q1-03-cryptocom-2fa-bypass-hot-wallet-theft) | 2022-01-20 | Crypto.com |
-| [I2022Q2-04](2022/2022-Q2.md#i2022q2-04-beanstalk-farms-flash-loan-governance-exploit) | 2022-04-17 | Beanstalk Farms |
+| [I2022Q2-05](2022/2022-Q2.md#i2022q2-05-beanstalk-farms-flash-loan-governance-exploit) | 2022-04-17 | Beanstalk Farms |
 | [I2023Q1-05](2023/2023-Q1.md#i2023q1-05-goto-and-lastpass-shared-cloud-storage-breach) | 2023-01-24 | GoTo and LastPass |
 | [I2026Q1-13](2026/2026-Q1.md#i2026q1-13-stryker-wiper-attack) | 2026-03-28 | Stryker Corporation |
 
@@ -1900,11 +1925,11 @@ preference, and this file is where that shows.
 | [I2021Q2-09](2021/2021-Q2.md#i2021q2-09-hse-ireland-conti-ransomware-attack) | 2021-05-14 | Health Service Executive (Ireland) |
 | [I2021Q2-11](2021/2021-Q2.md#i2021q2-11-axa-asia-avaddon-ransomware-attack) | 2021-05-17 | AXA Partners (Inter Partners Asia) |
 | [I2021Q2-12](2021/2021-Q2.md#i2021q2-12-waikato-dhb-ransomware-attack) | 2021-05-18 | Waikato District Health Board |
-| [I2021Q3-11](2021/2021-Q3.md#i2021q3-11-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
+| [I2021Q3-14](2021/2021-Q3.md#i2021q3-14-simon-eye-management-business-email-compromise) | 2021-09 | Simon Eye Management |
 | [I2021Q4-08](2021/2021-Q4.md#i2021q4-08-robinhood-customer-support-social-engineering-breach) | 2021-11-08 | Robinhood Markets |
 | [I2022Q1-12](2022/2022-Q1.md#i2022q1-12-okta-customer-support-breach-via-sitel-lapsus) | 2022-03-22 | Okta, Inc. (via subprocessor Sitel/Sykes) |
 | [I2022Q2-02](2022/2022-Q2.md#i2022q2-02-mailchimp-internal-tool-breach-via-employee-social-engineering) | 2022-04-04 | Mailchimp (Intuit) |
-| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
+| [I2022Q2-13](2022/2022-Q2.md#i2022q2-13-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
 | [I2022Q3-04](2022/2022-Q3.md#i2022q3-04-twilio-0ktapus-sms-phishing-campaign) | 2022-08-07 | Twilio |
 | [I2022Q3-05](2022/2022-Q3.md#i2022q3-05-cisco-corporate-network-intrusion) | 2022-08-10 | Cisco Systems |
 | [I2022Q3-11](2022/2022-Q3.md#i2022q3-11-rockstar-games-gta-vi-source-code-leak) | 2022-09-19 | Rockstar Games (Take-Two Interactive) |
@@ -1930,16 +1955,17 @@ preference, and this file is where that shows.
 
 ## `HUMAN-06` — Reporting a mistake is safe and fast; no blame for self-reported errors
 
-**2 incidents.**
+**3 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2019Q1-13](2019/2019-Q1.md#i2019q1-13-facebook-plaintext-password-logging) | 2019-03-21 | Facebook |
 | [I2021Q1-05](2021/2021-Q1.md#i2021q1-05-ggd-covid-19-test-system-insider-data-theft) | 2021-01-26 | GGD (Dutch municipal health services, coordinated by GGD GHOR Nederland) |
+| [I2022Q2-16](2022/2022-Q2.md#i2022q2-16-san-raffaele-hospital-newsletter-data-exposure-gdpr-fine) | 2022-06-13 | Società Ospedale San Raffaele (IRCCS San Raffaele), Milan |
 
 ## `HUMAN-07` — Sensitive operations have a checklist, not just a competent operator
 
-**28 incidents.**
+**30 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -1967,7 +1993,9 @@ preference, and this file is where that shows.
 | [I2020Q2-14](2020/2020-Q2.md#i2020q2-14-illinois-pua-unemployment-portal-data-exposure) | 2020-05-16 | Illinois Department of Employment Security |
 | [I2020Q4-01](2020/2020-Q4.md#i2020q4-01-japan-post-trading-co) | 2020-10 | Japan Post Trading Co., Ltd. |
 | [I2020Q4-13](2020/2020-Q4.md#i2020q4-13-helena-public-schools) | 2020-12 | Helena Public Schools |
+| [I2021Q3-17](2021/2021-Q3.md#i2021q3-17-uk-ministry-of-defence-afghan-interpreters-email-data-breach) | 2021-09-21 | UK Ministry of Defence (Afghan Relocations and Assistance Policy team) |
 | [I2022Q1-05](2022/2022-Q1.md#i2022q1-05-givesendgo-donor-data-exposure-and-breach) | 2022-02-08 | GiveSendGo |
+| [I2022Q2-16](2022/2022-Q2.md#i2022q2-16-san-raffaele-hospital-newsletter-data-exposure-gdpr-fine) | 2022-06-13 | Società Ospedale San Raffaele (IRCCS San Raffaele), Milan |
 | [I2023Q4-01](2023/2023-Q4.md#i2023q4-01-philhealth-medusa-ransomware-attack) | 2023-10-03 | Philippine Health Insurance Corporation (PhilHealth) |
 | [I2025Q1-06](2025/2025-Q1.md#i2025q1-06-bybit-15b-theft-via-the-safewallet-signing-interface) | 2025-02-21 | Bybit (compromise originated at Safe{Wallet}) |
 | [I2026Q1-01](2026/2026-Q1.md#i2026q1-01-illinois-department-of-human-services-public-website-exposure) | 2026-01-02 | Illinois Department of Human Services |
@@ -2005,7 +2033,7 @@ preference, and this file is where that shows.
 
 ## `HUMAN-10` — Recipients and destinations are confirmed before data leaves the organization
 
-**10 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2019,6 +2047,8 @@ preference, and this file is where that shows.
 | [I2019Q3-14](2019/2019-Q3.md#i2019q3-14-toyota-boshoku-business-email-compromise) | 2019-09-06 | Toyota Boshoku Corporation (European subsidiary) |
 | [I2020Q1-06](2020/2020-Q1.md#i2020q1-06-slickwraps-customer-data-exposure) | 2020-02-22 | Slickwraps |
 | [I2020Q4-01](2020/2020-Q4.md#i2020q4-01-japan-post-trading-co) | 2020-10 | Japan Post Trading Co., Ltd. |
+| [I2021Q3-17](2021/2021-Q3.md#i2021q3-17-uk-ministry-of-defence-afghan-interpreters-email-data-breach) | 2021-09-21 | UK Ministry of Defence (Afghan Relocations and Assistance Policy team) |
+| [I2022Q2-16](2022/2022-Q2.md#i2022q2-16-san-raffaele-hospital-newsletter-data-exposure-gdpr-fine) | 2022-06-13 | Società Ospedale San Raffaele (IRCCS San Raffaele), Milan |
 
 ## `INPUT-01` — Parameterized queries everywhere; no concatenated SQL
 
@@ -2086,7 +2116,7 @@ preference, and this file is where that shows.
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
 | [I2016Q4-07](2016/2016-Q4.md#i2016q4-07-friendfinder-networks-breach-adultfriendfinder) | 2016-11-13 | FriendFinder Networks |
-| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
+| [I2022Q2-13](2022/2022-Q2.md#i2022q2-13-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
 | [I2024Q1-10](2024/2024-Q1.md#i2024q1-10-malicious-machine-learning-models-on-the-hugging-face-hub) | 2024-02-29 | Hugging Face Hub (research and disclosure by JFrog) |
 | [I2025Q1-04](2025/2025-Q1.md#i2025q1-04-nullifai-malicious-models-on-hugging-face) | 2025-02 | Hugging Face (platform); glockr1/ballr7 and who-r-u0000 model repositories |
 
@@ -2108,7 +2138,7 @@ preference, and this file is where that shows.
 
 ## `INPUT-09` — Identifiers are unguessable, and unguessability is never the only control
 
-**11 incidents.**
+**12 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2122,6 +2152,7 @@ preference, and this file is where that shows.
 | [I2020Q1-14](2020/2020-Q1.md#i2020q1-14-zoom-zoombombing-wave) | 2020-03-30 | Zoom Video Communications |
 | [I2020Q2-16](2020/2020-Q2.md#i2020q2-16-ehteraz-contact-tracing-app-national-id-exposure) | 2020-05-26 | Ministry of Public Health, Qatar (Ehteraz app) |
 | [I2021Q2-03](2021/2021-Q2.md#i2021q2-03-geico-drivers-license-number-scraping) | 2021-04-19 | GEICO |
+| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-poly-network-cross-chain-protocol-exploit) | 2021-08-10 | Poly Network |
 | [I2024Q2-02](2024/2024-Q2.md#i2024q2-02-dell-partner-portal-api-data-scrape) | 2024-05-10 | Dell Technologies |
 
 ## `OBSV-01` — Authentication, authorization failures, admin actions, and exports are centrally logged
@@ -2197,7 +2228,7 @@ preference, and this file is where that shows.
 | [I2020Q4-16](2020/2020-Q4.md#i2020q4-16-fireeye) | 2020-12-08 | FireEye |
 | [I2020Q4-19](2020/2020-Q4.md#i2020q4-19-kawasaki-heavy-industries) | 2020-12-28 | Kawasaki Heavy Industries, Ltd. |
 | [I2021Q2-14](2021/2021-Q2.md#i2021q2-14-fujitsu-projectweb-compromise) | 2021-05-25 | Fujitsu |
-| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
+| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-guntrader-firearms-marketplace-database-theft) | 2021-07-21 | Guntrader |
 | [I2021Q4-06](2021/2021-Q4.md#i2021q4-06-iran-nationwide-fuel-card-payment-system-cyberattack) | 2021-10-26 | Iranian fuel-card payment system (gas station network) |
 | [I2021Q4-07](2021/2021-Q4.md#i2021q4-07-atraf-lgbtq-dating-platform-data-leak) | 2021-10-30 | Atraf (Israeli LGBTQ social and dating platform) |
 | [I2021Q4-11](2021/2021-Q4.md#i2021q4-11-panasonic-file-server-unauthorized-access) | 2021-11-26 | Panasonic Corporation |
@@ -2307,8 +2338,8 @@ preference, and this file is where that shows.
 | [I2022Q1-03](2022/2022-Q1.md#i2022q1-03-cryptocom-2fa-bypass-hot-wallet-theft) | 2022-01-20 | Crypto.com |
 | [I2022Q1-09](2022/2022-Q1.md#i2022q1-09-samsung-lapsus-source-code-leak) | 2022-03-04 | Samsung Electronics |
 | [I2022Q1-11](2022/2022-Q1.md#i2022q1-11-amelicnam-healthcare-professional-account-breach) | 2022-03-17 | Caisse nationale de l'assurance maladie (Cnam) / Ameli |
-| [I2022Q2-04](2022/2022-Q2.md#i2022q2-04-beanstalk-farms-flash-loan-governance-exploit) | 2022-04-17 | Beanstalk Farms |
-| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
+| [I2022Q2-05](2022/2022-Q2.md#i2022q2-05-beanstalk-farms-flash-loan-governance-exploit) | 2022-04-17 | Beanstalk Farms |
+| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-general-motors-customer-account-credential-stuffing) | 2022-05-23 | General Motors |
 | [I2022Q4-03](2022/2022-Q4.md#i2022q4-03-mydeal-woolworths-group-customer-data-breach) | 2022-10-14 | MyDeal.com.au (Woolworths Group subsidiary) |
 | [I2022Q4-07](2022/2022-Q4.md#i2022q4-07-twitter-api-vulnerability-data-scraped-and-leaked-at-scale) | 2022-11-24 | Twitter, Inc. (renamed X Corp. in 2023) |
 | [I2023Q1-04](2023/2023-Q1.md#i2023q1-04-t-mobile-api-data-breach) | 2023-01-19 | T-Mobile US |
@@ -2397,7 +2428,7 @@ preference, and this file is where that shows.
 
 ## `OBSV-05` — A written incident plan naming the decider, the communicator, and the disclosure clock
 
-**100 incidents.**
+**110 incidents.**
 
 | Incident | Disclosed | Organization |
 | --- | --- | --- |
@@ -2456,9 +2487,13 @@ preference, and this file is where that shows.
 | [I2021Q2-12](2021/2021-Q2.md#i2021q2-12-waikato-dhb-ransomware-attack) | 2021-05-18 | Waikato District Health Board |
 | [I2021Q2-13](2021/2021-Q2.md#i2021q2-13-air-india-passenger-data-breach-sita-compromise) | 2021-05-21 | Air India |
 | [I2021Q2-15](2021/2021-Q2.md#i2021q2-15-jbs-foods-ransomware-attack) | 2021-05-31 | JBS S.A. |
-| [I2021Q3-05](2021/2021-Q3.md#i2021q3-05-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
-| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
-| [I2021Q3-09](2021/2021-Q3.md#i2021q3-09-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
+| [I2021Q3-03](2021/2021-Q3.md#i2021q3-03-hx5-revil-ransomware-attack-and-document-leak) | 2021-07-07 | HX5, LLC |
+| [I2021Q3-04](2021/2021-Q3.md#i2021q3-04-pegasus-project-spyware-surveillance-campaign) | 2021-07-18 | Pegasus Project targets (NSO Group Pegasus spyware) |
+| [I2021Q3-07](2021/2021-Q3.md#i2021q3-07-transnet-ransomware-attack-on-south-african-ports) | 2021-07-22 | Transnet SOC Ltd |
+| [I2021Q3-08](2021/2021-Q3.md#i2021q3-08-gigabyte-ransomexx-ransomware-attack) | 2021-08-06 | Giga-Byte Technology Co., Ltd. |
+| [I2021Q3-10](2021/2021-Q3.md#i2021q3-10-accenture-lockbit-ransomware-and-data-theft-extortion) | 2021-08-11 | Accenture |
+| [I2021Q3-12](2021/2021-Q3.md#i2021q3-12-lojas-renner-ransomware-attack) | 2021-08-19 | Lojas Renner S.A. |
+| [I2021Q3-15](2021/2021-Q3.md#i2021q3-15-olympus-emea-ransomware-attack) | 2021-09-08 | Olympus Corporation |
 | [I2021Q4-04](2021/2021-Q4.md#i2021q4-04-sinclair-broadcast-group-ransomware-attack) | 2021-10-17 | Sinclair Broadcast Group |
 | [I2021Q4-06](2021/2021-Q4.md#i2021q4-06-iran-nationwide-fuel-card-payment-system-cyberattack) | 2021-10-26 | Iranian fuel-card payment system (gas station network) |
 | [I2021Q4-07](2021/2021-Q4.md#i2021q4-07-atraf-lgbtq-dating-platform-data-leak) | 2021-10-30 | Atraf (Israeli LGBTQ social and dating platform) |
@@ -2470,7 +2505,13 @@ preference, and this file is where that shows.
 | [I2021Q4-19](2021/2021-Q4.md#i2021q4-19-kronos-private-cloud-ransomware-attack) | 2021-12-13 | Ultimate Kronos Group (UKG) |
 | [I2021Q4-20](2021/2021-Q4.md#i2021q4-20-belgian-ministry-of-defence-log4shell-exploitation) | 2021-12-21 | Belgian Ministry of Defence |
 | [I2022Q2-01](2022/2022-Q2.md#i2022q2-01-cash-app-investing-former-employee-data-access) | 2022-04-04 | Block, Inc. (Cash App Investing) |
-| [I2022Q2-05](2022/2022-Q2.md#i2022q2-05-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
+| [I2022Q2-04](2022/2022-Q2.md#i2022q2-04-municipality-of-quito-ransomware-attack-alphvblackcat) | 2022-04-16 | Municipality of Quito, Ecuador |
+| [I2022Q2-06](2022/2022-Q2.md#i2022q2-06-costa-rica-government-ransomware-emergency-conti-then-hive) | 2022-04-18 | Government of Costa Rica (Ministry of Finance/Hacienda; Caja Costarricense de Seguro Social) |
+| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-rio-de-janeiro-state-finance-secretariat-ransomware-listing-lockbit) | 2022-04-22 | Secretaria de Estado de Fazenda do Rio de Janeiro (SEFAZ-RJ), Brazil |
+| [I2022Q2-08](2022/2022-Q2.md#i2022q2-08-peru-government-ransomware-extortion-conti) | 2022-04-27 | Government of Peru (Dirección Nacional de Inteligencia; Ministry of Economy and Finance) |
+| [I2022Q2-10](2022/2022-Q2.md#i2022q2-10-morelos-state-health-secretariat-ransomware-listing-lockbit) | 2022-05-23 | Secretaría de Salud del Estado de Morelos, Mexico |
+| [I2022Q2-12](2022/2022-Q2.md#i2022q2-12-spicejet-ransomware-attack) | 2022-05-25 | SpiceJet Ltd. |
+| [I2022Q2-14](2022/2022-Q2.md#i2022q2-14-foxconn-baja-california-ransomware-attack-lockbit) | 2022-06-02 | Foxconn / Hon Hai Precision Industry — Baja California plant, Tijuana, Mexico |
 | [I2022Q3-09](2022/2022-Q3.md#i2022q3-09-suffolk-county-ransomware-attack) | 2022-09-08 | Suffolk County, New York |
 | [I2023Q1-02](2023/2023-Q1.md#i2023q1-02-royal-mail-lockbit-ransomware-attack) | 2023-01-11 | Royal Mail |
 | [I2023Q1-07](2023/2023-Q1.md#i2023q1-07-activision-blizzard-sms-phishing-breach) | 2023-02-20 | Activision Blizzard |
@@ -2532,8 +2573,8 @@ preference, and this file is where that shows.
 | [I2020Q3-09](2020/2020-Q3.md#i2020q3-09-unsecured-elasticsearch-database-exposes-scraped-social-profiles) | 2020-08 | SocialArks (social-media data/marketing vendor) |
 | [I2021Q2-06](2021/2021-Q2.md#i2021q2-06-peloton-unauthenticated-api-exposure) | 2021-05-05 | Peloton Interactive |
 | [I2021Q4-03](2021/2021-Q4.md#i2021q4-03-missouri-dese-educator-social-security-number-exposure) | 2021-10-14 | Missouri Department of Elementary and Secondary Education |
-| [I2022Q2-07](2022/2022-Q2.md#i2022q2-07-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
-| [I2022Q2-09](2022/2022-Q2.md#i2022q2-09-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
+| [I2022Q2-13](2022/2022-Q2.md#i2022q2-13-follina-cve-2022-30190-msdt-zero-day-exploitation) | 2022-05-30 | Microsoft Office/Windows (MSDT protocol handler); exploited against multiple victims including Tibetan advocacy organizations |
+| [I2022Q2-17](2022/2022-Q2.md#i2022q2-17-shanghai-national-police-shga-database-leak) | 2022-06-30 | Shanghai Municipal Public Security Bureau |
 | [I2022Q4-04](2022/2022-Q4.md#i2022q4-04-microsoft-misconfigured-azure-storage-exposure-bluebleed) | 2022-10-19 | Microsoft Corporation |
 | [I2023Q1-08](2023/2023-Q1.md#i2023q1-08-us-special-operations-command-exposed-email-archive) | 2023-02-21 | U.S. Special Operations Command (USSOCOM) / U.S. Department of Defense |
 | [I2023Q2-05](2023/2023-Q2.md#i2023q2-05-capita-legacy-aws-bucket-exposure) | 2023-05-05 | Capita plc |
@@ -2641,7 +2682,7 @@ preference, and this file is where that shows.
 | [I2021Q2-14](2021/2021-Q2.md#i2021q2-14-fujitsu-projectweb-compromise) | 2021-05-25 | Fujitsu |
 | [I2021Q2-17](2021/2021-Q2.md#i2021q2-17-volkswagenaudi-vendor-data-exposure) | 2021-06-11 | Volkswagen Group of America / Audi |
 | [I2021Q3-02](2021/2021-Q3.md#i2021q3-02-morgan-stanley-stockplan-connect-breach-via-guidehouseaccellion) | 2021-07-02 | Morgan Stanley |
-| [I2021Q3-04](2021/2021-Q3.md#i2021q3-04-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
+| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
 | [I2022Q1-02](2022/2022-Q1.md#i2022q1-02-international-committee-of-the-red-cross-icrc-data-breach) | 2022-01-19 | International Committee of the Red Cross (ICRC) |
 | [I2022Q1-08](2022/2022-Q1.md#i2022q1-08-toyota-production-halt-via-kojima-industries-cyberattack) | 2022-02-28 | Toyota Motor Corporation (production halted via supplier Kojima Industries) |
 | [I2022Q3-06](2022/2022-Q3.md#i2022q3-06-signal-phone-number-exposure-via-twilio) | 2022-08-15 | Signal (Signal Technology Foundation) |
@@ -2813,7 +2854,7 @@ preference, and this file is where that shows.
 | [I2020Q4-19](2020/2020-Q4.md#i2020q4-19-kawasaki-heavy-industries) | 2020-12-28 | Kawasaki Heavy Industries, Ltd. |
 | [I2021Q1-07](2021/2021-Q1.md#i2021q1-07-humana-subcontractor-phi-disclosure) | 2021-02 | Humana Inc. |
 | [I2021Q3-02](2021/2021-Q3.md#i2021q3-02-morgan-stanley-stockplan-connect-breach-via-guidehouseaccellion) | 2021-07-02 | Morgan Stanley |
-| [I2021Q3-04](2021/2021-Q3.md#i2021q3-04-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
+| [I2021Q3-06](2021/2021-Q3.md#i2021q3-06-saudi-aramco-contractor-data-leak-and-extortion) | 2021-07-21 | Saudi Aramco |
 | [I2022Q1-08](2022/2022-Q1.md#i2022q1-08-toyota-production-halt-via-kojima-industries-cyberattack) | 2022-02-28 | Toyota Motor Corporation (production halted via supplier Kojima Industries) |
 | [I2022Q1-12](2022/2022-Q1.md#i2022q1-12-okta-customer-support-breach-via-sitel-lapsus) | 2022-03-22 | Okta, Inc. (via subprocessor Sitel/Sykes) |
 | [I2022Q3-06](2022/2022-Q3.md#i2022q3-06-signal-phone-number-exposure-via-twilio) | 2022-08-15 | Signal (Signal Technology Foundation) |
