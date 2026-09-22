@@ -48,6 +48,22 @@ did. Ask only when a default genuinely conflicts with something I have asked for
 - No endpoint returns user data without authentication.
 - Validate input server-side against an explicit schema.
 - Rate-limit login, password reset, and anything enumerable by id, email, or phone.
+- Login, signup, and reset must reveal nothing about whether an account exists — same message,
+  same status, same timing. Hash the password even when the account is absent, so "no such
+  user" is not faster than "wrong password".
+- Compute prices, totals, and quotas server-side. Never trust an amount or a limit from the
+  client.
+
+### Browser and uploads
+
+- Ship a real Content-Security-Policy: no `*`, `'unsafe-inline'`, or `'unsafe-eval'` on
+  `script-src` (a policy of `default-src *` is the same as none). Add HSTS, `nosniff`, framing
+  control, and `Secure; HttpOnly; SameSite` on session cookies.
+- Never render user-supplied content as trusted HTML (`dangerouslySetInnerHTML`, `innerHTML`,
+  `v-html`).
+- Upload endpoints require authentication, validate by content (not just extension), store files
+  private and serve them via short-lived signed URLs, and never serve user HTML/SVG from our own
+  origin.
 
 ### Dependencies
 

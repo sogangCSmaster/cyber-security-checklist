@@ -7,7 +7,7 @@ Paste immediately before deploying. Asks for a verdict, not a discussion.
 ```text
 I am about to deploy this to production where real users will use it. Run a go/no-go gate.
 
-Check these eight. Any single failure means DO NOT SHIP:
+Check these ten. Any single failure means DO NOT SHIP:
 
 G1 SECRETS — No credential in the repository, in git history, or in the built client bundle.
    Every client-visible env var is one I would publish on purpose. Build the bundle and check it;
@@ -18,7 +18,9 @@ G2 ROW-LEVEL SECURITY — Every table the client can reach denies by default and
 
 G3 PUBLIC SURFACE — Enumerate everything reachable from the internet: buckets, databases, search
    indexes, admin panels, debug endpoints, staging. Confirm each is public on purpose. Include
-   anything left over from an earlier version of the project.
+   anything left over from an earlier version of the project. An unauthenticated write endpoint
+   (an upload or create that answers with no session), especially one whose file lands at a
+   public bucket URL, fails this gate.
 
 G4 AUTHORIZATION — Every endpoint returning user data checks who is asking, from the session, and
    whether they may have this specific record. Trace three endpoints by hand.
@@ -35,6 +37,14 @@ G7 DEPENDENCIES — Lockfile committed and used for installs. Install scripts do
 
 G8 DETECTION — Authentication failures, authorization failures, and bulk reads are logged
    somewhere a human or an alert can reach. At minimum, alert on abnormal export volume.
+
+G9 BROWSER TRUST — A real Content-Security-Policy (no *, 'unsafe-inline', or 'unsafe-eval' on
+   script-src — a policy of default-src * is disabled in all but name), plus HSTS, nosniff,
+   framing control, and Secure/HttpOnly/SameSite session cookies.
+
+G10 NO ENUMERATION — Login, signup, and password reset return the same answer, status, and timing
+   whether or not the account exists. The login path hashes even when the account is absent, so
+   "no such user" is not measurably faster than "wrong password".
 
 RULES
 - Verdict first, as a heading: SHIP or DO NOT SHIP.
