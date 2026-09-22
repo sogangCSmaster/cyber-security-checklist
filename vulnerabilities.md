@@ -808,8 +808,15 @@ production data in it.
 - **Tea, 2025** — a *legacy* Firebase bucket from an earlier version of the product, left publicly
   readable: 13,000 government IDs and 1.1 million private messages.
 
+- **South Korean Ministry of Foreign Affairs, 2026** — an intruder sat on a server for ten months.
+  The server had been *excluded from vulnerability scanning*. The asset was missing from the exact
+  process that existed to find problems on it, which is the sharpest form this class takes: not an
+  asset nobody knew about, but one that had been deliberately carved out and then forgotten.
+
 **How to test.** Enumerate what is actually internet-reachable rather than what your architecture
-diagram says. Every result needs an owner or a deletion date.
+diagram says. Every result needs an owner or a deletion date. Then separately enumerate every
+exclusion in your scanning, patching and monitoring configuration, and ask who approved each one
+and whether that reason still holds.
 
 ---
 
@@ -1110,6 +1117,9 @@ gone.
   addresses in CC rather than BCC.
 - **San Raffaele Hospital, 2022** — a newsletter to ~600 patients and carers without BCC, so each
   learned who else was a patient.
+- **Metropolitan Police, 2026** — a case update sent to roughly 140 complainants in a sexual abuse
+  investigation, with the addresses in CC. The pattern is not rare; the harm scales with who the
+  recipients are.
 - **Swedish Transport Agency, 2017** — driving licence, military vehicle and protected-witness data
   sent in cleartext to unvetted foreign contractors. Two ministers resigned.
 - **Strava, 2018** — no mistake at all: a feature working as designed aggregated soldiers' runs
