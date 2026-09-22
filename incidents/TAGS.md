@@ -95,6 +95,7 @@ The single most important dimension. Exactly one of these is usually the differe
 | --- | --- |
 | `entry/help-desk` | Support or IT reset credentials or MFA for an impostor |
 | `entry/insider` | A person with legitimate access misused it |
+| `entry/inadvertent-disclosure` | A person with legitimate access exposed data without intending to: pasted it into a third-party tool, sent it to the wrong recipient, published it to the wrong place. Distinct from `entry/insider`, which is deliberate |
 | `entry/bribery` | An insider was paid |
 | `entry/physical` | Physical access, device theft, or lost media |
 | `entry/third-party-access` | A contractor, subprocessor, or partner's legitimate access was used |
