@@ -20,6 +20,11 @@ Each control has an ID (`CRED-01`), a priority, the incident that proves it matt
 verify it. The ID is stable: incident records point at it, skills cite it, and you can reference
 it in a pull request.
 
+[`incidents/CONTROL-INDEX.md`](./incidents/CONTROL-INDEX.md) lists, for every control, every
+incident in the corpus it would have broken. It is generated, so it cannot drift from the
+evidence — and the three controls with no incidents behind them are marked as such below rather
+than quietly left to look supported.
+
 ### Priorities
 
 | | Meaning |
@@ -100,6 +105,9 @@ credential somewhere it should not have been.
     reached ~200 customer companies four years later.
   - *Verify:* list every long-lived token in the account and give each one an expiry or an owner.
 - [ ] **CRED-08** · **P1** — Per-environment secrets; development cannot reach production.
+  - *Evidence:* **none in this corpus.** Several records show a non-production *environment* with a
+    path into production (`CLOUD-06`), but none turns specifically on a shared secret. Kept as a
+    preventive control, marked so you can weigh it accordingly.
   - *Why:* Optus, 2022 — a test network with a path to production, 9.8M customers.
 - [ ] **CRED-09** · **P2** — A rotation and revocation runbook with a named owner and a stated
       maximum time-to-revoke.
@@ -235,6 +243,8 @@ credential somewhere it should not have been.
   - *Verify:* request `http://169.254.169.254/` through the feature and confirm it is refused.
 - [ ] **INPUT-05** · **P1** — Uploads type-checked, size-limited, stored off-host, served from a
       separate origin, never executed.
+  - *Evidence:* **none in this corpus.** Web shells appear in several records, but they arrive
+    through remote code execution rather than through an upload handler. Preventive.
 - [ ] **INPUT-06** · **P1** — No deserialization, template rendering, or evaluation of untrusted
       data.
   - *Why:* Equifax, 2017 — Apache Struts CVE-2017-5638, patch available for two months: 147M
@@ -268,7 +278,9 @@ Roughly a fifth of the corpus. The category that has grown fastest since 2020.
   - *Why:* `ua-parser-js` and `torchtriton` were name-based attacks. Models now invent package
     names confidently, and attackers register them — slopsquatting.
 - [ ] **DEPS-05** · **P1** — Internal package names reserved on public registries.
-  - *Why:* PyTorch, 2023 — `torchtriton` on PyPI took precedence over the internal package.
+  - *Evidence:* **none in this corpus.** The canonical case, the `torchtriton` dependency-confusion
+    package on PyPI, was not captured by the quarter that would have held it. The mechanism is well
+    documented elsewhere; this list simply does not carry the proof.
 - [ ] **DEPS-06** · **P1** — No script or stylesheet loaded from a URL you do not control.
   - *Why:* Polyfill.io, 2024 — the domain was sold and began serving malware to 100,000+ sites
     that had pinned a hostname rather than a version. British Airways, 2018 — a modified script on

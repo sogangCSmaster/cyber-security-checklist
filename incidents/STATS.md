@@ -343,6 +343,7 @@ incidents is not a preference, it is where the evidence is.
 | `HUMAN-06` | 1 |
 | `CLOUD-02` | 1 |
 | `HUMAN-08` | 1 |
+| `INPUT-07` | 1 |
 | `HUMAN-NEW` | 1 |
 | `CLOUD-NEW` | 1 |
 | `VENDOR-NEW` | 1 |

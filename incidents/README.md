@@ -41,6 +41,7 @@ incidents/
 ├── STATS.md         generated: tag frequencies across the corpus
 ├── index.jsonl      generated: one JSON object per incident
 ├── PATTERNS.md      the rollup: what actually keeps happening, and why
+├── CONTROL-INDEX.md generated: every control, and the incidents behind it
 └── <YYYY>/
     └── <YYYY>-Q<N>.md
 ```

@@ -151,7 +151,9 @@ grep -rl 'DATA-01' incidents/20*/
 ```
 
 `incidents/INDEX.md` is the fastest lookup: one line per incident with the entry vector and the
-controls it maps to.
+controls it maps to. `incidents/CONTROL-INDEX.md` goes the other way — give it a control ID and it
+lists every incident that control would have broken, which is usually the faster path from a
+finding to its precedent.
 
 Never invent an incident, a figure, or a CVE. If the corpus has no matching case, say the control
 is preventive rather than evidenced — that is an honest and still useful finding.

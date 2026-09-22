@@ -124,6 +124,8 @@ grep -rl 'DATA-01' incidents/20*/                     # which incidents does thi
 ```
 
 [`incidents/PATTERNS.md`](./incidents/PATTERNS.md) is the rollup.
+[`incidents/CONTROL-INDEX.md`](./incidents/CONTROL-INDEX.md) maps every control to the incidents
+it would have broken — and marks the three that have none.
 [`incidents/INDEX.md`](./incidents/INDEX.md) is one line per incident.
 [`incidents/STATS.md`](./incidents/STATS.md) is the frequency rollup that the checklist's ordering
 comes from. [`incidents/index.jsonl`](./incidents/index.jsonl) is the machine-readable version.
