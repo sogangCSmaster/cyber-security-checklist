@@ -233,13 +233,13 @@ incidents is not a preference, it is where the evidence is.
 | `HUMAN-01` | 5 |
 | `AUTH-08` | 5 |
 | `INPUT-09` | 5 |
+| `CLOUD-10` | 5 |
 | `VENDOR-05` | 4 |
 | `INPUT-02` | 4 |
 | `CRED-03` | 4 |
 | `HUMAN-09` | 4 |
 | `OBSV-09` | 4 |
 | `DATA-02` | 4 |
-| `CLOUD-10` | 4 |
 | `CICD-08` | 4 |
 | `DEPS-10` | 4 |
 | `HUMAN-04` | 4 |
@@ -269,7 +269,6 @@ incidents is not a preference, it is where the evidence is.
 | `CRED-02` | 1 |
 | `DEPS-06` | 1 |
 | `HUMAN-03` | 1 |
-| `CLOUD-NEW` | 1 |
 | `DEPS-03` | 1 |
 | `DEPS-08` | 1 |
 | `DATA-05` | 1 |

@@ -138,7 +138,7 @@ open the quarterly file for the full record.
 | [I2018Q3-09](2018/2018-Q3.md#i2018q3-09-chegg-database-breach-via-former-contractors-shared-login) | 2018-09-26 | Chegg, Inc. | entry/offboarding-failure | 40000000 people | HUMAN-03, CRED-06, AUTH-01 |
 | [I2018Q3-10](2018/2018-Q3.md#i2018q3-10-facebook-view-as-access-token-breach) | 2018-09-28 | Facebook, Inc. | entry/business-logic | 30000000-50000000 people | AUTH-04, CICD-02, OBSV-02 |
 | [I2018Q4-01](2018/2018-Q4.md#i2018q4-01-employees-retirement-system-of-texas-member-search-exposure) | 2018-10-23 | Employees Retirement System of Texas (ERS) | entry/idor | 1248263 people | AUTH-02, DATA-01, DATA-02 |
-| [I2018Q4-02](2018/2018-Q4.md#i2018q4-02-cathay-pacific-passenger-data-breach) | 2018-10-24 | Cathay Pacific Airways | entry/unpatched-cve | 9400000 people | AUTH-01, DATA-07, CLOUD-NEW |
+| [I2018Q4-02](2018/2018-Q4.md#i2018q4-02-cathay-pacific-passenger-data-breach) | 2018-10-24 | Cathay Pacific Airways | entry/unpatched-cve | 9400000 people | AUTH-01, DATA-07, CLOUD-10 |
 | [I2018Q4-03](2018/2018-Q4.md#i2018q4-03-hsbc-usa-credential-stuffing-breach) | 2018-11-02 | HSBC Bank USA | entry/credential-stuffing | 14000 people | AUTH-01, AUTH-06, AUTH-09 |
 | [I2018Q4-04](2018/2018-Q4.md#i2018q4-04-nordstrom-contractor-data-mishandling) | 2018-11-14 | Nordstrom, Inc. | entry/third-party-access | 76000 people | HUMAN-04, HUMAN-07, DATA-09 |
 | [I2018Q4-05](2018/2018-Q4.md#i2018q4-05-voxox-exposed-sms-database) | 2018-11-15 | Voxox, Inc. | entry/public-database | 26000000 messages | DATA-04, CLOUD-01, AUTH-03 |
