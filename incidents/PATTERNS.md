@@ -194,7 +194,14 @@ Stated plainly, because the numbers above are only as good as their limits:
 4. **Confidence is mixed on purpose.** 225 records are `high` (a regulator, a court filing, or the
    victim's own post-mortem), 217 `medium`, 28 `low`. A `low` record is in the corpus because the
    mechanism is instructive, not because the numbers are trustworthy.
-5. **Scale figures are the least reliable field.** Breach counts are revised, duplicated across
+5. **Human error is under-counted, and systematically so.** Ordinary mistakes — a misdirected
+   email, a spreadsheet with a hidden tab, a lost device — usually surface through a regulator's
+   decision rather than through press coverage, and those decisions land a year or more after the
+   incident. Several second-pass agents hunting for human-error cases in a given quarter found
+   good candidates and had to move them forward by four to eight quarters. The effect is that
+   this class is under-represented in recent quarters and over-represented in older ones, and the
+   true share is higher than the `factor/human-error` count suggests.
+6. **Scale figures are the least reliable field.** Breach counts are revised, duplicated across
    sources, and inflated by attackers. Where a figure is an attacker's claim, the record says so.
 
 ---
