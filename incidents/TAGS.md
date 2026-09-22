@@ -218,4 +218,5 @@ malicious exploitation — these are among the most instructive records in the c
 `sector/government` · `sector/defense` · `sector/education` · `sector/telecom` · `sector/energy` ·
 `sector/transport` · `sector/aviation` · `sector/manufacturing` · `sector/automotive` ·
 `sector/media` · `sector/hospitality` · `sector/gaming` · `sector/crypto` · `sector/nonprofit` ·
-`sector/legal` · `sector/insurance` · `sector/logistics` · `sector/consumer`
+`sector/legal` · `sector/insurance` · `sector/logistics` · `sector/consumer` ·
+`sector/real-estate` · `sector/agriculture` · `sector/construction` · `sector/utilities`
