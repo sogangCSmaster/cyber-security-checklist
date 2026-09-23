@@ -1,0 +1,2 @@
+const token = "{{secret:ghp}}";
+export default token;

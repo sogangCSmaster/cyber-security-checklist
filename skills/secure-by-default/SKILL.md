@@ -6,9 +6,10 @@ description: Secure defaults to apply while writing application code — authent
 # Secure by default
 
 This skill exists because the default output of fast development is a breach. Not hypothetically:
-[`incidents/`](../../incidents/) records the cases, and a 2025 scan of 1,072 AI-built applications
-found 98% carrying at least one security flaw. The failures are not exotic. They are the same six
-or seven mistakes, repeated for a decade.
+[`incidents/`](../../incidents/) records the cases. In 2025 a researcher scanned 1,645 apps built
+with one AI app generator and found 170 of them serving their whole database to anyone who asked
+(CVE-2025-48757, record `I2025Q2-12`). The failures are not exotic. They are the same six or seven
+mistakes, repeated for a decade.
 
 Apply these while writing the code. Retrofitting them later costs ten times as much and usually
 does not happen.
@@ -16,6 +17,17 @@ does not happen.
 **Do not stop work to ask permission for these.** They are defaults, not proposals. Write the
 secure version, and mention in one line what you did and why. Ask only when the secure default
 genuinely conflicts with something the user has asked for.
+
+A default that breaks the app gets the whole list switched off, so stage the ones that can: a
+Content-Security-Policy goes out as `Content-Security-Policy-Report-Only` first and is enforced
+once the reports are clean.
+
+**The write-time check.** Installed as the plugin, this skill comes with a hook that scans each
+file you write or edit — for committed secrets, `service_role` in client code, SQL built from
+strings, a migration that creates a table without row-level security, unsafe CI workflows and a
+few more — and reports what the change introduced. When it reports, fix the line, or tell the user
+in one sentence why it is a false positive. Never add the `security-checklist: allow` marker
+yourself; it exists for a person to make that call.
 
 ---
 
@@ -162,7 +174,7 @@ They own the decision.
 
 These are cheap while you are generating the code and expensive to retrofit:
 
-- **Browser headers.** Ship a real Content-Security-Policy (nonce-based, no `*`/`unsafe-inline`/`unsafe-eval`), plus HSTS, `nosniff`, framing control, and `Secure; HttpOnly; SameSite` cookies. A CSP of `default-src *` is the same as none. → [`WEB-01`](../../checklist/web.md#web-01), [`WEB-05`](../../checklist/web.md#web-05)
+- **Browser headers.** Write a real Content-Security-Policy (nonce-based, no `*`/`unsafe-inline`/`unsafe-eval`) and ship it as `Content-Security-Policy-Report-Only` until the reports are clean, then enforce it; add HSTS, `nosniff`, framing control, and `Secure; HttpOnly; SameSite` cookies. A CSP of `default-src *` is the same as none. → [`WEB-01`](../../checklist/web.md#web-01), [`WEB-05`](../../checklist/web.md#web-05)
 - **Uploads.** Require auth on the upload endpoint, validate by content, store private and serve via signed URLs, and never serve user HTML/SVG from your own origin. An unauthenticated `/api/upload` that lands in a public bucket is two breaches at once. → [`FILE-01`](../../checklist/files.md#file-01), [`FILE-04`](../../checklist/files.md#file-04)
 - **Don't leak existence.** Login, signup, and password reset return one neutral answer, in constant time, whether or not the account exists — always run the password hash, even against a dummy made with the app's own hasher and cost, so "no such user" is not measurably faster than "wrong password". Count failed attempts per submitted identifier, send emails from a queue, and check "disabled" or "unverified" only after the password. Never "fix" timing with a random sleep. → [`AUTH-13`](../../checklist/authentication.md#auth-13), [`LEAK-01`](../../checklist/leakage.md#leak-01)
 - **No `admin` to find.** No account named `admin`, `root`, or `test` in production; privileged users sign in through the company IdP with passkeys or hardware keys, never through the public login form. → [`AUTH-14`](../../checklist/authentication.md#auth-14)
@@ -171,6 +183,9 @@ These are cheap while you are generating the code and expensive to retrofit:
 ---
 
 ## Full reference
+
+These paths resolve when the skill is installed as the plugin or read in the repository. A
+skill copied on its own has only this file.
 
 - [`checklist.md`](../../checklist.md) — the entry point, triage, and domain map
 - [`checklist/`](../../checklist/) — 165 controls across 19 domains, each with Detect / Fix / Verify / Probe

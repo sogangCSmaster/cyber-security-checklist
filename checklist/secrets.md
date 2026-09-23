@@ -21,7 +21,7 @@ config-level.
 **P0 · code** — Anything the client can read is public. Secrets are server-side only.
 
 - **Why:** Moltbook, 2026 — a Supabase anon key in the client bundle with RLS off: 1.5M API tokens, 4,060 private messages. Every `NEXT_PUBLIC_*`, `VITE_*`, `REACT_APP_*`, `EXPO_PUBLIC_*` value ships to the browser.
-- **Detect:** build the bundle, then `grep -rE "(sk-|service_role|AKIA|-----BEGIN)" dist/ .next/ build/`. Reading the source is a different, weaker check.
+- **Detect:** build the bundle, then scan it: [`scan.py --bundle auto`](../skills/security-audit/scripts/scan.py). Without Python, list the files that hold a key: `grep -rlE "sk-(proj-|ant-)?[A-Za-z0-9_-]{20,}|[rs]k_live_|sb_secret_|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|-----BEGIN [A-Z ]*PRIVATE KEY" .next/static/ dist/ build/ out/`. A Supabase `service_role` key is a JWT like the public anon key, so the words "service_role" never appear in it — only decoding the token tells the two apart, which the scanner does. Reading the source is a different, weaker check.
 - **Fix:** move any real secret to a server route or function; keep only publishable identifiers client-side.
 - **Verify:** the built bundle contains no credential beyond public identifiers; confirm by grepping the artifact, not the source.
 - **Probe:** pull the deployed JS bundle and grep it — [playbook §1](./probe-playbook.md#1--map-the-surface--what-endpoints-exist-at-all).
@@ -45,7 +45,7 @@ config-level.
 **P1 · code** — Secret file patterns ignored before the first commit.
 
 - **Why:** the window between "created `.env`" and "added it to `.gitignore`" is where it gets committed. A `.env` added to `.gitignore` after it was tracked stays in history.
-- **Detect:** `git ls-files | grep -E '^\.env|\.pem$|\.key$'` is empty; `.gitignore` covers them.
+- **Detect:** `git ls-files | grep -E '(^|/)\.env($|\.)|\.(pem|key|p12|pfx)$|service-account.*\.json$' | grep -vE '\.env\.(example|sample|template)$'` is empty — nested `apps/web/.env` included, templates excluded — and `git check-ignore -q .env` succeeds.
 - **Fix:** add the patterns before the first commit and ship a `.env.example` with placeholders.
 - **Verify:** the grep above is empty and history is clean.
 

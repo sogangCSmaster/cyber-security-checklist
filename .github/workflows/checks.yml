@@ -1,0 +1,32 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Nothing here writes to the repository. CICD-04: least privilege, actions pinned to a commit.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      # The generated index is written with PyYAML, so the freshness check needs the same parser.
+      - name: Python with PyYAML
+        run: |
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --disable-pip-version-check --quiet pyyaml==6.0.1
+          echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+
+      - name: Corpus is valid and generated files are current
+        run: python3 tools/build_index.py --check
+
+      - name: Scanner regression tests
+        run: python3 -m unittest discover -s tests -v

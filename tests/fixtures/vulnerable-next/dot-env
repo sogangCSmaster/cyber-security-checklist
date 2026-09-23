@@ -1,0 +1,6 @@
+NEXT_PUBLIC_SUPABASE_URL=https://abcdefghijklmnop.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY={{secret:anon_jwt}}
+SUPABASE_SERVICE_ROLE_KEY={{secret:service_jwt}}
+OPENAI_API_KEY={{secret:openai}}
+STRIPE_SECRET_KEY={{secret:stripe_live}}
+DATABASE_URL=postgres://app_user:{{secret:db_password}}@db.internal.example.net:5432/app

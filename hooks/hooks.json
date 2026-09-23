@@ -1,0 +1,17 @@
+{
+  "description": "Write-time security check: after Claude writes or edits a file, scan what the change introduced for committed secrets, service_role in client code, SQL built from strings, tables created without row-level security, and unsafe CI workflows. Set SECURITY_CHECKLIST_HOOK=off to turn it off.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v python3 >/dev/null 2>&1 || exit 0; exec python3 \"${CLAUDE_PLUGIN_ROOT}/skills/security-audit/scripts/scan.py\" --hook",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

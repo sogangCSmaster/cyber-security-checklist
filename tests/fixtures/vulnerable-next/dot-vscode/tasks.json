@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "fixture: harmless echo",
+      "type": "shell",
+      "command": "echo this fixture task would run on folder open",
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
