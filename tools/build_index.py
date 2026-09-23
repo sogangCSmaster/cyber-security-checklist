@@ -9,10 +9,13 @@ YAML metadata block from each record, validates it against the closed vocabulary
   incidents/INDEX.md           a greppable table, for humans and for skills
   incidents/STATS.md           tag frequency rollups across the whole corpus
   incidents/CONTROL-INDEX.md   every control, and the incidents that would have been broken by it
+  skills/security-audit/references/precedents.md
+                               every control, its text, and the incidents to cite for it — shipped
+                               inside the skill so it works even where the corpus is not installed
 
 Usage:
     python3 tools/build_index.py            # build
-    python3 tools/build_index.py --check    # validate only, non-zero exit on error
+    python3 tools/build_index.py --check    # validate, and fail if a generated file is out of date
 """
 
 from __future__ import annotations
@@ -31,6 +34,8 @@ except ImportError:  # pragma: no cover - the fallback keeps the tool dependency
 
 ROOT = Path(__file__).resolve().parent.parent
 INCIDENTS = ROOT / "incidents"
+CHECKLIST = ROOT / "checklist"
+PRECEDENTS = ROOT / "skills" / "security-audit" / "references" / "precedents.md"
 
 RECORD_RE = re.compile(
     r"^###\s+(?P<id>I\d{4}Q\d-\d+)\s*[·|-]\s*(?P<title>.+?)\s*$\n+```ya?ml\n(?P<yaml>.*?)\n```",
@@ -159,7 +164,7 @@ def as_list(value) -> list[str]:
     return [str(v) for v in value]
 
 
-def write_jsonl(records: list[dict]) -> None:
+def render_jsonl(records: list[dict]) -> str:
     lines = []
     for r in records:
         tags = []
@@ -183,10 +188,10 @@ def write_jsonl(records: list[dict]) -> None:
             "sources": as_list(r.get("sources")),
             "file": r.get("file"),
         }, ensure_ascii=False, sort_keys=False))
-    (INCIDENTS / "index.jsonl").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return "\n".join(lines) + "\n"
 
 
-def write_index_md(records: list[dict]) -> None:
+def render_index_md(records: list[dict]) -> str:
     by_year: dict[int, list[dict]] = defaultdict(list)
     for r in records:
         by_year[r["year"]].append(r)
@@ -221,7 +226,7 @@ def write_index_md(records: list[dict]) -> None:
                 f"{r.get('scale')} | {controls} |"
             )
         out.append("")
-    (INCIDENTS / "INDEX.md").write_text("\n".join(out), encoding="utf-8")
+    return "\n".join(out)
 
 
 def anchor(record: dict) -> str:
@@ -230,8 +235,8 @@ def anchor(record: dict) -> str:
     return re.sub(r"[\s]+", "-", slug).strip("-")
 
 
-def write_control_index(records: list[dict], controls: set[str]) -> list[str]:
-    """Map every control to the incidents citing it. Returns controls with no evidence."""
+def render_control_index(records: list[dict]) -> tuple[str, list[str]]:
+    """Map every control to the incidents citing it. Also returns the controls with no evidence."""
     cited: dict[str, list[dict]] = defaultdict(list)
     for r in records:
         for c in as_list(r.get("controls")):
@@ -269,11 +274,10 @@ def write_control_index(records: list[dict], controls: set[str]) -> list[str]:
             link = f"[{r['id']}]({Path(r['file']).relative_to('incidents').as_posix()}#{anchor(r)})"
             out.append(f"| {link} | {r.get('date_disclosed')} | {r.get('org')} |")
         out.append("")
-    (INCIDENTS / "CONTROL-INDEX.md").write_text("\n".join(out), encoding="utf-8")
-    return empty
+    return "\n".join(out), empty
 
 
-def write_stats(records: list[dict]) -> None:
+def render_stats(records: list[dict]) -> str:
     counters = {field: Counter() for field in TAG_FIELDS}
     controls = Counter()
     for r in records:
@@ -312,30 +316,129 @@ def write_stats(records: list[dict]) -> None:
     out += ["## Most-cited controls", "", "| Control | Incidents it would have broken |", "| --- | --- |"]
     out += [f"| `{cid}` | {n} |" for cid, n in controls.most_common()]
     out.append("")
-    (INCIDENTS / "STATS.md").write_text("\n".join(out), encoding="utf-8")
+    return "\n".join(out)
+
+
+CONTROL_HEAD = re.compile(r"^### (?P<id>[A-Z]+-\d+)\n\*\*(?P<meta>P\d · \w+)\*\* — (?P<text>.+)$", re.MULTILINE)
+DOMAIN_ROW = re.compile(r"^\| \*\*[A-Z]+\*\* \| \[`(?P<file>[\w-]+\.md)`\]", re.MULTILINE)
+CONFIDENCE_RANK = {"high": 0, "medium": 1, "low": 2}
+
+
+def load_checklist() -> list[tuple[str, str, str]]:
+    """(id, "P0 · config", one-line text) for every control, in the checklist's own order."""
+    order = DOMAIN_ROW.findall((ROOT / "checklist.md").read_text(encoding="utf-8"))
+    out = []
+    for name in order:
+        for m in CONTROL_HEAD.finditer((CHECKLIST / name).read_text(encoding="utf-8")):
+            text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", m.group("text")).strip()
+            out.append((m.group("id"), m.group("meta"), text))
+    return out
+
+
+def pick_precedents(cid: str, rows: list[dict], limit: int = 4) -> list[dict]:
+    """The incidents to offer as precedent for one control.
+
+    Records name their controls most-important first, so a record where this control comes first
+    is the closest match. Among those, the most recent lead; then, if the corpus has one years
+    older, the oldest case, because two incidents years apart show the failure keeps happening.
+    Low-confidence records are offered only when nothing better exists.
+    """
+    usable = [r for r in rows if r.get("confidence") != "low"] or rows
+    ordered = sorted(usable, key=lambda r: (str(r.get("date_disclosed")), str(r.get("id"))), reverse=True)
+    ordered.sort(key=lambda r: as_list(r.get("controls")).index(cid))
+    chosen = ordered[:limit]
+    rest = [r for r in usable if r not in chosen]
+    oldest = min(rest, key=lambda r: (str(r.get("date_disclosed")), str(r.get("id"))), default=None)
+    if oldest is not None and chosen and int(chosen[0]["year"]) - int(oldest["year"]) >= 3:
+        chosen.append(oldest)
+    return chosen
+
+
+def render_precedents(records: list[dict]) -> str:
+    cited: dict[str, list[dict]] = defaultdict(list)
+    for r in records:
+        for c in as_list(r.get("controls")):
+            cited[c].append(r)
+    out = [
+        "# Precedents by control",
+        "",
+        "Generated by `tools/build_index.py` from the incident corpus. Do not edit by hand.",
+        "",
+        "For each control: its priority, layer and one-line text, then up to five incidents it would",
+        "have broken — those where it is the primary control first, most recent first, then an older case",
+        "when the corpus has one, because two incidents years apart show that the failure keeps happening.",
+        "Each line gives the record ID, the year disclosed, the confidence, and a source a reader can check.",
+        "",
+        "- Pick the incident whose mechanism matches the finding (a Firebase rule, a Supabase policy, a",
+        "  committed key), and prefer `high` confidence among those that match.",
+        "- Cite the record ID and the source with the precedent, so the claim can be verified.",
+        "- `low` confidence means single-source reporting or an attacker's claim. Never cite one alone.",
+        "- A control with no incident is preventive. Say so; do not reach for a loosely related case.",
+        "",
+        "Look a control up with `grep -A8 '^## DATA-01 ' precedents.md`.",
+        "",
+    ]
+    for cid, meta, text in load_checklist():
+        rows = cited.get(cid, [])
+        out.append(f"## {cid} · {meta}")
+        out.append(text)
+        if not rows:
+            out.append("- No incident in the corpus cites this control: cite it as preventive.")
+        chosen = pick_precedents(cid, rows)
+        for r in chosen:
+            name = str(r.get("name"))
+            name = name if len(name) <= 110 else name[:109] + "…"
+            source = as_list(r.get("sources"))[0]
+            out.append(f"- `{r['id']}` {r['year']} · {r.get('confidence')} · {name} — {source}")
+        if len(rows) > len(chosen):
+            out.append(f"- {len(rows) - len(chosen)} more in the corpus: `incidents/CONTROL-INDEX.md`")
+        out.append("")
+    return "\n".join(out)
+
+
+def outputs(records: list[dict]) -> tuple[dict[Path, str], list[str]]:
+    control_index, empty = render_control_index(records)
+    return {
+        INCIDENTS / "index.jsonl": render_jsonl(records),
+        INCIDENTS / "INDEX.md": render_index_md(records),
+        INCIDENTS / "STATS.md": render_stats(records),
+        INCIDENTS / "CONTROL-INDEX.md": control_index,
+        PRECEDENTS: render_precedents(records),
+    }, empty
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="validate only, write nothing")
+    parser.add_argument("--check", action="store_true",
+                        help="validate, and fail if a generated file is out of date; write nothing")
     args = parser.parse_args()
 
     vocab = load_vocabulary()
     controls = load_controls()
     records, errors = collect(vocab, controls)
+    listed = {cid for cid, _, _ in load_checklist()}
+    for cid in sorted(controls - listed):
+        errors.append(f"checklist: {cid} is in incidents/CONTROLS.md but in no domain file listed in checklist.md")
+    generated, empty = outputs(records)
 
-    for err in errors:
-        print(f"error: {err}", file=sys.stderr)
-
-    if not args.check:
-        write_jsonl(records)
-        write_index_md(records)
-        write_stats(records)
-        empty = write_control_index(records, controls)
+    if args.check:
+        if yaml is None:
+            print("note: PyYAML is not installed, so the generated files were not compared "
+                  "(their formatting depends on it); install it to check them", file=sys.stderr)
+        else:
+            for path, text in generated.items():
+                if not path.exists() or path.read_text(encoding="utf-8") != text:
+                    errors.append(f"{path.relative_to(ROOT)}: out of date — run python3 tools/build_index.py")
+    else:
+        for path, text in generated.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
         print(f"indexed {len(records)} records from {len(quarterly_files())} quarterly files")
         if empty:
             print(f"note: {len(empty)} control(s) with no incident evidence: {', '.join(empty)}")
 
+    for err in errors:
+        print(f"error: {err}", file=sys.stderr)
     if errors:
         print(f"\n{len(errors)} validation error(s)", file=sys.stderr)
         return 1

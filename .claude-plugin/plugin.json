@@ -1,8 +1,8 @@
 {
   "name": "security-checklist",
   "displayName": "Breach-Driven Security Checklist",
-  "version": "0.1.0",
-  "description": "Secure defaults, code review, and a pre-deploy gate, derived from how organizations were actually breached between 2016 and 2026. Every rule cites the incident that produced it.",
+  "version": "0.2.0",
+  "description": "Secure defaults with a write-time check, a scanner-backed security audit, and a pre-deploy gate, derived from how organizations were actually breached between 2016 and 2026. Every rule cites the incident that produced it.",
   "author": {
     "name": "sogangCSmaster"
   },

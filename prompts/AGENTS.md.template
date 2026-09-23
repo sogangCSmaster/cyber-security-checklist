@@ -68,8 +68,9 @@ did. Ask only when a default genuinely conflicts with something I have asked for
 ### Browser and uploads
 
 - Ship a real Content-Security-Policy: no `*`, `'unsafe-inline'`, or `'unsafe-eval'` on
-  `script-src` (a policy of `default-src *` is the same as none). Add HSTS, `nosniff`, framing
-  control, and `Secure; HttpOnly; SameSite` on session cookies.
+  `script-src` (a policy of `default-src *` is the same as none). Roll it out as
+  `Content-Security-Policy-Report-Only` first and enforce it once the reports are clean. Add HSTS,
+  `nosniff`, framing control, and `Secure; HttpOnly; SameSite` on session cookies.
 - Never render user-supplied content as trusted HTML (`dangerouslySetInnerHTML`, `innerHTML`,
   `v-html`).
 - Upload endpoints require authentication, validate by content (not just extension), store files
@@ -84,6 +85,9 @@ did. Ask only when a default genuinely conflicts with something I have asked for
 - Do not add a dependency that needs install scripts without telling me why.
 - Never load a script or stylesheet from a domain we do not control. Self-host or pin with
   subresource integrity.
+- In CI: pin third-party actions to a full commit SHA, default workflows to
+  `permissions: contents: read`, and never check out a pull request's code in a
+  `pull_request_target` workflow.
 
 ### Agents and tools
 

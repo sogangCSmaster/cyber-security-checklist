@@ -11,8 +11,8 @@
       "name": "security-checklist",
       "source": "./",
       "displayName": "Breach-Driven Security Checklist",
-      "description": "Secure defaults while generating code, a review that cites real incidents, and a blocking pre-deploy gate. Built from 2016-2026 breach analysis.",
-      "version": "0.1.0",
+      "description": "Secure defaults and a write-time check while generating code, an audit that cites real incidents, and a blocking pre-deploy gate. Built from 2016-2026 breach analysis.",
+      "version": "0.2.0",
       "author": {
         "name": "sogangCSmaster"
       },

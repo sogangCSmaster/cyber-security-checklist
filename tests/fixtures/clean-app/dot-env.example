@@ -1,0 +1,2 @@
+STRIPE_SECRET_KEY=
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key

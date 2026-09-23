@@ -97,8 +97,8 @@ reading. None of them loads the whole thing — that would be both slow and poin
 | Skill | What it does with the corpus |
 | --- | --- |
 | `secure-by-default` | Does not read it during generation. The corpus is what produced the rules it applies |
-| `vibe-security-review` | On a finding, greps for the matching `entry/` tag and cites one real incident, so the finding carries a consequence rather than a severity label |
-| `ship-gate` | Reads `STATS.md` to order the blocking checks by how often each failure actually appears |
+| `security-audit` | On a finding, looks up the control in [`precedents.md`](../skills/security-audit/references/precedents.md) — generated from this corpus and shipped inside the skill — and cites a matching incident with its record ID and source, so the finding carries a consequence rather than a severity label |
+| `ship-gate` | Orders its gates by how often each failure appears here ([`STATS.md`](./STATS.md)); the order is fixed in the skill and revisited when the corpus changes |
 
 The pattern is deliberate: **the checklist carries the rule, the corpus carries the proof.** A
 finding that says "this is CRED-01, and it is how Uber lost 57 million records in 2016 and Toyota

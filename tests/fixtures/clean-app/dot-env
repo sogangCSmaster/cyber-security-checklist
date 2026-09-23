@@ -1,0 +1,2 @@
+SUPABASE_SERVICE_ROLE_KEY={{secret:service_jwt}}
+STRIPE_SECRET_KEY={{secret:stripe_live}}

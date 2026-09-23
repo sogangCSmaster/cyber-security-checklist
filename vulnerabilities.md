@@ -234,11 +234,10 @@ application works flawlessly for every user including the one reading everyone e
 **In the corpus:** 3 incidents, all recent.
 
 - **Lovable, 2025 (CVE-2025-48757)** — the builder generated Supabase applications without RLS;
-  170+ production applications confirmed exposed.
+  a scan of 1,645 of them found 170 exposed.
 - **Moltbook, 2026** — anon key in the client bundle, RLS off: 1.5 million API tokens, 35,000
-  email addresses, 4,060 private messages.
-- A 2025 scan of 1,072 AI-built applications found 98% carrying at least one security flaw; this
-  is the flaw that recurs.
+  email addresses, 4,060 private messages. The same failure a year later: this is the flaw that
+  recurs.
 
 **How to test.**
 
@@ -281,8 +280,13 @@ ${column}` looks unavoidable. It is not — allowlist the column names.
 - **Kaseya VSA, 2021** — SQL injection plus authentication bypass, then a fake hotfix pushed down
   the agent channel to ~1,500 downstream businesses.
 
-**How to test.** Grep for concatenation into query calls, then run a scanner against the routes it
-finds. `grep -rInE "(execute|query|raw)\s*\(\s*[\"'\`].*(\+|\$\{|%s|f[\"'])"`.
+**How to test.** Find query calls that build SQL from values, then run a scanner against the routes
+they serve. [`scan.py --only sql-string-building`](./skills/security-audit/scripts/scan.py) handles
+the cases a one-line grep gets wrong: it reports an f-string, `%` or `.format()` passed to
+`execute()`, concatenation, and a template literal passed to `query()`, and leaves alone DB-API
+parameters (`execute("... %s", (x,))`) and tagged templates (`` sql`...${x}` ``), which are the safe
+forms. Without Python, list every query call and read each one:
+`grep -rnE --exclude-dir=node_modules "(execute|query|raw)[[:space:]]*\(" .`.
 
 ---
 
@@ -485,7 +489,7 @@ inline `<script>` block or an `href` that can be `javascript:`.
 2018** (a supplier's chatbot script), **BadgerDAO, 2021** (a stolen Cloudflare API key used to
 inject a front-end script, $119M).
 
-**How to test.** `grep -rn "dangerouslySetInnerHTML\|innerHTML\s*=\|v-html"`. For each hit, trace
+**How to test.** `grep -rnE --exclude-dir=node_modules "dangerouslySetInnerHTML|innerHTML[[:space:]]*=|v-html|\{@html" .`. For each hit, trace
 the value to its source. Then add a content security policy and watch what breaks — what breaks is
 usually what would have been exploitable.
 
@@ -672,9 +676,12 @@ an OpenAI key, a Supabase `service_role` key and a publishable identifier all lo
 - **Grammarly, 2018** — a browser extension exposed an authentication token to every page it ran
   on.
 
-**How to test.** Build, then grep the build:
-`grep -rE "(sk-|service_role|AKIA|-----BEGIN)" dist/ .next/ build/`. Reading the source is a
-different and weaker check.
+**How to test.** Build, then scan the build with
+[`scan.py --bundle auto`](./skills/security-audit/scripts/scan.py), or list the files that hold a key:
+`grep -rlE "sk-(proj-|ant-)?[A-Za-z0-9_-]{20,}|[rs]k_live_|sb_secret_|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|-----BEGIN [A-Z ]*PRIVATE KEY" .next/static/ dist/ build/ out/`.
+A Supabase `service_role` key is a JWT like the public anon key, so the words "service_role"
+never appear in it; only decoding the token tells them apart. Reading the source is a different
+and weaker check.
 
 ---
 
@@ -983,8 +990,11 @@ generate — a pull request, a marketplace extension, a snippet pasted from a we
 - **GlassWorm, 2025** — malicious code hidden in invisible Unicode characters inside OpenVSX and
   VS Code marketplace extensions.
 
-**How to test.**
-`grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}]" --include='*.js' --include='*.ts' --include='*.py' --include='*.go' --include='*.json' .`
+**How to test.** [`scan.py --only invisible-unicode`](./skills/security-audit/scripts/scan.py), or
+with any grep, in any locale:
+`LC_ALL=C grep -rlE "$(printf '\342\200[\213-\217\252-\256]|\342\201[\240-\257]|\363\240[\200\201]')" --exclude-dir=node_modules --exclude-dir=.git .`
+The Perl-regex form this line used to give is missing from macOS grep and errors outside a UTF-8
+locale — and with its errors discarded, both looked like a clean result.
 
 ---
 

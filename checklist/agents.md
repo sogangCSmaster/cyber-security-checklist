@@ -74,7 +74,7 @@ so anything it can read can steer it.
 ### AGENT-09
 **P2 · code** — Generated code scanned for invisible and homoglyph characters.
 
-- **Detect:** `grep -rlP "[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2060}-\x{206F}]" .`
+- **Detect:** [`scan.py --only invisible-unicode`](../skills/security-audit/scripts/scan.py), or with any grep, in any locale: `LC_ALL=C grep -rlE "$(printf '\342\200[\213-\217\252-\256]|\342\201[\240-\257]|\363\240[\200\201]')" --exclude-dir=node_modules --exclude-dir=.git .`. (The Perl-regex form this line used to give is missing from macOS grep and errors outside a UTF-8 locale; with its errors discarded, both looked clean.)
 - **Fix:** strip or reject invisible/bidi/homoglyph characters in generated and pasted code.
 - **Verify:** the scan is clean and runs in CI.
 
@@ -88,7 +88,7 @@ so anything it can read can steer it.
 ### AGENT-11
 **P1 · process** — AI-generated security defaults verified, never assumed.
 
-- **Why:** a 2025 scan of 1,072 AI-built applications found 98% carrying at least one security flaw. The generated code works — that is what makes the failure invisible.
+- **Why:** Lovable, 2025 (CVE-2025-48757) — a researcher scanned 1,645 applications the builder had generated and found 170 serving their database to anyone, because the row-level security it wrote was missing or scoped to nothing. The generated code works — that is what makes the failure invisible.
 - **Detect:** are generated auth, RLS, and validation actually reviewed, or trusted because they run?
-- **Fix:** review generated security-relevant code against this checklist; run [`security-review`](../skills/security-review/SKILL.md).
+- **Fix:** review generated security-relevant code against this checklist; run [`security-audit`](../skills/security-audit/SKILL.md).
 - **Verify:** generated defaults pass the relevant Verify steps here, not just a smoke test.

@@ -9,6 +9,9 @@ __pycache__/
 *.pyc
 .venv/
 
+# claude plugin eval output
+evals/results/
+
 # Never commit these — see CRED-05 in checklist.md
 .env
 .env.*

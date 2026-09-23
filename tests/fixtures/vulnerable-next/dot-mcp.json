@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase", "--service-role-key", "{{secret:service_jwt}}"]
+    },
+    "remote-tools": {
+      "url": "http://tools.example.net/mcp"
+    }
+  }
+}
